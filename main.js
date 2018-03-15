@@ -1,7 +1,25 @@
 'use strict';
 
-
+const ioHook = require('iohook');
 var electron = require('electron');
+const {clipboard, app, BrowserWindow} = require('electron')
+
+
+  // Or use `remote` from the renderer process.
+  // const {BrowserWindow} = require('electron').remote
+
+
+var mainWindow = null;
+  // Load a remote URL
+  app.on('ready', () => {
+
+    //need to externalize window size
+
+    ioHook.start();
+})
+
+
+
 /*
 var app = electron.app;
 const {BrowserWindow, ipcMain} = require('electron');
@@ -27,23 +45,54 @@ ipcMain.on('close-main-window', function () {
     app.quit();
 });
 */
-'use strict';
-const ioHook = require('iohook');
 
-ioHook.on("mousemove", event => {
+
+var currentEvent = null;
+var mouseDown = false;
+ioHook.on("mousedown", event => {
   console.log(event);
-  /* You get object like this
-    {
-      type: 'mousemove',
-      x: 700,
-      y: 400
-    }
-   */
+  currentEvent = event;
+  mouseDown = true;
+  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow.on('closed', () => {
+    mainWindow = null
+  })
+  mainWindow.loadURL('https://github.com')
+  callEvent();
+});
+
+ioHook.on("mouseup", event => {
+  console.log(event);
+  currentEvent = event;
+  mouseDown = false;
+  mainWindow = null
 });
 
 //Register and start hook
-ioHook.start();
 
+
+
+function callEvent()
+{
+ if(mouseDown)
+ {
+   console.log("hellooo");
+   // do whatever you want
+   // it will continue executing until mouse is not released
+
+
+   setTimeout(callEvent,1000);
+ }
+ else
+ return;
+}
+
+
+function startListeners(){
+
+
+
+}
 /*
 function setGlobalShortcuts() {
     globalShortcut.unregisterAll();
