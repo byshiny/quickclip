@@ -1,14 +1,28 @@
 {
-  "name": "sound_machine",
+  "name": "quickclip",
   "version": "0.1.0",
   "main": "./main.js",
   "scripts": {
     "start": "electron ."
   },
-  "devDependencies": {
-    "electron-prebuilt": "^0.30.3"
-  },
   "dependencies": {
-    "electron": "^1.8.2"
+    "build": "^0.1.4",
+    "cmake-js": "^3.6.2",
+    "electron": "^1.7.0",
+    "iohook": "^0.1.13"
+  },
+  "iohook": {
+    "targets": [
+      "node-51",
+      "electron-57"
+    ],
+    "platforms": [
+      "win32",
+      "darwin"
+    ],
+    "arches": [
+      "x64",
+      "ia32"
+    ]
   }
 }
