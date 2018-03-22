@@ -1,8 +1,31 @@
 'use strict';
 
+/*
+
+STEPS:
+
+1. Need to go get that circular buffer to store all values
+2. Extenralize configuration keys or different platforms
+3. Flow for adding the event back in
+*/
+
+/* GLOBAL Parameters
+*/
+
+var copyBufferSize = 10;
+
+
 const ioHook = require('iohook');
 var electron = require('electron');
 const {clipboard, app, BrowserWindow} = require('electron')
+var CircularBuffer = require("circular-buffer");
+
+
+var readString = clipboard.readText();
+console.log(readString);
+console.log(buf.capacity()); // -> 3
+copyBuf.enq(readString);
+
 
 
   // Or use `remote` from the renderer process.
@@ -47,6 +70,13 @@ ipcMain.on('close-main-window', function () {
 */
 
 
+
+
+
+
+
+var copyBuffer = new CircularBuffer(copyBufferSize);
+
 var currentEvent = null;
 var mouseDown = false;
 ioHook.on("mousedown", event => {
@@ -60,6 +90,8 @@ ioHook.on("mousedown", event => {
   mainWindow.loadURL('https://github.com')
   callEvent();
 });
+
+mainWindow.webContents.send('load-buffer', 0);
 
 ioHook.on("mouseup", event => {
   console.log(event);
