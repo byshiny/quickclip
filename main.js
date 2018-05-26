@@ -12,7 +12,7 @@ STEPS:
 /* GLOBAL Parameters
 */
 
-var copyBufferSize = 10;
+var COPY_BUFFER_SIZE = 10;
 
 
 const ioHook = require('iohook');
@@ -21,9 +21,11 @@ const {clipboard, app, BrowserWindow} = require('electron')
 var CircularBuffer = require("circular-buffer");
 
 
+var copyBuf = new CircularBuffer(COPY_BUFFER_SIZE);
+
 var readString = clipboard.readText();
 console.log(readString);
-console.log(buf.capacity()); // -> 3
+console.log(copyBuf.capacity()); // -> 3
 copyBuf.enq(readString);
 
 
@@ -37,6 +39,13 @@ var mainWindow = null;
   app.on('ready', () => {
 
     //need to externalize window size
+
+    mainWindow = new BrowserWindow({width: 800, height: 600})
+    mainWindow.on('closed', () => {
+      mainWindow = null
+    })
+    mainWindow.loadURL('https://github.com')
+    mainWindow.hide()
 
     ioHook.start();
 })
@@ -83,15 +92,12 @@ ioHook.on("mousedown", event => {
   console.log(event);
   currentEvent = event;
   mouseDown = true;
-  mainWindow = new BrowserWindow({width: 800, height: 600})
-  mainWindow.on('closed', () => {
-    mainWindow = null
-  })
-  mainWindow.loadURL('https://github.com')
+  mainWindow.webContents.send('load-buffer', 0);
+
   callEvent();
 });
 
-mainWindow.webContents.send('load-buffer', 0);
+
 
 ioHook.on("mouseup", event => {
   console.log(event);
