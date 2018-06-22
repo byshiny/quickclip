@@ -8,13 +8,13 @@
   "dependencies": {
     "build": "^0.1.4",
     "circular-buffer": "^1.0.2",
-    "cmake-js": "^3.6.2",
-    "electron": "^1.7.0",
-    "iohook": "^0.1.13"
+    "cmake-js": "^3.7.3",
+    "iohook": "^0.1.16",
+    "robotjs": "^0.5.1"
   },
   "iohook": {
     "targets": [
-      "node-51",
+      "node-59",
       "electron-57"
     ],
     "platforms": [
@@ -25,5 +25,8 @@
       "x64",
       "ia32"
     ]
+  },
+  "devDependencies": {
+    "electron": "^2.0.2"
   }
 }

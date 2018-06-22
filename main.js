@@ -13,15 +13,21 @@ STEPS:
 */
 
 var COPY_BUFFER_SIZE = 10;
-
+console.log("directory name!")
+console.log(__dirname)
 
 const ioHook = require('iohook');
-var electron = require('electron');
-const {clipboard, app, BrowserWindow} = require('electron')
+const {app, BrowserWindow} = require('electron')
+const {clipboard} = require('electron')
+var robot = require("robotjs")
+var electron = require('electron')
+
+
+console.log(app)
 var CircularBuffer = require("circular-buffer");
 
-
 var copyBuf = new CircularBuffer(COPY_BUFFER_SIZE);
+
 
 var readString = clipboard.readText();
 console.log(readString);
@@ -45,38 +51,13 @@ var mainWindow = null;
       mainWindow = null
     })
     mainWindow.loadURL('https://github.com')
-    mainWindow.hide()
+    //REMOVE THIS LATER: mainWindow.hide()
 
     ioHook.start();
 })
 
-
-
-/*
-var app = electron.app;
-const {BrowserWindow, ipcMain} = require('electron');
-var configuration = require('./configuration');
-var mainWindow = null;
-
-app.on('ready', function() {
-    mainWindow = new BrowserWindow({
-        frame: false,
-        height: 700,
-        resizable: false,
-        width: 368
-    });
-
-    mainWindow.loadURL('file://' + __dirname + '/app/index.html');
-
-    if (!configuration.readSettings('shortcutKeys')) {
-        configuration.saveSettings('shortcutKeys', ['ctrl', 'shift']);
-    }
-});
-
-ipcMain.on('close-main-window', function () {
-    app.quit();
-});
-*/
+var content = clipboard.readText();
+console.log(content);
 
 
 
@@ -84,10 +65,12 @@ ipcMain.on('close-main-window', function () {
 
 
 
-var copyBuffer = new CircularBuffer(copyBufferSize);
+
+var copyBuffer = new CircularBuffer(COPY_BUFFER_SIZE);
 
 var currentEvent = null;
 var mouseDown = false;
+/*
 ioHook.on("mousedown", event => {
   console.log(event);
   currentEvent = event;
@@ -96,16 +79,16 @@ ioHook.on("mousedown", event => {
 
   callEvent();
 });
+*/
 
-
-
+/*
 ioHook.on("mouseup", event => {
   console.log(event);
   currentEvent = event;
   mouseDown = false;
   mainWindow = null
 });
-
+*/
 //Register and start hook
 
 
@@ -131,7 +114,7 @@ function startListeners(){
 
 
 }
-/*
+
 function setGlobalShortcuts() {
     globalShortcut.unregisterAll();
 
@@ -144,4 +127,4 @@ function setGlobalShortcuts() {
     globalShortcut.register(shortcutPrefix + '2', function () {
         mainWindow.webContents.send('global-shortcut', 1);
     });
-    */
+  }
