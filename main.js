@@ -11,19 +11,17 @@ STEPS:
 
 /* GLOBAL Parameters
 */
-
+console.log(process.version)
 var COPY_BUFFER_SIZE = 10;
-console.log("directory name!")
-console.log(__dirname)
 
 const ioHook = require('iohook');
-const {app, BrowserWindow} = require('electron')
-const {clipboard} = require('electron')
+const {app, BrowserWindow, ipcMain, globalShortcut} = require('electron')
+const {clipboard, dialog} = require('electron')
+const configuration = require('./configuration')
+
 var robot = require("robotjs")
 var electron = require('electron')
 
-
-console.log(app)
 var CircularBuffer = require("circular-buffer");
 
 var copyBuf = new CircularBuffer(COPY_BUFFER_SIZE);
@@ -51,14 +49,22 @@ var mainWindow = null;
       mainWindow = null
     })
     mainWindow.loadURL('https://github.com')
+    setGlobalShortcuts();
     //REMOVE THIS LATER: mainWindow.hide()
+    let win = new BrowserWindow({transparent: true, frame: false})
+    win.show()
+
 
     ioHook.start();
+
 })
 
 var content = clipboard.readText();
-console.log(content);
+console.log("keyboard content" + content);
 
+ipcMain.on('close-main-window', function () {
+    app.quit();
+});
 
 
 
@@ -118,13 +124,10 @@ function startListeners(){
 function setGlobalShortcuts() {
     globalShortcut.unregisterAll();
 
-    var shortcutKeysSetting = configuration.readSettings('shortcutKeys');
-    var shortcutPrefix = shortcutKeysSetting.length === 0 ? '' : shortcutKeysSetting.join('+') + '+';
-
-    globalShortcut.register(shortcutPrefix + '1', function () {
+    var shortcutKeysSettingArray = configuration.readSettings('pasteBuffer1');
+    var shortcutKeysSetting = shortcutKeysSettingArray[0];
+    globalShortcut.register(shortcutKeysSetting, function () {
         mainWindow.webContents.send('global-shortcut', 0);
     });
-    globalShortcut.register(shortcutPrefix + '2', function () {
-        mainWindow.webContents.send('global-shortcut', 1);
-    });
+
   }
