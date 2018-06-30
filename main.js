@@ -28,6 +28,7 @@ var copyBuf = new CircularBuffer(COPY_BUFFER_SIZE);
 
 
 var readString = clipboard.readText();
+console.log("copy text");
 console.log(readString);
 console.log(copyBuf.capacity()); // -> 3
 copyBuf.enq(readString);
@@ -88,19 +89,22 @@ function showBuffer(){
   //TODO: Parameterize width and height
   bufferWindow = new BrowserWindow({width: 400, height: 200});
   bufferWindow.loadURL(`file://${__dirname}/resources/app/index.html`);
+  bufferWindow.webContents.on('did-finish-load', function() {
+    bufferWindow.webContents.send('load-buffer', readString);
+});
 }
 
 
-/*
-ioHook.on("mousedown", event => {
+
+ioHook.on("mousewheel", event => {
   console.log(event);
   currentEvent = event;
   mouseDown = true;
-  mainWindow.webContents.send('load-buffer', 0);
 
-  callEvent();
+
+
 });
-*/
+
 
 /*
 ioHook.on("mouseup", event => {
