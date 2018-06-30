@@ -39,6 +39,7 @@ copyBuf.enq(readString);
 
 
 var mainWindow = null;
+let bufferWindow = null;
   // Load a remote URL
   app.on('ready', () => {
 
@@ -51,12 +52,11 @@ var mainWindow = null;
     mainWindow.loadURL('https://github.com')
     setGlobalShortcuts();
     //REMOVE THIS LATER: mainWindow.hide()
-    let win = new BrowserWindow({transparent: true, frame: false})
-    win.show()
+    //let win = new BrowserWindow({transparent: true, frame: false})
+    //win.show()
 
 
     ioHook.start();
-
 })
 
 var content = clipboard.readText();
@@ -76,6 +76,21 @@ var copyBuffer = new CircularBuffer(COPY_BUFFER_SIZE);
 
 var currentEvent = null;
 var mouseDown = false;
+ioHook.on('keydown', event => {
+  console.log(event); // { type: 'mousemove', x: 700, y: 400 }
+  showBuffer();
+});
+
+/* This function shows the current window that is available
+*/
+
+function showBuffer(){
+  //TODO: Parameterize width and height
+  bufferWindow = new BrowserWindow({width: 400, height: 200});
+  bufferWindow.loadURL(`file://${__dirname}/resources/app/index.html`);
+}
+
+
 /*
 ioHook.on("mousedown", event => {
   console.log(event);
