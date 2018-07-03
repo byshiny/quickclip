@@ -112,9 +112,6 @@ ioHook.on("mousewheel", event => {
   console.log(event);
   currentEvent = event;
   mouseDown = true;
-
-
-
 });
 
 ioHook.on("mouseup", event => {
@@ -150,16 +147,47 @@ function callEvent() {
 function startListeners() {
 
 
-
 }
 
+function saveBuffer(bufferNum) {
+  readString = clipboard.readText();
+  textBufferChecker[0] = 1;
+  textBufferArray[0] = readString;
+  textBufferTimer[0] = new Date();
+  console.log("Content saved");
+  console.log(readString);
+}
+
+function pasteBuffer(bufferNum) {
+  readString = clipboard.readText();
+  textBufferChecker[0] = 1;
+  textBufferArray[0] = readString;
+  textBufferTimer[0] = new Date();
+  console.log("Content saved");
+  console.log(readString);
+}
+
+function triggerBuffer(bufferNum) {
+  readString = clipboard.readText();
+  textBufferChecker[0] = 1;
+  textBufferArray[0] = readString;
+  textBufferTimer[0] = new Date();
+  console.log("Content saved");
+  console.log(readString);
+}
 function setGlobalShortcuts() {
   globalShortcut.unregisterAll();
 
-  var shortcutKeysSettingArray = configuration.readSettings('pasteBuffer1');
-  var shortcutKeysSetting = shortcutKeysSettingArray[0];
-  console.log('paste buffer 1' + shortcutKeysSetting);
-  globalShortcut.register(shortcutKeysSetting, function() {
+  var osKey = configuration.readSettings('os');
+  console.log("oskkyy " + osKey);
+  var shortcutKeySettingJSON = configuration.readSettings(osKey);
+
+  //you need to loop afterwards
+  var shortcutKeySetting1 = shortcutKeySettingJSON['pasteBuffer1']['shortcutKeys'];
+  var shortcurNum = shortcutKeySettingJSON['pasteBuffer1'][0];
+  var shortcutKeySetting2 = shortcutKeySettingJSON['pasteBuffer2']['shortcutKeys'];
+  var shortcurNum = shortcutKeySettingJSON['pasteBuffer2'][0];
+  globalShortcut.register(shortcutKeySetting1, function() {
     mainWindow.webContents.send('global-shortcut', 0);
   });
   //pop up paste buffer
@@ -169,23 +197,6 @@ function setGlobalShortcuts() {
   globalShortcut.register('m', function() {
     bufferWindow.webContents.send('inc-opq', readString);;
   });
-  globalShortcut.register('Ctrl+1', function() {
-    readString = clipboard.readText();
-    textBufferChecker[0] = 1;
-    textBufferArray[0] = readString;
-    textBufferTimer[0] = new Date();
-    console.log("Content saved");
-    console.log(readString);
-  });
-  globalShortcut.register('CtrlOrCommand+c+1', function() {
-    readString = clipboard.readText();
-    textBufferArray[0] = readString;
-    console.log("Content saved");
-    console.log(readString);
-  });
-  globalShortcut.register('Alt+1', function() {
-    console.log("Robotjs pasted");
-    robot.keyTap('v', ['command']);
-  });
+  globalShortcut.register(shortcutKeySetting1, );
 
 }
