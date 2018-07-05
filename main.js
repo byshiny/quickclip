@@ -123,6 +123,7 @@ ioHook.on("mouseup", event => {
 
 
 ioHook.on("keyup", e => {
+  //ahh fuck this keyset problem: 
   console.log(e.rawcode, String.fromCharCode(e.rawcode));
 });
 
@@ -168,12 +169,7 @@ function pasteBuffer(bufferNum) {
 }
 
 function triggerBuffer(bufferNum) {
-  readString = clipboard.readText();
-  textBufferChecker[0] = 1;
-  textBufferArray[0] = readString;
   textBufferTimer[0] = new Date();
-  console.log("Content saved");
-  console.log(readString);
 }
 function setGlobalShortcuts() {
   globalShortcut.unregisterAll();
@@ -183,10 +179,12 @@ function setGlobalShortcuts() {
   var shortcutKeySettingJSON = configuration.readSettings(osKey);
 
   //you need to loop afterwards
-  var shortcutKeySetting1 = shortcutKeySettingJSON['pasteBuffer1']['shortcutKeys'];
-  var shortcurNum = shortcutKeySettingJSON['pasteBuffer1'][0];
+  var shortcutKeySetting1 = shortcutKeySettingJSON.pasteBuffer1.num;
+  var shortcutNum1 = shortcutKeySettingJSON['pasteBuffer1']['num'];
   var shortcutKeySetting2 = shortcutKeySettingJSON['pasteBuffer2']['shortcutKeys'];
-  var shortcurNum = shortcutKeySettingJSON['pasteBuffer2'][0];
+  var shortcutNum2 = shortcutKeySettingJSON['pasteBuffer2']['num'];
+    console.log("shorty" + shortcutKeySetting1);
+  console.log("shorty" + shortcutNum1);
   globalShortcut.register(shortcutKeySetting1, function() {
     mainWindow.webContents.send('global-shortcut', 0);
   });
@@ -197,6 +195,8 @@ function setGlobalShortcuts() {
   globalShortcut.register('m', function() {
     bufferWindow.webContents.send('inc-opq', readString);;
   });
-  globalShortcut.register(shortcutKeySetting1, );
-
+  //need to loop to register all shortcuts
+  globalShortcut.register(shortcutKeySetting1, function(){
+    triggerBuffer(shortcutNum1);
+  });
 }
