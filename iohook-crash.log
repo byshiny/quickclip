@@ -1,0 +1,20 @@
+PID 22244 received SIGSEGV for address: 0x20
+0   segfault-handler.node               0x000000010e9f1408 _ZL16segfault_handleriP9__siginfoPv + 312
+1   libsystem_platform.dylib            0x00007fff6727ef5a _sigtramp + 26
+2   libsystem_malloc.dylib              0x00007fff671a70a9 small_malloc_from_free_list + 171
+3   iohook.node                         0x000000011186ebf0 hook_event_proc + 2000
+4   SkyLight                            0x00007fff6101dc0e processDecodedEventRef + 112
+5   SkyLight                            0x00007fff6101d47e processEventTapData + 567
+6   SkyLight                            0x00007fff60fcd425 _XPostEventTapData + 278
+7   SkyLight                            0x00007fff6101d1e9 eventTapMessageHandler + 132
+8   CoreFoundation                      0x00007fff3f6df306 __CFMachPortPerform + 310
+9   CoreFoundation                      0x00007fff3f6df1b9 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE1_PERFORM_FUNCTION__ + 41
+10  CoreFoundation                      0x00007fff3f6df105 __CFRunLoopDoSource1 + 533
+11  CoreFoundation                      0x00007fff3f6d6cf0 __CFRunLoopRun + 2848
+12  CoreFoundation                      0x00007fff3f6d5f43 CFRunLoopRunSpecific + 483
+13  CoreFoundation                      0x00007fff3f7148f3 CFRunLoopRun + 99
+14  iohook.node                         0x000000011186fd95 hook_run + 1749
+15  iohook.node                         0x000000011186b15e _Z16hook_thread_procPv + 14
+16  libsystem_pthread.dylib             0x00007fff672886c1 _pthread_body + 340
+17  libsystem_pthread.dylib             0x00007fff6728856d _pthread_body + 0
+18  libsystem_pthread.dylib             0x00007fff67287c5d thread_start + 13

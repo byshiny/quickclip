@@ -1,0 +1,19 @@
+Minimum requirements:
+Paste buffer storage
+Right click to cycle through
+Warning about keyboard shortcuts
+Packaging
+
+Dialog box opening position
+Externalize all position data
+
+
+Idiot proofing myself:
+
+1. I need to go figure out how to convert this stupid keyset issue, and see if it maps.
+2. Also need to check out if this keyset mapping will be consistent across all backgrounds.
+
+#Global shortcuts are already defined will not register.
+
+You need to do a lot of clean up. Thread clean up.
+How the fuck are you going to package this? What about the configuration? Do you need a UI for this.
