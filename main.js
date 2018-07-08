@@ -14,7 +14,9 @@ STEPS:
 console.log(process.version)
 // remove hard code
 const COPY_BUFFER_COUNT = 10
-const COPY_BUFFER_TIME = 2000
+const COPY_BUFFER_TIME = 2000 // this is in milliseconds
+const COPY_MOUSE_BUFFER_SIZE = 10
+const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 2000
 const ioHook = require('iohook')
 const {
   app,
@@ -30,20 +32,20 @@ const {
 const configuration = require('./configuration')
 
 var robot = require('robotjs')
-var electron = require('electron')
 
 var CircularBuffer = require('circular-buffer')
 var keyMapper = require('./keyMapper')
 
 var copyBuf = new CircularBuffer(COPY_BUFFER_COUNT)
-
+// TODO: Need to decide how to refactor this... group into one object???
 var textBufferTimer = new Array(COPY_BUFFER_COUNT)
 var textBufferChecker = new Array(COPY_BUFFER_COUNT)
 var textBufferFired = new Array(COPY_BUFFER_COUNT)
 var textBufferContent = new Array(COPY_BUFFER_COUNT)
 // initialize all the global Arrays
 function setAllTextArraysToDefault () {
-  var i; var n = COPY_BUFFER_COUNT
+  var i
+  var n = COPY_BUFFER_COUNT
   for (i = 0; i < n; ++i) {
     textBufferTimer[i] = new Date()
     textBufferChecker[i] = 0
@@ -65,6 +67,7 @@ copyBuf.enq(readString)
 
 var mainWindow = null
 let bufferWindow = null
+let circularBufferWindow = null
 // Load a remote URL
 app.on('ready', () => {
   // need to externalize window size
@@ -137,10 +140,18 @@ ioHook.on("mouseup", event => {
   //remember to add mainwindow = null later.
 });
 */
+
+ioHook.on('mousedown', event => {
+  console.log(event)
+  currentEvent = event
+  mouseDown = false
+  // remember to add mainwindow = null later.
+})
+
 function bufferKeyPressed (event) {
   // TODO: REFACTOR WHEN CONFIGURATION Is SET
   var keycode = event.keycode
-  if (keycode >= 2 && keycode <= 11) {
+  if (keycode >= 2 && keycode <= 11 && event.ctrlKey === true) {
     return true
   }
   return false
@@ -190,6 +201,7 @@ function callEvent () {
 
   }
 }
+
 function saveBuffer (bufferNum) {
   var readString = clipboard.readText()
   textBufferChecker[bufferNum] = 1
@@ -198,14 +210,17 @@ function saveBuffer (bufferNum) {
   console.log('Content saved')
   console.log(readString)
 }
+
 function pasteBuffer (bufferNum) {
   // this is pretty much a classic swaparoo in CS
-  var currentText = clipboard.readText()
-  console.log('buff num' + bufferNum)
-  var textFromBuffer = textBufferContent[bufferNum]
-  clipboard.writeText(textFromBuffer)
-  robot.keyTap('v', ['command'])
-  clipboard.writeText(currentText)
+  if (textBufferChecker[bufferNum] === 1) {
+    var currentText = clipboard.readText()
+    console.log('buff num' + bufferNum)
+    var textFromBuffer = textBufferContent[bufferNum]
+    clipboard.writeText(textFromBuffer)
+    robot.keyTap('v', ['command'])
+    clipboard.writeText(currentText)
+  }
 }
 
 function triggerBuffer (bufferNum) {
@@ -234,16 +249,12 @@ function setGlobalShortcuts () {
   var nRegistered = globalShortcut.isRegistered('n')
 
   console.log('Is this registed??' + nRegistered)
-
+  /*
   globalShortcut.register('n', function () {
     showBuffer()
   })
   globalShortcut.register('m', function () {
     bufferWindow.webContents.send('inc-opq', readString)
   })
-  // need to loop to register all shortcuts
-  console.log('register check ' + globalShortcut.isRegistered(shortcutKeySetting1))
-  globalShortcut.register(shortcutKeySetting1, function () {
-    showBuffer()
-  })
+  */
 }

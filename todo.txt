@@ -1,9 +1,9 @@
 Minimum requirements:
-Paste buffer storage
-Right click to cycle through
+1. Paste buffer storage
+2. Right click to cycle through
 Warning about keyboard shortcuts
-Packaging
-Quit unexpectedly warning`
+3. Packaging
+Quit unexpectedly warning(DONE)
 Dialog box opening position
 Externalize all position data
 Doing something about resetting when you turn off the computer or if the computer crashes... I/O
