@@ -137,7 +137,6 @@ ioHook.on("mouseup", event => {
   //remember to add mainwindow = null later.
 });
 */
-1
 function bufferKeyPressed (event) {
   // TODO: REFACTOR WHEN CONFIGURATION Is SET
   var keycode = event.keycode
@@ -163,20 +162,21 @@ ioHook.on('keyup', event => {
   if (bufferKeyPressed(event)) {
     console.log('event! whoo hoo!')
     var number = keyMapper.getKeyFromCode(event.keycode)
-
-    var curDate = new Date()
-    var lastKeyDownDate = textBufferTimer[number]
-    console.log('time diff')
-    var diff = Math.abs(new Date() - lastKeyDownDate)
-    console.log(lastKeyDownDate.toString())
-    console.log(curDate.toString())
-    console.log(diff)
-    if (diff < COPY_BUFFER_TIME) {
-      pasteBuffer(number)
-    } else {
-      saveBuffer(number)
+    if (textBufferFired[number] === true) {
+      var curDate = new Date()
+      var lastKeyDownDate = textBufferTimer[number]
+      console.log('time diff')
+      var diff = Math.abs(new Date() - lastKeyDownDate)
+      console.log(lastKeyDownDate.toString())
+      console.log(curDate.toString())
+      console.log(diff)
+      if (diff < COPY_BUFFER_TIME) {
+        pasteBuffer(number)
+      } else {
+        saveBuffer(number)
+      }
+      textBufferFired[number] = false
     }
-    textBufferFired[number] = false
   }
 })
 
@@ -201,6 +201,7 @@ function saveBuffer (bufferNum) {
 function pasteBuffer (bufferNum) {
   // this is pretty much a classic swaparoo in CS
   var currentText = clipboard.readText()
+  console.log('buff num' + bufferNum)
   var textFromBuffer = textBufferContent[bufferNum]
   clipboard.writeText(textFromBuffer)
   robot.keyTap('v', ['command'])
