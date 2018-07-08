@@ -1,22 +1,22 @@
-'use strict';
+'use strict'
 
-var nconf = require('nconf').file({file: getUserHome() + '/quick-clip-config.json'});
+var nconf = require('nconf').file({file: getUserHome() + '/quick-clip-config.json'})
 
-function saveSettings(settingKey, settingValue) {
-    nconf.set(settingKey, settingValue);
-    nconf.save();
+function saveSettings (settingKey, settingValue) {
+  nconf.set(settingKey, settingValue)
+  nconf.save()
 }
 
-function readSettings(settingKey) {
-    nconf.load();
-    return nconf.get(settingKey);
+function readSettings (settingKey) {
+  nconf.load()
+  return nconf.get(settingKey)
 }
 
-function getUserHome() {
-    return process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
+function getUserHome () {
+  return process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME']
 }
 
 module.exports = {
-    saveSettings: saveSettings,
-    readSettings: readSettings
-};
+  saveSettings: saveSettings,
+  readSettings: readSettings
+}
