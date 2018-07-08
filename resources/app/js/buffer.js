@@ -2,6 +2,8 @@
 
 
 //use for debug purpose only =D
+var closeEl = document.querySelector('.close');
+var settingsEl = document.querySelector('.settings');
 var nodeConsole = require('console');
 var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
 myConsole.log('Hello World!');
@@ -10,7 +12,7 @@ var bufferDiv = document.querySelector('#buffer');
 myConsole.log("checkyy");
 myConsole.log(bufferDiv.innerHTML);
 bufferDiv.innerHTML = "JavaScript was here";
-var opacity = 1; 
+var opacity = 1;
 ipcRenderer.on('load-buffer', (event, message) => {
   bufferDiv.innerHTML = message;
 });
@@ -26,6 +28,10 @@ ipcRenderer.on('inc-opq', (event, message) => {
             curWindow.close();
           }
         }, 100);
+});
+
+closeEl.addEventListener('click', function () {
+    ipc.send('close-main-window');
 });
 
 myConsole.log("checkyy");

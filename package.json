@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "main": "./main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "rebuild": "npm rebuild --runtime=electron --target=2.0.3 --disturl=https://atom.io/download/atom-shell --abi=57",
+    "comment": "Remember to build with 8.9.3(57). I think there's something else I can't remember",
+    "install": "npm rebuild --runtime=electron --target=2.0.3 --disturl=https://atom.io/download/atom-shell --abi=57"
   },
   "dependencies": {
     "build": "^0.1.4",
     "circular-buffer": "^1.0.2",
     "cmake-js": "^3.7.3",
-    "iohook": "^0.1.16",
+    "iohook": "0.2.0",
+    "nconf": "^0.10.0",
     "robotjs": "^0.5.1"
   },
   "iohook": {
