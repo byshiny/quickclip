@@ -16,7 +16,8 @@ console.log(process.version)
 const COPY_BUFFER_COUNT = 10
 const COPY_BUFFER_TIME = 2000 // this is in milliseconds
 const COPY_MOUSE_BUFFER_SIZE = 10
-const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 2000
+const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 1000
+const SHORTCUT_SIZE_LIMIT = 10
 const ioHook = require('iohook')
 const {
   app,
@@ -42,15 +43,20 @@ var textBufferTimer = new Array(COPY_BUFFER_COUNT)
 var textBufferChecker = new Array(COPY_BUFFER_COUNT)
 var textBufferFired = new Array(COPY_BUFFER_COUNT)
 var textBufferContent = new Array(COPY_BUFFER_COUNT)
+
+var shortcutKeys = new Array(SHORTCUT_SIZE_LIMIT)
 // initialize all the global Arrays
 function setAllTextArraysToDefault () {
-  var i
   var n = COPY_BUFFER_COUNT
-  for (i = 0; i < n; ++i) {
+  for (var i = 0; i < n; ++i) {
     textBufferTimer[i] = new Date()
     textBufferChecker[i] = 0
     textBufferFired[i] = false
     textBufferContent[i] = ''
+  }
+  var n = SHORTCUT_SIZE_LIMIT
+  for (i = 0; i < n; ++i) {
+    shortcutKeys[i] = {}
   }
 }
 
@@ -232,9 +238,9 @@ function setGlobalShortcuts () {
   globalShortcut.unregisterAll()
 
   var osKey = configuration.readSettings('os')
-  console.log('oskkyy ' + osKey)
+  const os = process.platform
   var shortcutKeySettingJSON = configuration.readSettings(osKey)
-
+  console.log(os)
   // you need to loop afterwards
   var shortcutKeySetting1 = shortcutKeySettingJSON.pasteBuffer1.shortcutKeys
   var shortcutNum1 = shortcutKeySettingJSON.pasteBuffer1.num

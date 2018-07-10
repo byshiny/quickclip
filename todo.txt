@@ -3,6 +3,7 @@ Minimum requirements:
 2. Right click to cycle through
 Warning about keyboard shortcuts
 3. Packaging
+4. OS Detection
 Quit unexpectedly warning(DONE)
 Dialog box opening position
 Externalize all position data
@@ -17,3 +18,5 @@ Idiot proofing myself:
 
 You need to do a lot of clean up. Thread clean up.
 How the fuck are you going to package this? What about the configuration? Do you need a UI for this.
+
+1
