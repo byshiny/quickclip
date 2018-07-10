@@ -1,6 +1,6 @@
 'use strict'
 
-var nconf = require('nconf').file({file: getUserHome() + '/quick-clip-config.json'})
+var nconf = require('nconf').file({file: './qconfig.json'})
 
 function saveSettings (settingKey, settingValue) {
   nconf.set(settingKey, settingValue)

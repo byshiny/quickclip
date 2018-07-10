@@ -4,6 +4,7 @@ Minimum requirements:
 Warning about keyboard shortcuts
 3. Packaging
 4. OS Detection
+5. Paymeium, limit size of shortcutKeys map
 Quit unexpectedly warning(DONE)
 Dialog box opening position
 Externalize all position data
