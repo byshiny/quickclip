@@ -34,18 +34,23 @@ const configuration = require('./configuration')
 
 var robot = require('robotjs')
 
+// for mouse holding
 var CircularBuffer = require('circular-buffer')
 var keyMapper = require('./keyMapper')
 
-var copyBuf = new CircularBuffer(COPY_BUFFER_COUNT)
 // TODO: Need to decide how to refactor this... group into one object???
 var textBufferTimer = new Array(COPY_BUFFER_COUNT)
 var textBufferChecker = new Array(COPY_BUFFER_COUNT)
 var textBufferFired = new Array(COPY_BUFFER_COUNT)
 var textBufferContent = new Array(COPY_BUFFER_COUNT)
 
+// MOUSE BUFFER GLOBAL VARIABLES
+var mouseCircularBuffer = new CircularBuffer(COPY_BUFFER_COUNT)
+var currentEvent = null
+var mouseDown = false
+
 var shortcutKeys = {}
-var copyKeyConfig = {}
+var copyKeyConfig = 'quack'
 // initialize all the global Arrays
 function setAllTextArraysToDefault () {
   var n = COPY_BUFFER_COUNT
@@ -64,10 +69,6 @@ function setAllTextArraysToDefault () {
 setAllTextArraysToDefault()
 
 var readString = clipboard.readText()
-console.log('copy text')
-console.log(readString)
-console.log(copyBuf.capacity()) // -> 3
-copyBuf.enq(readString)
 
 // Or use `remote` from the renderer process.
 // const {BrowserWindow} = require('electron').remote
@@ -107,11 +108,6 @@ ipcMain.on('close-main-window', function () {
   app.quit()
 })
 
-var mouseCircularBuffer = new CircularBuffer(COPY_BUFFER_COUNT)
-
-var currentEvent = null
-var mouseDown = false
-
 /* This function shows the current window that is available
  */
 
@@ -128,25 +124,15 @@ function showBuffer () {
   })
 }
 
-/*
-ioHook.on("mousewheel", event => {
-  console.log(event);
-  currentEvent = event;
-  mouseDown = true;
-});
-
-ioHook.on("mouseup", event => {
-  console.log(event);
-  currentEvent = event;
-  mouseDown = false;
-  //remember to add mainwindow = null later.
-});
-*/
+ioHook.on('mouseup', event => {
+  mouseDown = false
+})
 
 ioHook.on('mousedown', event => {
   console.log(event)
   currentEvent = event
-  mouseDown = false
+  mouseDown = true
+  waitBeforeCyclingBuffer()
   // remember to add mainwindow = null later.
 })
 
@@ -210,15 +196,17 @@ ioHook.on('keydown', event => {
       console.log(event)
       console.log(event.altKey)
     }
-  }/*
-  if (copyKeyTriggered()) {
+  }
+  if (copyKeyTriggered(event)) {
     var text = clipboard.readText()
-    mouseCircularBuffer.append(text)
-  } */
+    mouseCircularBuffer.enqueue(text)
+  }
 })
 
 function copyKeyTriggered (event) {
   for (var sKey in shortcutKeys) {
+    console.log('k' + event.keycode)
+    console.log('l' + copyKeyConfig.keycode)
     if (event.keycode == copyKeyConfig.keycode) {
       var keyConfig = shortcutKeys[sKey]
       if (event.keycode == keyConfig.keycode) {
@@ -268,12 +256,23 @@ ioHook.on('keyup', event => {
 
 // Register and start hook
 
-function callEvent () {
+function waitBeforeCyclingBuffer () {
+  // this can cause a bug, may have to contniously monitor to see that mouse has been held. Single check may screw up.
   if (mouseDown) {
     console.log('hellooo')
-    setTimeout(callEvent, 1000)
-  } else {
+    setTimeout(determineBufferCycling, COPY_MOUSE_BUTTON_ACTIVATION_TIME)
+  }
+}
+function determineBufferCycling () {
+  if (mouseDown) {
+    cycleThroughBuffer()
+  }
+  return false
+}
 
+function cycleThroughBuffer () {
+  for (var item in mouseCircularBuffer) {
+    console.log(item)
   }
 }
 
@@ -314,7 +313,10 @@ function setGlobalShortcuts () {
   var i = 0
   for (var key in shortcutConfig) {
     console.log(shortcutConfig[key])
-    if (key != 'copyKey') {
+    if (key == 'copyKey') {
+      copyKeyConfig = shortcutConfig[key]
+      console.log(copyKeyConfig)
+    } else {
       shortcutKeys[key] = shortcutConfig[key]
     }
   }
