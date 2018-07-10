@@ -45,6 +45,14 @@
       "shiftKey": false,
       "ctrlKey": true,
       "metaKey": false
+    },
+    "copyKey":{
+      "keycode": 46,
+      "altKey": false,
+      "shiftKey": false,
+      "ctrlKey": false,
+      "metaKey": true
+
     }
 
   }

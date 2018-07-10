@@ -14,9 +14,9 @@ STEPS:
 console.log(process.version)
 // remove hard code
 const COPY_BUFFER_COUNT = 10
-const COPY_BUFFER_TIME = 1console.log('Content saved')000 // this is in milliseconds
+const COPY_BUFFER_TIME = 1000 // this is in milliseconds
 const COPY_MOUSE_BUFFER_SIZE = 10
-const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 1000
+const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 3000
 const SHORTCUT_SIZE_LIMIT = 10
 const ioHook = require('iohook')
 const {
@@ -45,6 +45,7 @@ var textBufferFired = new Array(COPY_BUFFER_COUNT)
 var textBufferContent = new Array(COPY_BUFFER_COUNT)
 
 var shortcutKeys = {}
+var copyKeyConfig = {}
 // initialize all the global Arrays
 function setAllTextArraysToDefault () {
   var n = COPY_BUFFER_COUNT
@@ -106,16 +107,11 @@ ipcMain.on('close-main-window', function () {
   app.quit()
 })
 
-var copyMouseBuffer = new CircularBuffer(COPY_BUFFER_COUNT)
+var mouseCircularBuffer = new CircularBuffer(COPY_BUFFER_COUNT)
 
 var currentEvent = null
 var mouseDown = false
-/*
-ioHook.on('keydown', event => {
-  console.log(event); // { type: 'mousemove', x: 700, y: 400 }
-  showBuffer();
-});
-*/
+
 /* This function shows the current window that is available
  */
 
@@ -167,25 +163,31 @@ function bufferKeyPressedWithModifier (event) {
     console.log(sKey.keycode)
     var keyConfig = shortcutKeys[sKey]
     if (event.keycode == keyConfig.keycode) {
-      for (var modifierKey in keyConfig) {
-        var modifiersToCheck = []
-        if (modifierKey != 'rawcode' && modifierKey != 'keycode') {
-          if (keyConfig[modifierKey]) {
-            modifiersToCheck.append(modifierKey)
-          }
-        }
-        for (var modifiers in modifiersToCheck) {
-          if (event[modifiers] === false) {
-            return false
-          }
-        }
-        return true
-      }
-      return false
+      var match = ensureModifierKeysMatch(event, keyConfig)
+      return match
     }
   }
   return false
 }
+
+function ensureModifierKeysMatch (event, keyConfig) {
+  for (var modifierKey in keyConfig) {
+    var modifiersToCheck = []
+    if (modifierKey != 'rawcode' && modifierKey != 'keycode') {
+      if (keyConfig[modifierKey]) {
+        modifiersToCheck.append(modifierKey)
+      }
+    }
+    for (var modifiers in modifiersToCheck) {
+      if (event[modifiers] === false) {
+        return false
+      }
+    }
+    return true
+  }
+  return false
+}
+
 /* The condition to hold down are relaxed here so that the user will have to hold
 onto one button */
 function bufferKeyReleased (event) {
@@ -198,6 +200,8 @@ function bufferKeyReleased (event) {
 }
 ioHook.on('keydown', event => {
   var number = keyMapper.getKeyFromCode(event.keycode)
+  console.log(event)
+  // keycode 46 is control c
   if (bufferKeyPressedWithModifier(event)) {
     if (textBufferFired[number] == false) {
       triggerBuffer(number)
@@ -206,8 +210,39 @@ ioHook.on('keydown', event => {
       console.log(event)
       console.log(event.altKey)
     }
-  }
+  }/*
+  if (copyKeyTriggered()) {
+    var text = clipboard.readText()
+    mouseCircularBuffer.append(text)
+  } */
 })
+
+function copyKeyTriggered (event) {
+  for (var sKey in shortcutKeys) {
+    if (event.keycode == copyKeyConfig.keycode) {
+      var keyConfig = shortcutKeys[sKey]
+      if (event.keycode == keyConfig.keycode) {
+        for (var modifierKey in keyConfig) {
+          var modifiersToCheck = []
+          if (modifierKey != 'rawcode' && modifierKey != 'keycode') {
+            if (keyConfig[modifierKey]) {
+              modifiersToCheck.append(modifierKey)
+            }
+          }
+          for (var modifiers in modifiersToCheck) {
+            if (event[modifiers] === false) {
+              return false
+            }
+
+            return true
+          }
+          return false
+        }
+        return false
+      }
+    }
+  }
+}
 
 ioHook.on('keyup', event => {
   if (bufferKeyReleased(event)) {
@@ -279,7 +314,9 @@ function setGlobalShortcuts () {
   var i = 0
   for (var key in shortcutConfig) {
     console.log(shortcutConfig[key])
-    shortcutKeys[key] = shortcutConfig[key]
+    if (key != 'copyKey') {
+      shortcutKeys[key] = shortcutConfig[key]
+    }
   }
   // you need to loop afterwards
   /*
@@ -295,10 +332,12 @@ function setGlobalShortcuts () {
   console.log('Is this registed??' + nRegistered)
   /*
   globalShortcut.register('n', function () {
-    showBuffer()
+    // showBuffer()
+    for (var item in mouseCircularBuffer) {
+      console.log(item)
+    }
   })
   globalShortcut.register('m', function () {
     bufferWindow.webContents.send('inc-opq', readString)
-  })
-  */
+  }) */
 }
