@@ -1,10 +1,15 @@
 Minimum requirements:
 1. Paste buffer storage
 2. Right click to cycle through
+3. cut support
+4. Instructions on how to disable "funk" - http://www.mactricksandtips.com/2008/07/switch-off-annoying-system-sounds.html
+
+//need to add zero error handling - nothing inside
 Warning about keyboard shortcuts
 3. Packaging
 4. OS Detection
 5. Paymeium, limit size of shortcutKeys map
+6. Logging
 Quit unexpectedly warning(DONE)
 Dialog box opening position
 Externalize all position data
