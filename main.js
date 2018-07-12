@@ -11,7 +11,7 @@ STEPS:
 11
 /* GLOBAL Parameters
  */
-console.log(process.version)
+// console.log(process.version)
 // remove hard code
 const COPY_BUFFER_COUNT = 10
 const COPY_BUFFER_TIME = 1000 // this is in milliseconds
@@ -19,13 +19,12 @@ const COPY_MOUSE_BUFFER_SIZE = 10
 const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 3000
 const SHORTCUT_SIZE_LIMIT = 10
 const ioHook = require('iohook')
+const reload = require('require-reload')(require)
 const {
   app,
   BrowserWindow,
   ipcMain,
-  globalShortcut
-} = require('electron')
-const {
+  globalShortcut,
   clipboard,
   dialog
 } = require('electron')
@@ -68,8 +67,6 @@ function setAllTextArraysToDefault () {
 
 setAllTextArraysToDefault()
 
-var readString = clipboard.readText()
-
 // Or use `remote` from the renderer process.
 // const {BrowserWindow} = require('electron').remote
 
@@ -101,9 +98,6 @@ app.on('before-quit', () => {
   ioHook.stop()
 })
 
-var content = clipboard.readText()
-console.log('keyboard content' + content)
-
 ipcMain.on('close-main-window', function () {
   app.quit()
 })
@@ -129,7 +123,6 @@ ioHook.on('mouseup', event => {
 })
 
 ioHook.on('mousedown', event => {
-  console.log(event)
   currentEvent = event
   mouseDown = true
   waitBeforeCyclingBuffer()
@@ -146,7 +139,6 @@ function bufferKeyPressedWithModifier (event) {
   return false
   */
   for (var sKey in shortcutKeys) {
-    console.log(sKey.keycode)
     var keyConfig = shortcutKeys[sKey]
     if (event.keycode == keyConfig.keycode) {
       var match = ensureModifierKeysMatch(event, keyConfig)
@@ -191,47 +183,12 @@ ioHook.on('keydown', event => {
   if (bufferKeyPressedWithModifier(event)) {
     if (textBufferFired[number] == false) {
       triggerBuffer(number)
-      console.log('this is a numba fool')
-      console.log(number)
-      console.log(event)
-      console.log(event.altKey)
     }
-  }
-  if (copyKeyTriggered(event)) {
-    var text = clipboard.readText()
-    mouseCircularBuffer.enqueue(text)
-  }
+  } // else if (copyKeyTriggered(event)) {
+  // var text = clipboard.readText()
+  // mouseCircularBuffer.enqueue(text)
+//  }
 })
-
-function copyKeyTriggered (event) {
-  for (var sKey in shortcutKeys) {
-    console.log('k' + event.keycode)
-    console.log('l' + copyKeyConfig.keycode)
-    if (event.keycode == copyKeyConfig.keycode) {
-      var keyConfig = shortcutKeys[sKey]
-      if (event.keycode == keyConfig.keycode) {
-        for (var modifierKey in keyConfig) {
-          var modifiersToCheck = []
-          if (modifierKey != 'rawcode' && modifierKey != 'keycode') {
-            if (keyConfig[modifierKey]) {
-              modifiersToCheck.append(modifierKey)
-            }
-          }
-          for (var modifiers in modifiersToCheck) {
-            if (event[modifiers] === false) {
-              return false
-            }
-
-            return true
-          }
-          return false
-        }
-        return false
-      }
-    }
-  }
-}
-
 ioHook.on('keyup', event => {
   if (bufferKeyReleased(event)) {
     console.log('event! whoo hoo!')
@@ -254,15 +211,26 @@ ioHook.on('keyup', event => {
   }
 })
 
+function copyKeyTriggered (event) {
+  for (var sKey in shortcutKeys) {
+    if (event.keycode == copyKeyConfig.keycode) {
+      var keyConfig = shortcutKeys[sKey]
+      var match = ensureModifierKeysMatch(event, keyConfig)
+      return match
+    }
+  }
+  return false
+}
+
 // Register and start hook
 
 function waitBeforeCyclingBuffer () {
   // this can cause a bug, may have to contniously monitor to see that mouse has been held. Single check may screw up.
   if (mouseDown) {
-    console.log('hellooo')
     setTimeout(determineBufferCycling, COPY_MOUSE_BUTTON_ACTIVATION_TIME)
   }
 }
+
 function determineBufferCycling () {
   if (mouseDown) {
     cycleThroughBuffer()
@@ -277,29 +245,50 @@ function cycleThroughBuffer () {
 }
 
 function saveBuffer (bufferNum) {
-  var currentText = clipboard.readText()
+  var currentText = (' ' + clipboard.readText()).slice(1)
+  console.log('buff num:' + bufferNum + ' currentText:' + currentText)
   textBufferChecker[bufferNum] = 1
   textBufferTimer[bufferNum] = new Date()
   // this also needs to be externalized
+
+  setTimeout(function () {
+    robotCopyDelay(bufferNum)
+  }, 100)
+}
+
+function robotCopyDelay (bufferNum) {
   robot.keyTap('c', ['command'])
-  textBufferContent[bufferNum] = clipboard.readText()
-  clipboard.writeText(currentText)
-  console.log('Content saved')
-  console.log(readString)
+  setTimeout(function () {
+    anotherContext(bufferNum)
+  }, 100)
+}
+
+function anotherContext (bufferNum) {
+  textBufferContent[bufferNum] = (' ' + clipboard.readText()).slice(1)
+  console.log('buff num:' + bufferNum + ' textBufferText:' + clipboard.readText())
+  clipboard.writeText(textBufferContent[bufferNum])
 }
 
 function pasteBuffer (bufferNum) {
   // this is pretty much a classic swaparoo in CS
   if (textBufferChecker[bufferNum] === 1) {
-    var currentText = clipboard.readText()
-    console.log('buff num' + bufferNum)
+    // WATCH OUT FOR THIS FUCKING LINE
+    var currentText = (' ' + clipboard.readText()).slice(1)
+    console.log('buff num' + bufferNum + 'text content ' + textBufferContent[1])
+    console.log('buff num' + bufferNum + 'text content ' + textBufferContent[2])
     var textFromBuffer = textBufferContent[bufferNum]
+
     clipboard.writeText(textFromBuffer)
-    robot.keyTap('v', ['command'])
-    clipboard.writeText(currentText)
+    console.log('mem test' + clipboard.readText())
+    setTimeout(function2, 1)
   }
 }
-
+function function2 () {
+  // all the stuff you want to happen after that pause
+  console.log((' ' + clipboard.readText()).slice(1))
+  robot.keyTap('v', ['command'])
+  console.log('is this a reference to a pointer?' + clipboard.readText())
+}
 function triggerBuffer (bufferNum) {
   textBufferTimer[bufferNum] = new Date()
   textBufferFired[bufferNum] = true
@@ -308,11 +297,9 @@ function triggerBuffer (bufferNum) {
 function setGlobalShortcuts () {
   globalShortcut.unregisterAll()
   const os = process.platform
-  console.log(os)
   var shortcutConfig = configuration.readSettings(os)
   var i = 0
   for (var key in shortcutConfig) {
-    console.log(shortcutConfig[key])
     if (key == 'copyKey') {
       copyKeyConfig = shortcutConfig[key]
       console.log(copyKeyConfig)
@@ -322,8 +309,6 @@ function setGlobalShortcuts () {
   }
   // you need to loop afterwards
   /*
-  console.log('shorty' + shortcutKeySetting1)
-  console.log('shorty' + shortcutNum1)
   globalShortcut.register(shortcutKeySetting1, function () {
     mainWindow.webContents.send('global-shortcut', 0)
   })

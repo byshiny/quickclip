@@ -18,6 +18,9 @@ Idiot proofing myself:
 #Global shortcuts are already defined will not register.
 
 You need to do a lot of clean up. Thread clean up.
-How the fuck are you going to package this? What about the configuration? Do you need a UI for this.
+1
 
 1
+1
+
+2.
