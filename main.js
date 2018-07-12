@@ -128,7 +128,7 @@ function startCircularBufferWindow () {
   circularBufferWindow = new BrowserWindow({
     width: 400,
     height: 200,
-    transparent: true
+    transparent: false
   })
   circularBufferWindow.loadURL(`file://${__dirname}/resources/app/mousebuffer.html`)
   circularBufferWindow.showInactive()
@@ -136,6 +136,7 @@ function startCircularBufferWindow () {
   copyMouseItemIdx = 0
   circularBufferWindow.webContents.on('did-finish-load', function () {
     copyMouseStarted = true
+    cycleBufferWindow()
     copyMouseInterval = setInterval(function () {
       cycleBufferWindow()
     }, COPY_MOUSE_CYCLE_INTERVAL)
