@@ -13,17 +13,19 @@ STEPS:
 // console.log(process.version)
 // remove hard code
 const COPY_BUFFER_COUNT = 10
-const COPY_BUFFER_TIME = 1000 // this is in milliseconds
+const COPY_BUFFER_TIME = 500 // this is in milliseconds
 const COPY_MOUSE_BUFFER_SIZE = 10
 const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 2000
 const COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL = 200
 const COPY_MOUSE_CYCLE_INTERVAL = 1500
+
+const PASTE_DELAY = 100
 var copyMouseStarted = false
 var copyMouseInterval = null
 var copyMouseItemIdx = 0
 var copyTimePassed = 0
 var currentEvent = null
-const SHORTCUT_SIZE_LIMIT = 10
+const SHORTCUT_KEY_LIMIT = 10
 const ioHook = require('iohook')
 const {
   app,
@@ -64,7 +66,7 @@ function setAllTextArraysToDefault () {
     textBufferFired[i] = false
     textBufferContent[i] = ''
   }
-  var n = SHORTCUT_SIZE_LIMIT
+  var n = SHORTCUT_KEY_LIMIT
   for (i = 0; i < n; ++i) {
     shortcutKeys[i] = {}
   }
@@ -79,34 +81,6 @@ var mainWindow = null
 let bufferWindow = null
 let circularBufferWindow = null
 // Load a remote URL
-app.on('ready', () => {
-  // need to externalize window size
-  mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600
-  })
-  mainWindow.on('closed', () => {
-    mainWindow = null
-    bufferWindow = null
-    globalShortcut.unregisterAll()
-  })
-  mainWindow.loadURL('file://' + __dirname + '/app/index.html')
-  mainWindow.hide()
-  setGlobalShortcuts()
-  // REMOVE THIS LATER: mainWindow.hide()
-  // let win = new BrowserWindow({transparent: true, frame: false})
-  // win.show()
-  ioHook.start()
-})
-
-app.on('before-quit', () => {
-  ioHook.unload()
-  ioHook.stop()
-})
-
-ipcMain.on('close-main-window', function () {
-  app.quit()
-})
 
 /* This function shows the current window that is available
  */
@@ -159,7 +133,7 @@ function cycleBufferWindow () {
   } else {
     setTimeout(function () {
       pasteMouseCycleAndReset()
-    }, 100)
+    }, PASTE_DELAY)
   }
 }
 
@@ -171,7 +145,7 @@ function pasteFromCircularBuffer (circularBufferIdx) {
   clipboard.writeText(textFromBuffer)
   setTimeout(function () {
     pasteCommand(currentText)
-  }, 300)
+  }, PASTE_DELAY)
 }
 
 function pasteMouseCycleAndReset () {
@@ -308,7 +282,7 @@ function pasteBuffer (bufferNum) {
     clipboard.writeText(textFromBuffer)
     setTimeout(function () {
       pasteCommand(currentText)
-    }, 100)
+    }, PASTE_DELAY)
   }
 }
 
@@ -319,7 +293,7 @@ function pasteCommand (currentText) {
   setTimeout(function () {
     console.log('currenttext:' + currentText)
     clipboard.writeText(currentText)
-  }, 100)
+  }, PASTE_DELAY)
 }
 
 function setGlobalShortcuts () {
@@ -355,6 +329,38 @@ function setGlobalShortcuts () {
       bufferWindow.webContents.send('inc-opq', readString)
     }) */
 }
+
+// iohook setup
+
+app.on('ready', () => {
+  // need to externalize window size
+  mainWindow = new BrowserWindow({
+    width: 800,
+    height: 600
+  })
+  mainWindow.on('closed', () => {
+    mainWindow = null
+    bufferWindow = null
+    globalShortcut.unregisterAll()
+  })
+  mainWindow.loadURL('file://' + __dirname + '/app/index.html')
+  mainWindow.hide()
+  setGlobalShortcuts()
+  // REMOVE THIS LATER: mainWindow.hide()
+  // let win = new BrowserWindow({transparent: true, frame: false})
+  // win.show()
+  ioHook.start()
+})
+
+app.on('before-quit', () => {
+  ioHook.unload()
+  ioHook.stop()
+})
+
+ipcMain.on('close-main-window', function () {
+  app.quit()
+})
+
 ioHook.on('mouseup', event => {
   if (copyMouseStarted) {
     // DO NOT REMOVE THIS LINE! IF YOU DO, YOU'LL HAVE CONCURRENCY ISSUES
@@ -381,6 +387,7 @@ ioHook.on('keydown', event => {
     }, 100)
   }
 })
+
 ioHook.on('keyup', event => {
   if (bufferKeyReleased(event)) {
     var number = keyMapper.getKeyFromCode(event.keycode)
