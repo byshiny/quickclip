@@ -133,7 +133,7 @@ function startCircularBufferWindow () {
   circularBufferWindow.loadURL(`file://${__dirname}/resources/app/mousebuffer.html`)
   circularBufferWindow.showInactive()
   copyTimePassed = 0
-  copyMouseItemIdx = 0
+  copyMouseItemIdx = -1
   circularBufferWindow.webContents.on('did-finish-load', function () {
     copyMouseStarted = true
     cycleBufferWindow()
@@ -149,15 +149,17 @@ function cycleBufferWindow () {
   if (mouseDown) {
     copyTimePassed += COPY_MOUSE_CYCLE_INTERVAL
     console.log('cycling choo choo')
-    console.log(copyMouseItemIdx)
-    console.log(mouseCircularBuffer.get(copyMouseItemIdx))
-    circularBufferWindow.webContents.send('cycle-buffer', mouseCircularBuffer.get(copyMouseItemIdx))
     copyMouseItemIdx++
-    if (copyMouseItemIdx >= mouseCircularBuffer.size()) {
+    if (copyMouseItemIdx >= mouseCircularBuffer.size() || copyMouseItemIdx == -1) {
       copyMouseItemIdx = 0
     }
+    circularBufferWindow.webContents.send('cycle-buffer', mouseCircularBuffer.get(copyMouseItemIdx))
+    /* I'm adding a delay here because there is a change that the message doesn't reach the display fast enough
+    then the code below will execute and cause massive confusion because there's a disrepency with the view */
   } else {
-    pasteMouseCycleAndReset()
+    setTimeout(function () {
+      pasteMouseCycleAndReset()
+    }, 100)
   }
 }
 
@@ -179,10 +181,6 @@ function pasteMouseCycleAndReset () {
   mouseDown = false
   circularBufferWindow.close()
   Menu.sendActionToFirstResponder('hide:')
-  copyMouseItemIdx--
-  if (copyMouseItemIdx < 0) {
-    copyMouseItemIdx = 0
-  }
   pasteFromCircularBuffer(copyMouseItemIdx)
 }
 
