@@ -5,6 +5,7 @@ Minimum requirements:
 4. Instructions on how to disable "funk" - http://www.mactricksandtips.com/2008/07/switch-off-annoying-system-sounds.html
 5. Put exact dependencies to avoid breakage in package.json
 //need to add zero error handling - nothing inside
+6. Investigate how to enable logging and debug mode
 Warning about keyboard shortcuts
 3. Packaging
 4. OS Detection

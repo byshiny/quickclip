@@ -171,32 +171,33 @@ function bufferKeyPressedWithModifier (event) {
     var keyConfig = shortcutKeys[sKey]
     console.log(keyConfig)
     if (event.keycode == keyConfig.keycode) {
-      console.log(match)
       var match = ensureModifierKeysMatch(event, keyConfig)
+      console.log('matchy!!!' + match)
       return match
     }
   }
   return false
 }
 
+// NOTE: 7/14/18 - Using non-permissive version  - must press all specified modifiers
 function ensureModifierKeysMatch (event, keyConfig) {
+  var allMatch = true
+  var modifiersToCheck = []
   for (var modifierKey in keyConfig) {
-    var modifiersToCheck = []
     if (modifierKey != 'rawcode' && modifierKey != 'keycode') {
       if (keyConfig[modifierKey]) {
-        modifiersToCheck.append(modifierKey)
+        modifiersToCheck.push(modifierKey)
       }
     }
-    for (var modifiers in modifiersToCheck) {
-      if (event[modifiers] === false) {
-        return false
-      }
-    }
-    return true
   }
-  return false
+  console.log('holy' + modifiersToCheck)
+  for (var modifiers in modifiersToCheck) {
+    var valIdx = modifiersToCheck[modifiers]
+    allMatch = allMatch & event[valIdx]
+  }
+  console.log('holy' + allMatch)
+  return allMatch
 }
-
 /* The condition to hold down are relaxed here so that the user will have to hold
   onto one button */
 function bufferKeyReleased (event) {

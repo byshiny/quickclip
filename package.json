@@ -1,9 +1,16 @@
 {
   "name": "quickclip",
-  "version": "0.1.0",
-  "main": "./main.js",
+  "version": "0.0.1",
+  "license": "Commercial",
+  "description": "A quickway to copy and paste",
+  "author": "gosupandaa <gosupandaa@gmail.com>",
+  "main": "./app/main.js",
   "scripts": {
-    "start": "electron .",
+    "postinstall": "install-app-deps",
+    "start": " electron .",
+    "pack": "build --dir",
+    "dist": "build",
+    "build": "npm build --runtime=electron --target=2.0.3 --disturl=https://atom.io/download/atom-shell --abi=57",
     "rebuild": "npm rebuild --runtime=electron --target=2.0.3 --disturl=https://atom.io/download/atom-shell --abi=57",
     "comment": "Remember to build with 8.9.3(57). I think there's something else I can't remember",
     "install": "npm rebuild --runtime=electron --target=2.0.3 --disturl=https://atom.io/download/atom-shell --abi=57"
@@ -33,13 +40,41 @@
     ]
   },
   "devDependencies": {
-    "electron": "^2.0.2",
+    "electron": "latest",
     "eslint": "^5.0.1",
     "eslint-config-google": "^0.9.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0"
+    "eslint-plugin-standard": "^3.1.0",
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "quickclip",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
   }
 }

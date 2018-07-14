@@ -3,7 +3,7 @@
   "template": {
       "keycode": "NOT A KEY",
       "rawcode": 15,
-      "altKey": true,
+      "altKey": false,
       "shiftKey": false,
       "ctrlKey": true,
       "metaKey": false
@@ -12,7 +12,7 @@
     "pasteBuffer1": {
       "keycode": 2,
       "rawcode": 15,
-      "altKey": true,
+      "altKey": false,
       "shiftKey": false,
       "ctrlKey": true,
       "metaKey": false
@@ -20,30 +20,78 @@
     "pasteBuffer2": {
       "keycode": 3,
       "rawcode": 15,
-      "altKey": true,
+      "altKey": false,
       "shiftKey": false,
       "ctrlKey": true,
       "metaKey": false
     },
     "pasteBuffer3": {
       "keycode": 4,
-      "altKey": true,
+      "altKey": false,
       "shiftKey": false,
       "ctrlKey": true,
       "metaKey": false
     },
     "pasteBuffer4": {
       "keycode": 5,
-      "altKey": true,
+      "altKey": false,
       "shiftKey": false,
       "ctrlKey": true,
       "metaKey": false
     },
     "pasteBuffer5": {
       "keycode": 6,
-      "altKey": true,
+      "altKey": false,
       "shiftKey": false,
       "ctrlKey": true,
+      "metaKey": false
+    },
+    "copyKey":{
+      "keycode": 46,
+      "altKey": false,
+      "shiftKey": false,
+      "ctrlKey": false,
+      "metaKey": true
+
+    }
+
+  },
+  "win32": {
+    "pasteBuffer1": {
+      "keycode": 2,
+      "rawcode": 15,
+      "altKey": true,
+      "shiftKey": false,
+      "ctrlKey": false,
+      "metaKey": false
+    },
+    "pasteBuffer2": {
+      "keycode": 3,
+      "rawcode": 15,
+      "altKey": true,
+      "shiftKey": false,
+      "ctrlKey": false,
+      "metaKey": false
+    },
+    "pasteBuffer3": {
+      "keycode": 4,
+      "altKey": true,
+      "shiftKey": false,
+      "ctrlKey": false,
+      "metaKey": false
+    },
+    "pasteBuffer4": {
+      "keycode": 5,
+      "altKey": true,
+      "shiftKey": false,
+      "ctrlKey": false,
+      "metaKey": false
+    },
+    "pasteBuffer5": {
+      "keycode": 6,
+      "altKey": true,
+      "shiftKey": false,
+      "ctrlKey": false,
       "metaKey": false
     },
     "copyKey":{
