@@ -512,7 +512,7 @@ app.on('ready', () => {
   // I'm scared this will cause an infinite loop with above
   mainWindow.on('hide', function (event) {
     log.info('hidden')
-    mainWindow.minimize()
+    mainWindow.hide()
   })
 
   mainWindow.loadURL(`file://${__dirname}/resources/views/index.html`)
@@ -523,6 +523,20 @@ app.on('ready', () => {
     height: 200,
     focusable: false
   })
+  saveWindow.on('minimize', function (event) {
+    event.preventDefault()
+    saveWindow.hide()
+  })
+  saveWindow.on('defocus', function (event) {
+    log.info('da focused')
+    saveWindow.hide()
+  })
+  // I'm scared this will cause an infinite loop with above
+  saveWindow.on('hide', function (event) {
+    log.info('hidden')
+    saveWindow.hide()
+  })
+
   saveWindow.loadURL(`file://${__dirname}/resources/views/savepop.html`)
   saveWindow.hide()
   // load circular buffer from save.json
@@ -650,10 +664,11 @@ ioHook.on('keyup', event => {
       log.info(textBufferContent)
       if (diff < COPY_BUFFER_TIME) {
         saveWindow.hide()
+        Menu.sendActionToFirstResponder('hide:')
         pasteBuffer(number)
       } else {
         saveWindow.hide()
-        // Menu.sendActionToFirstResponder('hide:')
+        Menu.sendActionToFirstResponder('hide:')
         // Menu.sendActionToFirstResponder('hide:')
         saveBuffer(number)
       }

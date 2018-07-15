@@ -1,20 +1,20 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
+    "qui\n",
+    "saveWindow",
+    "clearIntervalCheckers()",
     "clearIntervalCheckers()",
     "pasteMouseCycleAndReset",
     "  saveWindow.show()",
     "  saveWindow.show()",
     "  saveWindow.hide()\n        // Menu.sendActionToFirstResponder('hide:')",
     "  saveWindow.show()",
-    "  saveWindow.show()",
-    "  saveWindow.show()",
-    "    if (!saveWindowHiding) {\n      saveWindow.show()\n      saveWindowHiding = false\n    }",
-    "git reset 'HEAD@{1}'"
+    "  saveWindow.show()"
   ],
   "keyBuffer": {
     "0": "hello",
-    "1": "  saveWindow.show()",
+    "1": "five",
     "2": "is",
     "3": "master",
     "4": "wolfy",
