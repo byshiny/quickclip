@@ -1,10 +1,16 @@
 /Users/byungjooshin/Desktop/wip/quickclip/app
+[ 'One', 'Two', 'Three', 'Four' ]
 undefined -> hello 
 undefined -> it's
 undefined -> me
 undefined -> your
 undefined -> buddy
-{ button: 1, clicks: 1, x: 1095, y: 236, type: 'mousedown' }
+{ keycode: 46,
+  altKey: false,
+  shiftKey: false,
+  ctrlKey: false,
+  metaKey: true }
+{ button: 1, clicks: 1, x: 1076, y: 261, type: 'mousedown' }
 time pass init0
 time pass init0
 time pass init0
@@ -31,7 +37,7 @@ need to clear up1
 need to clear up2
 3mouse downfalse
 need to clear up3
-{ button: 1, clicks: 1, x: 653, y: 63, type: 'mousedown' }
+{ button: 1, clicks: 1, x: 547, y: 69, type: 'mousedown' }
 time pass init0
 time pass init0
 time pass init0
@@ -44,7 +50,644 @@ need to clear up1
 need to clear up2
 3mouse downfalse
 need to clear up3
-{ button: 1, clicks: 1, x: 589, y: 69, type: 'mousedown' }
+{ button: 1, clicks: 1, x: 624, y: 148, type: 'mousedown' }
+time pass init0
+time pass init0
+time pass init0
+time pass init0
+0mouse downtrue
+0
+time pas200
+1mouse downtrue
+1
+time pas250
+2mouse downtrue
+2
+time pas300
+3mouse downfalse
+need to clear up3
+0mouse downfalse
+need to clear up0
+1mouse downfalse
+need to clear up1
+2mouse downfalse
+need to clear up2
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+dtected!
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+dtected!
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+dtected!
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+dtected!
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+dtected!
+time diff
+Sun Jul 15 2018 00:53:23 GMT-0400 (EDT)
+Sun Jul 15 2018 00:53:24 GMT-0400 (EDT)
+778
+buff num:1 currentText:Development issues:
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+herro
+Development issues:
+{ button: 1, clicks: 1, x: 537, y: 158, type: 'mousedown' }
+time pass init0
+time pass init0
+time pass init0
+time pass init0
+0mouse downfalse
+need to clear up0
+1mouse downfalse
+need to clear up1
+2mouse downfalse
+need to clear up2
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+3mouse downfalse
+need to clear up3
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+dtected!
+time diff
+Sun Jul 15 2018 00:53:26 GMT-0400 (EDT)
+Sun Jul 15 2018 00:53:26 GMT-0400 (EDT)
+87
+is this a reference to a pointer?Development issues:
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+currenttext:Development issues:
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+{ button: 1, clicks: 1, x: 843, y: 198, type: 'mousedown' }
+time pass init0
+time pass init0
+time pass init0
+time pass init0
+0mouse downtrue
+0
+time pas200
+1mouse downtrue
+1
+time pas250
+2mouse downtrue
+2
+time pas300
+3mouse downtrue
+3
+time pas350
+0mouse downtrue
+0
+time pas400
+1mouse downtrue
+1
+time pas500
+2mouse downtrue
+2
+time pas600
+0mouse downtrue
+0
+time pas600
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+3mouse downfalse
+need to clear up3
+1mouse downfalse
+need to clear up1
+0mouse downfalse
+need to clear up0
+2mouse downfalse
+need to clear up2
+{ button: 1, clicks: 1, x: 627, y: 198, type: 'mousedown' }
 time pass init0
 time pass init0
 time pass init0
@@ -57,7 +700,227 @@ need to clear up1
 need to clear up2
 3mouse downfalse
 need to clear up3
-{ button: 1, clicks: 1, x: 571, y: 442, type: 'mousedown' }
+{ button: 1, clicks: 1, x: 803, y: 198, type: 'mousedown' }
+time pass init0
+time pass init0
+time pass init0
+time pass init0
+0mouse downtrue
+0
+time pas200
+1mouse downtrue
+1
+time pas250
+2mouse downtrue
+2
+time pas300
+3mouse downtrue
+3
+time pas350
+0mouse downtrue
+0
+time pas400
+1mouse downtrue
+1
+time pas500
+2mouse downtrue
+2
+time pas600
+0mouse downtrue
+0
+time pas600
+3mouse downtrue
+3
+time pas700
+1mouse downtrue
+1
+time pas750
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+0mouse downfalse
+need to clear up0
+2mouse downfalse
+need to clear up2
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+dtected!
+1mouse downfalse
+need to clear up1
+3mouse downfalse
+need to clear up3
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+dtected!
+time diff
+Sun Jul 15 2018 00:53:32 GMT-0400 (EDT)
+Sun Jul 15 2018 00:53:32 GMT-0400 (EDT)
+523
+buff num:2 currentText:Development issues:
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+herro
+1. Timing ISSUEs with library api calls - some take too long
+{ button: 1, clicks: 1, x: 557, y: 190, type: 'mousedown' }
 time pass init0
 time pass init0
 time pass init0
@@ -70,387 +933,371 @@ need to clear up1
 need to clear up2
 3mouse downfalse
 need to clear up3
-{ button: 1, clicks: 1, x: 550, y: 433, type: 'mousedown' }
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+dtected!
+time diff
+Sun Jul 15 2018 00:53:33 GMT-0400 (EDT)
+Sun Jul 15 2018 00:53:33 GMT-0400 (EDT)
+128
+is this a reference to a pointer?1. Timing ISSUEs with library api calls - some take too long
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+currenttext:1. Timing ISSUEs with library api calls - some take too long
+{ button: 1, clicks: 1, x: 596, y: 169, type: 'mousedown' }
 time pass init0
 time pass init0
 time pass init0
 time pass init0
-0mouse downtrue
-0
-time pas200
-1mouse downtrue
-1
-time pas250
-2mouse downtrue
-2
-time pas300
-3mouse downtrue
-3
-time pas350
-0mouse downtrue
-0
-time pas400
-1mouse downtrue
-1
-time pas500
-2mouse downtrue
-2
-time pas600
-0mouse downtrue
-0
-time pas600
-3mouse downtrue
-3
-time pas700
-1mouse downtrue
-1
-time pas750
-0mouse downtrue
-0
-time pas800
-2mouse downtrue
-2
-time pas900
-0mouse downtrue
-0
-time pas1000
-1mouse downtrue
-1
-time pas1000
-3mouse downtrue
-3
-time pas1050
-cycle started at item3
-heyyoo
-circ buffer contentsintervalIDArray
-circ buffer contentsOne
-circ buffer contentsTwo
-circ buffer contentsThree
-circ buffer contentsFour
-2mouse downtrue
-2
-time pas1200
-0mouse downtrue
-0
-time pas1200
-1mouse downtrue
-1
-time pas1250
-mousedownyyy
-cycling choo choo
-mousedownyyy
-cycling choo choo
-osdarwin
-is this a reference to a pointer?Two
-currenttext:intervalIDArray
-{ button: 1, clicks: 1, x: 550, y: 433, type: 'mousedown' }
-time pass init0
-time pass init0
-time pass init0
-time pass init0
-0mouse downtrue
-0
-time pas200
-1mouse downtrue
-1
-time pas250
-2mouse downtrue
-2
-time pas300
-3mouse downtrue
-3
-time pas350
-0mouse downtrue
-0
-time pas400
-1mouse downtrue
-1
-time pas500
-2mouse downtrue
-2
-time pas600
-0mouse downtrue
-0
-time pas600
-3mouse downtrue
-3
-time pas700
-1mouse downtrue
-1
-time pas750
-0mouse downtrue
-0
-time pas800
-2mouse downtrue
-2
-time pas900
-0mouse downtrue
-0
-time pas1000
-1mouse downtrue
-1
-time pas1000
-3mouse downtrue
-3
-time pas1050
-cycle started at item3
-heyyoo
-circ buffer contentsintervalIDArray
-circ buffer contentsOne
-circ buffer contentsTwo
-circ buffer contentsThree
-circ buffer contentsFour
-2mouse downtrue
-2
-time pas1200
-0mouse downtrue
-0
-time pas1200
-1mouse downtrue
-1
-time pas1250
-mousedownyyy
-cycling choo choo
-mousedownyyy
-cycling choo choo
-osdarwin
-is this a reference to a pointer?Four
-currenttext:intervalIDArray
-{ button: 1, clicks: 1, x: 550, y: 433, type: 'mousedown' }
-time pass init0
-time pass init0
-time pass init0
-time pass init0
-0mouse downtrue
-0
-time pas200
-1mouse downtrue
-1
-time pas250
-2mouse downtrue
-2
-time pas300
-3mouse downtrue
-3
-time pas350
-0mouse downtrue
-0
-time pas400
-1mouse downtrue
-1
-time pas500
-2mouse downtrue
-2
-time pas600
-0mouse downtrue
-0
-time pas600
-3mouse downtrue
-3
-time pas700
-1mouse downtrue
-1
-time pas750
-0mouse downtrue
-0
-time pas800
-2mouse downtrue
-2
-time pas900
-1mouse downtrue
-1
-time pas1000
-0mouse downtrue
-0
-time pas1000
-3mouse downtrue
-3
-time pas1050
-cycle started at item3
-heyyoo
-circ buffer contentsintervalIDArray
-circ buffer contentsOne
-circ buffer contentsTwo
-circ buffer contentsThree
-circ buffer contentsFour
-2mouse downtrue
-2
-time pas1200
-0mouse downtrue
-0
-time pas1200
-1mouse downtrue
-1
-time pas1250
-mousedownyyy
-cycling choo choo
-mousedownyyy
-cycling choo choo
-mousedownyyy
-cycling choo choo
-mousedownyyy
-cycling choo choo
-osdarwin
-is this a reference to a pointer?Three
-currenttext:intervalIDArray
-{ button: 1, clicks: 1, x: 610, y: 429, type: 'mousedown' }
-time pass init0
-time pass init0
-time pass init0
-time pass init0
-0mouse downtrue
-0
-time pas200
-1mouse downtrue
-1
-time pas250
-2mouse downtrue
-2
-time pas300
-3mouse downtrue
-3
-time pas350
-0mouse downtrue
-0
-time pas400
-1mouse downtrue
-1
-time pas500
-2mouse downtrue
-2
-time pas600
-0mouse downtrue
-0
-time pas600
-3mouse downtrue
-3
-time pas700
-1mouse downtrue
-1
-time pas750
-0mouse downtrue
-0
-time pas800
-2mouse downtrue
-2
-time pas900
-0mouse downtrue
-0
-time pas1000
-1mouse downtrue
-1
-time pas1000
-3mouse downtrue
-3
-time pas1050
-cycle started at item3
-heyyoo
-circ buffer contentsintervalIDArray
-circ buffer contentsOne
-circ buffer contentsTwo
-circ buffer contentsThree
-circ buffer contentsFour
-2mouse downtrue
-2
-time pas1200
-0mouse downtrue
-0
-time pas1200
-1mouse downtrue
-1
-time pas1250
-mousedownyyy
-cycling choo choo
-mousedownyyy
-cycling choo choo
-mousedownyyy
-cycling choo choo
-mousedownyyy
-cycling choo choo
-osdarwin
-is this a reference to a pointer?Two
-currenttext:intervalIDArray
-{ button: 1, clicks: 1, x: 643, y: 427, type: 'mousedown' }
-time pass init0
-time pass init0
-time pass init0
-time pass init0
-0mouse downtrue
-0
-time pas200
-1mouse downtrue
-1
-time pas250
-2mouse downtrue
-2
-time pas300
-3mouse downtrue
-3
-time pas350
-0mouse downtrue
-0
-time pas400
-1mouse downtrue
-1
-time pas500
-2mouse downtrue
-2
-time pas600
-0mouse downtrue
-0
-time pas600
-3mouse downtrue
-3
-time pas700
-1mouse downtrue
-1
-time pas750
-0mouse downtrue
-0
-time pas800
-2mouse downtrue
-2
-time pas900
-1mouse downtrue
-1
-time pas1000
-0mouse downtrue
-0
-time pas1000
-3mouse downtrue
-3
-time pas1050
-cycle started at item3
-heyyoo
-circ buffer contentsintervalIDArray
-circ buffer contentsOne
-circ buffer contentsTwo
-circ buffer contentsThree
-circ buffer contentsFour
-2mouse downtrue
-2
-time pas1200
-0mouse downtrue
-0
-time pas1200
-1mouse downtrue
-1
-time pas1250
-mousedownyyy
-cycling choo choo
-mousedownyyy
-cycling choo choo
-mousedownyyy
-cycling choo choo
-osdarwin
-is this a reference to a pointer?intervalIDArray
-currenttext:intervalIDArray
-{ button: 1, clicks: 1, x: 607, y: 642, type: 'mousedown' }
-time pass init0
-time pass init0
-time pass init0
-time pass init0
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+dtected!
 0mouse downfalse
 need to clear up0
 1mouse downfalse
 need to clear up1
+time diff
+Sun Jul 15 2018 00:53:36 GMT-0400 (EDT)
+Sun Jul 15 2018 00:53:36 GMT-0400 (EDT)
+101
+2mouse downfalse
+need to clear up2
+is this a reference to a pointer?Development issues:
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+3mouse downfalse
+need to clear up3
+currenttext:1. Timing ISSUEs with library api calls - some take too long
+{ button: 1, clicks: 1, x: 665, y: 659, type: 'mousedown' }
+time pass init0
+time pass init0
+time pass init0
+time pass init0
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+{ '0': {},
+  '1': {},
+  '2': {},
+  '3': {},
+  '4': {},
+  '5': {},
+  '6': {},
+  '7': {},
+  '8': {},
+  '9': {},
+  pasteBuffer1: 
+   { keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }

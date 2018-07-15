@@ -184,8 +184,6 @@ function pasteFromCircularBuffer (circularBufferIdx) {
 
 function pasteMouseCycleAndReset () {
   copyTimePassed = 0
-  pasteStarted = false
-  mouseDown = false
 
   console.log('os' + OS)
   if (OS == 'darwin') {
@@ -197,6 +195,8 @@ function pasteMouseCycleAndReset () {
     }
   }
   pasteFromCircularBuffer(copyMouseItemIdx)
+  pasteStarted = false
+  mouseDown = true
   bufferCycling = false
 }
 
@@ -208,7 +208,8 @@ function bufferKeyPressedWithModifier (event) {
       return true
     }
     return false
-    */
+    */console.log(shortcutKeys)
+
   for (var sKey in shortcutKeys) {
     var keyConfig = shortcutKeys[sKey]
     if (event.keycode == keyConfig.keycode) {
@@ -471,10 +472,10 @@ app.on('ready', () => {
 
   mainWindow.loadURL(`file://${__dirname}/resources/views/index.html`)
   console.log(__dirname)
-  setGlobalShortcuts()
+
   // load circular buffer from save.json
   var circularBufferFromConfig = stateSaver.readValue('circularBuffer')
-  // console.log(circularBufferFromConfig)
+  console.log(circularBufferFromConfig)
 
   var text = mouseCircularBuffer.deq()
   for (var x = circularBufferFromConfig.length - 1; x >= 0; x--) {
@@ -483,6 +484,7 @@ app.on('ready', () => {
   }
   mouseCircularBuffer.enq(text)
   // load key values from save.json
+
   var keyBufferFromConfig = stateSaver.readValue('keyBuffer')
   for (var key in keyBufferFromConfig) {
     if (keyBufferFromConfig.hasOwnProperty(key)) {
@@ -491,6 +493,7 @@ app.on('ready', () => {
       console.log(bufferNumber + ' -> ' + keyBufferFromConfig[key])
     }
   }
+
   /*
   console.log(mouseCircularBuffer.size())
   for (var x = 0; x < mouseCircularBuffer.size(); x++) {
@@ -501,6 +504,9 @@ app.on('ready', () => {
   // REMOVE THIS LATER: mainWindow.hide()
   // let win = new BrowserWindow({transparent: true, frame: false})
   // win.show()
+
+  // IMPORTANT NOTE: NCONFG IS SAVED
+  setGlobalShortcuts()
   { ioHook.start() }
 })
 
