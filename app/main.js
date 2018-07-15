@@ -48,6 +48,7 @@ const {
 const configuration = require('./configuration')
 const stateSaver = require('./stateSaver')
 const log = require('electron-log')
+// log.transports.console.level = 'warn';
 var robot = require('robotjs')
 const path = require('path')
 
@@ -104,7 +105,7 @@ function setAllTextArraysToDefault () {
     textBufferTimer[i] = new Date()
     textBufferChecker[i] = 0
     textBufferFired[i] = false
-    textBufferContent[i] = ''
+    textBufferContent[i] = 'k'
   }
   var n = SHORTCUT_KEY_LIMIT
   for (i = 0; i < n; ++i) {
@@ -118,6 +119,7 @@ function setAllTextArraysToDefault () {
 var mainWindow = null
 let bufferWindow = null
 let circularBufferWindow = null
+let saveWindow = null
 // Load a remote URL
 
 /* This function shows the current window that is available
@@ -215,9 +217,11 @@ function bufferKeyPressedWithModifier (event) {
     }
     return false
     */log.info(shortcutKeys)
-
+  log.info('Event key code' + event.keycode)
   for (var sKey in shortcutKeys) {
     var keyConfig = shortcutKeys[sKey]
+    log.info('shortcut key code' + keyConfig.keycode)
+    log.info('shortcut key code' + keyConfig)
     if (event.keycode == keyConfig.keycode) {
       var match = ensureModifierKeysMatch(event, keyConfig)
       return match
@@ -227,21 +231,29 @@ function bufferKeyPressedWithModifier (event) {
 }
 
 function ensureModifierKeysMatch (event, keyConfig) {
+  var modifiersToCheck = []
+  log.info(event)
   for (var modifierKey in keyConfig) {
-    var modifiersToCheck = []
+    log.info('modifiers check')
+    log.info(modifierKey)
+
     if (modifierKey != 'rawcode' && modifierKey != 'keycode') {
       if (keyConfig[modifierKey]) {
-        modifiersToCheck.append(modifierKey)
+        modifiersToCheck.push(modifierKey)
       }
     }
-    for (var modifiers in modifiersToCheck) {
-      if (event[modifiers] === false) {
-        return false
-      }
-    }
-    return true
   }
-  return false
+  log.info('modifiers to check' + modifiersToCheck)
+  for (var modIdx in modifiersToCheck) {
+    var modifier = modifiersToCheck[modIdx]
+    if (event[modifier] == false) {
+      return false
+    }
+  }
+  if (modifiersToCheck.length == 0) {
+    return false
+  }
+  return true
 }
 
 /* The condition to hold down are relaxed here so that the user will have to hold
@@ -412,9 +424,10 @@ function pasteBuffer (bufferNum) {
   // this is pretty much a classic swaparoo in CS
   if (textBufferChecker[bufferNum] === 1) {
     // WATCH OUT FOR THIS FUCKING LINE
+    log.info('buffer checker is set')
     var currentText = (' ' + clipboard.readText()).slice(1)
     var textFromBuffer = textBufferContent[bufferNum]
-
+    log.info(textBufferContent)
     clipboard.writeText(textFromBuffer)
     setTimeout(function () {
       pasteCommand(currentText)
@@ -503,7 +516,14 @@ app.on('ready', () => {
 
   mainWindow.loadURL(`file://${__dirname}/resources/views/index.html`)
   log.info(__dirname)
-
+  /*
+  saveWindow = new BrowserWindow({
+    width: 400,
+    height: 300,
+    focusable: false
+  })
+  saveWindow.loadURL(`file://${__dirname}/resources/views/savepop.html`)
+  */
   // load circular buffer from save.json
   var circularBufferFromConfig = stateSaver.readValue('circularBuffer')
   log.info(circularBufferFromConfig)
@@ -521,8 +541,10 @@ app.on('ready', () => {
   for (var key in keyBufferFromConfig) {
     if (keyBufferFromConfig.hasOwnProperty(key)) {
       var bufferNumber = key
-      textBufferContent[bufferNumber] = 'hooligan'
-      log.info(bufferNumber + ' -> ' + textBufferContent[key])
+      textBufferContent[bufferNumber] = keyBufferFromConfig[bufferNumber]
+      textBufferChecker[bufferNumber] = 1
+      textBufferTimer[bufferNumber] = new Date()
+      log.info(bufferNumber + ' -> ' + textBufferContent[bufferNumber])
     }
   }
 
@@ -575,8 +597,9 @@ ioHook.on('keydown', event => {
   var number = keyMapper.getKeyFromCode(event.keycode)
   // keycode 46 is control c
   if (bufferKeyPressedWithModifier(event)) {
-    log.info('dtected!')
+    log.info('detected!')
     if (textBufferFired[number] == false) {
+      log.info('text buffer triggered!')
       triggerBuffer(number)
     }
   }
@@ -593,6 +616,7 @@ ioHook.on('keydown', event => {
 
 ioHook.on('keyup', event => {
   if (bufferKeyReleased(event)) {
+    log.info('buffer key released')
     var number = keyMapper.getKeyFromCode(event.keycode)
     if (textBufferFired[number] === true) {
       var curDate = new Date()
@@ -602,6 +626,7 @@ ioHook.on('keyup', event => {
       log.info(lastKeyDownDate.toString())
       log.info(curDate.toString())
       log.info(diff)
+      log.info(textBufferContent)
       if (diff < COPY_BUFFER_TIME) {
         pasteBuffer(number)
       } else {
@@ -611,7 +636,7 @@ ioHook.on('keyup', event => {
     }
   }
 })
-
+/*
 ioHook.on('mousedown', event => {
   currentEvent = event
   mouseDown = true
@@ -622,3 +647,4 @@ ioHook.on('mousedown', event => {
   }
   // remember to add mainwindow = null later.
 })
+*/

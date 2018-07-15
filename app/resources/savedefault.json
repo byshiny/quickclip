@@ -1,0 +1,17 @@
+{
+  "comment": "I'm trying to keep format consistent, so I'm going to have",
+  "circularBuffer": [
+    "Welcome",
+    "To",
+    "The",
+    "Jungle!"
+  ],
+  "keyBuffer": {
+    "0": "hello",
+    "1":"This",
+    "2":"is",
+    "3":"master",
+    "4":"wolfy",
+    "5":"wolf"
+  }
+}

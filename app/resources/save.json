@@ -1,27 +1,27 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
-    "[08:40:51.510] [info] time pass init0",
-    "clearInterValIDStack",
-    "  for (var y = 0; y < intervalIDArray.length; y++) {\n    if (intervalIDArray[y].length == 0) {\n      isEmpty = isEmpty && true\n    }\n  }",
-    "intervalIDArray",
-    "intervalIDArray",
-    "copyMouseIntervalStack",
-    "setAllTextArraysToDefault()",
-    "setAllTextArraysToDefault()",
-    "setAllTextArraysToDefault()",
-    "  mouseCircularBuffer.enq(text)"
+    "  var modifiersToCheck = []",
+    "  var modifiersToCheck = []",
+    "  var modifiersToCheck = []",
+    "  var modifiersToCheck = []",
+    "  var modifiersToCheck = []",
+    "  var modifiersToCheck = []",
+    "  var modifiersToCheck = []",
+    "    log.info('modifiers to check' + modifiersToCheck)\n    for (var modifiers in modifiersToCheck) {\n      if (event[modifiers] === false) {\n        return false\n      }\n    }\n    if (modifiersToCheck.length == 0) {\n      return false\n    }",
+    "    log.info('modifiers to check' + modifiersToCheck)\n    for (var modifiers in modifiersToCheck) {\n      if (event[modifiers] === false) {\n        return false\n      }\n    }\n    if (modifiersToCheck.length == 0) {\n      return false\n    }",
+    "log.info('shortcut key code' + keyConfig.keycode)\n      log.info('shortcut key code' + keyConfig)"
   ],
   "keyBuffer": {
-    "0": "hooligan",
-    "1": "hooligan",
-    "2": "hooligan",
-    "3": "hooligan",
-    "4": "hooligan",
-    "5": "hooligan",
-    "6": "hooligan",
-    "7": "hooligan",
-    "8": "hooligan",
-    "9": "hooligan"
+    "0": "hello",
+    "1": "  mouseCircularBuffer.enq(text)",
+    "2": "is",
+    "3": "master",
+    "4": "wolfy",
+    "5": "wolf",
+    "6": "k",
+    "7": "k",
+    "8": "k",
+    "9": "k"
   }
 }
