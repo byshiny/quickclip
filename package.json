@@ -16,13 +16,17 @@
     "install": "npm rebuild --runtime=electron --target=2.0.3 --disturl=https://atom.io/download/atom-shell --abi=57"
   },
   "dependencies": {
+    "bootstrap": "^4.1.2",
     "build": "^0.1.4",
     "circular-buffer": "^1.0.2",
     "cmake-js": "^3.7.3",
     "iohook": "0.2.0",
+    "jquery": "^3.3.1",
     "nconf": "^0.10.0",
+    "popper.js": "1.14.3",
     "require-reload": "^0.2.2",
-    "robotjs": "^0.5.1"
+    "robotjs": "^0.5.1",
+    "util": "^0.11.0"
   },
   "iohook": {
     "targets": [

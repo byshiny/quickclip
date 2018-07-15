@@ -12,19 +12,27 @@ STEPS:
  */
 // console.log(process.version)
 // remove hard code
+
 const COPY_BUFFER_COUNT = 10
 const COPY_BUFFER_TIME = 500 // this is in milliseconds
 const COPY_MOUSE_BUFFER_SIZE = 10
-const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 2000
+const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 1000
 const COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL = 200
-const COPY_MOUSE_CYCLE_INTERVAL = 1500
+// ok technically this needs a mutex - that check...
+const COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF = 50
+const COPY_MOUSE_CYCLE_INTERVAL = 1100
+const COPY_MOUSE_ACTIVATION_CHECK_COUNT = 4
+const OS = process.platform
 
-const PASTE_DELAY = 100
-var copyMouseStarted = false
+const PASTE_DELAY = 50
+
+// OK, all of this needs to be converted to OO
+var pasteStarted = false
 var copyMouseInterval = null
 var copyMouseItemIdx = 0
 var copyTimePassed = 0
 var currentEvent = null
+var bufferCycling = false
 const SHORTCUT_KEY_LIMIT = 10
 const ioHook = require('iohook')
 const {
@@ -44,15 +52,41 @@ var robot = require('robotjs')
 // for mouse holding
 var CircularBuffer = require('circular-buffer')
 var keyMapper = require('./keyMapper')
-
 // TODO: Need to decide how to refactor this... group into one object???
 var textBufferTimer = new Array(COPY_BUFFER_COUNT)
 var textBufferChecker = new Array(COPY_BUFFER_COUNT)
 var textBufferFired = new Array(COPY_BUFFER_COUNT)
 var textBufferContent = new Array(COPY_BUFFER_COUNT)
 
+// this is to thread multiple interval checkers in case of bouncy touchpads
+// again, global variable path is a terrible idea. I'm never doin this shit again.
+// I thought there would be no more than 5.
+var intervalIDArray = new Array(COPY_MOUSE_ACTIVATION_CHECK_COUNT)
+var timePassedArray = new Array(COPY_MOUSE_ACTIVATION_CHECK_COUNT)
+var mouseDownBooleanArray = new Array(COPY_MOUSE_ACTIVATION_CHECK_COUNT)
+for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
+  intervalIDArray[x] = 0
+  timePassedArray[x] = 0
+  mouseDownBooleanArray[x] = false
+}
+
+var fs = require('fs')
+var util = require('util')
+var log_file = fs.createWriteStream('./logs/debug.log', {
+  flags: 'w'
+})
+var log_stdout = process.stdout
+
+console.log = function (d) { //
+  log_file.write(util.format(d) + '\n')
+  log_stdout.write(util.format(d) + '\n')
+}
+// redirect stdout / stderr
+// constructor for mouse circular buffer
+
 // MOUSE BUFFER GLOBAL VARIABLES
 var mouseCircularBuffer = new CircularBuffer(COPY_BUFFER_COUNT)
+mouseCircularBuffer.enq(clipboard.readText())
 var mouseDown = false
 
 var shortcutKeys = {}
@@ -92,29 +126,37 @@ function showBuffer () {
     height: 200,
     transparent: false
   })
-  bufferWindow.loadURL(`file://./resources/app/index.html`)
+  bufferWindow.loadURL(`file://${__dirname}/resources/views/index.html`)
   bufferWindow.webContents.on('did-finish-load', function () {
     bufferWindow.webContents.send('load-buffer', readString)
   })
 }
 
 function startCircularBufferWindow () {
-  circularBufferWindow = new BrowserWindow({
-    width: 400,
-    height: 200,
-    transparent: false
-  })
-  circularBufferWindow.loadURL(`file://./resources/app/mousebuffer.html`)
-  circularBufferWindow.showInactive()
-  copyTimePassed = 0
-  copyMouseItemIdx = -1
-  circularBufferWindow.webContents.on('did-finish-load', function () {
-    copyMouseStarted = true
-    cycleBufferWindow()
-    copyMouseInterval = setInterval(function () {
+  if (circularBufferWindow == null) {
+    circularBufferWindow = new BrowserWindow({
+      width: 400,
+      height: 200,
+      transparent: false
+    })
+    circularBufferWindow.loadURL(`file://${__dirname}/resources/views/mousebuffer.html`)
+    circularBufferWindow.show()
+    copyTimePassed = 0
+    circularBufferWindow.webContents.on('did-finish-load', function () {
+      pasteStarted = true
+      // this is to get that first buffer immediately
       cycleBufferWindow()
-    }, COPY_MOUSE_CYCLE_INTERVAL)
-    // need to implement cycling logic there
+      copyMouseInterval = setInterval(function () {
+        cycleBufferWindow()
+      }, COPY_MOUSE_CYCLE_INTERVAL)
+      // need to implement cycling logic there
+    })
+  } else {
+    circularBufferWindow.show()
+  }
+  circularBufferWindow.on('minimize', function (event) {
+    event.preventDefault()
+    circularBufferWindow.hide()
   })
 }
 
@@ -132,13 +174,14 @@ function cycleBufferWindow () {
     then the code below will execute and cause massive confusion because there's a disrepency with the view */
   } else {
     setTimeout(function () {
+      console.log('pasting')
       pasteMouseCycleAndReset()
     }, PASTE_DELAY)
   }
 }
 
 function pasteFromCircularBuffer (circularBufferIdx) {
-// this is pretty much a classic swaparoo in CS
+  // this is pretty much a classic swaparoo in CS
   var currentText = (' ' + clipboard.readText()).slice(1)
   var textFromBuffer = mouseCircularBuffer.get(circularBufferIdx)
   // need to add zero error handling - nothing inside
@@ -150,12 +193,20 @@ function pasteFromCircularBuffer (circularBufferIdx) {
 
 function pasteMouseCycleAndReset () {
   copyTimePassed = 0
-  clearInterval(copyMouseInterval)
-  copyMouseStarted = false
+  pasteStarted = false
   mouseDown = false
-  circularBufferWindow.close()
-  Menu.sendActionToFirstResponder('hide:')
+
+  console.log('os' + OS)
+  if (OS == 'darwin') {
+    // mainWindow.minimize()
+    Menu.sendActionToFirstResponder('hide:')
+    // circularBufferWindow.hide()
+  }
+  if (OS == 'win32') {
+    circularBufferWindow.hide()
+  }
   pasteFromCircularBuffer(copyMouseItemIdx)
+  bufferCycling = false
 }
 
 function bufferKeyPressedWithModifier (event) {
@@ -169,35 +220,32 @@ function bufferKeyPressedWithModifier (event) {
     */
   for (var sKey in shortcutKeys) {
     var keyConfig = shortcutKeys[sKey]
-    console.log(keyConfig)
     if (event.keycode == keyConfig.keycode) {
       var match = ensureModifierKeysMatch(event, keyConfig)
-      console.log('matchy!!!' + match)
       return match
     }
   }
   return false
 }
 
-// NOTE: 7/14/18 - Using non-permissive version  - must press all specified modifiers
 function ensureModifierKeysMatch (event, keyConfig) {
-  var allMatch = true
-  var modifiersToCheck = []
   for (var modifierKey in keyConfig) {
+    var modifiersToCheck = []
     if (modifierKey != 'rawcode' && modifierKey != 'keycode') {
       if (keyConfig[modifierKey]) {
-        modifiersToCheck.push(modifierKey)
+        modifiersToCheck.append(modifierKey)
       }
     }
+    for (var modifiers in modifiersToCheck) {
+      if (event[modifiers] === false) {
+        return false
+      }
+    }
+    return true
   }
-  console.log('holy' + modifiersToCheck)
-  for (var modifiers in modifiersToCheck) {
-    var valIdx = modifiersToCheck[modifiers]
-    allMatch = allMatch & event[valIdx]
-  }
-  console.log('holy' + allMatch)
-  return allMatch
+  return false
 }
+
 /* The condition to hold down are relaxed here so that the user will have to hold
   onto one button */
 function bufferKeyReleased (event) {
@@ -225,28 +273,81 @@ function copyKeyTriggered (event) {
 
 function waitBeforeCyclingBuffer () {
   // this can cause a bug, may have to contniously monitor to see that mouse has been held. Single check may screw up.
+
+  for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
+    timePassedArray[x] = 0
+    console.log('time pass init' + timePassedArray[x])
+  }
+  // since mouse clicks go up and down, the wait period might miss a few increments
+  // solution: create four interval ids. If one of them is true(set it in a ored variable), then it's triggered.
+  for (var y = 0; y < COPY_MOUSE_ACTIVATION_CHECK_COUNT; y++) {
+    intervalIDArray[y] = setInterval(createMouseDownChecker(y), COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * y)
+  }
+}
+
+function createMouseDownChecker (val) {
+  return function () {
+    mouseDownChecker(val)
+  }
+}
+
+function mouseDownChecker (chkrIdx) {
   var activationTimeLimit = COPY_MOUSE_BUTTON_ACTIVATION_TIME
-  var timePassed = 0
-  var intervalID = setInterval(function () {
-    if (mouseDown) {
-      timePassed += COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL
-      console.log(timePassed)
-      if (timePassed > activationTimeLimit) {
-        clearInterval(intervalID)
+  mouseDownBooleanArray[chkrIdx] = mouseDown
+  console.log(chkrIdx + 'mouse down' + mouseDownBooleanArray[chkrIdx])
+  // if one of the instances have been pressed, then check for the time
+  if (checkIfMouseStillPressed(mouseDownBooleanArray)) {
+    console.log(chkrIdx)
+    timePassedArray[chkrIdx] += COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * chkrIdx
+    // console.log(chkrIdx)
+    console.log('time pas' + timePassedArray[chkrIdx])
+    // start the copy mouse
+
+    if (timePassedArray[chkrIdx] > activationTimeLimit) {
+      // this needs a mutex
+
+      if (!bufferCycling) {
+        bufferCycling = true
+        console.log('cycle started at item' + chkrIdx)
         cycleThroughBuffer()
+        clearInterval(intervalIDArray[chkrIdx])
+      } else {
+        clearInterval(intervalIDArray[chkrIdx])
       }
-    } else {
-      timePassed = 0
-      clearInterval(intervalID)
-      copyMouseStarted = false
+      clearInterval(intervalIDArray[chkrIdx])
+      for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
+        mouseDownBooleanArray[x] = false
+      }
     }
-  }, COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL)
+    // if
+    else {
+      //  clearInterval(intervalIDArray[chkrIdx])
+      // don't do anything, keep waiting...
+    }
+  } else {
+    for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
+      mouseDownBooleanArray[x] = false
+    }
+    clearInterval(intervalIDArray[chkrIdx])
+  }
+}
+// effectively a delta to ensure that there isn't a single mousedown checkpoint of failure
+
+function checkIfMouseStillPressed (mouseDownBooleanArray) {
+  var mouseHeld = false
+  for (var i = 0; i < mouseDownBooleanArray.length; i++) {
+    mouseHeld = mouseHeld || mouseDownBooleanArray[i]
+  }
+  for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
+    mouseDownBooleanArray[x] = false
+  }
+  return mouseHeld
 }
 
 function cycleThroughBuffer () {
   console.log('heyyoo')
   for (var x = 0; x < mouseCircularBuffer.size(); x++) {
-    console.log(mouseCircularBuffer.get(x))
+    console.log('circ buffer contents' + mouseCircularBuffer.get(x))
   }
   startCircularBufferWindow()
 }
@@ -296,15 +397,14 @@ function pasteCommand (currentText) {
   setTimeout(function () {
     console.log('currenttext:' + currentText)
     clipboard.writeText(currentText)
+    circularBufferWindow.hide()
   }, PASTE_DELAY)
 }
 
 function setGlobalShortcuts () {
   globalShortcut.unregisterAll()
   const os = process.platform
-  console.log(os)
   var shortcutConfig = configuration.readSettings(os)
-
   var i = 0
   for (var key in shortcutConfig) {
     if (key == 'copyKey') {
@@ -316,23 +416,23 @@ function setGlobalShortcuts () {
   }
   // you need to loop afterwards
   /*
-    globalShortcut.register(shortcutKeySetting1, function () {
-      mainWindow.webContents.send('global-shortcut', 0)
-    })
-    */
+      globalShortcut.register(shortcutKeySetting1, function () {
+        mainWindow.webContents.send('global-shortcut', 0)
+      })
+      */
   // pop up paste buffer
   var nRegistered = globalShortcut.isRegistered('n')
 
   /*
-    globalShortcut.register('n', function () {
-      // showBuffer()
-      for (var item in mouseCircularBuffer) {
-        console.log(item)
-      }
-    })
-    globalShortcut.register('m', function () {
-      bufferWindow.webContents.send('inc-opq', readString)
-    }) */
+      globalShortcut.register('n', function () {
+        // showBuffer()
+        for (var item in mouseCircularBuffer) {
+          console.log(item)
+        }
+      })
+      globalShortcut.register('m', function () {
+        bufferWindow.webContents.send('inc-opq', readString)
+      }) */
 }
 
 // iohook setup
@@ -341,15 +441,20 @@ app.on('ready', () => {
   // need to externalize window size
   mainWindow = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 600,
+    focusable: false
   })
   mainWindow.on('closed', () => {
     mainWindow = null
     bufferWindow = null
     globalShortcut.unregisterAll()
   })
-  mainWindow.loadURL('file://' + __dirname + '/app/index.html')
-  mainWindow.hide()
+  mainWindow.on('minimize', function (event) {
+    event.preventDefault()
+    mainWindow.hide()
+  })
+  mainWindow.loadURL(`file://${__dirname}/resources/views/index.html`)
+  console.log(__dirname)
   setGlobalShortcuts()
   // REMOVE THIS LATER: mainWindow.hide()
   // let win = new BrowserWindow({transparent: true, frame: false})
@@ -367,17 +472,19 @@ ipcMain.on('close-main-window', function () {
 })
 
 ioHook.on('mouseup', event => {
-  if (copyMouseStarted) {
+  if (pasteStarted) {
     // DO NOT REMOVE THIS LINE! IF YOU DO, YOU'LL HAVE CONCURRENCY ISSUES
     clearInterval(copyMouseInterval)
+    pasteStarted = false
     pasteMouseCycleAndReset()
   }
   mouseDown = false
 })
 ioHook.on('keydown', event => {
   var number = keyMapper.getKeyFromCode(event.keycode)
-  // keycode 46 is control
+  // keycode 46 is control c
   if (bufferKeyPressedWithModifier(event)) {
+    console.log('dtected!')
     if (textBufferFired[number] == false) {
       triggerBuffer(number)
     }
@@ -419,7 +526,7 @@ ioHook.on('mousedown', event => {
   mouseDown = true
   console.log(event)
   // this is prety much a mutex
-  if (!copyMouseStarted) {
+  if (!pasteStarted) {
     waitBeforeCyclingBuffer()
   }
   // remember to add mainwindow = null later.

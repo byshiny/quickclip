@@ -6,6 +6,7 @@ Minimum requirements:
 5. Put exact dependencies to avoid breakage in package.json
 //need to add zero error handling - nothing inside
 6. Investigate how to enable logging and debug mode
+7. Apply cut functionality
 Warning about keyboard shortcuts
 3. Packaging
 4. OS Detection
@@ -35,3 +36,19 @@ Development issues:
 
 1. Timing ISSUEs with library api calls - some take too long
 2. Some electron features are not supported  - i.e. out of focus, keycodes, etc
+
+
+Test before deployment:
+
+Check if mouse buffer can be launched more than once
+test suite:
+one
+two
+three
+four
+five
+test that all buffers are working correctly
+1 2 3 4 5
+1 5
+2 3 4
+Test cycling 
