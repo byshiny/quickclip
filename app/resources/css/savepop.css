@@ -1,0 +1,13 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+      transform: translate(12.5%, 25%);
+}
+.nowrap {
+    clear: both;
+    display: inline-block;a
+    overflow: hidden;
+    white-space: nowrap;
+      text-align: center;
+}

@@ -516,14 +516,14 @@ app.on('ready', () => {
 
   mainWindow.loadURL(`file://${__dirname}/resources/views/index.html`)
   log.info(__dirname)
-  /*
+
   saveWindow = new BrowserWindow({
-    width: 400,
-    height: 300,
+    width: 250,
+    height: 200,
     focusable: false
   })
   saveWindow.loadURL(`file://${__dirname}/resources/views/savepop.html`)
-  */
+
   // load circular buffer from save.json
   var circularBufferFromConfig = stateSaver.readValue('circularBuffer')
   log.info(circularBufferFromConfig)
