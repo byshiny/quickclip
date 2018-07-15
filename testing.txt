@@ -15,34 +15,28 @@ three two
 
 three
 three two
-three1  mouseCircularBuffer.enq(text)
-  mouseCircularBuffer.enq(text)  mouseCircularBuffer.enq(text)
+three
+
 three three two
 three twothree three two
-  mouseCircularBuffer.enq(text)  mouseCircularBuffer.enq(text)  mouseCircularBuffer.enq(text)
-    mouseCircularBuffer.enq(text)  mouseCircularBuffer.enq(text)  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)
+
 five
 two
 bufferDiv.innerHTML = 'JavaScript was here'
-'/resources/sav1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)e.json'}
-  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)
-onetime
-  mouseCircularBuffer.enq(text)
-quic111111111111111  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)
-onetime
-five
-This
-is
-1  mouseCircularBuffer.enq(text)
+'/resources/save.json'}
 
-11  mouseCircularBuffer.enq(text)1  mouseCircularBuffer.enq(text)
-master
-wolfyonetime
-This¡
+onetime
+
+quic
+onetime
+
+onetime
+¡¡¡¡¡¡¡
+¡
 onetime
 ¡¡¡¡¡¡¡
 four
-  mouseCircularBuffer.enq(text)
+
 five four five
 
 const path = require('path')

@@ -14,9 +14,9 @@ STEPS:
 // remove hard code
 
 const COPY_BUFFER_COUNT = 10
-const COPY_BUFFER_TIME = 2000 // this is in milliseconds
+const COPY_BUFFER_TIME = 500 // this is in milliseconds
 const COPY_MOUSE_BUFFER_SIZE = 10
-const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 2000
+const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 1000
 const COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL = 200
 // ok technically this needs a mutex - that check...
 const COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF = 50
@@ -25,7 +25,6 @@ const COPY_MOUSE_ACTIVATION_CHECK_COUNT = 4
 const OS = process.platform
 
 const PASTE_DELAY = 50
-const SAVE_WINDOW_AWAY_DELAY = 2000
 
 // OK, all of this needs to be converted to OO
 var pasteStarted = false
@@ -348,8 +347,8 @@ function mouseDownChecker (chkrIdx) {
       if (!bufferCycling) {
         bufferCycling = true
         log.info('cycle started at item' + chkrIdx)
+        clearIntervalCheckers()
         cycleThroughBuffer()
-        clearInterValIDStack(intervalIDArray[chkrIdx])
       } else {
         clearInterValIDStack(intervalIDArray[chkrIdx])
       }
@@ -522,7 +521,7 @@ app.on('ready', () => {
   saveWindow = new BrowserWindow({
     width: 250,
     height: 200,
-    focusable: true
+    focusable: false
   })
   saveWindow.loadURL(`file://${__dirname}/resources/views/savepop.html`)
   saveWindow.hide()
@@ -603,25 +602,26 @@ ioHook.on('keydown', event => {
     if (textBufferFired[number] == false) {
       log.info('text buffer triggered!')
       triggerBuffer(number)
+    }
+    var lastKeyDownDate = textBufferTimer[number]
+    log.info('goot time to save')
+    var diff = Math.abs(new Date() - lastKeyDownDate)
+    var saveTimeObj = {}
+    if (!saveWindowHiding) {
+      saveWindow.show()
+      saveWindowHiding = false
+    }
+    if (diff > COPY_BUFFER_TIME) {
+      saveTimeObj.save = 'Savable'
+      saveTimeObj.time = String((diff / 1000).toPrecision(3)) + 'seconds'
+      saveWindow.webContents.send('load-state-time', saveTimeObj)
+      saveWindow.show()
     } else {
-      var lastKeyDownDate = textBufferTimer[number]
-      log.info('goot time to save')
-      var diff = Math.abs(new Date() - lastKeyDownDate)
-      if (diff > COPY_BUFFER_TIME) {
-        if (!saveWindowHiding) {
-          var saveTimeObj = {}
-          saveTimeObj.save = 'Savable'
-          saveTimeObj.time = String((diff / 1000).toPrecision(3)) + 'seconds'
-          saveWindow.webContents.send('load-state-time', saveTimeObj)
-          saveWindow.show()
-        }
-      } else {
-        var saveTimeObj = {}
-        saveTimeObj.save = 'Unsavable'
-        saveTimeObj.time = String((diff / 1000).toPrecision(3)) + 'seconds'
-        saveWindow.webContents.send('load-state-time', saveTimeObj)
-        saveWindow.show()
-      }
+      saveTimeObj = {}
+      saveTimeObj.save = 'Unsavable'
+      saveTimeObj.time = String((diff / 1000).toPrecision(3)) + 'seconds'
+      saveWindow.webContents.send('load-state-time', saveTimeObj)
+      saveWindow.show()
     }
   }
   if (copyKeyTriggered(event)) {
@@ -649,28 +649,27 @@ ioHook.on('keyup', event => {
       log.info(diff)
       log.info(textBufferContent)
       if (diff < COPY_BUFFER_TIME) {
+        saveWindow.hide()
         pasteBuffer(number)
       } else {
+        saveWindow.hide()
+        // Menu.sendActionToFirstResponder('hide:')
+        // Menu.sendActionToFirstResponder('hide:')
         saveBuffer(number)
-        setTimeout(function () {
-          var saveTimeObj = {}
-          log.info('hiding window')
-          saveWindow.hide()
-        }, SAVE_WINDOW_AWAY_DELAY)
       }
       textBufferFired[number] = false
     }
   }
 })
-/*
+
 ioHook.on('mousedown', event => {
   currentEvent = event
   mouseDown = true
   log.info(event)
   // this is prety much a mutex
   if (!pasteStarted) {
+    clearIntervalCheckers()
     waitBeforeCyclingBuffer()
   }
   // remember to add mainwindow = null later.
 })
-*/
