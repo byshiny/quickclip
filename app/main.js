@@ -10,7 +10,7 @@ STEPS:
 */
 /* GLOBAL Parameters
  */
-// console.log(process.version)
+// log.info(process.version)
 // remove hard code
 
 const COPY_BUFFER_COUNT = 10
@@ -47,7 +47,9 @@ const {
 
 const configuration = require('./configuration')
 const stateSaver = require('./stateSaver')
+const log = require('electron-log')
 var robot = require('robotjs')
+const path = require('path')
 
 // for mouse holding
 var CircularBuffer = require('circular-buffer')
@@ -70,16 +72,20 @@ for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
 }
 
 var fs = require('fs')
+// replace with logging library
+/*
 var util = require('util')
 var log_file = fs.createWriteStream('./logs/debug.log', {
   flags: 'w'
 })
+
 var log_stdout = process.stdout
 
-console.log = function (d) { //
+log.info = function (d) { //
   log_file.write(util.format(d) + '\n')
   log_stdout.write(util.format(d) + '\n')
 }
+*/
 // redirect stdout / stderr
 // constructor for mouse circular buffer
 
@@ -152,10 +158,10 @@ function startCircularBufferWindow () {
 }
 
 function cycleBufferWindow () {
-  console.log('mousedownyyy')
+  log.info('mousedownyyy')
   if (mouseDown) {
     copyTimePassed += COPY_MOUSE_CYCLE_INTERVAL
-    console.log('cycling choo choo')
+    log.info('cycling choo choo')
     copyMouseItemIdx++
     if (copyMouseItemIdx >= mouseCircularBuffer.size() || copyMouseItemIdx == -1) {
       copyMouseItemIdx = 0
@@ -165,7 +171,7 @@ function cycleBufferWindow () {
     then the code below will execute and cause massive confusion because there's a disrepency with the view */
   } else {
     setTimeout(function () {
-      console.log('pasting')
+      log.info('pasting')
       pasteMouseCycleAndReset()
     }, PASTE_DELAY)
   }
@@ -185,7 +191,7 @@ function pasteFromCircularBuffer (circularBufferIdx) {
 function pasteMouseCycleAndReset () {
   copyTimePassed = 0
 
-  console.log('os' + OS)
+  log.info('os' + OS)
   if (OS == 'darwin') {
     Menu.sendActionToFirstResponder('hide:')
   }
@@ -208,7 +214,7 @@ function bufferKeyPressedWithModifier (event) {
       return true
     }
     return false
-    */console.log(shortcutKeys)
+    */log.info(shortcutKeys)
 
   for (var sKey in shortcutKeys) {
     var keyConfig = shortcutKeys[sKey]
@@ -268,7 +274,7 @@ function waitBeforeCyclingBuffer () {
 
   for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
     timePassedArray[x] = 0
-    console.log('time pass init' + timePassedArray[x])
+    log.info('time pass init' + timePassedArray[x])
   }
   // since mouse clicks go up and down, the wait period might miss a few increments
   // solution: create four interval ids. If one of them is true(set it in a ored variable), then it's triggered.
@@ -296,13 +302,14 @@ function intervalIDArrayIsNull () {
 function mouseDownChecker (chkrIdx) {
   var activationTimeLimit = COPY_MOUSE_BUTTON_ACTIVATION_TIME
   mouseDownBooleanArray[chkrIdx] = mouseDown
-  console.log(chkrIdx + 'mouse down' + mouseDownBooleanArray[chkrIdx])
+  log.info(chkrIdx + 'mouse down' + mouseDownBooleanArray[chkrIdx])
   // if one of the instances have been pressed, then check for the time
+  timePassedArray[chkrIdx] += COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * chkrIdx
   if (checkIfMouseStillPressed(mouseDownBooleanArray)) {
-    console.log(chkrIdx)
-    timePassedArray[chkrIdx] += COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * chkrIdx
-    // console.log(chkrIdx)
-    console.log('time pas' + timePassedArray[chkrIdx])
+    log.info(chkrIdx)
+
+    // log.info(chkrIdx)
+    log.info('time pas' + timePassedArray[chkrIdx])
     // start the copy mouse
 
     if (timePassedArray[chkrIdx] > activationTimeLimit) {
@@ -310,7 +317,7 @@ function mouseDownChecker (chkrIdx) {
 
       if (!bufferCycling) {
         bufferCycling = true
-        console.log('cycle started at item' + chkrIdx)
+        log.info('cycle started at item' + chkrIdx)
         cycleThroughBuffer()
         clearInterval(intervalIDArray[chkrIdx])
       } else {
@@ -327,11 +334,17 @@ function mouseDownChecker (chkrIdx) {
       // don't do anything, keep waiting...
     }
   } else {
-    console.log('need to clear up' + chkrIdx)
+    log.info('need to clear up' + chkrIdx)
     for (var y = 0; y < COPY_MOUSE_ACTIVATION_CHECK_COUNT; y++) {
       mouseDownBooleanArray[x] = false
     }
-    clearInterval(intervalIDArray[chkrIdx])
+    clearIntervalCheckers()
+  }
+}
+
+function clearIntervalCheckers () {
+  for (var z = 0; z < COPY_MOUSE_ACTIVATION_CHECK_COUNT; z++) {
+    clearInterval(intervalIDArray[z])
   }
 }
 // effectively a delta to ensure that there isn't a single mousedown checkpoint of failure
@@ -348,16 +361,16 @@ function checkIfMouseStillPressed (mouseDownBooleanArray) {
 }
 
 function cycleThroughBuffer () {
-  console.log('heyyoo')
+  log.info('heyyoo')
   for (var x = 0; x < mouseCircularBuffer.size(); x++) {
-    console.log('circ buffer contents' + mouseCircularBuffer.get(x))
+    log.info('circ buffer contents' + mouseCircularBuffer.get(x))
   }
   startCircularBufferWindow()
 }
 
 function saveBuffer (bufferNum) {
   var currentText = (' ' + clipboard.readText()).slice(1)
-  console.log('buff num:' + bufferNum + ' currentText:' + currentText)
+  log.info('buff num:' + bufferNum + ' currentText:' + currentText)
   textBufferChecker[bufferNum] = 1
   textBufferTimer[bufferNum] = new Date()
   // this also needs to be externalized
@@ -396,9 +409,9 @@ function pasteBuffer (bufferNum) {
 function pasteCommand (currentText) {
   // all the stuff you want to happen after that pause
   robot.keyTap('v', ['command'])
-  console.log('is this a reference to a pointer?' + clipboard.readText())
+  log.info('is this a reference to a pointer?' + clipboard.readText())
   setTimeout(function () {
-    console.log('currenttext:' + currentText)
+    log.info('currenttext:' + currentText)
     clipboard.writeText(currentText)
   }, PASTE_DELAY)
 }
@@ -411,7 +424,7 @@ function setGlobalShortcuts () {
   for (var key in shortcutConfig) {
     if (key == 'copyKey') {
       copyKeyConfig = shortcutConfig[key]
-      console.log(copyKeyConfig)
+      log.info(copyKeyConfig)
     } else {
       shortcutKeys[key] = shortcutConfig[key]
     }
@@ -429,7 +442,7 @@ function setGlobalShortcuts () {
       globalShortcut.register('n', function () {
         // showBuffer()
         for (var item in mouseCircularBuffer) {
-          console.log(item)
+          log.info(item)
         }
       })
       globalShortcut.register('m', function () {
@@ -445,10 +458,12 @@ function restoreSaveState () {
 
 app.on('ready', () => {
   // need to externalize window size
+  log.info(__dirname)
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    focusable: false
+    focusable: false,
+    icon: path.join(__dirname, 'assets/quickclip.png')
   })
   mainWindow.on('closed', () => {
     mainWindow = null
@@ -461,21 +476,21 @@ app.on('ready', () => {
     mainWindow.hide()
   })
   mainWindow.on('defocus', function (event) {
-    console.log('da focused')
+    log.info('da focused')
     mainWindow.hide()
   })
   // I'm scared this will cause an infinite loop with above
   mainWindow.on('hide', function (event) {
-    console.log('hidden')
+    log.info('hidden')
     mainWindow.minimize()
   })
 
   mainWindow.loadURL(`file://${__dirname}/resources/views/index.html`)
-  console.log(__dirname)
+  log.info(__dirname)
 
   // load circular buffer from save.json
   var circularBufferFromConfig = stateSaver.readValue('circularBuffer')
-  console.log(circularBufferFromConfig)
+  log.info(circularBufferFromConfig)
 
   var text = mouseCircularBuffer.deq()
   for (var x = circularBufferFromConfig.length - 1; x >= 0; x--) {
@@ -488,17 +503,17 @@ app.on('ready', () => {
   var keyBufferFromConfig = stateSaver.readValue('keyBuffer')
   for (var key in keyBufferFromConfig) {
     if (keyBufferFromConfig.hasOwnProperty(key)) {
-      var bufferNumber = key.split(':')[1]
+      var bufferNumber = key
       textBufferContent[bufferNumber] = keyBufferFromConfig[key]
-      console.log(bufferNumber + ' -> ' + keyBufferFromConfig[key])
+      log.info(bufferNumber + ' -> ' + keyBufferFromConfig[key])
     }
   }
 
   /*
-  console.log(mouseCircularBuffer.size())
+  log.info(mouseCircularBuffer.size())
   for (var x = 0; x < mouseCircularBuffer.size(); x++) {
     // if you save 1 2 3 , you need to load 3 2 1
-    console.log(mouseCircularBuffer.get(x))
+    log.info(mouseCircularBuffer.get(x))
   } */
 
   // REMOVE THIS LATER: mainWindow.hide()
@@ -511,6 +526,12 @@ app.on('ready', () => {
 })
 
 app.on('before-quit', () => {
+  stateSaver.saveValue('circularBuffer', mouseCircularBuffer.toarray())
+  var saveObj = {}
+  for (var x = 0; x < textBufferContent.length; x++) {
+    saveObj[x] = textBufferContent[x]
+  }
+  stateSaver.saveValue('keyBuffer', saveObj)
   ioHook.unload()
   ioHook.stop()
 })
@@ -534,7 +555,7 @@ ioHook.on('keydown', event => {
   var number = keyMapper.getKeyFromCode(event.keycode)
   // keycode 46 is control c
   if (bufferKeyPressedWithModifier(event)) {
-    console.log('dtected!')
+    log.info('dtected!')
     if (textBufferFired[number] == false) {
       triggerBuffer(number)
     }
@@ -543,8 +564,8 @@ ioHook.on('keydown', event => {
     // this is an arificial delay for robotjs and os to register cmd + x
     setTimeout(function () {
       var text = clipboard.readText()
-      console.log('herro')
-      console.log(text)
+      log.info('herro')
+      log.info(text)
       mouseCircularBuffer.enq(text)
     }, 100)
   }
@@ -556,11 +577,11 @@ ioHook.on('keyup', event => {
     if (textBufferFired[number] === true) {
       var curDate = new Date()
       var lastKeyDownDate = textBufferTimer[number]
-      console.log('time diff')
+      log.info('time diff')
       var diff = Math.abs(new Date() - lastKeyDownDate)
-      console.log(lastKeyDownDate.toString())
-      console.log(curDate.toString())
-      console.log(diff)
+      log.info(lastKeyDownDate.toString())
+      log.info(curDate.toString())
+      log.info(diff)
       if (diff < COPY_BUFFER_TIME) {
         pasteBuffer(number)
       } else {
@@ -574,7 +595,7 @@ ioHook.on('keyup', event => {
 ioHook.on('mousedown', event => {
   currentEvent = event
   mouseDown = true
-  console.log(event)
+  log.info(event)
   // this is prety much a mutex
   if (!pasteStarted) {
     waitBeforeCyclingBuffer()

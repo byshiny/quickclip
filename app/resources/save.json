@@ -1,0 +1,27 @@
+{
+  "comment": "I'm trying to keep format consistent, so I'm going to have",
+  "circularBuffer": [
+    "three \n",
+    "three two\n",
+    "  timePassedArray[chkrIdx] += COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * chkrIdx",
+    "  timePassedArray[chkrIdx] += COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * chkrIdx",
+    "  timePassedArray[chkrIdx] += COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * chkrIdx",
+    "var log = require('electron-log');",
+    "var log = require('electron-log');",
+    "bufferDiv.innerHTML = 'JavaScript was here'\n",
+    "intervalIDArray[y]",
+    "const path = require('path')\nvar pathString = path.resolve(__dirname) + '/resources/save.json'"
+  ],
+  "keyBuffer": {
+    "0": "",
+    "1": "three two\n",
+    "2": "three \n",
+    "3": "",
+    "4": "",
+    "5": "",
+    "6": "",
+    "7": "",
+    "8": "",
+    "9": ""
+  }
+}

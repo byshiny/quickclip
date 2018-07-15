@@ -1,6 +1,8 @@
 'use strict'
 const importFresh = require('import-fresh')
-var nconf = importFresh('nconf').file({file: './app/save.json'})
+const path = require('path')
+var pathString = path.resolve(__dirname) + '/resources/save.json'
+var nconf = importFresh('nconf').file({file: pathString})
 
 function saveValue (settingKey, settingValue) {
   nconf.set(settingKey, settingValue)

@@ -13,7 +13,6 @@ const {
 var bufferDiv = document.querySelector('#buffer')
 myConsole.log('checkyy')
 myConsole.log(bufferDiv.innerHTML)
-bufferDiv.innerHTML = 'JavaScript was here'
 var opacity = 1
 ipcRenderer.on('load-buffer', (event, message) => {
   bufferDiv.innerHTML = message

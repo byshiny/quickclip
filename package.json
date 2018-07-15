@@ -1,5 +1,5 @@
 {
-  "name": "quickclip",
+  "name": "QuickClip",
   "version": "0.0.1",
   "license": "Commercial",
   "description": "A quickway to copy and paste",
@@ -20,10 +20,12 @@
     "build": "^0.1.4",
     "circular-buffer": "^1.0.2",
     "cmake-js": "^3.7.3",
+    "electron-log": "^2.2.16",
     "import-fresh": "^2.0.0",
     "iohook": "0.2.0",
     "jquery": "^3.3.1",
     "nconf": "^0.10.0",
+    "path": "^0.12.7",
     "popper.js": "1.14.3",
     "require-reload": "^0.2.2",
     "robotjs": "^0.5.1",
@@ -57,6 +59,9 @@
   },
   "build": {
     "appId": "quickclip",
+    "directories": {
+      "buildResources": "assets/build"
+    },
     "dmg": {
       "contents": [
         {
