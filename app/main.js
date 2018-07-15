@@ -133,30 +133,22 @@ function showBuffer () {
 }
 
 function startCircularBufferWindow () {
-  if (circularBufferWindow == null) {
-    circularBufferWindow = new BrowserWindow({
-      width: 400,
-      height: 200,
-      transparent: false
-    })
-    circularBufferWindow.loadURL(`file://${__dirname}/resources/views/mousebuffer.html`)
-    circularBufferWindow.show()
-    copyTimePassed = 0
-    circularBufferWindow.webContents.on('did-finish-load', function () {
-      pasteStarted = true
-      // this is to get that first buffer immediately
+  circularBufferWindow = new BrowserWindow({
+    width: 400,
+    height: 200,
+    transparent: false
+  })
+  circularBufferWindow.loadURL(`file://${__dirname}/resources/views/mousebuffer.html`)
+  circularBufferWindow.show()
+  copyTimePassed = 0
+  circularBufferWindow.webContents.on('did-finish-load', function () {
+    pasteStarted = true
+    // this is to get that first buffer immediately
+    cycleBufferWindow()
+    copyMouseInterval = setInterval(function () {
       cycleBufferWindow()
-      copyMouseInterval = setInterval(function () {
-        cycleBufferWindow()
-      }, COPY_MOUSE_CYCLE_INTERVAL)
-      // need to implement cycling logic there
-    })
-  } else {
-    circularBufferWindow.show()
-  }
-  circularBufferWindow.on('minimize', function (event) {
-    event.preventDefault()
-    circularBufferWindow.hide()
+    }, COPY_MOUSE_CYCLE_INTERVAL)
+    // need to implement cycling logic there
   })
 }
 
@@ -198,12 +190,12 @@ function pasteMouseCycleAndReset () {
 
   console.log('os' + OS)
   if (OS == 'darwin') {
-    // mainWindow.minimize()
     Menu.sendActionToFirstResponder('hide:')
-    // circularBufferWindow.hide()
   }
   if (OS == 'win32') {
-    circularBufferWindow.hide()
+    if (circularBufferWindow != null) {
+      circularBufferWindow.close()
+    }
   }
   pasteFromCircularBuffer(copyMouseItemIdx)
   bufferCycling = false
@@ -325,7 +317,8 @@ function mouseDownChecker (chkrIdx) {
       // don't do anything, keep waiting...
     }
   } else {
-    for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
+    console.log('need to clear up')
+    for (var y = 0; y < COPY_MOUSE_ACTIVATION_CHECK_COUNT; y++) {
       mouseDownBooleanArray[x] = false
     }
     clearInterval(intervalIDArray[chkrIdx])
@@ -397,7 +390,6 @@ function pasteCommand (currentText) {
   setTimeout(function () {
     console.log('currenttext:' + currentText)
     clipboard.writeText(currentText)
-    circularBufferWindow.hide()
   }, PASTE_DELAY)
 }
 
@@ -449,10 +441,21 @@ app.on('ready', () => {
     bufferWindow = null
     globalShortcut.unregisterAll()
   })
+
   mainWindow.on('minimize', function (event) {
     event.preventDefault()
     mainWindow.hide()
   })
+  mainWindow.on('defocus', function (event) {
+    console.log('da focused')
+    mainWindow.hide()
+  })
+  // I'm scared this will cause an infinite loop with above
+  mainWindow.on('hide', function (event) {
+    console.log('hidden')
+    mainWindow.minimize()
+  })
+
   mainWindow.loadURL(`file://${__dirname}/resources/views/index.html`)
   console.log(__dirname)
   setGlobalShortcuts()
@@ -476,9 +479,11 @@ ioHook.on('mouseup', event => {
     // DO NOT REMOVE THIS LINE! IF YOU DO, YOU'LL HAVE CONCURRENCY ISSUES
     clearInterval(copyMouseInterval)
     pasteStarted = false
+    circularBufferWindow.close()
     pasteMouseCycleAndReset()
   }
   mouseDown = false
+  pasteStarted = false
 })
 ioHook.on('keydown', event => {
   var number = keyMapper.getKeyFromCode(event.keycode)
