@@ -1,0 +1,43 @@
+¡¡¡¡¡¡¡
+two
+three
+four
+five
+
+onetime
+two
+three four
+five
+five
+qui
+on
+three two
+
+three
+three two
+three
+
+three three two
+three twothree three two
+
+five
+two
+bufferDiv.innerHTML = 'JavaScript was here'
+'/resources/save.json'}
+
+onetime
+
+quic
+onetime
+
+onetime
+¡¡¡¡¡¡¡
+¡
+onetime
+¡¡¡¡¡¡¡
+four
+
+five four five
+
+const path = require('path')
+var pathString = path.resolve(__dirname) + '/resources/save.json'

@@ -28,7 +28,7 @@ const PASTE_DELAY = 50
 
 // OK, all of this needs to be converted to OO
 var pasteStarted = false
-var copyMouseInterval = null
+var copyMouseIntervalStack = []
 var copyMouseItemIdx = 0
 var copyTimePassed = 0
 var currentEvent = null
@@ -69,6 +69,7 @@ var mouseDownBooleanArray = new Array(COPY_MOUSE_ACTIVATION_CHECK_COUNT)
 for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
   timePassedArray[x] = 0
   mouseDownBooleanArray[x] = false
+  intervalIDArray[x] = []
 }
 
 var fs = require('fs')
@@ -111,8 +112,6 @@ function setAllTextArraysToDefault () {
   }
 }
 
-setAllTextArraysToDefault()
-
 // Or use `remote` from the renderer process.
 // const {BrowserWindow} = require('electron').remote
 
@@ -150,9 +149,10 @@ function startCircularBufferWindow () {
     pasteStarted = true
     // this is to get that first buffer immediately
     cycleBufferWindow()
-    copyMouseInterval = setInterval(function () {
+    var copyMouseInterval = setInterval(function () {
       cycleBufferWindow()
     }, COPY_MOUSE_CYCLE_INTERVAL)
+    copyMouseIntervalStack.push(copyMouseInterval)
     // need to implement cycling logic there
   })
 }
@@ -278,9 +278,10 @@ function waitBeforeCyclingBuffer () {
   }
   // since mouse clicks go up and down, the wait period might miss a few increments
   // solution: create four interval ids. If one of them is true(set it in a ored variable), then it's triggered.
-  if (intervalIDArrayIsNull()) {
+  if (intervalIDArrayIsEmpty()) {
     for (var y = 0; y < COPY_MOUSE_ACTIVATION_CHECK_COUNT; y++) {
-      intervalIDArray[y] = setInterval(createMouseDownChecker(y), COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * y)
+      var intervalID = setInterval(createMouseDownChecker(y), COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * y)
+      intervalIDArray[y].push(intervalID)
     }
   }
 }
@@ -290,15 +291,30 @@ function createMouseDownChecker (val) {
     mouseDownChecker(val)
   }
 }
-function intervalIDArrayIsNull () {
-  var isNull = true
+function intervalIDArrayIsEmpty () {
+  var isEmpty = true
   for (var y = 0; y < intervalIDArray.length; y++) {
-    if (intervalIDArray[y] != null) {
-      isNull = isNull && true
+    if (intervalIDArray[y].length == 0) {
+      isEmpty = isEmpty && true
     }
   }
-  return isNull
+  return isEmpty
 }
+function clearInterValIDArray () {
+  for (var y = 0; y < intervalIDArray.length; y++) {
+    while (intervalIDArray[y].length > 0) {
+      var intervalID = intervalIdArray[y].pop()
+      clearInterval(intervalID)
+    }
+  }
+}
+function clearInterValIDStack (stack) {
+  while (stack.length > 0) {
+    var intervalID = stack.pop()
+    clearInterval(intervalID)
+  }
+}
+
 function mouseDownChecker (chkrIdx) {
   var activationTimeLimit = COPY_MOUSE_BUTTON_ACTIVATION_TIME
   mouseDownBooleanArray[chkrIdx] = mouseDown
@@ -319,11 +335,11 @@ function mouseDownChecker (chkrIdx) {
         bufferCycling = true
         log.info('cycle started at item' + chkrIdx)
         cycleThroughBuffer()
-        clearInterval(intervalIDArray[chkrIdx])
+        clearInterValIDStack(intervalIDArray[chkrIdx])
       } else {
-        clearInterval(intervalIDArray[chkrIdx])
+        clearInterValIDStack(intervalIDArray[chkrIdx])
       }
-      clearInterval(intervalIDArray[chkrIdx])
+      clearInterValIDStack(intervalIDArray[chkrIdx])
       for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
         mouseDownBooleanArray[x] = false
       }
@@ -344,7 +360,7 @@ function mouseDownChecker (chkrIdx) {
 
 function clearIntervalCheckers () {
   for (var z = 0; z < COPY_MOUSE_ACTIVATION_CHECK_COUNT; z++) {
-    clearInterval(intervalIDArray[z])
+    clearInterValIDStack(intervalIDArray[z])
   }
 }
 // effectively a delta to ensure that there isn't a single mousedown checkpoint of failure
@@ -499,13 +515,14 @@ app.on('ready', () => {
   }
   mouseCircularBuffer.enq(text)
   // load key values from save.json
-
+  setAllTextArraysToDefault()
   var keyBufferFromConfig = stateSaver.readValue('keyBuffer')
+  log.info(keyBufferFromConfig)
   for (var key in keyBufferFromConfig) {
     if (keyBufferFromConfig.hasOwnProperty(key)) {
       var bufferNumber = key
-      textBufferContent[bufferNumber] = keyBufferFromConfig[key]
-      log.info(bufferNumber + ' -> ' + keyBufferFromConfig[key])
+      textBufferContent[bufferNumber] = 'hooligan'
+      log.info(bufferNumber + ' -> ' + textBufferContent[key])
     }
   }
 
@@ -543,7 +560,10 @@ ipcMain.on('close-main-window', function () {
 ioHook.on('mouseup', event => {
   if (pasteStarted) {
     // DO NOT REMOVE THIS LINE! IF YOU DO, YOU'LL HAVE CONCURRENCY ISSUES
-    clearInterval(copyMouseInterval)
+    while (copyMouseIntervalStack.length > 0) {
+      var copyMouseInterval = copyMouseIntervalStack.pop()
+      clearInterval(copyMouseInterval)
+    }
     pasteStarted = false
     circularBufferWindow.close()
     pasteMouseCycleAndReset()

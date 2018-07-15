@@ -1,27 +1,27 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
-    "three \n",
-    "three two\n",
-    "  timePassedArray[chkrIdx] += COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * chkrIdx",
-    "  timePassedArray[chkrIdx] += COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * chkrIdx",
-    "  timePassedArray[chkrIdx] += COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * chkrIdx",
-    "var log = require('electron-log');",
-    "var log = require('electron-log');",
-    "bufferDiv.innerHTML = 'JavaScript was here'\n",
-    "intervalIDArray[y]",
-    "const path = require('path')\nvar pathString = path.resolve(__dirname) + '/resources/save.json'"
+    "[08:40:51.510] [info] time pass init0",
+    "clearInterValIDStack",
+    "  for (var y = 0; y < intervalIDArray.length; y++) {\n    if (intervalIDArray[y].length == 0) {\n      isEmpty = isEmpty && true\n    }\n  }",
+    "intervalIDArray",
+    "intervalIDArray",
+    "copyMouseIntervalStack",
+    "setAllTextArraysToDefault()",
+    "setAllTextArraysToDefault()",
+    "setAllTextArraysToDefault()",
+    "  mouseCircularBuffer.enq(text)"
   ],
   "keyBuffer": {
-    "0": "",
-    "1": "three two\n",
-    "2": "three \n",
-    "3": "",
-    "4": "",
-    "5": "",
-    "6": "",
-    "7": "",
-    "8": "",
-    "9": ""
+    "0": "hooligan",
+    "1": "hooligan",
+    "2": "hooligan",
+    "3": "hooligan",
+    "4": "hooligan",
+    "5": "hooligan",
+    "6": "hooligan",
+    "7": "hooligan",
+    "8": "hooligan",
+    "9": "hooligan"
   }
 }

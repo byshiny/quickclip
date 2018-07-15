@@ -1,4 +1,5 @@
 Minimum requirements:
+**DSouble clicking causes problems.
 1. Paste buffer external storage
 2. Right click to cycle through
 3. cut support
