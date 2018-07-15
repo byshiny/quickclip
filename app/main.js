@@ -14,9 +14,9 @@ STEPS:
 // remove hard code
 
 const COPY_BUFFER_COUNT = 10
-const COPY_BUFFER_TIME = 500 // this is in milliseconds
+const COPY_BUFFER_TIME = 2000 // this is in milliseconds
 const COPY_MOUSE_BUFFER_SIZE = 10
-const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 1000
+const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 2000
 const COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL = 200
 // ok technically this needs a mutex - that check...
 const COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF = 50
@@ -25,6 +25,7 @@ const COPY_MOUSE_ACTIVATION_CHECK_COUNT = 4
 const OS = process.platform
 
 const PASTE_DELAY = 50
+const SAVE_WINDOW_AWAY_DELAY = 2000
 
 // OK, all of this needs to be converted to OO
 var pasteStarted = false
@@ -33,6 +34,7 @@ var copyMouseItemIdx = 0
 var copyTimePassed = 0
 var currentEvent = null
 var bufferCycling = false
+var saveWindowHiding = false
 const SHORTCUT_KEY_LIMIT = 10
 const ioHook = require('iohook')
 const {
@@ -520,10 +522,10 @@ app.on('ready', () => {
   saveWindow = new BrowserWindow({
     width: 250,
     height: 200,
-    focusable: false
+    focusable: true
   })
   saveWindow.loadURL(`file://${__dirname}/resources/views/savepop.html`)
-
+  saveWindow.hide()
   // load circular buffer from save.json
   var circularBufferFromConfig = stateSaver.readValue('circularBuffer')
   log.info(circularBufferFromConfig)
@@ -601,6 +603,25 @@ ioHook.on('keydown', event => {
     if (textBufferFired[number] == false) {
       log.info('text buffer triggered!')
       triggerBuffer(number)
+    } else {
+      var lastKeyDownDate = textBufferTimer[number]
+      log.info('goot time to save')
+      var diff = Math.abs(new Date() - lastKeyDownDate)
+      if (diff > COPY_BUFFER_TIME) {
+        if (!saveWindowHiding) {
+          var saveTimeObj = {}
+          saveTimeObj.save = 'Savable'
+          saveTimeObj.time = String((diff / 1000).toPrecision(3)) + 'seconds'
+          saveWindow.webContents.send('load-state-time', saveTimeObj)
+          saveWindow.show()
+        }
+      } else {
+        var saveTimeObj = {}
+        saveTimeObj.save = 'Unsavable'
+        saveTimeObj.time = String((diff / 1000).toPrecision(3)) + 'seconds'
+        saveWindow.webContents.send('load-state-time', saveTimeObj)
+        saveWindow.show()
+      }
     }
   }
   if (copyKeyTriggered(event)) {
@@ -631,6 +652,11 @@ ioHook.on('keyup', event => {
         pasteBuffer(number)
       } else {
         saveBuffer(number)
+        setTimeout(function () {
+          var saveTimeObj = {}
+          log.info('hiding window')
+          saveWindow.hide()
+        }, SAVE_WINDOW_AWAY_DELAY)
       }
       textBufferFired[number] = false
     }

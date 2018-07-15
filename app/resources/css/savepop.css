@@ -6,8 +6,16 @@
 }
 .nowrap {
     clear: both;
-    display: inline-block;a
+    display: inline-block;
     overflow: hidden;
     white-space: nowrap;
       text-align: center;
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active,
+.btn.btn-primary.active {
+  color: #ffffff;
+  background-color: pink;
+  border-color: pink;
 }
