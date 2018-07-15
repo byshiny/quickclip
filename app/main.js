@@ -46,7 +46,7 @@ const {
 } = require('electron')
 
 const configuration = require('./configuration')
-
+const stateSaver = require('./stateSaver')
 var robot = require('robotjs')
 
 // for mouse holding
@@ -65,7 +65,6 @@ var intervalIDArray = new Array(COPY_MOUSE_ACTIVATION_CHECK_COUNT)
 var timePassedArray = new Array(COPY_MOUSE_ACTIVATION_CHECK_COUNT)
 var mouseDownBooleanArray = new Array(COPY_MOUSE_ACTIVATION_CHECK_COUNT)
 for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
-  intervalIDArray[x] = 0
   timePassedArray[x] = 0
   mouseDownBooleanArray[x] = false
 }
@@ -272,8 +271,10 @@ function waitBeforeCyclingBuffer () {
   }
   // since mouse clicks go up and down, the wait period might miss a few increments
   // solution: create four interval ids. If one of them is true(set it in a ored variable), then it's triggered.
-  for (var y = 0; y < COPY_MOUSE_ACTIVATION_CHECK_COUNT; y++) {
-    intervalIDArray[y] = setInterval(createMouseDownChecker(y), COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * y)
+  if (intervalIDArrayIsNull()) {
+    for (var y = 0; y < COPY_MOUSE_ACTIVATION_CHECK_COUNT; y++) {
+      intervalIDArray[y] = setInterval(createMouseDownChecker(y), COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * y)
+    }
   }
 }
 
@@ -282,7 +283,15 @@ function createMouseDownChecker (val) {
     mouseDownChecker(val)
   }
 }
-
+function intervalIDArrayIsNull () {
+  var isNull = true
+  for (var y = 0; y < intervalIDArray.length; y++) {
+    if (intervalIDArray[y] != null) {
+      isNull = isNull && true
+    }
+  }
+  return isNull
+}
 function mouseDownChecker (chkrIdx) {
   var activationTimeLimit = COPY_MOUSE_BUTTON_ACTIVATION_TIME
   mouseDownBooleanArray[chkrIdx] = mouseDown
@@ -317,7 +326,7 @@ function mouseDownChecker (chkrIdx) {
       // don't do anything, keep waiting...
     }
   } else {
-    console.log('need to clear up')
+    console.log('need to clear up' + chkrIdx)
     for (var y = 0; y < COPY_MOUSE_ACTIVATION_CHECK_COUNT; y++) {
       mouseDownBooleanArray[x] = false
     }
@@ -413,7 +422,7 @@ function setGlobalShortcuts () {
       })
       */
   // pop up paste buffer
-  var nRegistered = globalShortcut.isRegistered('n')
+  // var nRegistered = globalShortcut.isRegistered('n')
 
   /*
       globalShortcut.register('n', function () {
@@ -428,6 +437,10 @@ function setGlobalShortcuts () {
 }
 
 // iohook setup
+
+function restoreSaveState () {
+
+}
 
 app.on('ready', () => {
   // need to externalize window size
@@ -459,10 +472,36 @@ app.on('ready', () => {
   mainWindow.loadURL(`file://${__dirname}/resources/views/index.html`)
   console.log(__dirname)
   setGlobalShortcuts()
+  // load circular buffer from save.json
+  var circularBufferFromConfig = stateSaver.readValue('circularBuffer')
+  // console.log(circularBufferFromConfig)
+
+  var text = mouseCircularBuffer.deq()
+  for (var x = circularBufferFromConfig.length - 1; x >= 0; x--) {
+    // if you save 1 2 3 , you need to load 3 2 1
+    mouseCircularBuffer.enq(circularBufferFromConfig[x])
+  }
+  mouseCircularBuffer.enq(text)
+  // load key values from save.json
+  var keyBufferFromConfig = stateSaver.readValue('keyBuffer')
+  for (var key in keyBufferFromConfig) {
+    if (keyBufferFromConfig.hasOwnProperty(key)) {
+      var bufferNumber = key.split(':')[1]
+      textBufferContent[bufferNumber] = keyBufferFromConfig[key]
+      console.log(bufferNumber + ' -> ' + keyBufferFromConfig[key])
+    }
+  }
+  /*
+  console.log(mouseCircularBuffer.size())
+  for (var x = 0; x < mouseCircularBuffer.size(); x++) {
+    // if you save 1 2 3 , you need to load 3 2 1
+    console.log(mouseCircularBuffer.get(x))
+  } */
+
   // REMOVE THIS LATER: mainWindow.hide()
   // let win = new BrowserWindow({transparent: true, frame: false})
   // win.show()
-  ioHook.start()
+  { ioHook.start() }
 })
 
 app.on('before-quit', () => {

@@ -12,6 +12,7 @@ Warning about keyboard shortcuts
 4. OS Detection
 5. Paymeium, limit size of shortcutKeys map
 6. Logging
+7. CARE: Changing the format of the save configs will change the save state!!!!
 Quit unexpectedly warning(DONE)
 Dialog box opening position
 Externalize all position data
@@ -51,4 +52,9 @@ test that all buffers are working correctly
 1 2 3 4 5
 1 5
 2 3 4
-Test cycling 
+Test cycling
+
+hellohellhellohellohellohellohellohelloohello
+
+focusablecircularBufferWindow.hide()circularBufferWindow.hide()circularBufferWindow.hide()
+circularBufferWindow.hide()

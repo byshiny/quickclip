@@ -1,54 +1,16 @@
 /Users/byungjooshin/Desktop/wip/quickclip/app
-{ keycode: 46,
-  altKey: false,
-  shiftKey: false,
-  ctrlKey: false,
-  metaKey: true }
-{ button: 1, clicks: 1, x: 1041, y: 357, type: 'mousedown' }
+undefined -> hello 
+undefined -> it's
+undefined -> me
+undefined -> your
+undefined -> buddy
+{ button: 1, clicks: 1, x: 1095, y: 236, type: 'mousedown' }
 time pass init0
 time pass init0
 time pass init0
 time pass init0
-0mouse downfalse
-need to clear up
-1mouse downfalse
-need to clear up
-2mouse downfalse
-need to clear up
-3mouse downfalse
-need to clear up
-{ button: 1, clicks: 1, x: 277, y: 92, type: 'mousedown' }
-time pass init0
-time pass init0
-time pass init0
-time pass init0
-0mouse downfalse
-need to clear up
-1mouse downfalse
-need to clear up
-2mouse downfalse
-need to clear up
-3mouse downfalse
-need to clear up
 hidden
-{ button: 1, clicks: 1, x: 592, y: 402, type: 'mousedown' }
-time pass init0
-time pass init0
-time pass init0
-time pass init0
-0mouse downfalse
-need to clear up
-1mouse downfalse
-need to clear up
-2mouse downfalse
-need to clear up
-3mouse downfalse
-need to clear up
-{ button: 1, clicks: 1, x: 610, y: 376, type: 'mousedown' }
-time pass init0
-time pass init0
-time pass init0
-time pass init0
+hidden
 0mouse downtrue
 0
 time pas200
@@ -61,323 +23,54 @@ time pas300
 3mouse downtrue
 3
 time pas350
-0mouse downtrue
-0
-time pas400
-1mouse downtrue
-1
-time pas500
-2mouse downfalse
-need to clear up
 0mouse downfalse
-need to clear up
-3mouse downfalse
-need to clear up
+need to clear up0
 1mouse downfalse
-need to clear up
-herro
-  circularBufferWindow.hide()
-{ button: 1, clicks: 1, x: 507, y: 113, type: 'mousedown' }
-time pass init0
-time pass init0
-time pass init0
-time pass init0
-0mouse downtrue
-0
-time pas200
-1mouse downfalse
-need to clear up
+need to clear up1
 2mouse downfalse
-need to clear up
+need to clear up2
 3mouse downfalse
-need to clear up
-0mouse downfalse
-need to clear up
-herro
-hello
-{ button: 1, clicks: 1, x: 488, y: 128, type: 'mousedown' }
+need to clear up3
+{ button: 1, clicks: 1, x: 653, y: 63, type: 'mousedown' }
 time pass init0
 time pass init0
 time pass init0
 time pass init0
 0mouse downfalse
-need to clear up
+need to clear up0
 1mouse downfalse
-need to clear up
+need to clear up1
 2mouse downfalse
-need to clear up
+need to clear up2
 3mouse downfalse
-need to clear up
-herro
-me
-{ button: 1, clicks: 1, x: 511, y: 138, type: 'mousedown' }
-time pass init0
-time pass init0
-time pass init0
-time pass init0
-0mouse downtrue
-0
-time pas200
-1mouse downfalse
-need to clear up
-2mouse downfalse
-need to clear up
-3mouse downfalse
-need to clear up
-0mouse downfalse
-need to clear up
-herro
-it's
-{ button: 1, clicks: 1, x: 509, y: 153, type: 'mousedown' }
-time pass init0
-time pass init0
-time pass init0
-time pass init0
-0mouse downtrue
-0
-time pas200
-1mouse downfalse
-need to clear up
-2mouse downfalse
-need to clear up
-3mouse downfalse
-need to clear up
-herro
-monkey>
-0mouse downfalse
-need to clear up
-{ button: 1, clicks: 1, x: 517, y: 345, type: 'mousedown' }
+need to clear up3
+{ button: 1, clicks: 1, x: 589, y: 69, type: 'mousedown' }
 time pass init0
 time pass init0
 time pass init0
 time pass init0
 0mouse downfalse
-need to clear up
+need to clear up0
 1mouse downfalse
-need to clear up
+need to clear up1
 2mouse downfalse
-need to clear up
+need to clear up2
 3mouse downfalse
-need to clear up
-{ button: 1, clicks: 1, x: 517, y: 345, type: 'mousedown' }
+need to clear up3
+{ button: 1, clicks: 1, x: 571, y: 442, type: 'mousedown' }
 time pass init0
 time pass init0
 time pass init0
 time pass init0
-0mouse downtrue
-0
-time pas200
-1mouse downtrue
-1
-time pas250
-2mouse downtrue
-2
-time pas300
-3mouse downtrue
-3
-time pas350
-0mouse downtrue
-0
-time pas400
-1mouse downtrue
-1
-time pas500
-2mouse downtrue
-2
-time pas600
-0mouse downtrue
-0
-time pas600
-3mouse downtrue
-3
-time pas700
-1mouse downtrue
-1
-time pas750
-0mouse downtrue
-0
-time pas800
-2mouse downtrue
-2
-time pas900
-1mouse downtrue
-1
-time pas1000
-0mouse downtrue
-0
-time pas1000
-3mouse downtrue
-3
-time pas1050
-cycle started at item3
-heyyoo
-circ buffer contentsmonkey>
-circ buffer contentsit's
-circ buffer contentsme
-circ buffer contentshello
-circ buffer contents  circularBufferWindow.hide()
-circ buffer contents    event.preventDefault()
-2mouse downtrue
-2
-time pas1200
-0mouse downtrue
-0
-time pas1200
-1mouse downtrue
-1
-time pas1250
-mousedownyyy
-cycling choo choo
-mousedownyyy
-cycling choo choo
-osdarwin
-is this a reference to a pointer?me
-currenttext:monkey>
-{ button: 1, clicks: 1, x: 525, y: 346, type: 'mousedown' }
-time pass init0
-time pass init0
-time pass init0
-time pass init0
-0mouse downtrue
-0
-time pas200
-1mouse downtrue
-1
-time pas250
-2mouse downtrue
-2
-time pas300
-3mouse downtrue
-3
-time pas350
-0mouse downtrue
-0
-time pas400
-1mouse downtrue
-1
-time pas500
-0mouse downtrue
-0
-time pas600
-2mouse downtrue
-2
-time pas600
-3mouse downtrue
-3
-time pas700
-1mouse downtrue
-1
-time pas750
-0mouse downtrue
-0
-time pas800
-2mouse downtrue
-2
-time pas900
-0mouse downtrue
-0
-time pas1000
-1mouse downtrue
-1
-time pas1000
-3mouse downtrue
-3
-time pas1050
-cycle started at item3
-heyyoo
-circ buffer contentsmonkey>
-circ buffer contentsit's
-circ buffer contentsme
-circ buffer contentshello
-circ buffer contents  circularBufferWindow.hide()
-circ buffer contents    event.preventDefault()
-2mouse downtrue
-2
-time pas1200
-0mouse downtrue
-0
-time pas1200
-1mouse downtrue
-1
-time pas1250
-mousedownyyy
-cycling choo choo
-osdarwin
-is this a reference to a pointer?hello
-currenttext:monkey>
-{ button: 1, clicks: 1, x: 551, y: 345, type: 'mousedown' }
-time pass init0
-time pass init0
-time pass init0
-time pass init0
-0mouse downtrue
-0
-time pas200
-1mouse downtrue
-1
-time pas250
-2mouse downtrue
-2
-time pas300
-3mouse downtrue
-3
-time pas350
-0mouse downtrue
-0
-time pas400
-1mouse downtrue
-1
-time pas500
-2mouse downtrue
-2
-time pas600
-0mouse downtrue
-0
-time pas600
-3mouse downtrue
-3
-time pas700
-1mouse downtrue
-1
-time pas750
-0mouse downtrue
-0
-time pas800
-2mouse downtrue
-2
-time pas900
-1mouse downtrue
-1
-time pas1000
-0mouse downtrue
-0
-time pas1000
-3mouse downtrue
-3
-time pas1050
-cycle started at item3
-heyyoo
-circ buffer contentsmonkey>
-circ buffer contentsit's
-circ buffer contentsme
-circ buffer contentshello
-circ buffer contents  circularBufferWindow.hide()
-circ buffer contents    event.preventDefault()
-2mouse downtrue
-2
-time pas1200
-0mouse downtrue
-0
-time pas1200
-1mouse downtrue
-1
-time pas1250
-mousedownyyy
-cycling choo choo
-osdarwin
-is this a reference to a pointer?  circularBufferWindow.hide()
-currenttext:monkey>
-{ button: 1, clicks: 1, x: 669, y: 343, type: 'mousedown' }
+0mouse downfalse
+need to clear up0
+1mouse downfalse
+need to clear up1
+2mouse downfalse
+need to clear up2
+3mouse downfalse
+need to clear up3
+{ button: 1, clicks: 1, x: 550, y: 433, type: 'mousedown' }
 time pass init0
 time pass init0
 time pass init0
@@ -429,12 +122,11 @@ time pas1000
 time pas1050
 cycle started at item3
 heyyoo
-circ buffer contentsmonkey>
-circ buffer contentsit's
-circ buffer contentsme
-circ buffer contentshello
-circ buffer contents  circularBufferWindow.hide()
-circ buffer contents    event.preventDefault()
+circ buffer contentsintervalIDArray
+circ buffer contentsOne
+circ buffer contentsTwo
+circ buffer contentsThree
+circ buffer contentsFour
 2mouse downtrue
 2
 time pas1200
@@ -449,13 +141,316 @@ cycling choo choo
 mousedownyyy
 cycling choo choo
 osdarwin
-is this a reference to a pointer?monkey>
-currenttext:monkey>
-{ button: 1, clicks: 1, x: 629, y: 660, type: 'mousedown' }
+is this a reference to a pointer?Two
+currenttext:intervalIDArray
+{ button: 1, clicks: 1, x: 550, y: 433, type: 'mousedown' }
+time pass init0
+time pass init0
+time pass init0
+time pass init0
+0mouse downtrue
+0
+time pas200
+1mouse downtrue
+1
+time pas250
+2mouse downtrue
+2
+time pas300
+3mouse downtrue
+3
+time pas350
+0mouse downtrue
+0
+time pas400
+1mouse downtrue
+1
+time pas500
+2mouse downtrue
+2
+time pas600
+0mouse downtrue
+0
+time pas600
+3mouse downtrue
+3
+time pas700
+1mouse downtrue
+1
+time pas750
+0mouse downtrue
+0
+time pas800
+2mouse downtrue
+2
+time pas900
+0mouse downtrue
+0
+time pas1000
+1mouse downtrue
+1
+time pas1000
+3mouse downtrue
+3
+time pas1050
+cycle started at item3
+heyyoo
+circ buffer contentsintervalIDArray
+circ buffer contentsOne
+circ buffer contentsTwo
+circ buffer contentsThree
+circ buffer contentsFour
+2mouse downtrue
+2
+time pas1200
+0mouse downtrue
+0
+time pas1200
+1mouse downtrue
+1
+time pas1250
+mousedownyyy
+cycling choo choo
+mousedownyyy
+cycling choo choo
+osdarwin
+is this a reference to a pointer?Four
+currenttext:intervalIDArray
+{ button: 1, clicks: 1, x: 550, y: 433, type: 'mousedown' }
+time pass init0
+time pass init0
+time pass init0
+time pass init0
+0mouse downtrue
+0
+time pas200
+1mouse downtrue
+1
+time pas250
+2mouse downtrue
+2
+time pas300
+3mouse downtrue
+3
+time pas350
+0mouse downtrue
+0
+time pas400
+1mouse downtrue
+1
+time pas500
+2mouse downtrue
+2
+time pas600
+0mouse downtrue
+0
+time pas600
+3mouse downtrue
+3
+time pas700
+1mouse downtrue
+1
+time pas750
+0mouse downtrue
+0
+time pas800
+2mouse downtrue
+2
+time pas900
+1mouse downtrue
+1
+time pas1000
+0mouse downtrue
+0
+time pas1000
+3mouse downtrue
+3
+time pas1050
+cycle started at item3
+heyyoo
+circ buffer contentsintervalIDArray
+circ buffer contentsOne
+circ buffer contentsTwo
+circ buffer contentsThree
+circ buffer contentsFour
+2mouse downtrue
+2
+time pas1200
+0mouse downtrue
+0
+time pas1200
+1mouse downtrue
+1
+time pas1250
+mousedownyyy
+cycling choo choo
+mousedownyyy
+cycling choo choo
+mousedownyyy
+cycling choo choo
+mousedownyyy
+cycling choo choo
+osdarwin
+is this a reference to a pointer?Three
+currenttext:intervalIDArray
+{ button: 1, clicks: 1, x: 610, y: 429, type: 'mousedown' }
+time pass init0
+time pass init0
+time pass init0
+time pass init0
+0mouse downtrue
+0
+time pas200
+1mouse downtrue
+1
+time pas250
+2mouse downtrue
+2
+time pas300
+3mouse downtrue
+3
+time pas350
+0mouse downtrue
+0
+time pas400
+1mouse downtrue
+1
+time pas500
+2mouse downtrue
+2
+time pas600
+0mouse downtrue
+0
+time pas600
+3mouse downtrue
+3
+time pas700
+1mouse downtrue
+1
+time pas750
+0mouse downtrue
+0
+time pas800
+2mouse downtrue
+2
+time pas900
+0mouse downtrue
+0
+time pas1000
+1mouse downtrue
+1
+time pas1000
+3mouse downtrue
+3
+time pas1050
+cycle started at item3
+heyyoo
+circ buffer contentsintervalIDArray
+circ buffer contentsOne
+circ buffer contentsTwo
+circ buffer contentsThree
+circ buffer contentsFour
+2mouse downtrue
+2
+time pas1200
+0mouse downtrue
+0
+time pas1200
+1mouse downtrue
+1
+time pas1250
+mousedownyyy
+cycling choo choo
+mousedownyyy
+cycling choo choo
+mousedownyyy
+cycling choo choo
+mousedownyyy
+cycling choo choo
+osdarwin
+is this a reference to a pointer?Two
+currenttext:intervalIDArray
+{ button: 1, clicks: 1, x: 643, y: 427, type: 'mousedown' }
+time pass init0
+time pass init0
+time pass init0
+time pass init0
+0mouse downtrue
+0
+time pas200
+1mouse downtrue
+1
+time pas250
+2mouse downtrue
+2
+time pas300
+3mouse downtrue
+3
+time pas350
+0mouse downtrue
+0
+time pas400
+1mouse downtrue
+1
+time pas500
+2mouse downtrue
+2
+time pas600
+0mouse downtrue
+0
+time pas600
+3mouse downtrue
+3
+time pas700
+1mouse downtrue
+1
+time pas750
+0mouse downtrue
+0
+time pas800
+2mouse downtrue
+2
+time pas900
+1mouse downtrue
+1
+time pas1000
+0mouse downtrue
+0
+time pas1000
+3mouse downtrue
+3
+time pas1050
+cycle started at item3
+heyyoo
+circ buffer contentsintervalIDArray
+circ buffer contentsOne
+circ buffer contentsTwo
+circ buffer contentsThree
+circ buffer contentsFour
+2mouse downtrue
+2
+time pas1200
+0mouse downtrue
+0
+time pas1200
+1mouse downtrue
+1
+time pas1250
+mousedownyyy
+cycling choo choo
+mousedownyyy
+cycling choo choo
+mousedownyyy
+cycling choo choo
+osdarwin
+is this a reference to a pointer?intervalIDArray
+currenttext:intervalIDArray
+{ button: 1, clicks: 1, x: 607, y: 642, type: 'mousedown' }
 time pass init0
 time pass init0
 time pass init0
 time pass init0
 0mouse downfalse
-need to clear up
+need to clear up0
 1mouse downfalse
+need to clear up1
