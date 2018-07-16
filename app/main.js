@@ -16,7 +16,7 @@ STEPS:
 const COPY_BUFFER_COUNT = 10
 const COPY_BUFFER_TIME = 500 // this is in milliseconds
 const COPY_MOUSE_BUFFER_SIZE = 10
-const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 1000
+const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 3000
 const COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL = 200
 // ok technically this needs a mutex - that check...
 const COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF = 50
@@ -595,7 +595,7 @@ ipcMain.on('close-main-window', function () {
 })
 
 ioHook.on('mouseup', event => {
-  if (pasteStarted) {
+  if (pasteStarted && mouseDown) {
     // DO NOT REMOVE THIS LINE! IF YOU DO, YOU'LL HAVE CONCURRENCY ISSUES
     while (copyMouseIntervalStack.length > 0) {
       var copyMouseInterval = copyMouseIntervalStack.pop()
@@ -679,12 +679,12 @@ ioHook.on('keyup', event => {
 
 ioHook.on('mousedown', event => {
   currentEvent = event
-  mouseDown = true
   log.info(event)
   // this is prety much a mutex
-  if (!pasteStarted) {
+  if (!pasteStarted && !mouseDown) {
     clearIntervalCheckers()
     waitBeforeCyclingBuffer()
   }
+  mouseDown = true
   // remember to add mainwindow = null later.
 })

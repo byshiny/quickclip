@@ -8,6 +8,7 @@ Minimum requirements:
 //need to add zero error handling - nothing inside
 6. Investigate how to enable logging and debug mode
 7. Apply cut functionality
+8. bug: After the first tap, you need to make the hold to as fine grained as possible. Remove all shitty code doing x + 1,2,3,y
 Warning about keyboard shortcuts
 3. Packaging
 4. OS Detection
