@@ -3,291 +3,65 @@
 >  electron .
 
 /Users/byungjooshin/Desktop/wip/quickclip/app/resources/qconfig.json
-[00:20:31.737] [info] /Users/byungjooshin/Desktop/wip/quickclip/app
-[00:20:31.830] [info] /Users/byungjooshin/Desktop/wip/quickclip/app
-[00:20:31.893] [info] [ 'showKeysMatch',
-  'modifiers to check',
-  '  if (modifiersToCheck.length == 0) {\n    return false\n  }',
-  'showKeyConfig',
-  '\n',
-  'https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8',
-  'https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8',
-  'https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8',
-  'https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8',
-  'https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8' ]
-[00:20:31.908] [info] { '0': 'hello',
+[00:37:12.318] [info] /Users/byungjooshin/Desktop/wip/quickclip/app
+[00:37:12.412] [info] /Users/byungjooshin/Desktop/wip/quickclip/app
+[00:37:12.456] [info] [ '    }\n',
+  '    }\n',
+  '    }\n',
+  '    }\n',
+  '    }\n',
+  '    }\n',
+  '    }\n',
+  '    }\n',
+  '    }\n',
+  '    }\n' ]
+[00:37:12.460] [info] { '0': 'hello',
   '1': 'https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8',
   '2': 'public host key,',
   '3': 'master',
   '4': 'wolfy',
-  '5': 'wolf',
+  '5': '    }\n',
   '6': 'k',
   '7': 'k',
   '8': 'k',
   '9': 'k' }
-[00:20:31.911] [info] 0 -> hello
-[00:20:31.923] [info] 1 -> https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8
-[00:20:31.924] [info] 2 -> public host key,
-[00:20:31.924] [info] 3 -> master
-[00:20:31.925] [info] 4 -> wolfy
-[00:20:31.925] [info] 5 -> wolf
-[00:20:31.925] [info] 6 -> k
-[00:20:31.925] [info] 7 -> k
-[00:20:31.926] [info] 8 -> k
-[00:20:31.926] [info] 9 -> k
-[00:20:31.963] [info] { keycode: 46,
+[00:37:12.461] [info] 0 -> hello
+[00:37:12.461] [info] 1 -> https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8
+[00:37:12.462] [info] 2 -> public host key,
+[00:37:12.462] [info] 3 -> master
+[00:37:12.463] [info] 4 -> wolfy
+[00:37:12.463] [info] 5 ->     }
+
+[00:37:12.463] [info] 6 -> k
+[00:37:12.463] [info] 7 -> k
+[00:37:12.464] [info] 8 -> k
+[00:37:12.464] [info] 9 -> k
+[00:37:12.465] [info] { keycode: 46,
   altKey: false,
   shiftKey: false,
   ctrlKey: false,
   metaKey: true }
-[00:20:31.963] [info] shoKey!
-[00:20:31.964] [info] { keycode: 29,
+[00:37:12.465] [info] shoKey!
+[00:37:12.466] [info] { keycode: 29,
   altKey: true,
   shiftKey: false,
   ctrlKey: true,
   metaKey: false }
-[00:20:32.091] [info] hidden
+Hello World!
+checkyy
+Hello World!
+checkyy
 Hello World!
 checkyy
 Nothing in your buffer!
-Hello World!
-Hello World!
-checkyy
-checkyy
 { shiftKey: false,
   altKey: false,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 29,
-  rawcode: 59,
-  type: 'keydown' }
-[00:20:33.639] [info] { '0': {},
-  '1': {},
-  '2': {},
-  '3': {},
-  '4': {},
-  '5': {},
-  '6': {},
-  '7': {},
-  '8': {},
-  '9': {},
-  pasteBuffer1: 
-   { keycode: 2,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer2: 
-   { keycode: 3,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer3: 
-   { keycode: 4,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer4: 
-   { keycode: 5,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer5: 
-   { keycode: 6,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  copyKey: 
-   { keycode: 46,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: false,
-     metaKey: true } }
-[00:20:33.641] [info] Event key code29
-[00:20:33.641] [info] shortcut key codeundefined
-[00:20:33.641] [info] shortcut key code[object Object]
-[00:20:33.641] [info] shortcut key codeundefined
-[00:20:33.642] [info] shortcut key code[object Object]
-[00:20:33.642] [info] shortcut key codeundefined
-[00:20:33.642] [info] shortcut key code[object Object]
-[00:20:33.642] [info] shortcut key codeundefined
-[00:20:33.643] [info] shortcut key code[object Object]
-[00:20:33.643] [info] shortcut key codeundefined
-[00:20:33.643] [info] shortcut key code[object Object]
-[00:20:33.643] [info] shortcut key codeundefined
-[00:20:33.644] [info] shortcut key code[object Object]
-[00:20:33.644] [info] shortcut key codeundefined
-[00:20:33.644] [info] shortcut key code[object Object]
-[00:20:33.644] [info] shortcut key codeundefined
-[00:20:33.645] [info] shortcut key code[object Object]
-[00:20:33.645] [info] shortcut key codeundefined
-[00:20:33.645] [info] shortcut key code[object Object]
-[00:20:33.645] [info] shortcut key codeundefined
-[00:20:33.646] [info] shortcut key code[object Object]
-[00:20:33.646] [info] shortcut key code2
-[00:20:33.646] [info] shortcut key code[object Object]
-[00:20:33.646] [info] shortcut key code3
-[00:20:33.647] [info] shortcut key code[object Object]
-[00:20:33.647] [info] shortcut key code4
-[00:20:33.647] [info] shortcut key code[object Object]
-[00:20:33.647] [info] shortcut key code5
-[00:20:33.647] [info] shortcut key code[object Object]
-[00:20:33.649] [info] shortcut key code6
-[00:20:33.649] [info] shortcut key code[object Object]
-[00:20:33.650] [info] shortcut key code46
-[00:20:33.650] [info] shortcut key code[object Object]
-[00:20:33.650] [info] { shiftKey: false,
-  altKey: false,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 29,
-  rawcode: 59,
-  type: 'keydown' }
-[00:20:33.651] [info] modifiers check
-[00:20:33.651] [info] keycode
-[00:20:33.651] [info] modifiers check
-[00:20:33.651] [info] altKey
-[00:20:33.652] [info] modifiers check
-[00:20:33.652] [info] shiftKey
-[00:20:33.652] [info] modifiers check
-[00:20:33.652] [info] ctrlKey
-[00:20:33.652] [info] modifiers check
-[00:20:33.652] [info] metaKey
-[00:20:33.653] [info] modifiers to checkaltKey,ctrlKey
-{ shiftKey: false,
-  altKey: true,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 56,
-  rawcode: 58,
-  type: 'keydown' }
-[00:20:33.654] [info] { '0': {},
-  '1': {},
-  '2': {},
-  '3': {},
-  '4': {},
-  '5': {},
-  '6': {},
-  '7': {},
-  '8': {},
-  '9': {},
-  pasteBuffer1: 
-   { keycode: 2,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer2: 
-   { keycode: 3,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer3: 
-   { keycode: 4,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer4: 
-   { keycode: 5,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer5: 
-   { keycode: 6,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  copyKey: 
-   { keycode: 46,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: false,
-     metaKey: true } }
-[00:20:33.654] [info] Event key code56
-[00:20:33.654] [info] shortcut key codeundefined
-[00:20:33.655] [info] shortcut key code[object Object]
-[00:20:33.655] [info] shortcut key codeundefined
-[00:20:33.655] [info] shortcut key code[object Object]
-[00:20:33.655] [info] shortcut key codeundefined
-[00:20:33.655] [info] shortcut key code[object Object]
-[00:20:33.655] [info] shortcut key codeundefined
-[00:20:33.656] [info] shortcut key code[object Object]
-[00:20:33.656] [info] shortcut key codeundefined
-[00:20:33.656] [info] shortcut key code[object Object]
-[00:20:33.656] [info] shortcut key codeundefined
-[00:20:33.656] [info] shortcut key code[object Object]
-[00:20:33.656] [info] shortcut key codeundefined
-[00:20:33.657] [info] shortcut key code[object Object]
-[00:20:33.657] [info] shortcut key codeundefined
-[00:20:33.657] [info] shortcut key code[object Object]
-[00:20:33.657] [info] shortcut key codeundefined
-[00:20:33.657] [info] shortcut key code[object Object]
-[00:20:33.658] [info] shortcut key codeundefined
-[00:20:33.658] [info] shortcut key code[object Object]
-[00:20:33.658] [info] shortcut key code2
-[00:20:33.658] [info] shortcut key code[object Object]
-[00:20:33.658] [info] shortcut key code3
-[00:20:33.658] [info] shortcut key code[object Object]
-[00:20:33.659] [info] shortcut key code4
-[00:20:33.659] [info] shortcut key code[object Object]
-[00:20:33.659] [info] shortcut key code5
-[00:20:33.659] [info] shortcut key code[object Object]
-[00:20:33.659] [info] shortcut key code6
-[00:20:33.659] [info] shortcut key code[object Object]
-[00:20:33.660] [info] shortcut key code46
-[00:20:33.660] [info] shortcut key code[object Object]
-[00:20:33.660] [info] { shiftKey: false,
-  altKey: true,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 56,
-  rawcode: 58,
-  type: 'keydown' }
-[00:20:33.660] [info] modifiers check
-[00:20:33.661] [info] keycode
-[00:20:33.661] [info] modifiers check
-[00:20:33.661] [info] altKey
-[00:20:33.661] [info] modifiers check
-[00:20:33.661] [info] shiftKey
-[00:20:33.661] [info] modifiers check
-[00:20:33.661] [info] ctrlKey
-[00:20:33.662] [info] modifiers check
-[00:20:33.662] [info] metaKey
-[00:20:33.662] [info] modifiers to checkaltKey,ctrlKey
-show me monies
-[00:20:35.275] [info] { button: 1, clicks: 1, x: 534, y: 289, type: 'mousedown' }
-[00:20:35.276] [info] time pass init0
-[00:20:35.276] [info] time pass init0
-[00:20:35.277] [info] time pass init0
-[00:20:35.277] [info] time pass init0
-1
-2
-[00:20:35.364] [info] hidden
-3
-3
-3
-3
-3
-{ shiftKey: false,
-  altKey: true,
   ctrlKey: false,
-  metaKey: false,
-  keycode: 56,
-  rawcode: 58,
+  metaKey: true,
+  keycode: 3675,
+  rawcode: 55,
   type: 'keydown' }
-[00:20:35.884] [info] { '0': {},
+[00:37:13.648] [info] { '0': {},
   '1': {},
   '2': {},
   '3': {},
@@ -328,194 +102,64 @@ show me monies
      altKey: false,
      shiftKey: false,
      ctrlKey: true,
-     metaKey: false },
-  copyKey: 
-   { keycode: 46,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: false,
-     metaKey: true } }
-[00:20:35.885] [info] Event key code56
-[00:20:35.886] [info] shortcut key codeundefined
-[00:20:35.886] [info] shortcut key code[object Object]
-[00:20:35.886] [info] shortcut key codeundefined
-[00:20:35.887] [info] shortcut key code[object Object]
-[00:20:35.887] [info] shortcut key codeundefined
-[00:20:35.887] [info] shortcut key code[object Object]
-[00:20:35.887] [info] shortcut key codeundefined
-[00:20:35.888] [info] shortcut key code[object Object]
-[00:20:35.888] [info] shortcut key codeundefined
-[00:20:35.888] [info] shortcut key code[object Object]
-[00:20:35.888] [info] shortcut key codeundefined
-[00:20:35.888] [info] shortcut key code[object Object]
-[00:20:35.889] [info] shortcut key codeundefined
-[00:20:35.889] [info] shortcut key code[object Object]
-[00:20:35.889] [info] shortcut key codeundefined
-[00:20:35.889] [info] shortcut key code[object Object]
-[00:20:35.890] [info] shortcut key codeundefined
-[00:20:35.890] [info] shortcut key code[object Object]
-[00:20:35.890] [info] shortcut key codeundefined
-[00:20:35.890] [info] shortcut key code[object Object]
-[00:20:35.890] [info] shortcut key code2
-[00:20:35.891] [info] shortcut key code[object Object]
-[00:20:35.891] [info] shortcut key code3
-[00:20:35.891] [info] shortcut key code[object Object]
-[00:20:35.892] [info] shortcut key code4
-[00:20:35.892] [info] shortcut key code[object Object]
-[00:20:35.892] [info] shortcut key code5
-[00:20:35.892] [info] shortcut key code[object Object]
-[00:20:35.893] [info] shortcut key code6
-[00:20:35.893] [info] shortcut key code[object Object]
-[00:20:35.893] [info] shortcut key code46
-[00:20:35.893] [info] shortcut key code[object Object]
-[00:20:35.893] [info] { shiftKey: false,
-  altKey: true,
+     metaKey: false } }
+[00:37:13.649] [info] Event key code3675
+[00:37:13.649] [info] shortcut key codeundefined
+[00:37:13.650] [info] shortcut key code[object Object]
+[00:37:13.650] [info] shortcut key codeundefined
+[00:37:13.650] [info] shortcut key code[object Object]
+[00:37:13.650] [info] shortcut key codeundefined
+[00:37:13.651] [info] shortcut key code[object Object]
+[00:37:13.651] [info] shortcut key codeundefined
+[00:37:13.651] [info] shortcut key code[object Object]
+[00:37:13.651] [info] shortcut key codeundefined
+[00:37:13.652] [info] shortcut key code[object Object]
+[00:37:13.652] [info] shortcut key codeundefined
+[00:37:13.652] [info] shortcut key code[object Object]
+[00:37:13.652] [info] shortcut key codeundefined
+[00:37:13.652] [info] shortcut key code[object Object]
+[00:37:13.653] [info] shortcut key codeundefined
+[00:37:13.653] [info] shortcut key code[object Object]
+[00:37:13.653] [info] shortcut key codeundefined
+[00:37:13.653] [info] shortcut key code[object Object]
+[00:37:13.654] [info] shortcut key codeundefined
+[00:37:13.654] [info] shortcut key code[object Object]
+[00:37:13.654] [info] shortcut key code2
+[00:37:13.655] [info] shortcut key code[object Object]
+[00:37:13.655] [info] shortcut key code3
+[00:37:13.655] [info] shortcut key code[object Object]
+[00:37:13.655] [info] shortcut key code4
+[00:37:13.656] [info] shortcut key code[object Object]
+[00:37:13.656] [info] shortcut key code5
+[00:37:13.656] [info] shortcut key code[object Object]
+[00:37:13.656] [info] shortcut key code6
+[00:37:13.657] [info] shortcut key code[object Object]
+[00:37:13.657] [info] { shiftKey: false,
+  altKey: false,
   ctrlKey: false,
-  metaKey: false,
-  keycode: 56,
-  rawcode: 58,
+  metaKey: true,
+  keycode: 3675,
+  rawcode: 55,
   type: 'keydown' }
-[00:20:35.894] [info] modifiers check
-[00:20:35.894] [info] keycode
-[00:20:35.895] [info] modifiers check
-[00:20:35.895] [info] altKey
-[00:20:35.895] [info] modifiers check
-[00:20:35.895] [info] shiftKey
-[00:20:35.895] [info] modifiers check
-[00:20:35.896] [info] ctrlKey
-[00:20:35.896] [info] modifiers check
-[00:20:35.896] [info] metaKey
-[00:20:35.896] [info] modifiers to checkaltKey,ctrlKey
-{ shiftKey: false,
-  altKey: true,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 29,
-  rawcode: 59,
-  type: 'keydown' }
-[00:20:35.897] [info] { '0': {},
-  '1': {},
-  '2': {},
-  '3': {},
-  '4': {},
-  '5': {},
-  '6': {},
-  '7': {},
-  '8': {},
-  '9': {},
-  pasteBuffer1: 
-   { keycode: 2,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer2: 
-   { keycode: 3,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer3: 
-   { keycode: 4,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer4: 
-   { keycode: 5,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer5: 
-   { keycode: 6,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  copyKey: 
-   { keycode: 46,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: false,
-     metaKey: true } }
-[00:20:35.897] [info] Event key code29
-[00:20:35.898] [info] shortcut key codeundefined
-[00:20:35.898] [info] shortcut key code[object Object]
-[00:20:35.898] [info] shortcut key codeundefined
-[00:20:35.898] [info] shortcut key code[object Object]
-[00:20:35.898] [info] shortcut key codeundefined
-[00:20:35.899] [info] shortcut key code[object Object]
-[00:20:35.899] [info] shortcut key codeundefined
-[00:20:35.899] [info] shortcut key code[object Object]
-[00:20:35.899] [info] shortcut key codeundefined
-[00:20:35.899] [info] shortcut key code[object Object]
-[00:20:35.900] [info] shortcut key codeundefined
-[00:20:35.900] [info] shortcut key code[object Object]
-[00:20:35.900] [info] shortcut key codeundefined
-[00:20:35.900] [info] shortcut key code[object Object]
-[00:20:35.900] [info] shortcut key codeundefined
-[00:20:35.900] [info] shortcut key code[object Object]
-[00:20:35.901] [info] shortcut key codeundefined
-[00:20:35.901] [info] shortcut key code[object Object]
-[00:20:35.901] [info] shortcut key codeundefined
-[00:20:35.901] [info] shortcut key code[object Object]
-[00:20:35.901] [info] shortcut key code2
-[00:20:35.901] [info] shortcut key code[object Object]
-[00:20:35.902] [info] shortcut key code3
-[00:20:35.902] [info] shortcut key code[object Object]
-[00:20:35.902] [info] shortcut key code4
-[00:20:35.902] [info] shortcut key code[object Object]
-[00:20:35.902] [info] shortcut key code5
-[00:20:35.903] [info] shortcut key code[object Object]
-[00:20:35.903] [info] shortcut key code6
-[00:20:35.903] [info] shortcut key code[object Object]
-[00:20:35.903] [info] shortcut key code46
-[00:20:35.903] [info] shortcut key code[object Object]
-[00:20:35.904] [info] { shiftKey: false,
-  altKey: true,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 29,
-  rawcode: 59,
-  type: 'keydown' }
-[00:20:35.904] [info] modifiers check
-[00:20:35.904] [info] keycode
-[00:20:35.904] [info] modifiers check
-[00:20:35.905] [info] altKey
-[00:20:35.905] [info] modifiers check
-[00:20:35.905] [info] shiftKey
-[00:20:35.905] [info] modifiers check
-[00:20:35.905] [info] ctrlKey
-[00:20:35.906] [info] modifiers check
-[00:20:35.906] [info] metaKey
-[00:20:35.906] [info] modifiers to checkaltKey,ctrlKey
-show me monies
-Hello World!
-checkyy
-[00:20:36.758] [info] { button: 1, clicks: 1, x: 534, y: 289, type: 'mousedown' }
-[00:20:36.758] [info] time pass init0
-[00:20:36.758] [info] time pass init0
-[00:20:36.759] [info] time pass init0
-[00:20:36.759] [info] time pass init0
-1
-2
-[00:20:36.854] [info] hidden
-3
-3
-3
-3
-3
+[00:37:13.659] [info] modifiers check
+[00:37:13.659] [info] keycode
+[00:37:13.659] [info] modifiers check
+[00:37:13.660] [info] altKey
+[00:37:13.660] [info] modifiers check
+[00:37:13.660] [info] shiftKey
+[00:37:13.660] [info] modifiers check
+[00:37:13.661] [info] ctrlKey
+[00:37:13.661] [info] modifiers check
+[00:37:13.661] [info] metaKey
+[00:37:13.661] [info] modifiers to checkaltKey,ctrlKey
 { shiftKey: false,
   altKey: false,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 29,
-  rawcode: 59,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 46,
+  rawcode: 8,
   type: 'keydown' }
-[00:20:37.196] [info] { '0': {},
+[00:37:13.792] [info] { '0': {},
   '1': {},
   '2': {},
   '3': {},
@@ -556,194 +200,102 @@ checkyy
      altKey: false,
      shiftKey: false,
      ctrlKey: true,
-     metaKey: false },
-  copyKey: 
-   { keycode: 46,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: false,
-     metaKey: true } }
-[00:20:37.198] [info] Event key code29
-[00:20:37.198] [info] shortcut key codeundefined
-[00:20:37.199] [info] shortcut key code[object Object]
-[00:20:37.199] [info] shortcut key codeundefined
-[00:20:37.199] [info] shortcut key code[object Object]
-[00:20:37.199] [info] shortcut key codeundefined
-[00:20:37.200] [info] shortcut key code[object Object]
-[00:20:37.200] [info] shortcut key codeundefined
-[00:20:37.200] [info] shortcut key code[object Object]
-[00:20:37.200] [info] shortcut key codeundefined
-[00:20:37.200] [info] shortcut key code[object Object]
-[00:20:37.201] [info] shortcut key codeundefined
-[00:20:37.201] [info] shortcut key code[object Object]
-[00:20:37.201] [info] shortcut key codeundefined
-[00:20:37.201] [info] shortcut key code[object Object]
-[00:20:37.202] [info] shortcut key codeundefined
-[00:20:37.202] [info] shortcut key code[object Object]
-[00:20:37.202] [info] shortcut key codeundefined
-[00:20:37.202] [info] shortcut key code[object Object]
-[00:20:37.202] [info] shortcut key codeundefined
-[00:20:37.203] [info] shortcut key code[object Object]
-[00:20:37.203] [info] shortcut key code2
-[00:20:37.203] [info] shortcut key code[object Object]
-[00:20:37.203] [info] shortcut key code3
-[00:20:37.204] [info] shortcut key code[object Object]
-[00:20:37.204] [info] shortcut key code4
-[00:20:37.204] [info] shortcut key code[object Object]
-[00:20:37.204] [info] shortcut key code5
-[00:20:37.205] [info] shortcut key code[object Object]
-[00:20:37.205] [info] shortcut key code6
-[00:20:37.205] [info] shortcut key code[object Object]
-[00:20:37.205] [info] shortcut key code46
-[00:20:37.206] [info] shortcut key code[object Object]
-[00:20:37.206] [info] { shiftKey: false,
+     metaKey: false } }
+[00:37:13.792] [info] Event key code46
+[00:37:13.793] [info] shortcut key codeundefined
+[00:37:13.793] [info] shortcut key code[object Object]
+[00:37:13.793] [info] shortcut key codeundefined
+[00:37:13.793] [info] shortcut key code[object Object]
+[00:37:13.793] [info] shortcut key codeundefined
+[00:37:13.793] [info] shortcut key code[object Object]
+[00:37:13.794] [info] shortcut key codeundefined
+[00:37:13.794] [info] shortcut key code[object Object]
+[00:37:13.794] [info] shortcut key codeundefined
+[00:37:13.794] [info] shortcut key code[object Object]
+[00:37:13.795] [info] shortcut key codeundefined
+[00:37:13.795] [info] shortcut key code[object Object]
+[00:37:13.795] [info] shortcut key codeundefined
+[00:37:13.795] [info] shortcut key code[object Object]
+[00:37:13.795] [info] shortcut key codeundefined
+[00:37:13.795] [info] shortcut key code[object Object]
+[00:37:13.796] [info] shortcut key codeundefined
+[00:37:13.796] [info] shortcut key code[object Object]
+[00:37:13.796] [info] shortcut key codeundefined
+[00:37:13.796] [info] shortcut key code[object Object]
+[00:37:13.797] [info] shortcut key code2
+[00:37:13.797] [info] shortcut key code[object Object]
+[00:37:13.797] [info] shortcut key code3
+[00:37:13.798] [info] shortcut key code[object Object]
+[00:37:13.798] [info] shortcut key code4
+[00:37:13.798] [info] shortcut key code[object Object]
+[00:37:13.798] [info] shortcut key code5
+[00:37:13.798] [info] shortcut key code[object Object]
+[00:37:13.799] [info] shortcut key code6
+[00:37:13.799] [info] shortcut key code[object Object]
+[00:37:13.799] [info] { shiftKey: false,
   altKey: false,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 29,
-  rawcode: 59,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 46,
+  rawcode: 8,
   type: 'keydown' }
-[00:20:37.206] [info] modifiers check
-[00:20:37.206] [info] keycode
-[00:20:37.207] [info] modifiers check
-[00:20:37.207] [info] altKey
-[00:20:37.208] [info] modifiers check
-[00:20:37.208] [info] shiftKey
-[00:20:37.208] [info] modifiers check
-[00:20:37.208] [info] ctrlKey
-[00:20:37.209] [info] modifiers check
-[00:20:37.209] [info] metaKey
-[00:20:37.209] [info] modifiers to checkaltKey,ctrlKey
-{ shiftKey: false,
-  altKey: true,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 56,
-  rawcode: 58,
+[00:37:13.799] [info] modifiers check
+[00:37:13.800] [info] keycode
+[00:37:13.800] [info] modifiers check
+[00:37:13.800] [info] altKey
+[00:37:13.800] [info] modifiers check
+[00:37:13.800] [info] shiftKey
+[00:37:13.801] [info] modifiers check
+[00:37:13.801] [info] ctrlKey
+[00:37:13.801] [info] modifiers check
+[00:37:13.801] [info] metaKey
+[00:37:13.801] [info] modifiers to checkmetaKey
+[00:37:13.801] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 46,
+  rawcode: 8,
   type: 'keydown' }
-[00:20:37.210] [info] { '0': {},
-  '1': {},
-  '2': {},
-  '3': {},
-  '4': {},
-  '5': {},
-  '6': {},
-  '7': {},
-  '8': {},
-  '9': {},
-  pasteBuffer1: 
-   { keycode: 2,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer2: 
-   { keycode: 3,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer3: 
-   { keycode: 4,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer4: 
-   { keycode: 5,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer5: 
-   { keycode: 6,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  copyKey: 
-   { keycode: 46,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: false,
-     metaKey: true } }
-[00:20:37.210] [info] Event key code56
-[00:20:37.211] [info] shortcut key codeundefined
-[00:20:37.211] [info] shortcut key code[object Object]
-[00:20:37.211] [info] shortcut key codeundefined
-[00:20:37.211] [info] shortcut key code[object Object]
-[00:20:37.211] [info] shortcut key codeundefined
-[00:20:37.212] [info] shortcut key code[object Object]
-[00:20:37.212] [info] shortcut key codeundefined
-[00:20:37.212] [info] shortcut key code[object Object]
-[00:20:37.212] [info] shortcut key codeundefined
-[00:20:37.212] [info] shortcut key code[object Object]
-[00:20:37.212] [info] shortcut key codeundefined
-[00:20:37.213] [info] shortcut key code[object Object]
-[00:20:37.213] [info] shortcut key codeundefined
-[00:20:37.213] [info] shortcut key code[object Object]
-[00:20:37.213] [info] shortcut key codeundefined
-[00:20:37.213] [info] shortcut key code[object Object]
-[00:20:37.214] [info] shortcut key codeundefined
-[00:20:37.214] [info] shortcut key code[object Object]
-[00:20:37.214] [info] shortcut key codeundefined
-[00:20:37.214] [info] shortcut key code[object Object]
-[00:20:37.214] [info] shortcut key code2
-[00:20:37.214] [info] shortcut key code[object Object]
-[00:20:37.215] [info] shortcut key code3
-[00:20:37.215] [info] shortcut key code[object Object]
-[00:20:37.215] [info] shortcut key code4
-[00:20:37.215] [info] shortcut key code[object Object]
-[00:20:37.215] [info] shortcut key code5
-[00:20:37.216] [info] shortcut key code[object Object]
-[00:20:37.216] [info] shortcut key code6
-[00:20:37.216] [info] shortcut key code[object Object]
-[00:20:37.216] [info] shortcut key code46
-[00:20:37.216] [info] shortcut key code[object Object]
-[00:20:37.216] [info] { shiftKey: false,
-  altKey: true,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 56,
-  rawcode: 58,
+[00:37:13.802] [info] modifiers check
+[00:37:13.802] [info] keycode
+[00:37:13.802] [info] modifiers check
+[00:37:13.802] [info] altKey
+[00:37:13.802] [info] modifiers check
+[00:37:13.803] [info] shiftKey
+[00:37:13.803] [info] modifiers check
+[00:37:13.803] [info] ctrlKey
+[00:37:13.803] [info] modifiers check
+[00:37:13.803] [info] metaKey
+[00:37:13.803] [info] modifiers to checkmetaKey
+[00:37:13.804] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 46,
+  rawcode: 8,
   type: 'keydown' }
-[00:20:37.217] [info] modifiers check
-[00:20:37.217] [info] keycode
-[00:20:37.217] [info] modifiers check
-[00:20:37.217] [info] altKey
-[00:20:37.218] [info] modifiers check
-[00:20:37.218] [info] shiftKey
-[00:20:37.218] [info] modifiers check
-[00:20:37.218] [info] ctrlKey
-[00:20:37.218] [info] modifiers check
-[00:20:37.218] [info] metaKey
-[00:20:37.219] [info] modifiers to checkaltKey,ctrlKey
-show me monies
-Hello World!
-checkyy
-[00:20:38.037] [info] { button: 1, clicks: 1, x: 534, y: 289, type: 'mousedown' }
-[00:20:38.037] [info] time pass init0
-[00:20:38.037] [info] time pass init0
-[00:20:38.037] [info] time pass init0
-[00:20:38.038] [info] time pass init0
-1
-2
-[00:20:38.133] [info] hidden
-3
-3
-3
-3
-3
+[00:37:13.805] [info] modifiers check
+[00:37:13.805] [info] keycode
+[00:37:13.805] [info] modifiers check
+[00:37:13.805] [info] altKey
+[00:37:13.806] [info] modifiers check
+[00:37:13.806] [info] shiftKey
+[00:37:13.806] [info] modifiers check
+[00:37:13.806] [info] ctrlKey
+[00:37:13.806] [info] modifiers check
+[00:37:13.807] [info] metaKey
+[00:37:13.807] [info] modifiers to checkaltKey,ctrlKey
+[00:37:13.907] [info] herro
+[00:37:13.908] [info] bufferKeyPressedWithModifier
 { shiftKey: false,
   altKey: false,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 29,
-  rawcode: 59,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 46,
+  rawcode: 8,
   type: 'keydown' }
-[00:20:38.522] [info] { '0': {},
+[00:37:14.292] [info] { '0': {},
   '1': {},
   '2': {},
   '3': {},
@@ -784,437 +336,112 @@ checkyy
      altKey: false,
      shiftKey: false,
      ctrlKey: true,
-     metaKey: false },
-  copyKey: 
-   { keycode: 46,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: false,
-     metaKey: true } }
-[00:20:38.523] [info] Event key code29
-[00:20:38.524] [info] shortcut key codeundefined
-[00:20:38.524] [info] shortcut key code[object Object]
-[00:20:38.524] [info] shortcut key codeundefined
-[00:20:38.525] [info] shortcut key code[object Object]
-[00:20:38.525] [info] shortcut key codeundefined
-[00:20:38.525] [info] shortcut key code[object Object]
-[00:20:38.525] [info] shortcut key codeundefined
-[00:20:38.525] [info] shortcut key code[object Object]
-[00:20:38.526] [info] shortcut key codeundefined
-[00:20:38.526] [info] shortcut key code[object Object]
-[00:20:38.526] [info] shortcut key codeundefined
-[00:20:38.526] [info] shortcut key code[object Object]
-[00:20:38.526] [info] shortcut key codeundefined
-[00:20:38.527] [info] shortcut key code[object Object]
-[00:20:38.527] [info] shortcut key codeundefined
-[00:20:38.527] [info] shortcut key code[object Object]
-[00:20:38.527] [info] shortcut key codeundefined
-[00:20:38.527] [info] shortcut key code[object Object]
-[00:20:38.528] [info] shortcut key codeundefined
-[00:20:38.528] [info] shortcut key code[object Object]
-[00:20:38.528] [info] shortcut key code2
-[00:20:38.528] [info] shortcut key code[object Object]
-[00:20:38.528] [info] shortcut key code3
-[00:20:38.529] [info] shortcut key code[object Object]
-[00:20:38.529] [info] shortcut key code4
-[00:20:38.529] [info] shortcut key code[object Object]
-[00:20:38.529] [info] shortcut key code5
-[00:20:38.530] [info] shortcut key code[object Object]
-[00:20:38.530] [info] shortcut key code6
-[00:20:38.530] [info] shortcut key code[object Object]
-[00:20:38.530] [info] shortcut key code46
-[00:20:38.530] [info] shortcut key code[object Object]
-[00:20:38.531] [info] { shiftKey: false,
+     metaKey: false } }
+[00:37:14.293] [info] Event key code46
+[00:37:14.293] [info] shortcut key codeundefined
+[00:37:14.293] [info] shortcut key code[object Object]
+[00:37:14.294] [info] shortcut key codeundefined
+[00:37:14.294] [info] shortcut key code[object Object]
+[00:37:14.294] [info] shortcut key codeundefined
+[00:37:14.294] [info] shortcut key code[object Object]
+[00:37:14.295] [info] shortcut key codeundefined
+[00:37:14.295] [info] shortcut key code[object Object]
+[00:37:14.295] [info] shortcut key codeundefined
+[00:37:14.295] [info] shortcut key code[object Object]
+[00:37:14.295] [info] shortcut key codeundefined
+[00:37:14.296] [info] shortcut key code[object Object]
+[00:37:14.296] [info] shortcut key codeundefined
+[00:37:14.296] [info] shortcut key code[object Object]
+[00:37:14.296] [info] shortcut key codeundefined
+[00:37:14.296] [info] shortcut key code[object Object]
+[00:37:14.297] [info] shortcut key codeundefined
+[00:37:14.297] [info] shortcut key code[object Object]
+[00:37:14.297] [info] shortcut key codeundefined
+[00:37:14.297] [info] shortcut key code[object Object]
+[00:37:14.298] [info] shortcut key code2
+[00:37:14.298] [info] shortcut key code[object Object]
+[00:37:14.298] [info] shortcut key code3
+[00:37:14.298] [info] shortcut key code[object Object]
+[00:37:14.298] [info] shortcut key code4
+[00:37:14.299] [info] shortcut key code[object Object]
+[00:37:14.299] [info] shortcut key code5
+[00:37:14.299] [info] shortcut key code[object Object]
+[00:37:14.299] [info] shortcut key code6
+[00:37:14.299] [info] shortcut key code[object Object]
+[00:37:14.300] [info] { shiftKey: false,
   altKey: false,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 29,
-  rawcode: 59,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 46,
+  rawcode: 8,
   type: 'keydown' }
-[00:20:38.531] [info] modifiers check
-[00:20:38.531] [info] keycode
-[00:20:38.531] [info] modifiers check
-[00:20:38.531] [info] altKey
-[00:20:38.532] [info] modifiers check
-[00:20:38.532] [info] shiftKey
-[00:20:38.532] [info] modifiers check
-[00:20:38.533] [info] ctrlKey
-[00:20:38.533] [info] modifiers check
-[00:20:38.533] [info] metaKey
-[00:20:38.533] [info] modifiers to checkaltKey,ctrlKey
-{ shiftKey: false,
-  altKey: true,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 56,
-  rawcode: 58,
-  type: 'keydown' }
-[00:20:38.534] [info] { '0': {},
-  '1': {},
-  '2': {},
-  '3': {},
-  '4': {},
-  '5': {},
-  '6': {},
-  '7': {},
-  '8': {},
-  '9': {},
-  pasteBuffer1: 
-   { keycode: 2,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer2: 
-   { keycode: 3,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer3: 
-   { keycode: 4,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer4: 
-   { keycode: 5,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer5: 
-   { keycode: 6,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  copyKey: 
-   { keycode: 46,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: false,
-     metaKey: true } }
-[00:20:38.534] [info] Event key code56
-[00:20:38.535] [info] shortcut key codeundefined
-[00:20:38.535] [info] shortcut key code[object Object]
-[00:20:38.535] [info] shortcut key codeundefined
-[00:20:38.536] [info] shortcut key code[object Object]
-[00:20:38.537] [info] shortcut key codeundefined
-[00:20:38.537] [info] shortcut key code[object Object]
-[00:20:38.537] [info] shortcut key codeundefined
-[00:20:38.537] [info] shortcut key code[object Object]
-[00:20:38.538] [info] shortcut key codeundefined
-[00:20:38.538] [info] shortcut key code[object Object]
-[00:20:38.538] [info] shortcut key codeundefined
-[00:20:38.538] [info] shortcut key code[object Object]
-[00:20:38.539] [info] shortcut key codeundefined
-[00:20:38.539] [info] shortcut key code[object Object]
-[00:20:38.539] [info] shortcut key codeundefined
-[00:20:38.539] [info] shortcut key code[object Object]
-[00:20:38.539] [info] shortcut key codeundefined
-[00:20:38.540] [info] shortcut key code[object Object]
-[00:20:38.540] [info] shortcut key codeundefined
-[00:20:38.540] [info] shortcut key code[object Object]
-[00:20:38.540] [info] shortcut key code2
-[00:20:38.540] [info] shortcut key code[object Object]
-[00:20:38.540] [info] shortcut key code3
-[00:20:38.541] [info] shortcut key code[object Object]
-[00:20:38.541] [info] shortcut key code4
-[00:20:38.541] [info] shortcut key code[object Object]
-[00:20:38.541] [info] shortcut key code5
-[00:20:38.541] [info] shortcut key code[object Object]
-[00:20:38.541] [info] shortcut key code6
-[00:20:38.542] [info] shortcut key code[object Object]
-[00:20:38.542] [info] shortcut key code46
-[00:20:38.542] [info] shortcut key code[object Object]
-[00:20:38.542] [info] { shiftKey: false,
-  altKey: true,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 56,
-  rawcode: 58,
-  type: 'keydown' }
-[00:20:38.542] [info] modifiers check
-[00:20:38.543] [info] keycode
-[00:20:38.543] [info] modifiers check
-[00:20:38.543] [info] altKey
-[00:20:38.543] [info] modifiers check
-[00:20:38.543] [info] shiftKey
-[00:20:38.543] [info] modifiers check
-[00:20:38.544] [info] ctrlKey
-[00:20:38.544] [info] modifiers check
-[00:20:38.544] [info] metaKey
-[00:20:38.544] [info] modifiers to checkaltKey,ctrlKey
-show me monies
-Hello World!
-checkyy
-[00:20:39.260] [info] { button: 1, clicks: 1, x: 534, y: 289, type: 'mousedown' }
-[00:20:39.260] [info] time pass init0
-[00:20:39.261] [info] time pass init0
-[00:20:39.261] [info] time pass init0
-[00:20:39.261] [info] time pass init0
-1
-2
-[00:20:39.372] [info] hidden
-3
-3
-3
-3
-3
-{ shiftKey: false,
+[00:37:14.300] [info] modifiers check
+[00:37:14.300] [info] keycode
+[00:37:14.300] [info] modifiers check
+[00:37:14.301] [info] altKey
+[00:37:14.301] [info] modifiers check
+[00:37:14.301] [info] shiftKey
+[00:37:14.301] [info] modifiers check
+[00:37:14.302] [info] ctrlKey
+[00:37:14.302] [info] modifiers check
+[00:37:14.302] [info] metaKey
+[00:37:14.302] [info] modifiers to checkmetaKey
+[00:37:14.302] [info] { shiftKey: false,
   altKey: false,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 29,
-  rawcode: 59,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 46,
+  rawcode: 8,
   type: 'keydown' }
-[00:20:39.616] [info] { '0': {},
-  '1': {},
-  '2': {},
-  '3': {},
-  '4': {},
-  '5': {},
-  '6': {},
-  '7': {},
-  '8': {},
-  '9': {},
-  pasteBuffer1: 
-   { keycode: 2,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer2: 
-   { keycode: 3,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer3: 
-   { keycode: 4,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer4: 
-   { keycode: 5,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer5: 
-   { keycode: 6,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  copyKey: 
-   { keycode: 46,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: false,
-     metaKey: true } }
-[00:20:39.616] [info] Event key code29
-[00:20:39.616] [info] shortcut key codeundefined
-[00:20:39.617] [info] shortcut key code[object Object]
-[00:20:39.617] [info] shortcut key codeundefined
-[00:20:39.617] [info] shortcut key code[object Object]
-[00:20:39.617] [info] shortcut key codeundefined
-[00:20:39.617] [info] shortcut key code[object Object]
-[00:20:39.617] [info] shortcut key codeundefined
-[00:20:39.617] [info] shortcut key code[object Object]
-[00:20:39.618] [info] shortcut key codeundefined
-[00:20:39.618] [info] shortcut key code[object Object]
-[00:20:39.618] [info] shortcut key codeundefined
-[00:20:39.618] [info] shortcut key code[object Object]
-[00:20:39.618] [info] shortcut key codeundefined
-[00:20:39.618] [info] shortcut key code[object Object]
-[00:20:39.619] [info] shortcut key codeundefined
-[00:20:39.619] [info] shortcut key code[object Object]
-[00:20:39.619] [info] shortcut key codeundefined
-[00:20:39.619] [info] shortcut key code[object Object]
-[00:20:39.619] [info] shortcut key codeundefined
-[00:20:39.620] [info] shortcut key code[object Object]
-[00:20:39.620] [info] shortcut key code2
-[00:20:39.620] [info] shortcut key code[object Object]
-[00:20:39.620] [info] shortcut key code3
-[00:20:39.620] [info] shortcut key code[object Object]
-[00:20:39.620] [info] shortcut key code4
-[00:20:39.620] [info] shortcut key code[object Object]
-[00:20:39.621] [info] shortcut key code5
-[00:20:39.621] [info] shortcut key code[object Object]
-[00:20:39.621] [info] shortcut key code6
-[00:20:39.621] [info] shortcut key code[object Object]
-[00:20:39.621] [info] shortcut key code46
-[00:20:39.621] [info] shortcut key code[object Object]
-[00:20:39.621] [info] { shiftKey: false,
+[00:37:14.303] [info] modifiers check
+[00:37:14.303] [info] keycode
+[00:37:14.303] [info] modifiers check
+[00:37:14.303] [info] altKey
+[00:37:14.304] [info] modifiers check
+[00:37:14.304] [info] shiftKey
+[00:37:14.304] [info] modifiers check
+[00:37:14.305] [info] ctrlKey
+[00:37:14.305] [info] modifiers check
+[00:37:14.305] [info] metaKey
+[00:37:14.305] [info] modifiers to checkmetaKey
+[00:37:14.306] [info] { shiftKey: false,
   altKey: false,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 29,
-  rawcode: 59,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 46,
+  rawcode: 8,
   type: 'keydown' }
-[00:20:39.622] [info] modifiers check
-[00:20:39.622] [info] keycode
-[00:20:39.622] [info] modifiers check
-[00:20:39.622] [info] altKey
-[00:20:39.622] [info] modifiers check
-[00:20:39.623] [info] shiftKey
-[00:20:39.623] [info] modifiers check
-[00:20:39.623] [info] ctrlKey
-[00:20:39.623] [info] modifiers check
-[00:20:39.623] [info] metaKey
-[00:20:39.623] [info] modifiers to checkaltKey,ctrlKey
-{ shiftKey: false,
-  altKey: true,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 56,
-  rawcode: 58,
-  type: 'keydown' }
-[00:20:39.624] [info] { '0': {},
-  '1': {},
-  '2': {},
-  '3': {},
-  '4': {},
-  '5': {},
-  '6': {},
-  '7': {},
-  '8': {},
-  '9': {},
-  pasteBuffer1: 
-   { keycode: 2,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer2: 
-   { keycode: 3,
-     rawcode: 15,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer3: 
-   { keycode: 4,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer4: 
-   { keycode: 5,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  pasteBuffer5: 
-   { keycode: 6,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: true,
-     metaKey: false },
-  copyKey: 
-   { keycode: 46,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: false,
-     metaKey: true } }
-[00:20:39.624] [info] Event key code56
-[00:20:39.625] [info] shortcut key codeundefined
-[00:20:39.625] [info] shortcut key code[object Object]
-[00:20:39.625] [info] shortcut key codeundefined
-[00:20:39.625] [info] shortcut key code[object Object]
-[00:20:39.625] [info] shortcut key codeundefined
-[00:20:39.625] [info] shortcut key code[object Object]
-[00:20:39.626] [info] shortcut key codeundefined
-[00:20:39.626] [info] shortcut key code[object Object]
-[00:20:39.626] [info] shortcut key codeundefined
-[00:20:39.626] [info] shortcut key code[object Object]
-[00:20:39.626] [info] shortcut key codeundefined
-[00:20:39.626] [info] shortcut key code[object Object]
-[00:20:39.627] [info] shortcut key codeundefined
-[00:20:39.627] [info] shortcut key code[object Object]
-[00:20:39.627] [info] shortcut key codeundefined
-[00:20:39.627] [info] shortcut key code[object Object]
-[00:20:39.627] [info] shortcut key codeundefined
-[00:20:39.627] [info] shortcut key code[object Object]
-[00:20:39.627] [info] shortcut key codeundefined
-[00:20:39.628] [info] shortcut key code[object Object]
-[00:20:39.628] [info] shortcut key code2
-[00:20:39.628] [info] shortcut key code[object Object]
-[00:20:39.628] [info] shortcut key code3
-[00:20:39.628] [info] shortcut key code[object Object]
-[00:20:39.628] [info] shortcut key code4
-[00:20:39.628] [info] shortcut key code[object Object]
-[00:20:39.629] [info] shortcut key code5
-[00:20:39.629] [info] shortcut key code[object Object]
-[00:20:39.629] [info] shortcut key code6
-[00:20:39.629] [info] shortcut key code[object Object]
-[00:20:39.629] [info] shortcut key code46
-[00:20:39.629] [info] shortcut key code[object Object]
-[00:20:39.630] [info] { shiftKey: false,
-  altKey: true,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 56,
-  rawcode: 58,
-  type: 'keydown' }
-[00:20:39.630] [info] modifiers check
-[00:20:39.630] [info] keycode
-[00:20:39.630] [info] modifiers check
-[00:20:39.630] [info] altKey
-[00:20:39.630] [info] modifiers check
-[00:20:39.631] [info] shiftKey
-[00:20:39.631] [info] modifiers check
-[00:20:39.631] [info] ctrlKey
-[00:20:39.631] [info] modifiers check
-[00:20:39.631] [info] metaKey
-[00:20:39.631] [info] modifiers to checkaltKey,ctrlKey
-show me monies
-Hello World!
-checkyy
-[00:20:40.283] [info] { button: 1, clicks: 1, x: 534, y: 289, type: 'mousedown' }
-[00:20:40.283] [info] time pass init0
-[00:20:40.284] [info] time pass init0
-[00:20:40.284] [info] time pass init0
-[00:20:40.284] [info] time pass init0
-1
-2
-[00:20:40.380] [info] hidden
-3
-3
-3
-3
-3
-[00:20:41.734] [info] { button: 1, clicks: 1, x: 260, y: 90, type: 'mousedown' }
-[00:20:41.735] [info] time pass init0
-[00:20:41.735] [info] time pass init0
-[00:20:41.735] [info] time pass init0
-[00:20:41.735] [info] time pass init0
+[00:37:14.306] [info] modifiers check
+[00:37:14.306] [info] keycode
+[00:37:14.307] [info] modifiers check
+[00:37:14.307] [info] altKey
+[00:37:14.307] [info] modifiers check
+[00:37:14.307] [info] shiftKey
+[00:37:14.307] [info] modifiers check
+[00:37:14.308] [info] ctrlKey
+[00:37:14.308] [info] modifiers check
+[00:37:14.308] [info] metaKey
+[00:37:14.308] [info] modifiers to checkaltKey,ctrlKey
+[00:37:14.407] [info] herro
+[00:37:14.407] [info] bufferKeyPressedWithModifier
+[00:37:15.709] [info] { button: 1, clicks: 1, x: 258, y: 85, type: 'mousedown' }
+[00:37:15.710] [info] time pass init0
+[00:37:15.711] [info] time pass init0
+[00:37:15.711] [info] time pass init0
+[00:37:15.711] [info] time pass init0
 1
 2
 2
 2
 2
 2
-[00:20:42.749] [info] { button: 1, clicks: 1, x: 579, y: 578, type: 'mousedown' }
-[00:20:42.749] [info] time pass init0
-[00:20:42.749] [info] time pass init0
-[00:20:42.749] [info] time pass init0
-[00:20:42.750] [info] time pass init0
+[00:37:16.877] [info] { button: 1, clicks: 1, x: 640, y: 613, type: 'mousedown' }
+[00:37:16.877] [info] time pass init0
+[00:37:16.878] [info] time pass init0
+[00:37:16.878] [info] time pass init0
+[00:37:16.878] [info] time pass init0
 1
 2
-3
-3
-3
-3
-3
 { shiftKey: false,
   altKey: false,
   ctrlKey: true,
@@ -1222,7 +449,7 @@ checkyy
   keycode: 29,
   rawcode: 59,
   type: 'keydown' }
-[00:20:43.545] [info] { '0': {},
+[00:37:16.977] [info] { '0': {},
   '1': {},
   '2': {},
   '3': {},
@@ -1263,64 +490,58 @@ checkyy
      altKey: false,
      shiftKey: false,
      ctrlKey: true,
-     metaKey: false },
-  copyKey: 
-   { keycode: 46,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: false,
-     metaKey: true } }
-[00:20:43.546] [info] Event key code29
-[00:20:43.547] [info] shortcut key codeundefined
-[00:20:43.547] [info] shortcut key code[object Object]
-[00:20:43.547] [info] shortcut key codeundefined
-[00:20:43.547] [info] shortcut key code[object Object]
-[00:20:43.548] [info] shortcut key codeundefined
-[00:20:43.548] [info] shortcut key code[object Object]
-[00:20:43.548] [info] shortcut key codeundefined
-[00:20:43.548] [info] shortcut key code[object Object]
-[00:20:43.548] [info] shortcut key codeundefined
-[00:20:43.548] [info] shortcut key code[object Object]
-[00:20:43.549] [info] shortcut key codeundefined
-[00:20:43.549] [info] shortcut key code[object Object]
-[00:20:43.549] [info] shortcut key codeundefined
-[00:20:43.549] [info] shortcut key code[object Object]
-[00:20:43.549] [info] shortcut key codeundefined
-[00:20:43.550] [info] shortcut key code[object Object]
-[00:20:43.550] [info] shortcut key codeundefined
-[00:20:43.550] [info] shortcut key code[object Object]
-[00:20:43.550] [info] shortcut key codeundefined
-[00:20:43.550] [info] shortcut key code[object Object]
-[00:20:43.551] [info] shortcut key code2
-[00:20:43.551] [info] shortcut key code[object Object]
-[00:20:43.551] [info] shortcut key code3
-[00:20:43.551] [info] shortcut key code[object Object]
-[00:20:43.551] [info] shortcut key code4
-[00:20:43.551] [info] shortcut key code[object Object]
-[00:20:43.552] [info] shortcut key code5
-[00:20:43.552] [info] shortcut key code[object Object]
-[00:20:43.552] [info] shortcut key code6
-[00:20:43.552] [info] shortcut key code[object Object]
-[00:20:43.552] [info] shortcut key code46
-[00:20:43.553] [info] shortcut key code[object Object]
-[00:20:43.553] [info] { shiftKey: false,
+     metaKey: false } }
+[00:37:16.978] [info] Event key code29
+[00:37:16.979] [info] shortcut key codeundefined
+[00:37:16.979] [info] shortcut key code[object Object]
+[00:37:16.979] [info] shortcut key codeundefined
+[00:37:16.980] [info] shortcut key code[object Object]
+[00:37:16.980] [info] shortcut key codeundefined
+[00:37:16.980] [info] shortcut key code[object Object]
+[00:37:16.980] [info] shortcut key codeundefined
+[00:37:16.981] [info] shortcut key code[object Object]
+[00:37:16.981] [info] shortcut key codeundefined
+[00:37:16.981] [info] shortcut key code[object Object]
+[00:37:16.981] [info] shortcut key codeundefined
+[00:37:16.982] [info] shortcut key code[object Object]
+[00:37:16.982] [info] shortcut key codeundefined
+[00:37:16.982] [info] shortcut key code[object Object]
+[00:37:16.982] [info] shortcut key codeundefined
+[00:37:16.983] [info] shortcut key code[object Object]
+[00:37:16.983] [info] shortcut key codeundefined
+[00:37:16.983] [info] shortcut key code[object Object]
+[00:37:16.983] [info] shortcut key codeundefined
+[00:37:16.984] [info] shortcut key code[object Object]
+[00:37:16.984] [info] shortcut key code2
+[00:37:16.984] [info] shortcut key code[object Object]
+[00:37:16.984] [info] shortcut key code3
+[00:37:16.985] [info] shortcut key code[object Object]
+[00:37:16.985] [info] shortcut key code4
+[00:37:16.985] [info] shortcut key code[object Object]
+[00:37:16.986] [info] shortcut key code5
+[00:37:16.986] [info] shortcut key code[object Object]
+[00:37:16.986] [info] shortcut key code6
+[00:37:16.986] [info] shortcut key code[object Object]
+[00:37:16.987] [info] { shiftKey: false,
   altKey: false,
   ctrlKey: true,
   metaKey: false,
   keycode: 29,
   rawcode: 59,
   type: 'keydown' }
-[00:20:43.553] [info] modifiers check
-[00:20:43.553] [info] keycode
-[00:20:43.553] [info] modifiers check
-[00:20:43.553] [info] altKey
-[00:20:43.554] [info] modifiers check
-[00:20:43.554] [info] shiftKey
-[00:20:43.554] [info] modifiers check
-[00:20:43.554] [info] ctrlKey
-[00:20:43.554] [info] modifiers check
-[00:20:43.554] [info] metaKey
-[00:20:43.555] [info] modifiers to checkaltKey,ctrlKey
+[00:37:16.987] [info] modifiers check
+[00:37:16.987] [info] keycode
+[00:37:16.987] [info] modifiers check
+[00:37:16.988] [info] altKey
+[00:37:16.988] [info] modifiers check
+[00:37:16.988] [info] shiftKey
+[00:37:16.989] [info] modifiers check
+[00:37:16.989] [info] ctrlKey
+[00:37:16.989] [info] modifiers check
+[00:37:16.990] [info] metaKey
+[00:37:16.990] [info] modifiers to checkaltKey,ctrlKey
+2
+2
 { shiftKey: false,
   altKey: false,
   ctrlKey: true,
@@ -1328,7 +549,7 @@ checkyy
   keycode: 46,
   rawcode: 8,
   type: 'keydown' }
-[00:20:43.693] [info] { '0': {},
+[00:37:17.069] [info] { '0': {},
   '1': {},
   '2': {},
   '3': {},
@@ -1369,115 +590,92 @@ checkyy
      altKey: false,
      shiftKey: false,
      ctrlKey: true,
-     metaKey: false },
-  copyKey: 
-   { keycode: 46,
-     altKey: false,
-     shiftKey: false,
-     ctrlKey: false,
-     metaKey: true } }
-[00:20:43.693] [info] Event key code46
-[00:20:43.694] [info] shortcut key codeundefined
-[00:20:43.694] [info] shortcut key code[object Object]
-[00:20:43.694] [info] shortcut key codeundefined
-[00:20:43.694] [info] shortcut key code[object Object]
-[00:20:43.694] [info] shortcut key codeundefined
-[00:20:43.694] [info] shortcut key code[object Object]
-[00:20:43.696] [info] shortcut key codeundefined
-[00:20:43.696] [info] shortcut key code[object Object]
-[00:20:43.697] [info] shortcut key codeundefined
-[00:20:43.697] [info] shortcut key code[object Object]
-[00:20:43.697] [info] shortcut key codeundefined
-[00:20:43.697] [info] shortcut key code[object Object]
-[00:20:43.697] [info] shortcut key codeundefined
-[00:20:43.697] [info] shortcut key code[object Object]
-[00:20:43.698] [info] shortcut key codeundefined
-[00:20:43.698] [info] shortcut key code[object Object]
-[00:20:43.698] [info] shortcut key codeundefined
-[00:20:43.698] [info] shortcut key code[object Object]
-[00:20:43.698] [info] shortcut key codeundefined
-[00:20:43.698] [info] shortcut key code[object Object]
-[00:20:43.698] [info] shortcut key code2
-[00:20:43.698] [info] shortcut key code[object Object]
-[00:20:43.699] [info] shortcut key code3
-[00:20:43.699] [info] shortcut key code[object Object]
-[00:20:43.699] [info] shortcut key code4
-[00:20:43.699] [info] shortcut key code[object Object]
-[00:20:43.699] [info] shortcut key code5
-[00:20:43.699] [info] shortcut key code[object Object]
-[00:20:43.699] [info] shortcut key code6
-[00:20:43.700] [info] shortcut key code[object Object]
-[00:20:43.700] [info] shortcut key code46
-[00:20:43.700] [info] shortcut key code[object Object]
-[00:20:43.700] [info] { shiftKey: false,
+     metaKey: false } }
+[00:37:17.070] [info] Event key code46
+[00:37:17.071] [info] shortcut key codeundefined
+[00:37:17.071] [info] shortcut key code[object Object]
+[00:37:17.071] [info] shortcut key codeundefined
+[00:37:17.072] [info] shortcut key code[object Object]
+[00:37:17.072] [info] shortcut key codeundefined
+[00:37:17.072] [info] shortcut key code[object Object]
+[00:37:17.072] [info] shortcut key codeundefined
+[00:37:17.073] [info] shortcut key code[object Object]
+[00:37:17.073] [info] shortcut key codeundefined
+[00:37:17.073] [info] shortcut key code[object Object]
+[00:37:17.073] [info] shortcut key codeundefined
+[00:37:17.074] [info] shortcut key code[object Object]
+[00:37:17.074] [info] shortcut key codeundefined
+[00:37:17.074] [info] shortcut key code[object Object]
+[00:37:17.074] [info] shortcut key codeundefined
+[00:37:17.074] [info] shortcut key code[object Object]
+[00:37:17.075] [info] shortcut key codeundefined
+[00:37:17.075] [info] shortcut key code[object Object]
+[00:37:17.075] [info] shortcut key codeundefined
+[00:37:17.075] [info] shortcut key code[object Object]
+[00:37:17.075] [info] shortcut key code2
+[00:37:17.075] [info] shortcut key code[object Object]
+[00:37:17.076] [info] shortcut key code3
+[00:37:17.076] [info] shortcut key code[object Object]
+[00:37:17.076] [info] shortcut key code4
+[00:37:17.076] [info] shortcut key code[object Object]
+[00:37:17.076] [info] shortcut key code5
+[00:37:17.076] [info] shortcut key code[object Object]
+[00:37:17.077] [info] shortcut key code6
+[00:37:17.077] [info] shortcut key code[object Object]
+[00:37:17.077] [info] { shiftKey: false,
   altKey: false,
   ctrlKey: true,
   metaKey: false,
   keycode: 46,
   rawcode: 8,
   type: 'keydown' }
-[00:20:43.701] [info] modifiers check
-[00:20:43.701] [info] keycode
-[00:20:43.701] [info] modifiers check
-[00:20:43.701] [info] altKey
-[00:20:43.702] [info] modifiers check
-[00:20:43.702] [info] shiftKey
-[00:20:43.702] [info] modifiers check
-[00:20:43.702] [info] ctrlKey
-[00:20:43.702] [info] modifiers check
-[00:20:43.702] [info] metaKey
-[00:20:43.703] [info] modifiers to checkmetaKey
-[00:20:43.703] [info] { shiftKey: false,
+[00:37:17.077] [info] modifiers check
+[00:37:17.077] [info] keycode
+[00:37:17.078] [info] modifiers check
+[00:37:17.078] [info] altKey
+[00:37:17.078] [info] modifiers check
+[00:37:17.078] [info] shiftKey
+[00:37:17.078] [info] modifiers check
+[00:37:17.079] [info] ctrlKey
+[00:37:17.079] [info] modifiers check
+[00:37:17.079] [info] metaKey
+[00:37:17.079] [info] modifiers to checkmetaKey
+[00:37:17.079] [info] { shiftKey: false,
   altKey: false,
   ctrlKey: true,
   metaKey: false,
   keycode: 46,
   rawcode: 8,
   type: 'keydown' }
-[00:20:43.703] [info] modifiers check
-[00:20:43.703] [info] keycode
-[00:20:43.704] [info] modifiers check
-[00:20:43.704] [info] altKey
-[00:20:43.704] [info] modifiers check
-[00:20:43.704] [info] shiftKey
-[00:20:43.704] [info] modifiers check
-[00:20:43.704] [info] ctrlKey
-[00:20:43.704] [info] modifiers check
-[00:20:43.705] [info] metaKey
-[00:20:43.705] [info] modifiers to checkmetaKey
-[00:20:43.705] [info] { shiftKey: false,
+[00:37:17.080] [info] modifiers check
+[00:37:17.080] [info] keycode
+[00:37:17.080] [info] modifiers check
+[00:37:17.080] [info] altKey
+[00:37:17.081] [info] modifiers check
+[00:37:17.081] [info] shiftKey
+[00:37:17.081] [info] modifiers check
+[00:37:17.081] [info] ctrlKey
+[00:37:17.082] [info] modifiers check
+[00:37:17.082] [info] metaKey
+[00:37:17.082] [info] modifiers to checkmetaKey
+[00:37:17.082] [info] { shiftKey: false,
   altKey: false,
   ctrlKey: true,
   metaKey: false,
   keycode: 46,
   rawcode: 8,
   type: 'keydown' }
-[00:20:43.705] [info] modifiers check
-[00:20:43.705] [info] keycode
-[00:20:43.706] [info] modifiers check
-[00:20:43.706] [info] altKey
-[00:20:43.706] [info] modifiers check
-[00:20:43.706] [info] shiftKey
-[00:20:43.706] [info] modifiers check
-[00:20:43.706] [info] ctrlKey
-[00:20:43.706] [info] modifiers check
-[00:20:43.707] [info] metaKey
-[00:20:43.707] [info] modifiers to checkmetaKey
-[00:20:43.707] [info] { shiftKey: false,
-  altKey: false,
-  ctrlKey: true,
-  metaKey: false,
-  keycode: 46,
-  rawcode: 8,
-  type: 'keydown' }
-[00:20:43.707] [info] modifiers check
-[00:20:43.707] [info] keycode
-[00:20:43.707] [info] modifiers check
-[00:20:43.708] [info] altKey
-[00:20:43.708] [info] modifiers check
-[00:20:43.708] [info] shiftKey
-[00:20:43.708] [info] modifiers check
-[00:20:43.708] [info] ctrlKey
-[00:20:43.708] [info] modifiers check
-[00:20:43.708] [info] metaKey
-[00:20:43.708] [info] modifiers to checkaltKey,ctrlKey
+[00:37:17.083] [info] modifiers check
+[00:37:17.083] [info] keycode
+[00:37:17.083] [info] modifiers check
+[00:37:17.083] [info] altKey
+[00:37:17.083] [info] modifiers check
+[00:37:17.084] [info] shiftKey
+[00:37:17.084] [info] modifiers check
+[00:37:17.084] [info] ctrlKey
+[00:37:17.084] [info] modifiers check
+[00:37:17.084] [info] metaKey
+[00:37:17.084] [info] modifiers to checkaltKey,ctrlKey
+[00:37:17.089] [info] hidden
+2
+2

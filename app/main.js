@@ -40,6 +40,9 @@ var copyTimePassed = 0
 var currentEvent = null
 var bufferCycling = false
 var saveWindowHiding = false
+
+var showOrHideShowWindow = true
+
 const SHORTCUT_KEY_LIMIT = 10
 const ioHook = require('iohook')
 const {
@@ -414,8 +417,7 @@ function setGlobalShortcuts () {
     if (key == 'copyKey') {
       copyKeyConfig = shortcutConfig[key]
       log.info(copyKeyConfig)
-    }
-    if (key == 'showKey') {
+    } else if (key == 'showKey') {
       showKeyConfig = shortcutConfig[key]
       log.info('shoKey!')
       log.info(showKeyConfig)
@@ -651,10 +653,15 @@ ioHook.on('keydown', event => {
   if (showKeysTriggered(event, showKeyConfig)) {
     // this is an arificial delay for robotjs and os to register cmd + x
     console.log('show me monies')
-    if (showWindow == null) {
-      loadShowWindow()
+    if (showOrHideShowWindow == true) {
+      if (showWindow == null) {
+        loadShowWindow()
+      } else {
+        showWindow.show()
+      }
+      wolf
     } else {
-      showWindow.show()
+      showWindow.hide()
     }
   }
 })

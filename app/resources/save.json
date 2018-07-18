@@ -1,16 +1,16 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
-    "showKeysMatch",
-    "showKeysMatch",
-    "modifiers to check",
-    "  if (modifiersToCheck.length == 0) {\n    return false\n  }",
-    "showKeyConfig",
-    "\n",
-    "https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8",
-    "https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8",
-    "https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8",
-    "https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8"
+    "bufferKeyPressedWithModifier",
+    "bufferKeyPressedWithModifier",
+    "bufferKeyPressedWithModifier",
+    "    }\n",
+    "    }\n",
+    "    }\n",
+    "    }\n",
+    "    }\n",
+    "    }\n",
+    "    }\n"
   ],
   "keyBuffer": {
     "0": "hello",
@@ -18,7 +18,7 @@
     "2": "public host key,",
     "3": "master",
     "4": "wolfy",
-    "5": "wolf",
+    "5": "    }\n",
     "6": "k",
     "7": "k",
     "8": "k",
