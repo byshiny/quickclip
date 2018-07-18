@@ -4,19 +4,27 @@ three
 four
 five
 
+WelcomeJungle!
+WelcomeJungle
+is
+master
+wolfywolf
+onetime
+  saveWindow.show()  saveWindow.show()
+
 onetime
 two
 three four
-five
+five  saveWindow.show()
 five
 qui
 on
 three two
-
+five
 three
 three two
 three
-
+saveWindow
 three three two
 three twothree three two
 

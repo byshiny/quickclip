@@ -19,14 +19,20 @@ const COPY_MOUSE_BUFFER_SIZE = 10
 const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 3000
 const COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL = 200
 // ok technically this needs a mutex - that check...
-const COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF = 50
+
 const COPY_MOUSE_CYCLE_INTERVAL = 1100
 const COPY_MOUSE_ACTIVATION_CHECK_COUNT = 4
+const MOUSE_HOLD_COUNT = 50
 const OS = process.platform
 
+const MOUSE_CHECK_TIME = 40
+const MOUSE_ACCUM_CAP = 80 // at 40 seconds, must reach a cap of 80
 const PASTE_DELAY = 50
-
+const MOUSE_UP_COUNT = 5
+var mouseDownAccum = 0 /// this is pretty much a accumilator or a counting queue
 // OK, all of this needs to be converted to OO
+var mouseUpAccum = MOUSE_UP_COUNT
+
 var pasteStarted = false
 var copyMouseIntervalStack = []
 var copyMouseItemIdx = 0
@@ -68,6 +74,8 @@ var textBufferContent = new Array(COPY_BUFFER_COUNT)
 var intervalIDArray = new Array(COPY_MOUSE_ACTIVATION_CHECK_COUNT)
 var timePassedArray = new Array(COPY_MOUSE_ACTIVATION_CHECK_COUNT)
 var mouseDownBooleanArray = new Array(COPY_MOUSE_ACTIVATION_CHECK_COUNT)
+var mouseHoldCount = MOUSE_HOLD_COUNT
+
 for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
   timePassedArray[x] = 0
   mouseDownBooleanArray[x] = false
@@ -171,7 +179,7 @@ function cycleBufferWindow () {
     }
     circularBufferWindow.webContents.send('cycle-buffer', mouseCircularBuffer.get(copyMouseItemIdx))
     /* I'm adding a delay here because there is a change that the message doesn't reach the display fast enough
-    then the code below will execute and cause massive confusion because there's a disrepency with the view */
+    then the code below wil execute and cause massive confusion because there's a disrepency with the view */
   } else {
     setTimeout(function () {
       log.info('pasting')
@@ -291,111 +299,30 @@ function waitBeforeCyclingBuffer () {
   }
   // since mouse clicks go up and down, the wait period might miss a few increments
   // solution: create four interval ids. If one of them is true(set it in a ored variable), then it's triggered.
-  if (intervalIDArrayIsEmpty()) {
-    for (var y = 0; y < COPY_MOUSE_ACTIVATION_CHECK_COUNT; y++) {
-      var intervalID = setInterval(createMouseDownChecker(y), COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * y)
-      intervalIDArray[y].push(intervalID)
-    }
-  }
-}
-
-function createMouseDownChecker (val) {
-  return function () {
-    mouseDownChecker(val)
-  }
-}
-function intervalIDArrayIsEmpty () {
-  var isEmpty = true
-  for (var y = 0; y < intervalIDArray.length; y++) {
-    if (intervalIDArray[y].length == 0) {
-      isEmpty = isEmpty && true
-    }
-  }
-  return isEmpty
-}
-function clearInterValIDArray () {
-  for (var y = 0; y < intervalIDArray.length; y++) {
-    while (intervalIDArray[y].length > 0) {
-      var intervalID = intervalIdArray[y].pop()
-      clearInterval(intervalID)
-    }
-  }
-}
-function clearInterValIDStack (stack) {
-  while (stack.length > 0) {
-    var intervalID = stack.pop()
-    clearInterval(intervalID)
-  }
-}
-
-function mouseDownChecker (chkrIdx) {
-  var activationTimeLimit = COPY_MOUSE_BUTTON_ACTIVATION_TIME
-  mouseDownBooleanArray[chkrIdx] = mouseDown
-  log.info(chkrIdx + 'mouse down' + mouseDownBooleanArray[chkrIdx])
-  // if one of the instances have been pressed, then check for the time
-  timePassedArray[chkrIdx] += COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL + COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL_DIFF * chkrIdx
-  if (checkIfMouseStillPressed(mouseDownBooleanArray)) {
-    log.info(chkrIdx)
-
-    // log.info(chkrIdx)
-    log.info('time pas' + timePassedArray[chkrIdx])
-    // start the copy mouse
-
-    if (timePassedArray[chkrIdx] > activationTimeLimit) {
-      // this needs a mutex
-
-      if (!bufferCycling) {
-        bufferCycling = true
-        log.info('cycle started at item' + chkrIdx)
-        clearIntervalCheckers()
-        cycleThroughBuffer()
-      } else {
-        clearInterValIDStack(intervalIDArray[chkrIdx])
+  var interval = setInterval(function () {
+    mouseDownAccum++
+    console.log(mouseDownAccum)
+    if (mouseDown) {
+      if (mouseDownAccum > MOUSE_ACCUM_CAP) {
+        mouseDownAccum = MOUSE_ACCUM_CAP
+        if (!bufferCycling) {
+          bufferCycling = true
+          startCircularBufferWindow()
+        }
       }
-      clearInterValIDStack(intervalIDArray[chkrIdx])
-      for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
-        mouseDownBooleanArray[x] = false
-      }
+    } else {
+      mouseDownAccum--
+      mouseUpAccum--
     }
-    // if
-    else {
-      //  clearInterval(intervalIDArray[chkrIdx])
-      // don't do anything, keep waiting...
+    if (mouseUpAccum <= 0) {
+      clearInterval(interval)
+      mouseUpAccum = MOUSE_UP_COUNT
+      mouseDownAccum = 0
     }
-  } else {
-    log.info('need to clear up' + chkrIdx)
-    for (var y = 0; y < COPY_MOUSE_ACTIVATION_CHECK_COUNT; y++) {
-      mouseDownBooleanArray[x] = false
-    }
-    clearIntervalCheckers()
-  }
+  }, MOUSE_CHECK_TIME)
 }
 
-function clearIntervalCheckers () {
-  for (var z = 0; z < COPY_MOUSE_ACTIVATION_CHECK_COUNT; z++) {
-    clearInterValIDStack(intervalIDArray[z])
-  }
-}
 // effectively a delta to ensure that there isn't a single mousedown checkpoint of failure
-
-function checkIfMouseStillPressed (mouseDownBooleanArray) {
-  var mouseHeld = false
-  for (var i = 0; i < mouseDownBooleanArray.length; i++) {
-    mouseHeld = mouseHeld || mouseDownBooleanArray[i]
-  }
-  for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
-    mouseDownBooleanArray[x] = false
-  }
-  return mouseHeld
-}
-
-function cycleThroughBuffer () {
-  log.info('heyyoo')
-  for (var x = 0; x < mouseCircularBuffer.size(); x++) {
-    log.info('circ buffer contents' + mouseCircularBuffer.get(x))
-  }
-  startCircularBufferWindow()
-}
 
 function saveBuffer (bufferNum) {
   var currentText = (' ' + clipboard.readText()).slice(1)
@@ -682,7 +609,6 @@ ioHook.on('mousedown', event => {
   log.info(event)
   // this is prety much a mutex
   if (!pasteStarted && !mouseDown) {
-    clearIntervalCheckers()
     waitBeforeCyclingBuffer()
   }
   mouseDown = true

@@ -1,5 +1,4 @@
 Minimum requirements:
-**DSouble clicking causes problems.
 1. Paste buffer external storage
 2. Right click to cycle through
 3. cut support
@@ -8,7 +7,6 @@ Minimum requirements:
 //need to add zero error handling - nothing inside
 6. Investigate how to enable logging and debug mode
 7. Apply cut functionality
-8. bug: After the first tap, you need to make the hold to as fine grained as possible. Remove all shitty code doing x + 1,2,3,y
 Warning about keyboard shortcuts
 3. Packaging
 4. OS Detection
@@ -36,7 +34,10 @@ You need to do a lot of clean up. Thread clean up.
 2.
 
 Development issues:
-
+Development issues:
+Development issues:
+Development issues:
+1. Timing ISSUEs with library api calls - some take too long
 1. Timing ISSUEs with library api calls - some take too long
 2. Some electron features are not supported  - i.e. out of focus, keycodes, etc
 
@@ -60,3 +61,17 @@ hellohellhellohellohellohellohellohelloohello
 
 focusablecircularBufferWindow.hide()circularBufferWindow.hide()circularBufferWindow.hide()
 circularBufferWindow.hide()
+
+TwoFourOneThree
+
+{
+  "comment": "I'm trying to keep format consistent, so I'm going to have",
+  "circularBuffer" : ["One", "Two", "Three", "Four"],
+  "keyBuffer":{
+    "1": "hello ",
+    "2": "it's",
+    "3": "me",
+    "4": "your",
+    "5": "buddy"
+  }
+}
