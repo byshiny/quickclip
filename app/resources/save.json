@@ -1,20 +1,20 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
-    "const MOUSE_DOWN_CHECK_FREQ = 40",
-    "const MOUSE_DOWN_CHECK_FREQ = 40",
-    "mouseDownChecker",
-    "mouseDownChecker",
-    "      if (!bufferCycling) {\n        bufferCycling = true\n        startCircularBufferWindow()\n      }",
-    "console.log(mouseDownAccum)",
-    "console.log(mouseDownAccum)",
-    "  if (!bufferCycling) {\n          bufferCycling = true\n          startCircularBufferWindow()\n        }",
-    "  if (!bufferCycling) {\n          bufferCycling = true\n          startCircularBufferWindow()\n        }",
-    "  if (!bufferCycling) {\n          bufferCycling = true\n          startCircularBufferWindow()\n        }"
+    "showKeysMatch",
+    "showKeysMatch",
+    "modifiers to check",
+    "  if (modifiersToCheck.length == 0) {\n    return false\n  }",
+    "showKeyConfig",
+    "\n",
+    "https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8",
+    "https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8",
+    "https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8",
+    "https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8"
   ],
   "keyBuffer": {
     "0": "hello",
-    "1": "public host key,",
+    "1": "https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8",
     "2": "public host key,",
     "3": "master",
     "4": "wolfy",

@@ -107,6 +107,7 @@ var mouseDown = false
 
 var shortcutKeys = {}
 var copyKeyConfig = 'quack'
+var showKeyConfig = 'doodle'
 // initialize all the global Arrays
 function setAllTextArraysToDefault () {
   var n = COPY_BUFFER_COUNT
@@ -129,6 +130,7 @@ var mainWindow = null
 let bufferWindow = null
 let circularBufferWindow = null
 let saveWindow = null
+let showWindow = null
 // Load a remote URL
 
 /* This function shows the current window that is available
@@ -265,6 +267,35 @@ function ensureModifierKeysMatch (event, keyConfig) {
   return true
 }
 
+function showKeysTriggered (event, keyConfig) {
+  var modifiersToCheck = []
+  log.info(event)
+  for (var modifierKey in keyConfig) {
+    log.info('modifiers check')
+    log.info(modifierKey)
+
+    if (modifierKey != 'rawcode' && modifierKey != 'keycode') {
+      if (keyConfig[modifierKey]) {
+        modifiersToCheck.push(modifierKey)
+      }
+    }
+  }
+  log.info('modifiers to check' + modifiersToCheck)
+  for (var modIdx in modifiersToCheck) {
+    var modifier = modifiersToCheck[modIdx]
+    if (event[modifier] == false) {
+      return false
+    }
+  }
+  if (modifiersToCheck.length == 0) {
+    return false
+  }
+  if (modifiersToCheck.length < 2) {
+    return false
+  }
+  return true
+}
+
 /* The condition to hold down are relaxed here so that the user will have to hold
   onto one button */
 function bufferKeyReleased (event) {
@@ -284,6 +315,7 @@ function triggerBuffer (bufferNum) {
 function copyKeyTriggered (event) {
   if (event.keycode == copyKeyConfig.keycode) {
     var match = ensureModifierKeysMatch(event, copyKeyConfig)
+    ensureModifierKeysMatch(event, copyKeyConfig)
     return match
   }
 }
@@ -382,6 +414,11 @@ function setGlobalShortcuts () {
     if (key == 'copyKey') {
       copyKeyConfig = shortcutConfig[key]
       log.info(copyKeyConfig)
+    }
+    if (key == 'showKey') {
+      showKeyConfig = shortcutConfig[key]
+      log.info('shoKey!')
+      log.info(showKeyConfig)
     } else {
       shortcutKeys[key] = shortcutConfig[key]
     }
@@ -464,8 +501,16 @@ app.on('ready', () => {
     saveWindow.hide()
   })
 
+  saveWindow.on('close', function (event) {
+    event.preventDefault()
+    // lol make a new window and trick the user
+    saveWindow.hide()
+  })
   saveWindow.loadURL(`file://${__dirname}/resources/views/savepop.html`)
   saveWindow.hide()
+
+  loadShowWindow()
+  showWindow.hide()
   // load circular buffer from save.json
   var circularBufferFromConfig = stateSaver.readValue('circularBuffer')
   log.info(circularBufferFromConfig)
@@ -506,6 +551,34 @@ app.on('ready', () => {
   { ioHook.start() }
 })
 
+function loadShowWindow () {
+  showWindow = new BrowserWindow({
+    width: 250,
+    height: 200,
+    focusable: false
+  })
+  showWindow.on('minimize', function (event) {
+    event.preventDefault()
+    saveWindow.hide()
+  })
+  showWindow.on('defocus', function (event) {
+    log.info('da focused')
+    saveWindow.hide()
+  })
+  // I'm scared this will cause an infinite loop with above
+  showWindow.on('hide', function (event) {
+    log.info('hidden')
+    saveWindow.hide()
+  })
+
+  showWindow.on('close', function (event) {
+    log.info('hidden')
+    saveWindow.hide()
+    showWindow = null
+  })
+  showWindow.loadURL(`file://${__dirname}/resources/views/show.html`)
+}
+
 app.on('before-quit', () => {
   stateSaver.saveValue('circularBuffer', mouseCircularBuffer.toarray())
   var saveObj = {}
@@ -538,6 +611,7 @@ ioHook.on('mouseup', event => {
 ioHook.on('keydown', event => {
   var number = keyMapper.getKeyFromCode(event.keycode)
   // keycode 46 is control c
+  console.log(event)
   if (bufferKeyPressedWithModifier(event)) {
     log.info('detected!')
     if (textBufferFired[number] == false) {
@@ -573,6 +647,15 @@ ioHook.on('keydown', event => {
       log.info(text)
       mouseCircularBuffer.enq(text)
     }, 100)
+  }
+  if (showKeysTriggered(event, showKeyConfig)) {
+    // this is an arificial delay for robotjs and os to register cmd + x
+    console.log('show me monies')
+    if (showWindow == null) {
+      loadShowWindow()
+    } else {
+      showWindow.show()
+    }
   }
 })
 
