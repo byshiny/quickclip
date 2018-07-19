@@ -40,6 +40,7 @@ var copyTimePassed = 0
 var currentEvent = null
 var bufferCycling = false
 var saveWindowHiding = false
+var showOrHideShowWindow = true
 const SHORTCUT_KEY_LIMIT = 10
 const ioHook = require('iohook')
 const {
@@ -610,13 +611,48 @@ ioHook.on('keydown', event => {
   if (showKeysTriggered(event, showKeyConfig)) {
   // this is an arificial delay for robotjs and os to register cmd + x
     console.log('show me monies')
-    if (showWindow == null) {
-    // loadShowWindow()
+    if (showOrHideShowWindow) {
+      if (showWindow == null) {
+        loadShowWindow()
+      } else {
+        showWindow.show()
+      }
+      showOrHideShowWindow = !showOrHideShowWindow
     } else {
-    // showWindow.show()
+      if (showWindow != null) {
+        showWindow.close()
+        showOrHideShowWindow = !showOrHideShowWindow
+      }
     }
   }
 })
+function loadShowWindow () {
+  showWindow = new BrowserWindow({
+    width: 250,
+    height: 200,
+    focusable: false
+  })
+  showWindow.on('minimize', function (event) {
+    event.preventDefault()
+    saveWindow.hide()
+  })
+  showWindow.on('defocus', function (event) {
+    log.info('da focused')
+    saveWindow.hide()
+  })
+  // I'm scared this will cause an infinite loop with above
+  showWindow.on('hide', function (event) {
+    log.info('hidden')
+    saveWindow.hide()
+  })
+
+  showWindow.on('close', function (event) {
+    log.info('hidden')
+    saveWindow.hide()
+    showWindow = null
+  })
+  showWindow.loadURL(`file://${__dirname}/resources/views/show.html`)
+}
 
 ioHook.on('keyup', event => {
   if (bufferKeyReleased(event)) {
