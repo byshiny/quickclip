@@ -1,4 +1,6 @@
 Minimum requirements:
+0. I need a visual signal in the trey to say that the countdown for buffer cycling has started....
+Or even do a redesign??? 
 1. Paste buffer external storage
 2. Right click to cycle through
 3. cut support
