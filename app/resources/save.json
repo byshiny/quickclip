@@ -1,27 +1,16 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
-    "  showOrHideShowWindow = !showOrHideShowWindow",
-    "  showOrHideShowWindow = !showOrHideShowWindow",
-    "  if (showWindow == null) {\n        loadShowWindow()\n      } ",
-    "showOrHideShowWindow = false",
-    "showOrHideShowWindow = false",
-    "    else{\n        showOrHideShowWindow = true\n        showWindow.hide()\n      }",
-    "  if (showKeysTriggered(event, showKeyConfig)) {\n  // this is an arificial delay for robotjs and os to register cmd + x\n    console.log('show me monies')\n    if (showWindow == null) {\n      loadShowWindow()\n    } else {\n      showWindow.show()\n    }\n  }",
-    "  if (showKeysTriggered(event, showKeyConfig)) {\n  // this is an arificial delay for robotjs and os to register cmd + x\n    console.log('show me monies')\n    if (showWindow == null) {\n      loadShowWindow()\n    } else {\n      showWindow.show()\n    }\n  }",
-    "loadShowWindow",
-    "loadShowWindow"
+    "textObj.textBufferFired = textBufferFired",
+    "textObj.textBufferFired = textBufferFired",
+    "  bufferWindow.webContents.on('did-finish-load', function () {\n    bufferWindow.webContents.send('load-buffer', readString)\n  })\n",
+    "<div>\n  <button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\">\n         Button <span class=\"caret\"></span>\n     </button>\n     Hello!\n</div>",
+    "<div>\n  <button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\">\n         Button <span class=\"caret\"></span>\n     </button>\n     Hello!\n</div>",
+    "<div>\n  <button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\">\n         Button <span class=\"caret\"></span>\n     </button>\n     Hello!\n</div>",
+    " <button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\">\n        Button <span class=\"caret\"></span>\n    </button>",
+    " <button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\">\n        Button <span class=\"caret\"></span>\n    </button>",
+    "<p class=\"text-left\">Left aligned text on all viewport sizes.</p>",
+    "<p class=\"text-left\">Left aligned text on all viewport sizes.</p>"
   ],
-  "keyBuffer": {
-    "0": "hello",
-    "1": "https://www.google.com/search?q=adobe+spark&oq=adobe+spark&aqs=chrome.0.69i59j69i60l3j0j69i59.1458j0j4&sourceid=chrome&ie=UTF-8",
-    "2": "public host key,",
-    "3": "master",
-    "4": "wolfy",
-    "5": "    }\n",
-    "6": "k",
-    "7": "k",
-    "8": "k",
-    "9": "k"
-  }
+  "keyBuffer": {}
 }

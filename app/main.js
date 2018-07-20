@@ -460,6 +460,7 @@ app.on('ready', () => {
     mainWindow = null
     bufferWindow = null
     globalShortcut.unregisterAll()
+    app.quit()
   })
 
   mainWindow.on('minimize', function (event) {
@@ -618,6 +619,16 @@ ioHook.on('keydown', event => {
         showWindow.show()
       }
       showOrHideShowWindow = !showOrHideShowWindow
+      var textObj = {}
+      textBufferTimer = new Array(COPY_BUFFER_COUNT)
+      textBufferChecker = new Array(COPY_BUFFER_COUNT)
+      textBufferFired = new Array(COPY_BUFFER_COUNT)
+      textBufferContent = new Array(COPY_BUFFER_COUNT)
+      textObj.textBufferTimer = textBufferTimer
+      textObj.textBufferChecker = textBufferChecker
+      textObj.textBufferFired = textBufferFired
+      textObj.textBufferContent = textBufferContent
+      showWindow.webContents.send('load-buffer', textObj)
     } else {
       if (showWindow != null) {
         showWindow.close()
@@ -628,8 +639,8 @@ ioHook.on('keydown', event => {
 })
 function loadShowWindow () {
   showWindow = new BrowserWindow({
-    width: 250,
-    height: 200,
+    width: 400,
+    height: 800,
     focusable: false
   })
   showWindow.on('minimize', function (event) {
