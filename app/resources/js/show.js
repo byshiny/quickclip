@@ -1,6 +1,6 @@
 'use strict'
 /* This file is used to show all the contents of a bufferDiv
-*/
+ */
 // use for debug purpose only =D
 var closeEl = document.querySelector('.close')
 var settingsEl = document.querySelector('.settings')
@@ -47,14 +47,36 @@ ipcRenderer.on('load-buffer', (event, textObj) => {
   // textObj.textBufferChecker
   // textObj.textBufferFired
   // textObj.textBufferContent
+  /*
+  <div>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+       Button <span class="caret"></span>
+   </button> Hello!
+  </div>
+  <div>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+       Button <span class="caret"></span>
+   </button> Herro!
+ </div> */
+  for (var x = 0; x < textObj.textBufferContent.length; x++) {
+    if (textObj.textBufferChecker[x] === 1) {
+      myConsole.log(x)
+      var button = document.createElement('button')
+      var span = document.createElement('span')
+      var randColorInt = getRandomInt(0, CSS_COLOR_NAMES.length)
+      var randColor = CSS_COLOR_NAMES[randColorInt]
+      button.classList.add('btn')
+      button.innerHTML = x
+      span.innerHTML = textObj.textBufferContent[x]
+      span.classList.add('label')
+      var linebreak = document.createElement('br')
+      bufferHolder.appendChild(linebreak)
+      button.style.backgroundColor = randColor
+      bufferHolder.appendChild(button)
+      bufferHolder.appendChild(span)
+    }
+    //  bufferHolderDiv.appendChild(bufferHolderDiv)
+  }
 
-  var button = document.createElement('button')
-  var randColorInt = getRandomInt(0, CSS_COLOR_NAMES.length)
-  var randColor = CSS_COLOR_NAMES[randColorInt]
-  button.innerHTML = 'herro'
-  button.style.backgroundColor = randColor
-  bufferHolder.appendChild(button)
-//  bufferHolderDiv.appendChild(bufferHolderDiv)
+  myConsole.log('checkyy')
 })
-
-myConsole.log('checkyy')

@@ -116,7 +116,7 @@ function setAllTextArraysToDefault () {
     textBufferTimer[i] = new Date()
     textBufferChecker[i] = 0
     textBufferFired[i] = false
-    textBufferContent[i] = 'k'
+    textBufferContent[i] = '=('
   }
   var n = SHORTCUT_KEY_LIMIT
   for (i = 0; i < n; ++i) {
@@ -519,7 +519,7 @@ app.on('ready', () => {
     if (keyBufferFromConfig.hasOwnProperty(key)) {
       var bufferNumber = key
       textBufferContent[bufferNumber] = keyBufferFromConfig[bufferNumber]
-      textBufferChecker[bufferNumber] = 1
+      if (textBufferContent[bufferNumber] != '=(') { textBufferChecker[bufferNumber] = 1 }
       textBufferTimer[bufferNumber] = new Date()
       log.info(bufferNumber + ' -> ' + textBufferContent[bufferNumber])
     }
