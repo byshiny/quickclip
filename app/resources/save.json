@@ -1,16 +1,16 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
-    "  if(keyBufferFromConfig.)",
-    "  if(keyBufferFromConfig.)",
-    "setAllTextArraysToDefault",
-    "setAllTextArraysToDefault",
-    "setAllTextArraysToDefault",
-    "setAllTextArraysToDefault",
-    "  console.log('yahoo' + keyBuffer)",
-    "  console.log('yahoo' + keyBuffer)",
-    "  console.log('yahoo' + keyBuffer)",
-    "pasteBuffer"
+    "    var copyMouseInterval = setInterval(function () {\n",
+    "    var copyMouseInterval = setInterval(function () {\n",
+    "    var copyMouseInterval = setInterval(function () {\n",
+    "    var copyMouseInterval = setInterval(function () {\n",
+    "    var copyMouseInterval = setInterval(function () {\n",
+    "    var copyMouseInterval = setInterval(function () {\n",
+    "    var copyMouseInterval = setInterval(function () {\n",
+    "    var copyMouseInterval = setInterval(function () {\n",
+    "    var copyMouseInterval = setInterval(function () {\n",
+    "  mouseDown = true\n"
   ],
   "keyBuffer": {
     "0": "=(",

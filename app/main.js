@@ -34,9 +34,12 @@ var mouseDownAccum = 0 /// this is pretty much a accumilator or a counting queue
 var mouseUpAccum = MOUSE_UP_COUNT
 
 var pasteStarted = false
-var copyMouseIntervalStack = []
+var lastPasteTime = new Date()
+
 var copyMouseItemIdx = 0
 var copyTimePassed = 0
+var copyMouseInterval = null
+var copyMouseIntervalStack = []
 var currentEvent = null
 var bufferCycling = false
 var saveWindowHiding = false
@@ -86,7 +89,7 @@ for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
 var fs = require('fs')
 // replace with logging library
 /*
-var util = require('util')
+var util = require('setAllTextArraysToDefault')
 var log_file = fs.createWriteStream('./logs/debug.log', {
   flags: 'w'
 })
@@ -163,7 +166,7 @@ function startCircularBufferWindow () {
     pasteStarted = true
     // this is to get that first buffer immediately
     cycleBufferWindow()
-    var copyMouseInterval = setInterval(function () {
+    copyMouseInterval = setInterval(function () {
       cycleBufferWindow()
     }, COPY_MOUSE_CYCLE_INTERVAL)
     copyMouseIntervalStack.push(copyMouseInterval)
@@ -208,10 +211,13 @@ function pasteMouseCycleAndReset () {
   log.info('os' + OS)
   if (OS == 'darwin') {
     Menu.sendActionToFirstResponder('hide:')
+    if (circularBufferWindow != null) {
+      circularBufferWindow.destroy()
+    }
   }
   if (OS == 'win32') {
     if (circularBufferWindow != null) {
-      circularBufferWindow.close()
+      circularBufferWindow.destroy()
     }
   }
   pasteFromCircularBuffer(copyMouseItemIdx)
@@ -557,15 +563,18 @@ ipcMain.on('close-main-window', function () {
 })
 
 ioHook.on('mouseup', event => {
-  if (pasteStarted && mouseDown) {
+  var pasteDateDiff = Math.abs(lastPasteTime - new Date())
+
+  if (pasteStarted && mouseDown && pasteDateDiff > 4000) {
+    lastPasteTime = new Date()
     // DO NOT REMOVE THIS LINE! IF YOU DO, YOU'LL HAVE CONCURRENCY ISSUES
-    while (copyMouseIntervalStack.length > 0) {
-      var copyMouseInterval = copyMouseIntervalStack.pop()
-      clearInterval(copyMouseInterval)
-    }
     pasteStarted = false
-    circularBufferWindow.close()
     pasteMouseCycleAndReset()
+    clearInterval(copyMouseInterval)
+    while (copyMouseIntervalStack.length > 0) {
+      clearInterval(copyMouseIntervalStack.pop())
+    }
+    lastPasteTime = new Date()
   }
   mouseDown = false
   pasteStarted = false
@@ -658,7 +667,7 @@ function loadShowWindow () {
 
   showWindow.on('close', function (event) {
     log.info('hidden')
-    saveWindow.hide()
+    saveWindow.destroy()
     showWindow = null
   })
   showWindow.loadURL(`file://${__dirname}/resources/views/show.html`)
@@ -697,6 +706,7 @@ ioHook.on('mousedown', event => {
   log.info(event)
   // this is prety much a mutex
   if (!pasteStarted && !mouseDown) {
+    mouseDown = true // I'm downing the mouse twice so the computer doesn't enter the critical section twice
     waitBeforeCyclingBuffer()
   }
   mouseDown = true
