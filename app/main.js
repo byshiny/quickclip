@@ -618,17 +618,16 @@ ioHook.on('keydown', event => {
       } else {
         showWindow.show()
       }
+
       showOrHideShowWindow = !showOrHideShowWindow
-      var textObj = {}
-      textBufferTimer = new Array(COPY_BUFFER_COUNT)
-      textBufferChecker = new Array(COPY_BUFFER_COUNT)
-      textBufferFired = new Array(COPY_BUFFER_COUNT)
-      textBufferContent = new Array(COPY_BUFFER_COUNT)
-      textObj.textBufferTimer = textBufferTimer
-      textObj.textBufferChecker = textBufferChecker
-      textObj.textBufferFired = textBufferFired
-      textObj.textBufferContent = textBufferContent
-      showWindow.webContents.send('load-buffer', textObj)
+      setTimeout(function () {
+        var textObj = {}
+        textObj.textBufferTimer = textBufferTimer
+        textObj.textBufferChecker = textBufferChecker
+        textObj.textBufferFired = textBufferFired
+        textObj.textBufferContent = textBufferContent
+        showWindow.webContents.send('load-buffer', textObj)
+      }, 500)
     } else {
       if (showWindow != null) {
         showWindow.close()
@@ -701,5 +700,6 @@ ioHook.on('mousedown', event => {
     waitBeforeCyclingBuffer()
   }
   mouseDown = true
+
   // remember to add mainwindow = null later.
 })
