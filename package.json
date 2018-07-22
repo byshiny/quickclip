@@ -16,9 +16,9 @@
     "install": "npm rebuild --runtime=electron --target=2.0.3 --disturl=https://atom.io/download/atom-shell --abi=57"
   },
   "dependencies": {
+    "electron-log": "^2.2.16",
     "bootstrap": "^4.1.2",
     "circular-buffer": "^1.0.2",
-    "electron-log": "^2.2.16",
     "import-fresh": "^2.0.0",
     "iohook": "0.2.0",
     "jquery": "^3.3.1",

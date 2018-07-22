@@ -57,8 +57,8 @@
       "keycode": 29,
       "altKey": true,
       "shiftKey": false,
-      "ctrlKey": true,
-      "metaKey": false
+      "ctrlKey": false,
+      "metaKey": true
     }
   },
   "win32": {

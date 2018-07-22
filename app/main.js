@@ -10,7 +10,7 @@ STEPS:
 */
 /* GLOBAL Parameters
  */
-// log.info(process.version)
+// //log.info(process.version)
 // remove hard code
 
 const COPY_BUFFER_COUNT = 10
@@ -58,8 +58,8 @@ const {
 
 const configuration = require('./configuration')
 const stateSaver = require('./stateSaver')
-const log = require('electron-log')
-// log.transports.console.level = 'warn';
+// const log = require('electron-log')
+// //log.transports.console.level = 'warn';
 var robot = require('robotjs')
 const path = require('path')
 
@@ -96,7 +96,7 @@ var log_file = fs.createWriteStream('./logs/debug.log', {
 
 var log_stdout = process.stdout
 
-log.info = function (d) { //
+//log.info = function (d) { //
   log_file.write(util.format(d) + '\n')
   log_stdout.write(util.format(d) + '\n')
 }
@@ -175,10 +175,10 @@ function startCircularBufferWindow () {
 }
 
 function cycleBufferWindow () {
-  log.info('mousedownyyy')
+  /// /log.info('mousedownyyy')
   if (mouseDown) {
     copyTimePassed += COPY_MOUSE_CYCLE_INTERVAL
-    log.info('cycling choo choo')
+    /// ///log.info('cycling choo choo')
     copyMouseItemIdx++
     if (copyMouseItemIdx >= mouseCircularBuffer.size() || copyMouseItemIdx == -1) {
       copyMouseItemIdx = 0
@@ -188,7 +188,7 @@ function cycleBufferWindow () {
     then the code below wil execute and cause massive confusion because there's a disrepency with the view */
   } else {
     setTimeout(function () {
-      log.info('pasting')
+      /// /log.info('pasting')
       pasteMouseCycleAndReset()
     }, PASTE_DELAY)
   }
@@ -208,7 +208,7 @@ function pasteFromCircularBuffer (circularBufferIdx) {
 function pasteMouseCycleAndReset () {
   copyTimePassed = 0
 
-  log.info('os' + OS)
+  /// /log.info('os' + OS)
   if (OS == 'darwin') {
     Menu.sendActionToFirstResponder('hide:')
     if (circularBufferWindow != null) {
@@ -234,12 +234,12 @@ function bufferKeyPressedWithModifier (event) {
       return true
     }
     return false
-    */log.info(shortcutKeys)
-  log.info('Event key code' + event.keycode)
+    *//// /log.info(shortcutKeys)
+  /// /log.info('Event key code' + event.keycode)
   for (var sKey in shortcutKeys) {
     var keyConfig = shortcutKeys[sKey]
-    log.info('shortcut key code' + keyConfig.keycode)
-    log.info('shortcut key code' + keyConfig)
+    /// /log.info('shortcut key code' + keyConfig.keycode)
+    /// /log.info('shortcut key code' + keyConfig)
     if (event.keycode == keyConfig.keycode) {
       var match = ensureModifierKeysMatch(event, keyConfig)
       return match
@@ -250,10 +250,10 @@ function bufferKeyPressedWithModifier (event) {
 
 function ensureModifierKeysMatch (event, keyConfig) {
   var modifiersToCheck = []
-  log.info(event)
+  /// /log.info(event)
   for (var modifierKey in keyConfig) {
-    log.info('modifiers check')
-    log.info(modifierKey)
+    /// /log.info('modifiers check')
+    /// /log.info(modifierKey)
 
     if (modifierKey != 'rawcode' && modifierKey != 'keycode') {
       if (keyConfig[modifierKey]) {
@@ -261,7 +261,7 @@ function ensureModifierKeysMatch (event, keyConfig) {
       }
     }
   }
-  log.info('modifiers to check' + modifiersToCheck)
+  /// /log.info('modifiers to check' + modifiersToCheck)
   for (var modIdx in modifiersToCheck) {
     var modifier = modifiersToCheck[modIdx]
     if (event[modifier] == false) {
@@ -276,10 +276,10 @@ function ensureModifierKeysMatch (event, keyConfig) {
 
 function showKeysTriggered (event, keyConfig) {
   var modifiersToCheck = []
-  log.info(event)
+  /// /log.info(event)
   for (var modifierKey in keyConfig) {
-    log.info('modifiers check')
-    log.info(modifierKey)
+    /// /log.info('modifiers check')
+    /// /log.info(modifierKey)
 
     if (modifierKey != 'rawcode' && modifierKey != 'keycode') {
       if (keyConfig[modifierKey]) {
@@ -287,7 +287,7 @@ function showKeysTriggered (event, keyConfig) {
       }
     }
   }
-  log.info('modifiers to check' + modifiersToCheck)
+  /// /log.info('modifiers to check' + modifiersToCheck)
   for (var modIdx in modifiersToCheck) {
     var modifier = modifiersToCheck[modIdx]
     if (event[modifier] == false) {
@@ -332,7 +332,7 @@ function waitBeforeCyclingBuffer () {
 
   for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
     timePassedArray[x] = 0
-    log.info('time pass init' + timePassedArray[x])
+    /// /log.info('time pass init' + timePassedArray[x])
   }
   // since mouse clicks go up and down, the wait period might miss a few increments
   // solution: create four interval ids. If one of them is true(set it in a ored variable), then it's triggered.
@@ -363,7 +363,7 @@ function waitBeforeCyclingBuffer () {
 
 function saveBuffer (bufferNum) {
   var currentText = (' ' + clipboard.readText()).slice(1)
-  log.info('buff num:' + bufferNum + ' currentText:' + currentText)
+  /// /log.info('buff num:' + bufferNum + ' currentText:' + currentText)
   textBufferChecker[bufferNum] = 1
   textBufferTimer[bufferNum] = new Date()
   // this also needs to be externalized
@@ -389,10 +389,10 @@ function pasteBuffer (bufferNum) {
   // this is pretty much a classic swaparoo in CS
   if (textBufferChecker[bufferNum] === 1) {
     // WATCH OUT FOR THIS FUCKING LINE
-    log.info('buffer checker is set')
+    /// /log.info('buffer checker is set')
     var currentText = (' ' + clipboard.readText()).slice(1)
     var textFromBuffer = textBufferContent[bufferNum]
-    log.info(textBufferContent)
+    /// /log.info(textBufferContent)
     clipboard.writeText(textFromBuffer)
     setTimeout(function () {
       pasteCommand(currentText)
@@ -403,9 +403,9 @@ function pasteBuffer (bufferNum) {
 function pasteCommand (currentText) {
   // all the stuff you want to happen after that pause
   robot.keyTap('v', ['command'])
-  log.info('is this a reference to a pointer?' + clipboard.readText())
+  /// /log.info('is this a reference to a pointer?' + clipboard.readText())
   setTimeout(function () {
-    log.info('currenttext:' + currentText)
+    /// /log.info('currenttext:' + currentText)
     clipboard.writeText(currentText)
   }, PASTE_DELAY)
 }
@@ -418,10 +418,10 @@ function setGlobalShortcuts () {
   for (var key in shortcutConfig) {
     if (key == 'copyKey') {
       copyKeyConfig = shortcutConfig[key]
-      log.info(copyKeyConfig)
+      /// /log.info(copyKeyConfig)
     } else if (key == 'showKey') {
       showKeyConfig = shortcutConfig[key]
-      log.info(showKeyConfig)
+      // log.info(showKeyConfig)
     } else {
       shortcutKeys[key] = shortcutConfig[key]
     }
@@ -439,7 +439,7 @@ function setGlobalShortcuts () {
       globalShortcut.register('n', function () {
         // showBuffer()
         for (var item in mouseCircularBuffer) {
-          log.info(item)
+          //log.info(item)
         }
       })
       globalShortcut.register('m', function () {
@@ -455,7 +455,7 @@ function restoreSaveState () {
 
 app.on('ready', () => {
   // need to externalize window size
-  log.info(__dirname)
+  // log.info(__dirname)
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
@@ -474,17 +474,17 @@ app.on('ready', () => {
     mainWindow.hide()
   })
   mainWindow.on('defocus', function (event) {
-    log.info('da focused')
+    // log.info('da focused')
     mainWindow.hide()
   })
   // I'm scared this will cause an infinite loop with above
   mainWindow.on('hide', function (event) {
-    log.info('hidden')
+    // log.info('hidden')
     mainWindow.hide()
   })
 
   mainWindow.loadURL(`file://${__dirname}/resources/views/index.html`)
-  log.info(__dirname)
+  // log.info(__dirname)
 
   saveWindow = new BrowserWindow({
     width: 250,
@@ -496,12 +496,12 @@ app.on('ready', () => {
     saveWindow.hide()
   })
   saveWindow.on('defocus', function (event) {
-    log.info('da focused')
+    // log.info('da focused')
     saveWindow.hide()
   })
   // I'm scared this will cause an infinite loop with above
   saveWindow.on('hide', function (event) {
-    log.info('hidden')
+    // log.info('hidden')
     saveWindow.hide()
   })
 
@@ -509,7 +509,7 @@ app.on('ready', () => {
   saveWindow.hide()
   // load circular buffer from save.json
   var circularBufferFromConfig = stateSaver.readValue('circularBuffer')
-  log.info(circularBufferFromConfig)
+  // log.info(circularBufferFromConfig)
 
   var text = mouseCircularBuffer.deq()
   for (var x = circularBufferFromConfig.length - 1; x >= 0; x--) {
@@ -520,22 +520,22 @@ app.on('ready', () => {
   // load key values from save.json
   setAllTextArraysToDefault()
   var keyBufferFromConfig = stateSaver.readValue('keyBuffer')
-  log.info(keyBufferFromConfig)
+  // log.info(keyBufferFromConfig)
   for (var key in keyBufferFromConfig) {
     if (keyBufferFromConfig.hasOwnProperty(key)) {
       var bufferNumber = key
       textBufferContent[bufferNumber] = keyBufferFromConfig[bufferNumber]
       if (textBufferContent[bufferNumber] != '=(') { textBufferChecker[bufferNumber] = 1 }
       textBufferTimer[bufferNumber] = new Date()
-      log.info(bufferNumber + ' -> ' + textBufferContent[bufferNumber])
+      // log.info(bufferNumber + ' -> ' + textBufferContent[bufferNumber])
     }
   }
 
   /*
-  log.info(mouseCircularBuffer.size())
+  //log.info(mouseCircularBuffer.size())
   for (var x = 0; x < mouseCircularBuffer.size(); x++) {
     // if you save 1 2 3 , you need to load 3 2 1
-    log.info(mouseCircularBuffer.get(x))
+    //log.info(mouseCircularBuffer.get(x))
   } */
 
   // REMOVE THIS LATER: mainWindow.hide()
@@ -583,13 +583,13 @@ ioHook.on('keydown', event => {
   var number = keyMapper.getKeyFromCode(event.keycode)
   // keycode 46 is control c
   if (bufferKeyPressedWithModifier(event)) {
-    log.info('detected!')
+    // log.info('detected!')
     if (textBufferFired[number] == false) {
-      log.info('text buffer triggered!')
+      // log.info('text buffer triggered!')
       triggerBuffer(number)
     }
     var lastKeyDownDate = textBufferTimer[number]
-    log.info('goot time to save')
+    // log.info('goot time to save')
     var diff = Math.abs(new Date() - lastKeyDownDate)
     var saveTimeObj = {}
     if (!saveWindowHiding) {
@@ -613,8 +613,8 @@ ioHook.on('keydown', event => {
     // this is an arificial delay for robotjs and os to register cmd + x
     setTimeout(function () {
       var text = clipboard.readText()
-      log.info('herro')
-      log.info(text)
+      // log.info('herro')
+      // log.info(text)
       mouseCircularBuffer.enq(text)
     }, 100)
   }
@@ -656,17 +656,17 @@ function loadShowWindow () {
     saveWindow.hide()
   })
   showWindow.on('defocus', function (event) {
-    log.info('da focused')
+    // log.info('da focused')
     saveWindow.hide()
   })
   // I'm scared this will cause an infinite loop with above
   showWindow.on('hide', function (event) {
-    log.info('hidden')
+    // log.info('hidden')
     saveWindow.hide()
   })
 
   showWindow.on('close', function (event) {
-    log.info('hidden')
+    // log.info('hidden')
     saveWindow.destroy()
     showWindow = null
   })
@@ -675,17 +675,17 @@ function loadShowWindow () {
 
 ioHook.on('keyup', event => {
   if (bufferKeyReleased(event)) {
-    log.info('buffer key released')
+    // log.info('buffer key released')
     var number = keyMapper.getKeyFromCode(event.keycode)
     if (textBufferFired[number] === true) {
       var curDate = new Date()
       var lastKeyDownDate = textBufferTimer[number]
-      log.info('time diff')
+      // log.info('time diff')
       var diff = Math.abs(new Date() - lastKeyDownDate)
-      log.info(lastKeyDownDate.toString())
-      log.info(curDate.toString())
-      log.info(diff)
-      log.info(textBufferContent)
+      // log.info(lastKeyDownDate.toString())
+      // log.info(curDate.toString())
+      // log.info(diff)
+      // log.info(textBufferContent)
       if (diff < COPY_BUFFER_TIME) {
         saveWindow.hide()
         Menu.sendActionToFirstResponder('hide:')
@@ -703,7 +703,7 @@ ioHook.on('keyup', event => {
 
 ioHook.on('mousedown', event => {
   currentEvent = event
-  log.info(event)
+  // log.info(event)
   // this is prety much a mutex
   if (!pasteStarted && !mouseDown) {
     mouseDown = true // I'm downing the mouse twice so the computer doesn't enter the critical section twice
