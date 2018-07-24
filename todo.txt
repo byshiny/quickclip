@@ -1,6 +1,6 @@
 Minimum requirements:
 0. I need a visual signal in the trey to say that the countdown for buffer cycling has started....
-Or even do a redesign??? 
+Or even do a redesign???
 1. Paste buffer external storage
 2. Right click to cycle through
 3. cut support
@@ -9,6 +9,7 @@ Or even do a redesign???
 //need to add zero error handling - nothing inside
 6. Investigate how to enable logging and debug mode
 7. Apply cut functionality
+8. I want UI to show me that cycling has stared, or even change it to 4 quick taps. Even better is a circular motion. Probably a menu tray.
 Warning about keyboard shortcuts
 3. Packaging
 4. OS Detection

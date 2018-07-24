@@ -60,7 +60,6 @@ ipcRenderer.on('load-buffer', (event, textObj) => {
  </div> */
   for (var x = 0; x < textObj.textBufferContent.length; x++) {
     if (textObj.textBufferChecker[x] === 1) {
-      myConsole.log(x)
       var button = document.createElement('button')
       var span = document.createElement('span')
       var randColorInt = getRandomInt(0, CSS_COLOR_NAMES.length)
