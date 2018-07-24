@@ -113,7 +113,7 @@ var shortcutKeys = {}
 var showKeyConfig = 'doodle'
 var copyKeyConfig = 'quack'
 // initialize all the global Arrays
-function setAllTextArraysToDefault () {
+function setAllTextArraysToDefault() {
   var n = COPY_BUFFER_COUNT
   for (var i = 0; i < n; ++i) {
     textBufferTimer[i] = new Date()
@@ -140,7 +140,7 @@ let showWindow = null
 /* This function shows the current window that is available
  */
 
-function showBuffer () {
+function showBuffer() {
   // TODO: Parameterize width and height
   bufferWindow = new BrowserWindow({
     width: 400,
@@ -148,12 +148,12 @@ function showBuffer () {
     transparent: false
   })
   bufferWindow.loadURL(`file://${__dirname}/resources/views/index.html`)
-  bufferWindow.webContents.on('did-finish-load', function () {
+  bufferWindow.webContents.on('did-finish-load', function() {
     bufferWindow.webContents.send('load-buffer', readString)
   })
 }
 
-function startCircularBufferWindow () {
+function startCircularBufferWindow() {
   circularBufferWindow = new BrowserWindow({
     width: 400,
     height: 200,
@@ -162,11 +162,11 @@ function startCircularBufferWindow () {
   circularBufferWindow.loadURL(`file://${__dirname}/resources/views/mousebuffer.html`)
   circularBufferWindow.show()
   copyTimePassed = 0
-  circularBufferWindow.webContents.on('did-finish-load', function () {
+  circularBufferWindow.webContents.on('did-finish-load', function() {
     pasteStarted = true
     // this is to get that first buffer immediately
     cycleBufferWindow()
-    copyMouseInterval = setInterval(function () {
+    copyMouseInterval = setInterval(function() {
       cycleBufferWindow()
     }, COPY_MOUSE_CYCLE_INTERVAL)
     copyMouseIntervalStack.push(copyMouseInterval)
@@ -174,7 +174,7 @@ function startCircularBufferWindow () {
   })
 }
 
-function cycleBufferWindow () {
+function cycleBufferWindow() {
   /// /log.info('mousedownyyy')
   if (mouseDown) {
     copyTimePassed += COPY_MOUSE_CYCLE_INTERVAL
@@ -183,29 +183,32 @@ function cycleBufferWindow () {
     if (copyMouseItemIdx >= mouseCircularBuffer.size() || copyMouseItemIdx == -1) {
       copyMouseItemIdx = 0
     }
-    circularBufferWindow.webContents.send('cycle-buffer', mouseCircularBuffer.get(copyMouseItemIdx))
+    //e, this is a hack. Probably need to completely redesign this feature to be more click based
+    if (circularBufferWindow !- null) {
+      circularBufferWindow.webContents.send('cycle-buffer', mouseCircularBuffer.get(copyMouseItemIdx))
+    }
     /* I'm adding a delay here because there is a change that the message doesn't reach the display fast enough
     then the code below wil execute and cause massive confusion because there's a disrepency with the view */
   } else {
-    setTimeout(function () {
+    setTimeout(function() {
       /// /log.info('pasting')
       pasteMouseCycleAndReset()
     }, PASTE_DELAY)
   }
 }
 
-function pasteFromCircularBuffer (circularBufferIdx) {
+function pasteFromCircularBuffer(circularBufferIdx) {
   // this is pretty much a classic swaparoo in CS
   var currentText = (' ' + clipboard.readText()).slice(1)
   var textFromBuffer = mouseCircularBuffer.get(circularBufferIdx)
   // need to add zero error handling - nothing inside
   clipboard.writeText(textFromBuffer)
-  setTimeout(function () {
+  setTimeout(function() {
     pasteCommand(currentText)
   }, PASTE_DELAY)
 }
 
-function pasteMouseCycleAndReset () {
+function pasteMouseCycleAndReset() {
   copyTimePassed = 0
 
   /// /log.info('os' + OS)
@@ -226,7 +229,7 @@ function pasteMouseCycleAndReset () {
   bufferCycling = false
 }
 
-function bufferKeyPressedWithModifier (event) {
+function bufferKeyPressedWithModifier(event) {
   // TODO: REFACTOR WHEN CONFIGURATION Is SET
   /*
     var keycode = event.keycode
@@ -234,7 +237,7 @@ function bufferKeyPressedWithModifier (event) {
       return true
     }
     return false
-    *//// /log.info(shortcutKeys)
+    */ /// /log.info(shortcutKeys)
   /// /log.info('Event key code' + event.keycode)
   for (var sKey in shortcutKeys) {
     var keyConfig = shortcutKeys[sKey]
@@ -248,7 +251,7 @@ function bufferKeyPressedWithModifier (event) {
   return false
 }
 
-function ensureModifierKeysMatch (event, keyConfig) {
+function ensureModifierKeysMatch(event, keyConfig) {
   var modifiersToCheck = []
   /// /log.info(event)
   for (var modifierKey in keyConfig) {
@@ -274,7 +277,7 @@ function ensureModifierKeysMatch (event, keyConfig) {
   return true
 }
 
-function showKeysTriggered (event, keyConfig) {
+function showKeysTriggered(event, keyConfig) {
   var modifiersToCheck = []
   /// /log.info(event)
   for (var modifierKey in keyConfig) {
@@ -304,7 +307,7 @@ function showKeysTriggered (event, keyConfig) {
 }
 /* The condition to hold down are relaxed here so that the user will have to hold
   onto one button */
-function bufferKeyReleased (event) {
+function bufferKeyReleased(event) {
   for (var sKey in shortcutKeys) {
     if (event.keycode == shortcutKeys[sKey].keycode) {
       return true
@@ -313,12 +316,12 @@ function bufferKeyReleased (event) {
   return false
 }
 
-function triggerBuffer (bufferNum) {
+function triggerBuffer(bufferNum) {
   textBufferTimer[bufferNum] = new Date()
   textBufferFired[bufferNum] = true
 }
 
-function copyKeyTriggered (event) {
+function copyKeyTriggered(event) {
   if (event.keycode == copyKeyConfig.keycode) {
     var match = ensureModifierKeysMatch(event, copyKeyConfig)
     return match
@@ -327,7 +330,7 @@ function copyKeyTriggered (event) {
 
 // Register and start hook
 
-function waitBeforeCyclingBuffer () {
+function waitBeforeCyclingBuffer() {
   // this can cause a bug, may have to contniously monitor to see that mouse has been held. Single check may screw up.
 
   for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
@@ -336,7 +339,7 @@ function waitBeforeCyclingBuffer () {
   }
   // since mouse clicks go up and down, the wait period might miss a few increments
   // solution: create four interval ids. If one of them is true(set it in a ored variable), then it's triggered.
-  var interval = setInterval(function () {
+  var interval = setInterval(function() {
     mouseDownAccum++
     console.log(mouseDownAccum)
     if (mouseDown) {
@@ -361,31 +364,31 @@ function waitBeforeCyclingBuffer () {
 
 // effectively a delta to ensure that there isn't a single mousedown checkpoint of failure
 
-function saveBuffer (bufferNum) {
+function saveBuffer(bufferNum) {
   var currentText = (' ' + clipboard.readText()).slice(1)
   /// /log.info('buff num:' + bufferNum + ' currentText:' + currentText)
   textBufferChecker[bufferNum] = 1
   textBufferTimer[bufferNum] = new Date()
   // this also needs to be externalized
 
-  setTimeout(function () {
+  setTimeout(function() {
     robotCopyDelay(bufferNum)
   }, 100)
 }
 
-function robotCopyDelay (bufferNum) {
+function robotCopyDelay(bufferNum) {
   robot.keyTap('c', ['command'])
-  setTimeout(function () {
+  setTimeout(function() {
     anotherContext(bufferNum)
   }, 100)
 }
 
-function anotherContext (bufferNum) {
+function anotherContext(bufferNum) {
   textBufferContent[bufferNum] = (' ' + clipboard.readText()).slice(1)
   clipboard.writeText(textBufferContent[bufferNum])
 }
 
-function pasteBuffer (bufferNum) {
+function pasteBuffer(bufferNum) {
   // this is pretty much a classic swaparoo in CS
   if (textBufferChecker[bufferNum] === 1) {
     // WATCH OUT FOR THIS FUCKING LINE
@@ -394,23 +397,23 @@ function pasteBuffer (bufferNum) {
     var textFromBuffer = textBufferContent[bufferNum]
     /// /log.info(textBufferContent)
     clipboard.writeText(textFromBuffer)
-    setTimeout(function () {
+    setTimeout(function() {
       pasteCommand(currentText)
     }, PASTE_DELAY)
   }
 }
 
-function pasteCommand (currentText) {
+function pasteCommand(currentText) {
   // all the stuff you want to happen after that pause
   robot.keyTap('v', ['command'])
   /// /log.info('is this a reference to a pointer?' + clipboard.readText())
-  setTimeout(function () {
+  setTimeout(function() {
     /// /log.info('currenttext:' + currentText)
     clipboard.writeText(currentText)
   }, PASTE_DELAY)
 }
 
-function setGlobalShortcuts () {
+function setGlobalShortcuts() {
   globalShortcut.unregisterAll()
   const os = process.platform
   var shortcutConfig = configuration.readSettings(os)
@@ -449,7 +452,7 @@ function setGlobalShortcuts () {
 
 // iohook setup
 
-function restoreSaveState () {
+function restoreSaveState() {
 
 }
 
@@ -469,16 +472,16 @@ app.on('ready', () => {
     app.quit()
   })
 
-  mainWindow.on('minimize', function (event) {
+  mainWindow.on('minimize', function(event) {
     event.preventDefault()
     mainWindow.hide()
   })
-  mainWindow.on('defocus', function (event) {
+  mainWindow.on('defocus', function(event) {
     // log.info('da focused')
     mainWindow.hide()
   })
   // I'm scared this will cause an infinite loop with above
-  mainWindow.on('hide', function (event) {
+  mainWindow.on('hide', function(event) {
     // log.info('hidden')
     mainWindow.hide()
   })
@@ -491,16 +494,16 @@ app.on('ready', () => {
     height: 200,
     focusable: false
   })
-  saveWindow.on('minimize', function (event) {
+  saveWindow.on('minimize', function(event) {
     event.preventDefault()
     saveWindow.hide()
   })
-  saveWindow.on('defocus', function (event) {
+  saveWindow.on('defocus', function(event) {
     // log.info('da focused')
     saveWindow.hide()
   })
   // I'm scared this will cause an infinite loop with above
-  saveWindow.on('hide', function (event) {
+  saveWindow.on('hide', function(event) {
     // log.info('hidden')
     saveWindow.hide()
   })
@@ -525,7 +528,9 @@ app.on('ready', () => {
     if (keyBufferFromConfig.hasOwnProperty(key)) {
       var bufferNumber = key
       textBufferContent[bufferNumber] = keyBufferFromConfig[bufferNumber]
-      if (textBufferContent[bufferNumber] != '=(') { textBufferChecker[bufferNumber] = 1 }
+      if (textBufferContent[bufferNumber] != '=(') {
+        textBufferChecker[bufferNumber] = 1
+      }
       textBufferTimer[bufferNumber] = new Date()
       // log.info(bufferNumber + ' -> ' + textBufferContent[bufferNumber])
     }
@@ -543,8 +548,9 @@ app.on('ready', () => {
   // win.show()
 
   // IMPORTANT NOTE: NCONFG IS SAVED
-  setGlobalShortcuts()
-  { ioHook.start() }
+  setGlobalShortcuts() {
+    ioHook.start()
+  }
 })
 
 app.on('before-quit', () => {
@@ -558,7 +564,7 @@ app.on('before-quit', () => {
   ioHook.stop()
 })
 
-ipcMain.on('close-main-window', function () {
+ipcMain.on('close-main-window', function() {
   app.quit()
 })
 
@@ -611,7 +617,7 @@ ioHook.on('keydown', event => {
   }
   if (copyKeyTriggered(event)) {
     // this is an arificial delay for robotjs and os to register cmd + x
-    setTimeout(function () {
+    setTimeout(function() {
       var text = clipboard.readText()
       // log.info('herro')
       // log.info(text)
@@ -619,7 +625,7 @@ ioHook.on('keydown', event => {
     }, 100)
   }
   if (showKeysTriggered(event, showKeyConfig)) {
-  // this is an arificial delay for robotjs and os to register cmd + x
+    // this is an arificial delay for robotjs and os to register cmd + x
     console.log('show me monies')
     if (showOrHideShowWindow) {
       if (showWindow == null) {
@@ -629,7 +635,7 @@ ioHook.on('keydown', event => {
       }
 
       showOrHideShowWindow = !showOrHideShowWindow
-      setTimeout(function () {
+      setTimeout(function() {
         var textObj = {}
         textObj.textBufferTimer = textBufferTimer
         textObj.textBufferChecker = textBufferChecker
@@ -645,27 +651,28 @@ ioHook.on('keydown', event => {
     }
   }
 })
-function loadShowWindow () {
+
+function loadShowWindow() {
   showWindow = new BrowserWindow({
     width: 400,
     height: 800,
     focusable: false
   })
-  showWindow.on('minimize', function (event) {
+  showWindow.on('minimize', function(event) {
     event.preventDefault()
     saveWindow.hide()
   })
-  showWindow.on('defocus', function (event) {
+  showWindow.on('defocus', function(event) {
     // log.info('da focused')
     saveWindow.hide()
   })
   // I'm scared this will cause an infinite loop with above
-  showWindow.on('hide', function (event) {
+  showWindow.on('hide', function(event) {
     // log.info('hidden')
     saveWindow.hide()
   })
 
-  showWindow.on('close', function (event) {
+  showWindow.on('close', function(event) {
     // log.info('hidden')
     saveWindow.destroy()
     showWindow = null
