@@ -133,6 +133,7 @@ function setAllTextArraysToDefault () {
 var mainWindow = null
 let bufferWindow = null
 let circularBufferWindow = null
+var circularBufferWindowReady = false
 let saveWindow = null
 let showWindow = null
 // Load a remote URL
@@ -159,8 +160,11 @@ function startCircularBufferWindow () {
     height: 200,
     transparent: false
   })
+
+  // YOU MIGHT ALSO HAVE TO CHANGE THIS LINE TO PREVENT THE FREEZE BUG
   circularBufferWindow.loadURL(`file://${__dirname}/resources/views/mousebuffer.html`)
   circularBufferWindow.show()
+
   copyTimePassed = 0
   circularBufferWindow.webContents.on('did-finish-load', function () {
     pasteStarted = true
@@ -170,6 +174,7 @@ function startCircularBufferWindow () {
       cycleBufferWindow()
     }, COPY_MOUSE_CYCLE_INTERVAL)
     copyMouseIntervalStack.push(copyMouseInterval)
+    circularBufferWindowReady = true
     // need to implement cycling logic there
   })
 }
@@ -185,7 +190,7 @@ function cycleBufferWindow () {
     }
     // e, this is a hack. Probably need to completely redesign this feature to be more click based
     // error: we have a race condition with circular buffer window - need to fix.
-    if (circularBufferWindow != null && circularBufferWindow.isDestroyed()) {
+    if (circularBufferWindow != null && circularBufferWindow.isDestroyed() && circularBufferWindowReady == True) {
       circularBufferWindow.webContents.send('cycle-buffer', mouseCircularBuffer.get(copyMouseItemIdx))
     }
     /* I'm adding a delay here because there is a change that the message doesn't reach the display fast enough
@@ -217,11 +222,13 @@ function pasteMouseCycleAndReset () {
     Menu.sendActionToFirstResponder('hide:')
     if (circularBufferWindow != null) {
       circularBufferWindow.destroy()
+      circularBufferWindowReady = false
     }
   }
   if (OS == 'win32') {
     if (circularBufferWindow != null) {
       circularBufferWindow.destroy()
+      circularBufferWindowReady = false
     }
   }
   pasteFromCircularBuffer(copyMouseItemIdx)
