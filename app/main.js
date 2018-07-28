@@ -58,7 +58,7 @@ const {
 
 const configuration = require('./configuration')
 const stateSaver = require('./stateSaver')
-// const log = require('electron-log')
+const log = require('electron-log')
 // //log.transports.console.level = 'warn';
 var robot = require('robotjs')
 const path = require('path')
@@ -140,6 +140,25 @@ let showWindow = null
 
 /* This function shows the current window that is available
  */
+
+//
+log.transports.file.level = 'info'
+log.transports.file.format = '{h}:{i}:{s}:{ms} {text}'
+
+// Set approximate maximum log size in bytes. When it exceeds,
+// the archived log will be saved as the log.old.log file
+log.transports.file.maxSize = 5 * 1024 * 1024
+
+// Write to this file, must be set before first logging
+log.transports.file.file = path.join(__dirname, '/log.txt')
+
+// fs.createWriteStream options, must be set before first logging
+// you can find more information at
+// https://nodejs.org/api/fs.html#fs_fs_createwritestream_path_options
+log.transports.file.streamConfig = { flags: 'w' }
+
+// set existed file stream
+log.transports.file.stream = fs.createWriteStream('log.txt')
 
 function showBuffer () {
   // TODO: Parameterize width and height
@@ -353,7 +372,7 @@ function waitBeforeCyclingBuffer () {
     if (mouseDown) {
       if (mouseDownAccum > MOUSE_ACCUM_CAP) {
         mouseDownAccum = MOUSE_ACCUM_CAP
-        if (!bufferCycling) {
+        if (!bufferCycling && circularBufferWindowReady) {
           bufferCycling = true
           startCircularBufferWindow()
         }
