@@ -10,6 +10,8 @@ Or even do a redesign???
 6. Investigate how to enable logging and debug mode
 7. Apply cut functionality
 8. I want UI to show me that cycling has stared, or even change it to 4 quick taps. Even better is a circular motion. Probably a menu tray.
+9. Refactor logging setup logi
+
 Warning about keyboard shortcuts
 3. Packaging
 4. OS Detection

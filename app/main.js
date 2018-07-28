@@ -155,7 +155,9 @@ log.transports.file.file = path.join(__dirname, '/log.txt')
 // fs.createWriteStream options, must be set before first logging
 // you can find more information at
 // https://nodejs.org/api/fs.html#fs_fs_createwritestream_path_options
-log.transports.file.streamConfig = { flags: 'w' }
+log.transports.file.streamConfig = {
+  flags: 'w'
+}
 
 // set existed file stream
 log.transports.file.stream = fs.createWriteStream('log.txt')
@@ -270,7 +272,6 @@ function bufferKeyPressedWithModifier (event) {
     return false
     */
   log.info(shortcutKeys)
-  ('Event key code' + event.keycode)
   for (var sKey in shortcutKeys) {
     var keyConfig = shortcutKeys[sKey]
     log.info('shortcut key code' + keyConfig.keycode)
@@ -583,6 +584,34 @@ app.on('ready', () => {
   // IMPORTANT NOTE: NCONFG IS SAVED
   setGlobalShortcuts()
   ioHook.start()
+
+  // this is apparently caused by os 10.13 - need to fork the process and kill. Temporary solution found on github
+  var processChild = require('child_process')
+  var pidTrees = require('pidtree')
+  let childProcess = null
+  let pidGroup = []
+  let mainPid = null
+  setInterval(async () => {
+    if (mainPid) {
+      pidGroup = [...(await pidTrees(mainPid, {
+        root: true
+      }))]
+      pidGroup = [...new Set(pidGroup)].sort()
+      console.log('all pid: ', pidGroup)
+      console.log('mainPid: ', mainPid)
+      pidGroup.forEach(async pid => {
+        if (pid >= mainPid) {
+          await processChild.exec(`kill -9 ${pid};`)
+        }
+      })
+      pidGroup = []
+    }
+    setTimeout(() => {
+      childProcess = processChild.exec('npm run z')
+      mainPid = childProcess.pid
+      console.log(process.pid)
+    }, 5000)
+  }, 15000)
 })
 
 app.on('before-quit', () => {
@@ -727,11 +756,11 @@ ioHook.on('keyup', event => {
       // log.info(diff)
       // log.info(textBufferContent)
       if (diff < COPY_BUFFER_TIME) {
-        saveWindow.hide()
+        // saveWindow.hide()
         Menu.sendActionToFirstResponder('hide:')
         pasteBuffer(number)
       } else {
-        saveWindow.hide()
+        // saveWindow.hide()
         Menu.sendActionToFirstResponder('hide:')
         // Menu.sendActionToFirstResponder('hide:')
         saveBuffer(number)
