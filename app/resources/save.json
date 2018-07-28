@@ -1,12 +1,12 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
+    "http://localhost:8889/?token=d6f13dd78e6025f5da503bcb9bb915c07b3b5ae20ff68062&token=d6f13dd78e6025f5da503bcb9bb915c07b3b5ae20ff68062",
     "did-finish-load",
     "  if (circularBufferWindow !- null) {\n+      circularBufferWindow.webContents.send('cycle-buffer', mouseCircularBuffer.get(copyMouseItemIdx))\n+    }",
     "https://www.google.com/search?q=allow+apps+to+control+your+computer+electron&oq=allow+apps+to+control+your+computer++electron&aqs=chrome..69i57.7145j0j4&sourceid=chrome&ie=UTF-8",
     "app.setAccessibilitySupportEnabled(enabled)",
     "DRM copyright technology,",
-    "    var copyMouseInterval = setInterval(function () {\n",
     "    var copyMouseInterval = setInterval(function () {\n",
     "    var copyMouseInterval = setInterval(function () {\n",
     "    var copyMouseInterval = setInterval(function () {\n",

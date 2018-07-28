@@ -34,7 +34,7 @@ var mouseDownAccum = 0 /// this is pretty much a accumilator or a counting queue
 var mouseUpAccum = MOUSE_UP_COUNT
 
 var pasteStarted = false
-var lastPasteTime = new Date()
+var lastPressTime = new Date()
 
 var copyMouseItemIdx = 0
 var copyTimePassed = 0
@@ -199,7 +199,7 @@ function startCircularBufferWindow () {
 }
 
 function cycleBufferWindow () {
-  /// /log.info('mousedownyyy')
+  log.info('mousedownyyy')
   if (mouseDown) {
     copyTimePassed += COPY_MOUSE_CYCLE_INTERVAL
     /// ///log.info('cycling choo choo')
@@ -209,14 +209,14 @@ function cycleBufferWindow () {
     }
     // e, this is a hack. Probably need to completely redesign this feature to be more click based
     // error: we have a race condition with circular buffer window - need to fix.
-    if (circularBufferWindow != null && circularBufferWindow.isDestroyed() && circularBufferWindowReady == True) {
+    if (circularBufferWindow != null && circularBufferWindow.isDestroyed() && circularBufferWindowReady) {
       circularBufferWindow.webContents.send('cycle-buffer', mouseCircularBuffer.get(copyMouseItemIdx))
     }
     /* I'm adding a delay here because there is a change that the message doesn't reach the display fast enough
     then the code below wil execute and cause massive confusion because there's a disrepency with the view */
   } else {
     setTimeout(function () {
-      /// /log.info('pasting')
+      log.info('pasting')
       pasteMouseCycleAndReset()
     }, PASTE_DELAY)
   }
@@ -224,6 +224,7 @@ function cycleBufferWindow () {
 
 function pasteFromCircularBuffer (circularBufferIdx) {
   // this is pretty much a classic swaparoo in CS
+  log.info('paste from circular buffer')
   var currentText = (' ' + clipboard.readText()).slice(1)
   var textFromBuffer = mouseCircularBuffer.get(circularBufferIdx)
   // need to add zero error handling - nothing inside
@@ -234,18 +235,21 @@ function pasteFromCircularBuffer (circularBufferIdx) {
 }
 
 function pasteMouseCycleAndReset () {
+  log.info('pasting started!')
   copyTimePassed = 0
 
-  /// /log.info('os' + OS)
+  log.info('os' + OS)
   if (OS == 'darwin') {
     Menu.sendActionToFirstResponder('hide:')
     if (circularBufferWindow != null) {
+      log.info('destroying started!')
       circularBufferWindow.destroy()
       circularBufferWindowReady = false
     }
   }
   if (OS == 'win32') {
     if (circularBufferWindow != null) {
+      log.info('destroying started')
       circularBufferWindow.destroy()
       circularBufferWindowReady = false
     }
@@ -264,12 +268,13 @@ function bufferKeyPressedWithModifier (event) {
       return true
     }
     return false
-    */ /// /log.info(shortcutKeys)
-  /// /log.info('Event key code' + event.keycode)
+    */
+  log.info(shortcutKeys)
+  ('Event key code' + event.keycode)
   for (var sKey in shortcutKeys) {
     var keyConfig = shortcutKeys[sKey]
-    /// /log.info('shortcut key code' + keyConfig.keycode)
-    /// /log.info('shortcut key code' + keyConfig)
+    log.info('shortcut key code' + keyConfig.keycode)
+    log.info('shortcut key code' + keyConfig)
     if (event.keycode == keyConfig.keycode) {
       var match = ensureModifierKeysMatch(event, keyConfig)
       return match
@@ -280,10 +285,10 @@ function bufferKeyPressedWithModifier (event) {
 
 function ensureModifierKeysMatch (event, keyConfig) {
   var modifiersToCheck = []
-  /// /log.info(event)
+  log.info(event)
   for (var modifierKey in keyConfig) {
-    /// /log.info('modifiers check')
-    /// /log.info(modifierKey)
+    log.info('modifiers check')
+    log.info(modifierKey)
 
     if (modifierKey != 'rawcode' && modifierKey != 'keycode') {
       if (keyConfig[modifierKey]) {
@@ -291,7 +296,7 @@ function ensureModifierKeysMatch (event, keyConfig) {
       }
     }
   }
-  /// /log.info('modifiers to check' + modifiersToCheck)
+  log.info('modifiers to check' + modifiersToCheck)
   for (var modIdx in modifiersToCheck) {
     var modifier = modifiersToCheck[modIdx]
     if (event[modifier] == false) {
@@ -306,10 +311,10 @@ function ensureModifierKeysMatch (event, keyConfig) {
 
 function showKeysTriggered (event, keyConfig) {
   var modifiersToCheck = []
-  /// /log.info(event)
+  log.info(event)
   for (var modifierKey in keyConfig) {
-    /// /log.info('modifiers check')
-    /// /log.info(modifierKey)
+    log.info('modifiers check')
+    log.info(modifierKey)
 
     if (modifierKey != 'rawcode' && modifierKey != 'keycode') {
       if (keyConfig[modifierKey]) {
@@ -317,7 +322,7 @@ function showKeysTriggered (event, keyConfig) {
       }
     }
   }
-  /// /log.info('modifiers to check' + modifiersToCheck)
+  log.info('modifiers to check' + modifiersToCheck)
   for (var modIdx in modifiersToCheck) {
     var modifier = modifiersToCheck[modIdx]
     if (event[modifier] == false) {
@@ -362,7 +367,7 @@ function waitBeforeCyclingBuffer () {
 
   for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
     timePassedArray[x] = 0
-    /// /log.info('time pass init' + timePassedArray[x])
+    log.info('time pass init' + timePassedArray[x])
   }
   // since mouse clicks go up and down, the wait period might miss a few increments
   // solution: create four interval ids. If one of them is true(set it in a ored variable), then it's triggered.
@@ -384,7 +389,7 @@ function waitBeforeCyclingBuffer () {
     if (mouseUpAccum <= 0) {
       clearInterval(interval)
       mouseUpAccum = MOUSE_UP_COUNT
-      mouseDownAccum = 0
+      mouseDownAccum = 100
     }
   }, MOUSE_CHECK_TIME)
 }
@@ -393,7 +398,7 @@ function waitBeforeCyclingBuffer () {
 
 function saveBuffer (bufferNum) {
   var currentText = (' ' + clipboard.readText()).slice(1)
-  /// /log.info('buff num:' + bufferNum + ' currentText:' + currentText)
+  log.info('buff num:' + bufferNum + ' currentText:' + currentText)
   textBufferChecker[bufferNum] = 1
   textBufferTimer[bufferNum] = new Date()
   // this also needs to be externalized
@@ -419,10 +424,10 @@ function pasteBuffer (bufferNum) {
   // this is pretty much a classic swaparoo in CS
   if (textBufferChecker[bufferNum] === 1) {
     // WATCH OUT FOR THIS FUCKING LINE
-    /// /log.info('buffer checker is set')
+    log.info('buffer checker is set')
     var currentText = (' ' + clipboard.readText()).slice(1)
     var textFromBuffer = textBufferContent[bufferNum]
-    /// /log.info(textBufferContent)
+    log.info(textBufferContent)
     clipboard.writeText(textFromBuffer)
     setTimeout(function () {
       pasteCommand(currentText)
@@ -433,9 +438,10 @@ function pasteBuffer (bufferNum) {
 function pasteCommand (currentText) {
   // all the stuff you want to happen after that pause
   robot.keyTap('v', ['command'])
-  /// /log.info('is this a reference to a pointer?' + clipboard.readText())
+  log.info('is this a reference to a pointer?' + clipboard.readText())
+  log.info('paste command pressed')
   setTimeout(function () {
-    /// /log.info('currenttext:' + currentText)
+    log.info('currenttext:' + currentText)
     clipboard.writeText(currentText)
   }, PASTE_DELAY)
 }
@@ -448,7 +454,7 @@ function setGlobalShortcuts () {
   for (var key in shortcutConfig) {
     if (key == 'copyKey') {
       copyKeyConfig = shortcutConfig[key]
-      /// /log.info(copyKeyConfig)
+      log.info(copyKeyConfig)
     } else if (key == 'showKey') {
       showKeyConfig = shortcutConfig[key]
       // log.info(showKeyConfig)
@@ -595,18 +601,19 @@ ipcMain.on('close-main-window', function () {
 })
 
 ioHook.on('mouseup', event => {
-  var pasteDateDiff = Math.abs(lastPasteTime - new Date())
+  var pasteDateDiff = Math.abs(lastPressTime - new Date())
 
   if (pasteStarted && mouseDown && pasteDateDiff > 4000) {
-    lastPasteTime = new Date()
+    lastPressTime = new Date()
+    console.log('laste paste time' + lastPressTime)
     // DO NOT REMOVE THIS LINE! IF YOU DO, YOU'LL HAVE CONCURRENCY ISSUES
     pasteStarted = false
     pasteMouseCycleAndReset()
+    log.info('possibly global variable clearning is an issue?')
     clearInterval(copyMouseInterval)
     while (copyMouseIntervalStack.length > 0) {
       clearInterval(copyMouseIntervalStack.pop())
     }
-    lastPasteTime = new Date()
   }
   mouseDown = false
   pasteStarted = false
@@ -740,9 +747,11 @@ ioHook.on('mousedown', event => {
   // this is prety much a mutex
   if (!pasteStarted && !mouseDown) {
     mouseDown = true // I'm downing the mouse twice so the computer doesn't enter the critical section twice
+    log.info('initiate buffer cycling!')
     waitBeforeCyclingBuffer()
   }
   mouseDown = true
+  lastPressTime = new Date()
 
   // remember to add mainwindow = null later.
 })
