@@ -133,7 +133,7 @@ function setAllTextArraysToDefault () {
 var mainWindow = null
 let bufferWindow = null
 let circularBufferWindow = null
-var circularBufferWindowReady = false
+var circularBufferWindowReady = true
 let saveWindow = null
 let showWindow = null
 // Load a remote URL
@@ -145,6 +145,7 @@ let showWindow = null
 log.transports.file.level = 'info'
 log.transports.file.format = '{h}:{i}:{s}:{ms} {text}'
 
+log.transports.console.level = false
 // Set approximate maximum log size in bytes. When it exceeds,
 // the archived log will be saved as the log.old.log file
 log.transports.file.maxSize = 5 * 1024 * 1024
@@ -171,6 +172,7 @@ function showBuffer () {
   })
   bufferWindow.loadURL(`file://${__dirname}/resources/views/index.html`)
   bufferWindow.webContents.on('did-finish-load', function () {
+    var readString = clipboard.readText()
     bufferWindow.webContents.send('load-buffer', readString)
   })
 }
@@ -211,7 +213,7 @@ function cycleBufferWindow () {
     }
     // e, this is a hack. Probably need to completely redesign this feature to be more click based
     // error: we have a race condition with circular buffer window - need to fix.
-    if (circularBufferWindow != null && circularBufferWindow.isDestroyed() && circularBufferWindowReady) {
+    if (circularBufferWindow != null && circularBufferWindowReady) {
       circularBufferWindow.webContents.send('cycle-buffer', mouseCircularBuffer.get(copyMouseItemIdx))
     }
     /* I'm adding a delay here because there is a change that the message doesn't reach the display fast enough
@@ -372,13 +374,14 @@ function waitBeforeCyclingBuffer () {
   }
   // since mouse clicks go up and down, the wait period might miss a few increments
   // solution: create four interval ids. If one of them is true(set it in a ored variable), then it's triggered.
+  // why can't mouseup
   var interval = setInterval(function () {
     mouseDownAccum++
-    console.log(mouseDownAccum)
+    log.info(mouseDownAccum)
     if (mouseDown) {
       if (mouseDownAccum > MOUSE_ACCUM_CAP) {
         mouseDownAccum = MOUSE_ACCUM_CAP
-        if (!bufferCycling && circularBufferWindowReady) {
+        if (!bufferCycling) {
           bufferCycling = true
           startCircularBufferWindow()
         }
@@ -390,7 +393,7 @@ function waitBeforeCyclingBuffer () {
     if (mouseUpAccum <= 0) {
       clearInterval(interval)
       mouseUpAccum = MOUSE_UP_COUNT
-      mouseDownAccum = 100
+      mouseDownAccum = 0
     }
   }, MOUSE_CHECK_TIME)
 }
@@ -586,34 +589,7 @@ app.on('ready', () => {
   ioHook.start()
 
   // this is apparently caused by os 10.13 - need to fork the process and kill. Temporary solution found on github
-  var processChild = require('child_process')
-  var pidTrees = require('pidtree')
-  let childProcess = null
-  let pidGroup = []
-  let mainPid = null
-  setInterval(async () => {
-    if (mainPid) {
-      pidGroup = [...(await pidTrees(mainPid, {
-        root: true
-      }))]
-      pidGroup = [...new Set(pidGroup)].sort()
-      console.log('all pid: ', pidGroup)
-      console.log('mainPid: ', mainPid)
-      pidGroup.forEach(async pid => {
-        if (pid >= mainPid) {
-          await processChild.exec(`kill -9 ${pid};`)
-        }
-      })
-      pidGroup = []
-    }
-    setTimeout(() => {
-      childProcess = processChild.exec('npm run z')
-      mainPid = childProcess.pid
-      console.log(process.pid)
-    }, 5000)
-  }, 15000)
 })
-
 app.on('before-quit', () => {
   stateSaver.saveValue('circularBuffer', mouseCircularBuffer.toarray())
   var saveObj = {}
@@ -634,7 +610,7 @@ ioHook.on('mouseup', event => {
 
   if (pasteStarted && mouseDown && pasteDateDiff > 4000) {
     lastPressTime = new Date()
-    console.log('laste paste time' + lastPressTime)
+    // log.info('laste paste time' + lastPressTime)
     // DO NOT REMOVE THIS LINE! IF YOU DO, YOU'LL HAVE CONCURRENCY ISSUES
     pasteStarted = false
     pasteMouseCycleAndReset()
@@ -688,7 +664,7 @@ ioHook.on('keydown', event => {
   }
   if (showKeysTriggered(event, showKeyConfig)) {
     // this is an arificial delay for robotjs and os to register cmd + x
-    console.log('show me monies')
+    // log.info('show me monies')
     if (showOrHideShowWindow) {
       if (showWindow == null) {
         loadShowWindow()
