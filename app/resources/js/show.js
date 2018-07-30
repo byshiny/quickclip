@@ -15,7 +15,7 @@ const {
 } = require('electron')
 // var saveState = document.querySelector('#saveState')
 // var timeTaken = document.querySelector('#timeTaken')
-myConsole.log('checkyy')
+// myConsole.log('checkyy')
 var opacity = 1
 ipcRenderer.on('inc-opq', (event, message) => {
   // TODO: this parameters - disappearing and transparency speed needs to be externalized.
@@ -77,5 +77,5 @@ ipcRenderer.on('load-buffer', (event, textObj) => {
     //  bufferHolderDiv.appendChild(bufferHolderDiv)
   }
 
-  myConsole.log('checkyy')
+  // myConsole.log('checkyy')
 })

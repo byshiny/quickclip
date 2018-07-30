@@ -142,7 +142,7 @@ let showWindow = null
  */
 
 //
-log.transports.file.level = 'info'
+log.transports.file.level = 'warn'
 log.transports.file.format = '{h}:{i}:{s}:{ms} {text}'
 
 log.transports.console.level = false
@@ -712,8 +712,7 @@ function loadShowWindow () {
 
   showWindow.on('close', function (event) {
     // log.info('hidden')
-    saveWindow.destroy()
-    showWindow = null
+    saveWindow.hide()
   })
   showWindow.loadURL(`file://${__dirname}/resources/views/show.html`)
 }
