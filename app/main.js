@@ -27,7 +27,7 @@ const OS = process.platform
 
 const MOUSE_CHECK_TIME = 40
 const MOUSE_ACCUM_CAP = 80 // at 40 seconds, must reach a cap of 80
-const PASTE_DELAY = 50
+const PASTE_DELAY = 300
 const MOUSE_UP_COUNT = 5
 var mouseDownAccum = 0 /// this is pretty much a accumilator or a counting queue
 // OK, all of this needs to be converted to OO

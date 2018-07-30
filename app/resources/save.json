@@ -1,22 +1,22 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
+    "lisa_ex_annot_list",
+    "lisa_ex_annot_list",
+    "zoneAhead",
+    " struct sigaction sa;\n struct itimerval timer;\n\n /* Install timer_handler as the signal handler for SIGVTALRM. */\n memset (&sa, 0, sizeof (sa));\n sa.sa_handler = &timer_handler;\n sigaction (SIGVTALRM, &sa, NULL);\n\n /* Configure the timer to expire after 250 msec... */\n timer.it_value.tv_sec = 0;\n timer.it_value.tv_usec = 250000;\n /* ... and every 250 msec after that. */\n timer.it_interval.tv_sec = 0;\n timer.it_interval.tv_usec = 250000;\n /* Start a virtual timer. It counts down whenever this process is\n   executing. */\n setitimer (ITIMER_VIRTUAL, &timer, NULL);\n\n /* Do busy work. */\n while (1);",
     "log.transports.console.level",
     "\n",
     "\n",
     "#include <signal.h>\n#include <stdio.h>\n#include <string.h>\n#include <sys/time.h>",
     "lisa_sorted_warnings = generate_sorted_labels(lisa_dicts[0])\nlisa_sorted_reg = generate_sorted_labels(lisa_dicts[1])\n\nlisa_ex_sorted_warnings = generate_sorted_labels(lisa_ex_dicts[0])\nlisa_ex_sorted_reg = generate_sorted_labels(lisa_ex_dicts[1])",
-    "lisa_sorted_warnings = generate_sorted_labels(lisa_dicts[0])\nlisa_sorted_reg = generate_sorted_labels(lisa_dicts[1])\n\nlisa_ex_sorted_warnings = generate_sorted_labels(lisa_ex_dicts[0])\nlisa_ex_sorted_reg = generate_sorted_labels(lisa_ex_dicts[1])",
-    "lisa_sorted_reg = generate_sorted_labels(lisa_dicts[1])\n\nlisa_ex_sorted_warnings = generate_sorted_labels(lisa_ex_dicts[0])\nlisa_ex_sorted_reg = generate_sorted_labels(lisa_ex_dicts[1])",
-    "generate_graph_for_dataset(lisa_dicts[0], lisa_dicts[1])",
-    "enerate_graph_for_dataset(lisa_dicts[0], lisa_dicts[1])",
-    "Ship battle"
+    "lisa_sorted_warnings = generate_sorted_labels(lisa_dicts[0])\nlisa_sorted_reg = generate_sorted_labels(lisa_dicts[1])\n\nlisa_ex_sorted_warnings = generate_sorted_labels(lisa_ex_dicts[0])\nlisa_ex_sorted_reg = generate_sorted_labels(lisa_ex_dicts[1])"
   ],
   "keyBuffer": {
     "0": "=(",
-    "1": "#include <unistd.h>\n#include <signal.h>\n#include <string.h>\n#include <sys/time.h>",
-    "2": "http://www.informit.com/articles/article.aspx?p=23618&seqNum=14",
-    "3": " struct sigaction sa;\n struct itimerval timer;\n\n /* Install timer_handler as the signal handler for SIGVTALRM. */\n memset (&sa, 0, sizeof (sa));\n sa.sa_handler = &timer_handler;\n sigaction (SIGVTALRM, &sa, NULL);\n\n /* Configure the timer to expire after 250 msec... */\n timer.it_value.tv_sec = 0;\n timer.it_value.tv_usec = 250000;\n /* ... and every 250 msec after that. */\n timer.it_interval.tv_sec = 0;\n timer.it_interval.tv_usec = 250000;\n /* Start a virtual timer. It counts down whenever this process is\n   executing. */\n setitimer (ITIMER_VIRTUAL, &timer, NULL);\n\n /* Do busy work. */\n while (1);",
+    "1": "generate_totals",
+    "2": "lisa_ex_annot_list",
+    "3": "lisa_annot_list",
     "4": "=(",
     "5": "=(",
     "6": "=(",
