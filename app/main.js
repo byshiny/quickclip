@@ -14,7 +14,7 @@ STEPS:
 // remove hard code
 
 const COPY_BUFFER_COUNT = 10
-const COPY_BUFFER_TIME = 500 // this is in milliseconds
+const COPY_BUFFER_TIME = 500 // this is in mif==0:illiseconds
 const COPY_MOUSE_BUFFER_SIZE = 10
 const COPY_MOUSE_BUTTON_ACTIVATION_TIME = 3000
 const COPY_MOUSE_BUTTON_ACTIVATION_CHECK_INTERVAL = 200
@@ -218,11 +218,6 @@ function cycleBufferWindow () {
     }
     /* I'm adding a delay here because there is a change that the message doesn't reach the display fast enough
     then the code below wil execute and cause massive confusion because there's a disrepency with the view */
-  } else {
-    setTimeout(function () {
-      log.info('pasting')
-      pasteMouseCycleAndReset()
-    }, PASTE_DELAY)
   }
 }
 
