@@ -182,12 +182,17 @@ function startCircularBufferWindow () {
     height: 200,
     transparent: false
   })
+  circularBufferWindow.on('closed', () => {
+    circularBufferWindow = null
+  })
 
   // YOU MIGHT ALSO HAVE TO CHANGE THIS LINE TO PREVENT THE FREEZE BUG
   circularBufferWindow.loadURL(`file://${__dirname}/resources/views/mousebuffer.html`)
+  circularBufferWindow.webContents.send('cycle-buffer', mouseCircularBuffer.get(copyMouseItemIdx))
   circularBufferWindow.show()
 
   copyTimePassed = 0
+  circularBufferWindowReady = true
   circularBufferWindow.webContents.on('did-finish-load', function () {
     pasteStarted = true
     // this is to get that first buffer immediately
@@ -196,7 +201,6 @@ function startCircularBufferWindow () {
       cycleBufferWindow()
     }, COPY_MOUSE_CYCLE_INTERVAL)
 
-    circularBufferWindowReady = true
     // need to implement cycling logic there
   })
 }
@@ -241,6 +245,7 @@ function pasteMouseCycleAndReset () {
     Menu.sendActionToFirstResponder('hide:')
     if (circularBufferWindow != null) {
       log.info('destroying started!')
+      console.log('destroyed')
       circularBufferWindow.destroy()
       circularBufferWindowReady = false
     }
@@ -252,6 +257,7 @@ function pasteMouseCycleAndReset () {
       circularBufferWindowReady = false
     }
   }
+
   pasteFromCircularBuffer(copyMouseItemIdx)
   pasteStarted = false
   mouseDown = true
@@ -607,9 +613,11 @@ ioHook.on('mouseup', event => {
     // log.info('laste paste time' + lastPressTime)
     // DO NOT REMOVE THIS LINE! IF YOU DO, YOU'LL HAVE CONCURRENCY ISSUES
     pasteStarted = false
-    pasteMouseCycleAndReset()
     log.info('possibly global variable clearning is an issue?')
     clearInterval(copyMouseInterval)
+    // might need to add a delay here, because sometimes the update doesn't get
+    // to the window fast enough
+    pasteMouseCycleAndReset()
   }
   mouseDown = false
   pasteStarted = false

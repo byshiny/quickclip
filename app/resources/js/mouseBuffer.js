@@ -21,6 +21,10 @@ ipcRenderer.on('cycle-buffer', (event, message) => {
   // TODO: this parameters - disappearing and transparency speed needs to be externalized.
   bufferDiv.innerHTML = message
 })
+ipcRenderer.on('get-buffer-message', (event, message) => {
+  // TODO: this parameters - disappearing and transparency speed needs to be externalized.
+  return bufferDiv.innerHTML
+})
 
 closeEl.addEventListener('click', function () {
   ipc.send('close-main-window')
