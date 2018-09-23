@@ -59,7 +59,6 @@ const {
 const configuration = require('./configuration')
 const stateSaver = require('./stateSaver')
 const log = require('electron-log')
-// //log.transports.console.level = 'warn';
 var robot = require('robotjs')
 const path = require('path')
 
@@ -196,7 +195,7 @@ function startCircularBufferWindow () {
     copyMouseInterval = setInterval(function () {
       cycleBufferWindow()
     }, COPY_MOUSE_CYCLE_INTERVAL)
-    copyMouseIntervalStack.push(copyMouseInterval)
+
     circularBufferWindowReady = true
     // need to implement cycling logic there
   })
@@ -611,9 +610,6 @@ ioHook.on('mouseup', event => {
     pasteMouseCycleAndReset()
     log.info('possibly global variable clearning is an issue?')
     clearInterval(copyMouseInterval)
-    while (copyMouseIntervalStack.length > 0) {
-      clearInterval(copyMouseIntervalStack.pop())
-    }
   }
   mouseDown = false
   pasteStarted = false
