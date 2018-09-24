@@ -1,6 +1,8 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
+    "    mouseDownAccum++",
+    "jt.codes",
     "0@2x..png\r1@2x..png\r2@2x..png\r3@2x..png\r4@2x..png\r5@2x..png\r6@2x..png\r7@2x..png\r8@2x..png\r9@2x..png",
     "0@2x..png\r1@2x..png\r2@2x..png\r3@2x..png\r4@2x..png\r5@2x..png\r6@2x..png\r7@2x..png\r8@2x..png\r9@2x..png"
   ],

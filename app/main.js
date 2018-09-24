@@ -44,6 +44,8 @@ var currentEvent = null
 var bufferCycling = false
 var saveWindowHiding = false
 var showOrHideShowWindow = true
+
+var tray = 0
 const SHORTCUT_KEY_LIMIT = 10
 const ioHook = require('iohook')
 const {
@@ -378,9 +380,9 @@ function waitBeforeCyclingBuffer () {
   // solution: create four interval ids. If one of them is true(set it in a ored variable), then it's triggered.
   // why can't mouseup
   var interval = setInterval(function () {
-    mouseDownAccum++
-    log.info(mouseDownAccum)
+    // log.info(mouseDownAccum)
     if (mouseDown) {
+      mouseDownAccum++
       if (mouseDownAccum > MOUSE_ACCUM_CAP) {
         mouseDownAccum = MOUSE_ACCUM_CAP
         if (!bufferCycling) {
@@ -491,7 +493,7 @@ function setGlobalShortcuts () {
 
 // iohook setup
 
-function restoreSaveState () {
+function updateTrayIcon () {
 
 }
 
@@ -506,7 +508,7 @@ app.on('ready', () => {
   ])
   tray.setToolTip('Quickclip!.')
   tray.setContextMenu(contextMenu)
-  tray.setHighlightMode('always')
+  // tray.setHighlightMode('always')
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
