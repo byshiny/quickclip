@@ -11,8 +11,10 @@ Or even do a redesign???
 7. Apply cut functionality
 8. I want UI to show me that cycling has stared, or even change it to 4 quick taps. Even better is a circular motion. Probably a menu tray.
 9. Refactor logging setup logi
-
+10. OK, there are times when the visuals do not match the actual item pasted. This needs to be fixed.
 Warning about keyboard shortcuts
+
+11. ** USE CASES
 3. Packaging
 4. OS Detection
 5. Paymeium, limit size of shortcutKeys map

@@ -53,9 +53,11 @@ const {
   globalShortcut,
   clipboard,
   dialog,
-  Menu
+  nativeImage,
+  Menu,
+  Tray
 } = require('electron')
-
+var tray = null
 const configuration = require('./configuration')
 const stateSaver = require('./stateSaver')
 const log = require('electron-log')
@@ -496,6 +498,15 @@ function restoreSaveState () {
 app.on('ready', () => {
   // need to externalize window size
   // log.info(__dirname)
+  const trayIcon = path.join(__dirname, 'resources/tray_numbers/0.png')
+  const nimage = nativeImage.createFromPath(trayIcon)
+  tray = new Tray(trayIcon)
+  const contextMenu = Menu.buildFromTemplate([
+    {label: 'Item1', type: 'radio'}
+  ])
+  tray.setToolTip('Quickclip!.')
+  tray.setContextMenu(contextMenu)
+  tray.setHighlightMode('always')
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
