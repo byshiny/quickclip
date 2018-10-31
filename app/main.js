@@ -82,7 +82,7 @@ var intervalIDArray = new Array(COPY_MOUSE_ACTIVATION_CHECK_COUNT)
 var timePassedArray = new Array(COPY_MOUSE_ACTIVATION_CHECK_COUNT)
 var mouseDownBooleanArray = new Array(COPY_MOUSE_ACTIVATION_CHECK_COUNT)
 var mouseHoldCount = MOUSE_HOLD_COUNT
-
+var trayIconNo = 0
 for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
   timePassedArray[x] = 0
   mouseDownBooleanArray[x] = false
@@ -145,16 +145,16 @@ let showWindow = null
  */
 
 //
-log.transports.file.level = 'warn'
-log.transports.file.format = '{h}:{i}:{s}:{ms} {text}'
-
-log.transports.console.level = false
-// Set approximate maximum log size in bytes. When it exceeds,
-// the archived log will be saved as the log.old.log file
-log.transports.file.maxSize = 5 * 1024 * 1024
-
-// Write to this file, must be set before first logging
-log.transports.file.file = path.join(__dirname, '/log.txt')
+// log.transports.file.level = 'warn'
+// log.transports.file.format = '{h}:{i}:{s}:{ms} {text}'
+//
+// log.transports.console.level = false
+// // Set approximate maximum log size in bytes. When it exceeds,
+// // the archived log will be saved as the log.old.log file
+// log.transports.file.maxSize = 5 * 1024 * 1024
+//
+// // Write to this file, must be set before first logging
+// log.transports.file.file = path.join(__dirname, '/log.txt')
 
 // fs.createWriteStream options, must be set before first logging
 // you can find more information at
@@ -164,7 +164,7 @@ log.transports.file.streamConfig = {
 }
 
 // set existed file stream
-log.transports.file.stream = fs.createWriteStream('log.txt')
+// log.transports.file.stream = fs.createWriteStream('log.txt')
 
 function showBuffer () {
   // TODO: Parameterize width and height
@@ -181,11 +181,13 @@ function showBuffer () {
 }
 
 function startCircularBufferWindow () {
-  circularBufferWindow = new BrowserWindow({
-    width: 400,
-    height: 200,
-    transparent: false
-  })
+  if (circularBufferWindow == null) {
+    circularBufferWindow = new BrowserWindow({
+      width: 400,
+      height: 200,
+      transparent: false
+    })
+  }
   circularBufferWindow.on('closed', () => {
     circularBufferWindow = null
   })
@@ -263,6 +265,7 @@ function pasteMouseCycleAndReset () {
   }
 
   pasteFromCircularBuffer(copyMouseItemIdx)
+  copyMouseItemIdx = 0
   pasteStarted = false
   mouseDown = true
   bufferCycling = false
@@ -379,18 +382,26 @@ function waitBeforeCyclingBuffer () {
   // since mouse clicks go up and down, the wait period might miss a few increments
   // solution: create four interval ids. If one of them is true(set it in a ored variable), then it's triggered.
   // why can't mouseup
+  var tenth_accum = 0
   var interval = setInterval(function () {
     // log.info(mouseDownAccum)
+    // this variable is used to keep track of a tenth of mouse accum cap
+
     if (mouseDown) {
+      updateTrayIcon()
       mouseDownAccum++
+      tenth_accum++
+      console.log(tenth_accum)
       if (mouseDownAccum > MOUSE_ACCUM_CAP) {
         mouseDownAccum = MOUSE_ACCUM_CAP
         if (!bufferCycling) {
           bufferCycling = true
           startCircularBufferWindow()
+          tenth_accum = 0
         }
       }
     } else {
+      tenth_accum--
       mouseDownAccum--
       mouseUpAccum--
     }
@@ -398,6 +409,7 @@ function waitBeforeCyclingBuffer () {
       clearInterval(interval)
       mouseUpAccum = MOUSE_UP_COUNT
       mouseDownAccum = 0
+      tenth_accum = 0
     }
   }, MOUSE_CHECK_TIME)
 }
@@ -494,9 +506,25 @@ function setGlobalShortcuts () {
 // iohook setup
 
 function updateTrayIcon () {
+  // we want MOUSE_ACCUM_CAP = increment * 10
+  var trayNo = parseInt(mouseDownAccum * 10.0 / MOUSE_ACCUM_CAP) % 10
 
+  trayIconNo = (trayIconNo + 1) % 10
+  var trayStr = '' + trayNo + '.png'
+  console.log(trayStr)
+  const trayIcon = path.join(__dirname, 'resources/tray_numbers/' + trayStr)
+  const nimage = nativeImage.createFromPath(trayIcon)
+  tray.setImage(nimage)
 }
-
+function resetTrayIconToZero () {
+  trayIconNo = 0
+  var trayStr = '' + trayIconNo + '.png'
+  console.log(trayStr)
+  const trayIcon = path.join(__dirname, 'resources/tray_numbers/' + trayStr)
+  const nimage = nativeImage.createFromPath(trayIcon)
+  tray.setImage(nimage)
+}
+updateTrayIcon
 app.on('ready', () => {
   // need to externalize window size
   // log.info(__dirname)
@@ -508,6 +536,12 @@ app.on('ready', () => {
   ])
   tray.setToolTip('Quickclip!.')
   tray.setContextMenu(contextMenu)
+  circularBufferWindow = new BrowserWindow({
+    width: 400,
+    height: 200,
+    transparent: false
+  })
+  circularBufferWindow.hide()
   // tray.setHighlightMode('always')
   mainWindow = new BrowserWindow({
     width: 800,
@@ -558,6 +592,9 @@ app.on('ready', () => {
     saveWindow.hide()
   })
 
+  circularBufferWindow.on('close', function (event) {
+    clearInterval(copyMouseInterval)
+  })
   saveWindow.loadURL(`file://${__dirname}/resources/views/savepop.html`)
   saveWindow.hide()
   // load circular buffer from save.json

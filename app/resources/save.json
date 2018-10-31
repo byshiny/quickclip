@@ -1,10 +1,16 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
-    "    mouseDownAccum++",
-    "jt.codes",
-    "0@2x..png\r1@2x..png\r2@2x..png\r3@2x..png\r4@2x..png\r5@2x..png\r6@2x..png\r7@2x..png\r8@2x..png\r9@2x..png",
-    "0@2x..png\r1@2x..png\r2@2x..png\r3@2x..png\r4@2x..png\r5@2x..png\r6@2x..png\r7@2x..png\r8@2x..png\r9@2x..png"
+    "updateTrayIcon",
+    "updateTrayIcon",
+    "updateTrayIcon",
+    "updateTrayIcon",
+    "updateTrayIcon",
+    "function updateTrayIcon () {\n  trayIconNo = (trayIconNo + 1) % 10\n  var trayStr = '' + trayIconNo + '.png'\n  console.log(trayStr)\n  const trayIcon = path.join(__dirname, 'resources/tray_numbers/' + trayStr)\n  const nimage = nativeImage.createFromPath(trayIcon)\n  tray.setImage(nimage)\n}",
+    "function updateTrayIcon () {\n  trayIconNo = (trayIconNo + 1) % 10\n  var trayStr = '' + trayIconNo + '.png'\n  console.log(trayStr)\n  const trayIcon = path.join(__dirname, 'resources/tray_numbers/' + trayStr)\n  const nimage = nativeImage.createFromPath(trayIcon)\n  tray.setImage(nimage)\n}",
+    "function updateTrayIcon () {\n  trayIconNo = (trayIconNo + 1) % 10\n  var trayStr = '' + trayIconNo + '.png'\n  console.log(trayStr)\n  const trayIcon = path.join(__dirname, 'resources/tray_numbers/' + trayStr)\n  const nimage = nativeImage.createFromPath(trayIcon)\n  tray.setImage(nimage)\n}",
+    "updateTrayIcon",
+    "updateTrayIcon"
   ],
   "keyBuffer": {
     "0": "=(",
