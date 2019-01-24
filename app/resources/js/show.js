@@ -42,6 +42,7 @@ ipcRenderer.on('load-buffer', (event, textObj) => {
   </div>
 */
   // TODO: this parameters - disappearing and transparency speed needs to be externalized.
+  document.getElementById('buffer-holder').innerHTML = "";
   var bufferHolder = document.getElementById('buffer-holder')
   // textObj.textBufferTimer
   // textObj.textBufferChecker
@@ -58,6 +59,7 @@ ipcRenderer.on('load-buffer', (event, textObj) => {
        Button <span class="caret"></span>
    </button> Herro!
  </div> */
+ 
   for (var x = 0; x < textObj.textBufferContent.length; x++) {
     if (textObj.textBufferChecker[x] === 1) {
       var button = document.createElement('button')

@@ -1,21 +1,21 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
-    "updateTrayIcon",
-    "updateTrayIcon",
-    "updateTrayIcon",
-    "updateTrayIcon",
-    "updateTrayIcon",
-    "function updateTrayIcon () {\n  trayIconNo = (trayIconNo + 1) % 10\n  var trayStr = '' + trayIconNo + '.png'\n  console.log(trayStr)\n  const trayIcon = path.join(__dirname, 'resources/tray_numbers/' + trayStr)\n  const nimage = nativeImage.createFromPath(trayIcon)\n  tray.setImage(nimage)\n}",
-    "function updateTrayIcon () {\n  trayIconNo = (trayIconNo + 1) % 10\n  var trayStr = '' + trayIconNo + '.png'\n  console.log(trayStr)\n  const trayIcon = path.join(__dirname, 'resources/tray_numbers/' + trayStr)\n  const nimage = nativeImage.createFromPath(trayIcon)\n  tray.setImage(nimage)\n}",
-    "function updateTrayIcon () {\n  trayIconNo = (trayIconNo + 1) % 10\n  var trayStr = '' + trayIconNo + '.png'\n  console.log(trayStr)\n  const trayIcon = path.join(__dirname, 'resources/tray_numbers/' + trayStr)\n  const nimage = nativeImage.createFromPath(trayIcon)\n  tray.setImage(nimage)\n}",
-    "updateTrayIcon",
-    "updateTrayIcon"
+    "https://stackoverflow.com/questions/3450593/how-do-i-clear-the-content-of-a-div-using-javascript",
+    "https://stackoverflow.com/questions/3450593/how-do-i-clear-the-content-of-a-div-using-javascript",
+    "buffer-holder'",
+    "document.getElementById(elementID).innerHTML = \"\";",
+    "bufferHolder",
+    "showWindow",
+    "showWindow",
+    "You must specify a machine to start, using the command line.\n\nUsage: VirtualBoxVM --startvm &lt;name|UUID&gt;\nStarts the VirtualBox virtual machine with the given name or unique identifier (UUID).\n\n\n\n\n",
+    "You must specify a machine to start, using the command line.\n\nUsage: VirtualBoxVM --startvm &lt;name|UUID&gt;\nStarts the VirtualBox virtual machine with the given name or unique identifier (UUID).\n\n\n\n\n",
+    "You must specify a machine to start, using the command line.\n\nUsage: VirtualBoxVM --startvm &lt;name|UUID&gt;\nStarts the VirtualBox virtual machine with the given name or unique identifier (UUID).\n\n\n\n\n"
   ],
   "keyBuffer": {
     "0": "=(",
-    "1": "=(",
-    "2": "=(",
+    "1": "¡",
+    "2": "https://stackoverflow.com/questions/3450593/how-do-i-clear-the-content-of-a-div-using-javascript",
     "3": "=(",
     "4": "=(",
     "5": "=(",

@@ -732,9 +732,10 @@ ioHook.on('keydown', event => {
       }, 500)
     } else {
       if (showWindow != null) {
-        showWindow.close()
-        showOrHideShowWindow = !showOrHideShowWindow
+        showWindow.hide()
       }
+        showOrHideShowWindow = !showOrHideShowWindow
+      
     }
   }
 })
