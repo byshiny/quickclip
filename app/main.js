@@ -66,6 +66,7 @@ const log = require('electron-log')
 var robot = require('robotjs')
 const path = require('path')
 
+log.transports.console.level = 'warn';
 // for mouse holding
 var CircularBuffer = require('circular-buffer')
 var keyMapper = require('./keyMapper')
@@ -188,7 +189,7 @@ function startCircularBufferWindow () {
       transparent: false
     })
   }
-  circularBufferWindow.on('closed', () => {
+  circularBufferWindow.on('close', () => {
     circularBufferWindow = null
   })
 
@@ -251,7 +252,7 @@ function pasteMouseCycleAndReset () {
     Menu.sendActionToFirstResponder('hide:')
     if (circularBufferWindow != null) {
       log.info('destroying started!')
-      console.log('destroyed')
+      log.de.log('destroyed')
       circularBufferWindow.destroy()
       circularBufferWindowReady = false
     }
@@ -391,7 +392,7 @@ function waitBeforeCyclingBuffer () {
       updateTrayIcon()
       mouseDownAccum++
       tenth_accum++
-      console.log(tenth_accum)
+      log.info(tenth_accum)
       if (mouseDownAccum > MOUSE_ACCUM_CAP) {
         mouseDownAccum = MOUSE_ACCUM_CAP
         if (!bufferCycling) {
@@ -511,7 +512,7 @@ function updateTrayIcon () {
 
   trayIconNo = (trayIconNo + 1) % 10
   var trayStr = '' + trayNo + '.png'
-  console.log(trayStr)
+  log.info(trayStr)
   const trayIcon = path.join(__dirname, 'resources/tray_numbers/' + trayStr)
   const nimage = nativeImage.createFromPath(trayIcon)
   tray.setImage(nimage)

@@ -1,6 +1,8 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
+    "",
+    "",
     "https://stackoverflow.com/questions/3450593/how-do-i-clear-the-content-of-a-div-using-javascript",
     "https://stackoverflow.com/questions/3450593/how-do-i-clear-the-content-of-a-div-using-javascript",
     "buffer-holder'",
@@ -8,8 +10,6 @@
     "bufferHolder",
     "showWindow",
     "showWindow",
-    "You must specify a machine to start, using the command line.\n\nUsage: VirtualBoxVM --startvm &lt;name|UUID&gt;\nStarts the VirtualBox virtual machine with the given name or unique identifier (UUID).\n\n\n\n\n",
-    "You must specify a machine to start, using the command line.\n\nUsage: VirtualBoxVM --startvm &lt;name|UUID&gt;\nStarts the VirtualBox virtual machine with the given name or unique identifier (UUID).\n\n\n\n\n",
     "You must specify a machine to start, using the command line.\n\nUsage: VirtualBoxVM --startvm &lt;name|UUID&gt;\nStarts the VirtualBox virtual machine with the given name or unique identifier (UUID).\n\n\n\n\n"
   ],
   "keyBuffer": {
