@@ -5,7 +5,6 @@ var closeEl = document.querySelector('.close')
 var settingsEl = document.querySelector('.settings')
 var nodeConsole = require('console')
 var myConsole = new nodeConsole.Console(process.stdout, process.stderr)
-myConsole.log('Hello World!')
 const {
   ipcRenderer,
   remote

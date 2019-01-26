@@ -1,27 +1,27 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
-    "",
-    "",
-    "https://stackoverflow.com/questions/3450593/how-do-i-clear-the-content-of-a-div-using-javascript",
-    "https://stackoverflow.com/questions/3450593/how-do-i-clear-the-content-of-a-div-using-javascript",
-    "buffer-holder'",
-    "document.getElementById(elementID).innerHTML = \"\";",
-    "bufferHolder",
-    "showWindow",
-    "showWindow",
-    "You must specify a machine to start, using the command line.\n\nUsage: VirtualBoxVM --startvm &lt;name|UUID&gt;\nStarts the VirtualBox virtual machine with the given name or unique identifier (UUID).\n\n\n\n\n"
+    "\"displayValue\": \"1\",",
+    "\"displayValue\": \"1\",",
+    "ec2-52-90-81-196.compute-1.amazonaws.com",
+    "ec2-52-90-81-196.compute-1.amazonaws.com",
+    "./backend -d ../frontend -f good.db <",
+    "ssh -i \"matchbox.pem\" ec2-user@ec2-52-90-81-196.compute-1.amazonaws.com\n",
+    "pasteBuffer",
+    "    saveObj[x] = textBufferContent[x]\n",
+    "//show that circular buffer items have been triggered to new window",
+    "keyBufferFromConfig"
   ],
   "keyBuffer": {
     "0": "=(",
-    "1": "¡",
-    "2": "https://stackoverflow.com/questions/3450593/how-do-i-clear-the-content-of-a-div-using-javascript",
+    "1": "https://stackoverflow.com/questions/10398931/how-to-remove-text-from-a-string-in-javascript",
+    "2": "No jQuery needed.\n\nvar ret = \"data-123\".replace('data-','');\nconsole.log(ret);   //prints: 123\nDocs.\n\nFor all occurrences to be discarded use:\n\nvar ret = \"data-123\".replace(/data-/g,'');\nPS: The replace function returns a new string and leaves the original string unchanged, so use the function return value after the replace() call.",
     "3": "=(",
     "4": "=(",
-    "5": "=(",
+    "5": "VS Code gives you fine control over when your key bindings are enabled .... For example, to contribute context menu items for all Docker files, one could use:",
     "6": "=(",
     "7": "=(",
-    "8": "=(",
+    "8": "Our 2019 Developer Survey is Open to Coders Everywhere!",
     "9": "=("
   }
 }

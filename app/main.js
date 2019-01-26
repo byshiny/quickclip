@@ -43,7 +43,11 @@ var copyMouseIntervalStack = []
 var currentEvent = null
 var bufferCycling = false
 var saveWindowHiding = false
+
+//this is for keeping track of showing/hiding windows
 var showOrHideShowWindow = true
+var showOrHideCircularBufferWindow = true
+
 
 var tray = 0
 const SHORTCUT_KEY_LIMIT = 10
@@ -66,7 +70,7 @@ const log = require('electron-log')
 var robot = require('robotjs')
 const path = require('path')
 
-log.transports.console.level = 'warn';
+log.transports.console.level = 'info';
 // for mouse holding
 var CircularBuffer = require('circular-buffer')
 var keyMapper = require('./keyMapper')
@@ -114,7 +118,11 @@ mouseCircularBuffer.enq(clipboard.readText())
 var mouseDown = false
 
 var shortcutKeys = {}
+
+//these are configuration keys for show buffers 1 -n, circular buffer 
+//queue show, and the key config that tracks how things are copied
 var showKeyConfig = 'doodle'
+var circBufferKeyConfig = 'woof'
 var copyKeyConfig = 'quack'
 // initialize all the global Arrays
 function setAllTextArraysToDefault () {
@@ -136,10 +144,9 @@ function setAllTextArraysToDefault () {
 
 var mainWindow = null
 let bufferWindow = null
-let circularBufferWindow = null
-var circularBufferWindowReady = true
 let saveWindow = null
 let showWindow = null
+let circularBufferWindow = null
 // Load a remote URL
 
 /* This function shows the current window that is available
@@ -181,36 +188,6 @@ function showBuffer () {
   })
 }
 
-function startCircularBufferWindow () {
-  if (circularBufferWindow == null) {
-    circularBufferWindow = new BrowserWindow({
-      width: 400,
-      height: 200,
-      transparent: false
-    })
-  }
-  circularBufferWindow.on('close', () => {
-    circularBufferWindow = null
-  })
-
-  // YOU MIGHT ALSO HAVE TO CHANGE THIS LINE TO PREVENT THE FREEZE BUG
-  circularBufferWindow.loadURL(`file://${__dirname}/resources/views/mousebuffer.html`)
-  circularBufferWindow.webContents.send('cycle-buffer', mouseCircularBuffer.get(copyMouseItemIdx))
-  circularBufferWindow.show()
-
-  copyTimePassed = 0
-  circularBufferWindowReady = true
-  circularBufferWindow.webContents.on('did-finish-load', function () {
-    pasteStarted = true
-    // this is to get that first buffer immediately
-    cycleBufferWindow()
-    copyMouseInterval = setInterval(function () {
-      cycleBufferWindow()
-    }, COPY_MOUSE_CYCLE_INTERVAL)
-
-    // need to implement cycling logic there
-  })
-}
 
 function cycleBufferWindow () {
   log.info('mousedownyyy')
@@ -221,56 +198,10 @@ function cycleBufferWindow () {
     if (copyMouseItemIdx >= mouseCircularBuffer.size() || copyMouseItemIdx == -1) {
       copyMouseItemIdx = 0
     }
-    // e, this is a hack. Probably need to completely redesign this feature to be more click based
-    // error: we have a race condition with circular buffer window - need to fix.
-    if (circularBufferWindow != null && circularBufferWindowReady) {
-      circularBufferWindow.webContents.send('cycle-buffer', mouseCircularBuffer.get(copyMouseItemIdx))
-    }
-    /* I'm adding a delay here because there is a change that the message doesn't reach the display fast enough
-    then the code below wil execute and cause massive confusion because there's a disrepency with the view */
   }
 }
 
-function pasteFromCircularBuffer (circularBufferIdx) {
-  // this is pretty much a classic swaparoo in CS
-  log.info('paste from circular buffer')
-  var currentText = (' ' + clipboard.readText()).slice(1)
-  var textFromBuffer = mouseCircularBuffer.get(circularBufferIdx)
-  // need to add zero error handling - nothing inside
-  clipboard.writeText(textFromBuffer)
-  setTimeout(function () {
-    pasteCommand(currentText)
-  }, PASTE_DELAY)
-}
 
-function pasteMouseCycleAndReset () {
-  log.info('pasting started!')
-  copyTimePassed = 0
-
-  log.info('os' + OS)
-  if (OS == 'darwin') {
-    Menu.sendActionToFirstResponder('hide:')
-    if (circularBufferWindow != null) {
-      log.info('destroying started!')
-      log.de.log('destroyed')
-      circularBufferWindow.destroy()
-      circularBufferWindowReady = false
-    }
-  }
-  if (OS == 'win32') {
-    if (circularBufferWindow != null) {
-      log.info('destroying started')
-      circularBufferWindow.destroy()
-      circularBufferWindowReady = false
-    }
-  }
-
-  pasteFromCircularBuffer(copyMouseItemIdx)
-  copyMouseItemIdx = 0
-  pasteStarted = false
-  mouseDown = true
-  bufferCycling = false
-}
 
 function bufferKeyPressedWithModifier (event) {
   // TODO: REFACTOR WHEN CONFIGURATION Is SET
@@ -320,6 +251,9 @@ function ensureModifierKeysMatch (event, keyConfig) {
   return true
 }
 
+//basically what this method does is it takes a set of attributes
+//from json file, i.e. altKey = false, etc, and chooses a selection 
+//of them to check over in ModiferKeysToCheck
 function showKeysTriggered (event, keyConfig) {
   var modifiersToCheck = []
   log.info(event)
@@ -327,6 +261,7 @@ function showKeysTriggered (event, keyConfig) {
     log.info('modifiers check')
     log.info(modifierKey)
 
+    //for show buffer, don't check rawcode or keycode
     if (modifierKey != 'rawcode' && modifierKey != 'keycode') {
       if (keyConfig[modifierKey]) {
         modifiersToCheck.push(modifierKey)
@@ -373,47 +308,6 @@ function copyKeyTriggered (event) {
 
 // Register and start hook
 
-function waitBeforeCyclingBuffer () {
-  // this can cause a bug, may have to contniously monitor to see that mouse has been held. Single check may screw up.
-
-  for (var x = 0; x < COPY_MOUSE_ACTIVATION_CHECK_COUNT; x++) {
-    timePassedArray[x] = 0
-    log.info('time pass init' + timePassedArray[x])
-  }
-  // since mouse clicks go up and down, the wait period might miss a few increments
-  // solution: create four interval ids. If one of them is true(set it in a ored variable), then it's triggered.
-  // why can't mouseup
-  var tenth_accum = 0
-  var interval = setInterval(function () {
-    // log.info(mouseDownAccum)
-    // this variable is used to keep track of a tenth of mouse accum cap
-
-    if (mouseDown) {
-      updateTrayIcon()
-      mouseDownAccum++
-      tenth_accum++
-      log.info(tenth_accum)
-      if (mouseDownAccum > MOUSE_ACCUM_CAP) {
-        mouseDownAccum = MOUSE_ACCUM_CAP
-        if (!bufferCycling) {
-          bufferCycling = true
-          startCircularBufferWindow()
-          tenth_accum = 0
-        }
-      }
-    } else {
-      tenth_accum--
-      mouseDownAccum--
-      mouseUpAccum--
-    }
-    if (mouseUpAccum <= 0) {
-      clearInterval(interval)
-      mouseUpAccum = MOUSE_UP_COUNT
-      mouseDownAccum = 0
-      tenth_accum = 0
-    }
-  }, MOUSE_CHECK_TIME)
-}
 
 // effectively a delta to ensure that there isn't a single mousedown checkpoint of failure
 
@@ -473,13 +367,19 @@ function setGlobalShortcuts () {
   var shortcutConfig = configuration.readSettings(os)
   var i = 0
   for (var key in shortcutConfig) {
+    log.info("key")
+    log.info(key)
     if (key == 'copyKey') {
       copyKeyConfig = shortcutConfig[key]
       log.info(copyKeyConfig)
     } else if (key == 'showKey') {
       showKeyConfig = shortcutConfig[key]
       // log.info(showKeyConfig)
-    } else {
+    } else if (key == 'circBufferKey') {
+      circBufferKeyConfig = shortcutConfig[key]
+      // log.info(showKeyConfig)
+    }  else {
+      //var strippedKey = key.replace('pasteBuffer','');
       shortcutKeys[key] = shortcutConfig[key]
     }
   }
@@ -506,17 +406,6 @@ function setGlobalShortcuts () {
 
 // iohook setup
 
-function updateTrayIcon () {
-  // we want MOUSE_ACCUM_CAP = increment * 10
-  var trayNo = parseInt(mouseDownAccum * 10.0 / MOUSE_ACCUM_CAP) % 10
-
-  trayIconNo = (trayIconNo + 1) % 10
-  var trayStr = '' + trayNo + '.png'
-  log.info(trayStr)
-  const trayIcon = path.join(__dirname, 'resources/tray_numbers/' + trayStr)
-  const nimage = nativeImage.createFromPath(trayIcon)
-  tray.setImage(nimage)
-}
 function resetTrayIconToZero () {
   trayIconNo = 0
   var trayStr = '' + trayIconNo + '.png'
@@ -525,7 +414,6 @@ function resetTrayIconToZero () {
   const nimage = nativeImage.createFromPath(trayIcon)
   tray.setImage(nimage)
 }
-updateTrayIcon
 app.on('ready', () => {
   // need to externalize window size
   // log.info(__dirname)
@@ -537,12 +425,6 @@ app.on('ready', () => {
   ])
   tray.setToolTip('Quickclip!.')
   tray.setContextMenu(contextMenu)
-  circularBufferWindow = new BrowserWindow({
-    width: 400,
-    height: 200,
-    transparent: false
-  })
-  circularBufferWindow.hide()
   // tray.setHighlightMode('always')
   mainWindow = new BrowserWindow({
     width: 800,
@@ -581,7 +463,7 @@ app.on('ready', () => {
   })
   saveWindow.on('minimize', function (event) {
     event.preventDefault()
-    saveWindow.hide()
+    saveWindow.hide() //not quite sure why I put this in here...
   })
   saveWindow.on('defocus', function (event) {
     // log.info('da focused')
@@ -593,11 +475,18 @@ app.on('ready', () => {
     saveWindow.hide()
   })
 
-  circularBufferWindow.on('close', function (event) {
-    clearInterval(copyMouseInterval)
-  })
   saveWindow.loadURL(`file://${__dirname}/resources/views/savepop.html`)
   saveWindow.hide()
+
+  circularBufferWindow = new BrowserWindow({
+    width: 500,
+    height: 800,
+    focusable: true
+  })
+  circularBufferWindow.loadURL(`file://${__dirname}/resources/views/savepop.html`)
+  circularBufferWindow.hide()
+
+
   // load circular buffer from save.json
   var circularBufferFromConfig = stateSaver.readValue('circularBuffer')
   // log.info(circularBufferFromConfig)
@@ -624,13 +513,6 @@ app.on('ready', () => {
     }
   }
 
-  /*
-  //log.info(mouseCircularBuffer.size())
-  for (var x = 0; x < mouseCircularBuffer.size(); x++) {
-    // if you save 1 2 3 , you need to load 3 2 1
-    //log.info(mouseCircularBuffer.get(x))
-  } */
-
   // REMOVE THIS LATER: mainWindow.hide()
   // let win = new BrowserWindow({transparent: true, frame: false})
   // win.show()
@@ -645,6 +527,8 @@ app.on('before-quit', () => {
   stateSaver.saveValue('circularBuffer', mouseCircularBuffer.toarray())
   var saveObj = {}
   for (var x = 0; x < textBufferContent.length; x++) {
+    var key = textBufferContent.displayValue
+    print(key)
     saveObj[x] = textBufferContent[x]
   }
   stateSaver.saveValue('keyBuffer', saveObj)
@@ -712,6 +596,7 @@ ioHook.on('keydown', event => {
       mouseCircularBuffer.enq(text)
     }, 100)
   }
+  //show buffers 1 - n triggered
   if (showKeysTriggered(event, showKeyConfig)) {
     // this is an arificial delay for robotjs and os to register cmd + x
     // log.info('show me monies')
@@ -724,12 +609,14 @@ ioHook.on('keydown', event => {
 
       showOrHideShowWindow = !showOrHideShowWindow
       setTimeout(function () {
-        var textObj = {}
-        textObj.textBufferTimer = textBufferTimer
-        textObj.textBufferChecker = textBufferChecker
-        textObj.textBufferFired = textBufferFired
-        textObj.textBufferContent = textBufferContent
-        showWindow.webContents.send('load-buffer', textObj)
+        var data = {}
+        var savedBuffers = {}
+        savedBuffers.textBufferTimer = textBufferTimer
+        savedBuffers.textBufferChecker = textBufferChecker
+        savedBuffers.textBufferFired = textBufferFired
+        savedBuffers.textBufferContent = textBufferContent
+        data.savedBuffers = savedBuffers
+        showWindow.webContents.send('load-buffer', data)
       }, 500)
     } else {
       if (showWindow != null) {
@@ -739,12 +626,46 @@ ioHook.on('keydown', event => {
       
     }
   }
+  //show that circular buffer items have been triggered to new window
+  if (showKeysTriggered(event, circBufferKeyConfig)) {
+    // this is an arificial delay for robotjs and os to register cmd + x
+    // log.info('show me monies')
+    if (showOrHideCircularBufferWindow) {
+      if (showWindow == null) {
+        loadCircularBufferWindow()
+      } else {
+        circularBufferWindow.show()
+      }
+
+      showOrHideCircularBufferWindow = !showOrHideCircularBufferWindow
+      setTimeout(function () {
+        //You need to call soe load fucntion here. 
+        // var data = {}
+        // var savedBuffers = {}
+        // savedBuffers.textBufferTimer = textBufferTimer
+        // savedBuffers.textBufferChecker = textBufferChecker
+        // savedBuffers.textBufferFired = textBufferFired
+        // savedBuffers.textBufferContent = textBufferContent
+        // data.savedBuffers = savedBuffers
+        // showWindow.webContents.send('load-buffer', data)
+      }, 500)
+    } else {
+      if (showOrHideCircularBufferWindow != null) {
+        circularBufferWindow.hide()
+      }
+      showOrHideCircularBufferWindow = !showOrHideCircularBufferWindow
+      
+    }
+  }
+  
 })
 
+
+//load buffer window 1 - n and show them on a separate window
 function loadShowWindow () {
   showWindow = new BrowserWindow({
     width: 400,
-    height: 800,
+    height: 600,
     focusable: false
   })
   showWindow.on('minimize', function (event) {
@@ -767,6 +688,34 @@ function loadShowWindow () {
   })
   showWindow.loadURL(`file://${__dirname}/resources/views/show.html`)
 }
+
+function loadCircularBufferWindow () {
+  circularBufferWindow = new BrowserWindow({
+    width: 400,
+    height: 800,
+    focusable: false
+  })
+  circularBufferWindow.on('minimize', function (event) {
+    event.preventDefault()
+    saveWindow.hide()
+  })
+  circularBufferWindow.on('defocus', function (event) {
+    // log.info('da focused')
+    saveWindow.hide()
+  })
+  // I'm scared this will cause an infinite loop with above
+  circularBufferWindow.on('hide', function (event) {
+    // log.info('hidden')
+    saveWindow.hide()
+  })
+
+  circularBufferWindow.on('close', function (event) {
+    // log.info('hidden')
+    saveWindow.hide()
+  })
+  circularBufferWindow.loadURL(`file://${__dirname}/resources/views/show.html`)
+}
+
 
 ioHook.on('keyup', event => {
   if (bufferKeyReleased(event)) {
@@ -803,7 +752,6 @@ ioHook.on('mousedown', event => {
   if (!pasteStarted && !mouseDown) {
     mouseDown = true // I'm downing the mouse twice so the computer doesn't enter the critical section twice
     log.info('initiate buffer cycling!')
-    waitBeforeCyclingBuffer()
   }
   mouseDown = true
   lastPressTime = new Date()
