@@ -56,19 +56,19 @@ ipcRenderer.on('load-buffer', (event, data) => {
  </div> */
  var savedBuffers = data.savedBuffers
 
-  for (var x = 0; x < savedBuffers.textBufferContent.length; x++) {
-    if (savedBuffers.textBufferChecker[x] === 1) {
+  for (var key in savedBuffers.textBufferContent) {
+    if (savedBuffers.textBufferChecker[key] === 1) {
       var button = document.createElement('button')
       var textHolder = document.createElement('div')
       var randColorInt = getRandomInt(0, CSS_COLOR_NAMES.length)
       var rand1Color = CSS_COLOR_NAMES[randColorInt]
       button.classList.add('btn')
-      button.innerHTML = x
-      textHolder.innerHTML = savedBuffers.textBufferContent[x]
+      button.innerHTML = key
+      textHolder.innerHTML = savedBuffers.textBufferContent[key]
       textHolder.classList.add("pre-scrollable")
       var linebreak = document.createElement('br')
       bufferHolder.appendChild(linebreak)
-      button.style.backgroundColor = randColor
+      button.style.backgroundColor = rand1Color
       bufferHolder.appendChild(button)
       bufferHolder.appendChild(textHolder)
     }

@@ -302,22 +302,22 @@ function copyKeyTriggered (event) {
 
 // effectively a delta to ensure that there isn't a single mousedown checkpoint of failure
 
-function saveBuffer (bufferNum) {
+function saveBuffer (keyValue) {
   var currentText = (' ' + clipboard.readText()).slice(1)
-  log.info('buff num:' + bufferNum + ' currentText:' + currentText)
-  textBufferChecker[bufferNum] = 1
-  textBufferTimer[bufferNum] = new Date()
+  log.info('buff num:' + keyValue + ' currentText:' + currentText)
+  textBufferChecker[keyValue] = 1
+  textBufferTimer[keyValue] = new Date()
   // this also needs to be externalized
 
   setTimeout(function () {
-    robotCopyDelay(bufferNum)
+    robotCopyDelay(keyValue)
   }, 100)
 }
 
-function robotCopyDelay (bufferNum) {
+function robotCopyDelay (keyValue) {
   robot.keyTap('c', ['command'])
   setTimeout(function () {
-    anotherContext(bufferNum)
+    anotherContext(keyValue)
   }, 100)
 }
 
@@ -542,7 +542,6 @@ ioHook.on('keydown', event => {
     log.info("keyvalue")
     log.info(keyValue)
     log.info(textBufferFired)
-    log.info("buffalse")
     log.info(textBufferFired[keyValue] == false)
     if (textBufferFired[keyValue] == false) {
       log.info('text buffer triggered!')
@@ -599,6 +598,8 @@ ioHook.on('keydown', event => {
         savedBuffers.textBufferFired = textBufferFired
         savedBuffers.textBufferContent = textBufferContent
         data.savedBuffers = savedBuffers
+        log.info("where is my data")
+        log.info(data)
         showWindow.webContents.send('load-buffer', data)
       }, 500)
     } else {
