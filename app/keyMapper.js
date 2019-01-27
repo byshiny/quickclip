@@ -14,8 +14,21 @@ TODOs: 1. Externalize the mapping(maybe).
  */
 function getKeyFromCode (keycode) {
   var keyCodeInt = parseInt(keycode)
-  keyCodeInt = (keyCodeInt - 1) % 10
-  return keyCodeInt
+  if(keyCodeInt >=2 && keyCodeInt <= 11){
+    keyCodeInt = (keyCodeInt - 1) % 10
+    return keyCodeInt.toString()
+  }
+  if(keyCodeInt == 39) {
+    return ";"
+  }
+  if(keyCodeInt == 40) {
+    return "'"
+  }
+  if(keyCodeInt == 26) {
+    return "{"
+  }
+
+
 }
 
 module.exports = {

@@ -1,5 +1,6 @@
 {
   "os": "mac",
+  "comment": "To specify a new shortcut, you need to obtain the keycode,then put the keycode corresponding to the pasteBuffer after namingthe string pasteBuffer + p and specify a display value, which will show up on when you press cmd + opt ",
   "template": {
       "keycode": "NOT A KEY",
       "rawcode": 15,
@@ -51,7 +52,7 @@
       "ctrlKey": true,
       "metaKey": false
     },
-    "pasteBufferSemi": {
+    "pasteBuffer;": {
       "displayValue": ";",
       "keycode": 39,
       "altKey": false,
@@ -59,7 +60,7 @@
       "ctrlKey": true,
       "metaKey": false
     },
-    "pasteBufferQuotes": {
+    "pasteBuffer'": {
       "displayValue": "'",
       "keycode": 40,
       "altKey": false,
@@ -67,7 +68,7 @@
       "ctrlKey": true,
       "metaKey": false
     },
-    "pasteBufferBracket": {
+    "pasteBuffer{": {
       "displayValue": "{",
       "keycode": 26,
       "altKey": false,

@@ -55,12 +55,13 @@ ipcRenderer.on('load-buffer', (event, data) => {
    </button> Herro!
  </div> */
  var savedBuffers = data.savedBuffers
+
   for (var x = 0; x < savedBuffers.textBufferContent.length; x++) {
     if (savedBuffers.textBufferChecker[x] === 1) {
       var button = document.createElement('button')
       var textHolder = document.createElement('div')
       var randColorInt = getRandomInt(0, CSS_COLOR_NAMES.length)
-      var randColor = CSS_COLOR_NAMES[randColorInt]
+      var rand1Color = CSS_COLOR_NAMES[randColorInt]
       button.classList.add('btn')
       button.innerHTML = x
       textHolder.innerHTML = savedBuffers.textBufferContent[x]

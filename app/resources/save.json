@@ -1,27 +1,31 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
-    "\"displayValue\": \"1\",",
-    "\"displayValue\": \"1\",",
-    "ec2-52-90-81-196.compute-1.amazonaws.com",
-    "ec2-52-90-81-196.compute-1.amazonaws.com",
-    "./backend -d ../frontend -f good.db <",
-    "ssh -i \"matchbox.pem\" ec2-user@ec2-52-90-81-196.compute-1.amazonaws.com\n",
-    "pasteBuffer",
-    "    saveObj[x] = textBufferContent[x]\n",
-    "//show that circular buffer items have been triggered to new window",
-    "keyBufferFromConfig"
+    "\"comment\": \"To specify a new shortcut, you need to obtain the keycode,\n  \\then put the keycode corresponding to the pasteBuffer after naming\n  the string pasteBuffer + p and specify a display value, which will show\n  up on when you press cmd + opt \",",
+    "strippedKey",
+    "keyValue",
+    "strippedKey",
+    "strippedKey",
+    "var strippedKey = key.replace('pasteBuffer','');",
+    "keyvalue",
+    "shortcutKeys",
+    "buffalse",
+    "shortcutKeys"
   ],
   "keyBuffer": {
-    "0": "=(",
-    "1": "https://stackoverflow.com/questions/10398931/how-to-remove-text-from-a-string-in-javascript",
-    "2": "No jQuery needed.\n\nvar ret = \"data-123\".replace('data-','');\nconsole.log(ret);   //prints: 123\nDocs.\n\nFor all occurrences to be discarded use:\n\nvar ret = \"data-123\".replace(/data-/g,'');\nPS: The replace function returns a new string and leaves the original string unchanged, so use the function return value after the replace() call.",
+    "1": "lobalShortcut.unregisterAll()",
+    "2": "clipboard.writeText(currentText)",
     "3": "=(",
     "4": "=(",
-    "5": "VS Code gives you fine control over when your key bindings are enabled .... For example, to contribute context menu items for all Docker files, one could use:",
-    "6": "=(",
-    "7": "=(",
-    "8": "Our 2019 Developer Survey is Open to Coders Everywhere!",
-    "9": "=("
+    "5": "=(",
+    ";": "=(",
+    "'": "=(",
+    "{": "lobalShortcut.unregisterAll()",
+    "copyKey": "=(",
+    "showKey": "=(",
+    "circBufferKey": "=(",
+    "Semi": "=(",
+    "Quotes": "=(",
+    "Bracket": "=("
   }
 }

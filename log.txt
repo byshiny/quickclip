@@ -1,0 +1,5703 @@
+
+> QuickClip@0.0.1 start /Users/byungjooshin/go/src/github.com/byshiny/quickclip
+>  electron .
+
+/Users/byungjooshin/go/src/github.com/byshiny/quickclip/app/resources/qconfig.json
+[20:31:25.814] [info] herro???
+[20:31:25.899] [info] read 
+[20:31:25.899] [info] { pasteBuffer1: 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  'pasteBuffer;': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  'pasteBuffer\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  'pasteBuffer{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  copyKey: 
+   { keycode: 46,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: false,
+     metaKey: true },
+  showKey: 
+   { keycode: 29,
+     altKey: true,
+     shiftKey: false,
+     ctrlKey: false,
+     metaKey: true },
+  circBufferKey: 
+   { keycode: 29,
+     altKey: true,
+     shiftKey: true,
+     ctrlKey: false,
+     metaKey: false } }
+[20:31:25.904] [info] key
+[20:31:25.905] [info] pasteBuffer1
+[20:31:25.905] [info] key
+[20:31:25.905] [info] pasteBuffer2
+[20:31:25.905] [info] key
+[20:31:25.905] [info] pasteBuffer3
+[20:31:25.906] [info] key
+[20:31:25.906] [info] pasteBuffer4
+[20:31:25.906] [info] key
+[20:31:25.906] [info] pasteBuffer5
+[20:31:25.906] [info] key
+[20:31:25.907] [info] pasteBuffer;
+[20:31:25.907] [info] key
+[20:31:25.907] [info] pasteBuffer'
+[20:31:25.907] [info] key
+[20:31:25.908] [info] pasteBuffer{
+[20:31:25.908] [info] key
+[20:31:25.908] [info] copyKey
+[20:31:25.908] [info] { keycode: 46,
+  altKey: false,
+  shiftKey: false,
+  ctrlKey: false,
+  metaKey: true }
+[20:31:25.908] [info] key
+[20:31:25.909] [info] showKey
+[20:31:25.909] [info] key
+[20:31:25.909] [info] circBufferKey
+[20:31:25.909] [info] shortcutKeys
+[20:31:25.909] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:25.910] [info] wtf
+[20:31:25.910] [info] { pasteBuffer1: 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer2: 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer3: 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer4: 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  pasteBuffer5: 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  'pasteBuffer;': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  'pasteBuffer\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  'pasteBuffer{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  copyKey: 
+   { keycode: 46,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: false,
+     metaKey: true },
+  showKey: 
+   { keycode: 29,
+     altKey: true,
+     shiftKey: false,
+     ctrlKey: false,
+     metaKey: true },
+  circBufferKey: 
+   { keycode: 29,
+     altKey: true,
+     shiftKey: true,
+     ctrlKey: false,
+     metaKey: false } }
+[20:31:25.911] [info] textbufferfired should be null
+[20:31:25.911] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+checkyy
+Nothing in your buffer!
+checkyy
+checkyy
+[20:31:27.691] [info] ???
+[20:31:27.692] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:27.693] [info] shortcut key codes2
+[20:31:27.693] [info] shortcut key codes[object Object]
+[20:31:27.694] [info] 3675
+[20:31:27.694] [info] 2
+[20:31:27.694] [info] false
+[20:31:27.695] [info] shortcut key codes3
+[20:31:27.695] [info] shortcut key codes[object Object]
+[20:31:27.695] [info] 3675
+[20:31:27.695] [info] 3
+[20:31:27.695] [info] false
+[20:31:27.696] [info] shortcut key codes4
+[20:31:27.696] [info] shortcut key codes[object Object]
+[20:31:27.696] [info] 3675
+[20:31:27.696] [info] 4
+[20:31:27.697] [info] false
+[20:31:27.697] [info] shortcut key codes5
+[20:31:27.697] [info] shortcut key codes[object Object]
+[20:31:27.697] [info] 3675
+[20:31:27.698] [info] 5
+[20:31:27.698] [info] false
+[20:31:27.698] [info] shortcut key codes6
+[20:31:27.698] [info] shortcut key codes[object Object]
+[20:31:27.699] [info] 3675
+[20:31:27.699] [info] 6
+[20:31:27.699] [info] false
+[20:31:27.699] [info] shortcut key codes39
+[20:31:27.700] [info] shortcut key codes[object Object]
+[20:31:27.700] [info] 3675
+[20:31:27.700] [info] 39
+[20:31:27.700] [info] false
+[20:31:27.700] [info] shortcut key codes40
+[20:31:27.701] [info] shortcut key codes[object Object]
+[20:31:27.701] [info] 3675
+[20:31:27.701] [info] 40
+[20:31:27.701] [info] false
+[20:31:27.702] [info] shortcut key codes26
+[20:31:27.702] [info] shortcut key codes[object Object]
+[20:31:27.702] [info] 3675
+[20:31:27.702] [info] 26
+[20:31:27.703] [info] false
+[20:31:27.703] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 3675,
+  rawcode: 55,
+  type: 'keydown' }
+[20:31:27.704] [info] modifiers check
+[20:31:27.704] [info] keycode
+[20:31:27.704] [info] modifiers check
+[20:31:27.704] [info] altKey
+[20:31:27.704] [info] modifiers check
+[20:31:27.705] [info] shiftKey
+[20:31:27.705] [info] modifiers check
+[20:31:27.705] [info] ctrlKey
+[20:31:27.705] [info] modifiers check
+[20:31:27.705] [info] metaKey
+[20:31:27.706] [info] modifiers to checkaltKey,metaKey
+[20:31:27.706] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 3675,
+  rawcode: 55,
+  type: 'keydown' }
+[20:31:27.706] [info] modifiers check
+[20:31:27.707] [info] keycode
+[20:31:27.707] [info] modifiers check
+[20:31:27.707] [info] altKey
+[20:31:27.707] [info] modifiers check
+[20:31:27.707] [info] shiftKey
+[20:31:27.708] [info] modifiers check
+[20:31:27.708] [info] ctrlKey
+[20:31:27.708] [info] modifiers check
+[20:31:27.708] [info] metaKey
+[20:31:27.708] [info] modifiers to checkaltKey,shiftKey
+[20:31:27.709] [info] ???
+[20:31:27.709] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:27.710] [info] shortcut key codes2
+[20:31:27.710] [info] shortcut key codes[object Object]
+[20:31:27.710] [info] 56
+[20:31:27.710] [info] 2
+[20:31:27.711] [info] false
+[20:31:27.711] [info] shortcut key codes3
+[20:31:27.711] [info] shortcut key codes[object Object]
+[20:31:27.711] [info] 56
+[20:31:27.711] [info] 3
+[20:31:27.712] [info] false
+[20:31:27.712] [info] shortcut key codes4
+[20:31:27.712] [info] shortcut key codes[object Object]
+[20:31:27.712] [info] 56
+[20:31:27.712] [info] 4
+[20:31:27.713] [info] false
+[20:31:27.713] [info] shortcut key codes5
+[20:31:27.713] [info] shortcut key codes[object Object]
+[20:31:27.713] [info] 56
+[20:31:27.713] [info] 5
+[20:31:27.714] [info] false
+[20:31:27.714] [info] shortcut key codes6
+[20:31:27.714] [info] shortcut key codes[object Object]
+[20:31:27.714] [info] 56
+[20:31:27.715] [info] 6
+[20:31:27.715] [info] false
+[20:31:27.715] [info] shortcut key codes39
+[20:31:27.715] [info] shortcut key codes[object Object]
+[20:31:27.716] [info] 56
+[20:31:27.716] [info] 39
+[20:31:27.716] [info] false
+[20:31:27.716] [info] shortcut key codes40
+[20:31:27.716] [info] shortcut key codes[object Object]
+[20:31:27.717] [info] 56
+[20:31:27.717] [info] 40
+[20:31:27.717] [info] false
+[20:31:27.717] [info] shortcut key codes26
+[20:31:27.717] [info] shortcut key codes[object Object]
+[20:31:27.718] [info] 56
+[20:31:27.718] [info] 26
+[20:31:27.718] [info] false
+[20:31:27.718] [info] { shiftKey: false,
+  altKey: true,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 56,
+  rawcode: 58,
+  type: 'keydown' }
+[20:31:27.719] [info] modifiers check
+[20:31:27.719] [info] keycode
+[20:31:27.720] [info] modifiers check
+[20:31:27.720] [info] altKey
+[20:31:27.720] [info] modifiers check
+[20:31:27.720] [info] shiftKey
+[20:31:27.720] [info] modifiers check
+[20:31:27.721] [info] ctrlKey
+[20:31:27.721] [info] modifiers check
+[20:31:27.721] [info] metaKey
+[20:31:27.722] [info] modifiers to checkaltKey,metaKey
+[20:31:27.737] [info] { shiftKey: false,
+  altKey: true,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 56,
+  rawcode: 58,
+  type: 'keydown' }
+[20:31:27.738] [info] modifiers check
+[20:31:27.738] [info] keycode
+[20:31:27.738] [info] modifiers check
+[20:31:27.738] [info] altKey
+[20:31:27.739] [info] modifiers check
+[20:31:27.739] [info] shiftKey
+[20:31:27.739] [info] modifiers check
+[20:31:27.739] [info] ctrlKey
+[20:31:27.740] [info] modifiers check
+[20:31:27.740] [info] metaKey
+[20:31:27.740] [info] modifiers to checkaltKey,shiftKey
+[20:31:28.348] [info] ???
+[20:31:28.349] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:28.350] [info] shortcut key codes2
+[20:31:28.351] [info] shortcut key codes[object Object]
+[20:31:28.351] [info] 3675
+[20:31:28.351] [info] 2
+[20:31:28.352] [info] false
+[20:31:28.352] [info] shortcut key codes3
+[20:31:28.352] [info] shortcut key codes[object Object]
+[20:31:28.353] [info] 3675
+[20:31:28.353] [info] 3
+[20:31:28.353] [info] false
+[20:31:28.354] [info] shortcut key codes4
+[20:31:28.354] [info] shortcut key codes[object Object]
+[20:31:28.354] [info] 3675
+[20:31:28.354] [info] 4
+[20:31:28.355] [info] false
+[20:31:28.355] [info] shortcut key codes5
+[20:31:28.355] [info] shortcut key codes[object Object]
+[20:31:28.356] [info] 3675
+[20:31:28.356] [info] 5
+[20:31:28.356] [info] false
+[20:31:28.356] [info] shortcut key codes6
+[20:31:28.357] [info] shortcut key codes[object Object]
+[20:31:28.357] [info] 3675
+[20:31:28.357] [info] 6
+[20:31:28.357] [info] false
+[20:31:28.358] [info] shortcut key codes39
+[20:31:28.358] [info] shortcut key codes[object Object]
+[20:31:28.358] [info] 3675
+[20:31:28.358] [info] 39
+[20:31:28.359] [info] false
+[20:31:28.359] [info] shortcut key codes40
+[20:31:28.359] [info] shortcut key codes[object Object]
+[20:31:28.359] [info] 3675
+[20:31:28.360] [info] 40
+[20:31:28.360] [info] false
+[20:31:28.360] [info] shortcut key codes26
+[20:31:28.360] [info] shortcut key codes[object Object]
+[20:31:28.361] [info] 3675
+[20:31:28.361] [info] 26
+[20:31:28.361] [info] false
+[20:31:28.361] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 3675,
+  rawcode: 55,
+  type: 'keydown' }
+[20:31:28.362] [info] modifiers check
+[20:31:28.362] [info] keycode
+[20:31:28.362] [info] modifiers check
+[20:31:28.363] [info] altKey
+[20:31:28.363] [info] modifiers check
+[20:31:28.363] [info] shiftKey
+[20:31:28.363] [info] modifiers check
+[20:31:28.364] [info] ctrlKey
+[20:31:28.364] [info] modifiers check
+[20:31:28.364] [info] metaKey
+[20:31:28.364] [info] modifiers to checkaltKey,metaKey
+[20:31:28.365] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 3675,
+  rawcode: 55,
+  type: 'keydown' }
+[20:31:28.365] [info] modifiers check
+[20:31:28.365] [info] keycode
+[20:31:28.366] [info] modifiers check
+[20:31:28.366] [info] altKey
+[20:31:28.366] [info] modifiers check
+[20:31:28.366] [info] shiftKey
+[20:31:28.367] [info] modifiers check
+[20:31:28.367] [info] ctrlKey
+[20:31:28.367] [info] modifiers check
+[20:31:28.367] [info] metaKey
+[20:31:28.367] [info] modifiers to checkaltKey,shiftKey
+[20:31:28.368] [info] ???
+[20:31:28.368] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:28.369] [info] shortcut key codes2
+[20:31:28.369] [info] shortcut key codes[object Object]
+[20:31:28.369] [info] 56
+[20:31:28.370] [info] 2
+[20:31:28.370] [info] false
+[20:31:28.370] [info] shortcut key codes3
+[20:31:28.370] [info] shortcut key codes[object Object]
+[20:31:28.371] [info] 56
+[20:31:28.371] [info] 3
+[20:31:28.371] [info] false
+[20:31:28.371] [info] shortcut key codes4
+[20:31:28.372] [info] shortcut key codes[object Object]
+[20:31:28.372] [info] 56
+[20:31:28.372] [info] 4
+[20:31:28.372] [info] false
+[20:31:28.373] [info] shortcut key codes5
+[20:31:28.373] [info] shortcut key codes[object Object]
+[20:31:28.373] [info] 56
+[20:31:28.373] [info] 5
+[20:31:28.374] [info] false
+[20:31:28.374] [info] shortcut key codes6
+[20:31:28.375] [info] shortcut key codes[object Object]
+[20:31:28.375] [info] 56
+[20:31:28.376] [info] 6
+[20:31:28.376] [info] false
+[20:31:28.376] [info] shortcut key codes39
+[20:31:28.376] [info] shortcut key codes[object Object]
+[20:31:28.377] [info] 56
+[20:31:28.377] [info] 39
+[20:31:28.378] [info] false
+[20:31:28.378] [info] shortcut key codes40
+[20:31:28.378] [info] shortcut key codes[object Object]
+[20:31:28.379] [info] 56
+[20:31:28.379] [info] 40
+[20:31:28.379] [info] false
+[20:31:28.380] [info] shortcut key codes26
+[20:31:28.380] [info] shortcut key codes[object Object]
+[20:31:28.380] [info] 56
+[20:31:28.380] [info] 26
+[20:31:28.381] [info] false
+[20:31:28.381] [info] { shiftKey: false,
+  altKey: true,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 56,
+  rawcode: 58,
+  type: 'keydown' }
+[20:31:28.381] [info] modifiers check
+[20:31:28.382] [info] keycode
+[20:31:28.382] [info] modifiers check
+[20:31:28.382] [info] altKey
+[20:31:28.382] [info] modifiers check
+[20:31:28.383] [info] shiftKey
+[20:31:28.383] [info] modifiers check
+[20:31:28.383] [info] ctrlKey
+[20:31:28.383] [info] modifiers check
+[20:31:28.383] [info] metaKey
+[20:31:28.384] [info] modifiers to checkaltKey,metaKey
+[20:31:28.384] [info] { shiftKey: false,
+  altKey: true,
+  ctrlKey: false,
+  metaKey: true,
+  keycode: 56,
+  rawcode: 58,
+  type: 'keydown' }
+[20:31:28.385] [info] modifiers check
+[20:31:28.385] [info] keycode
+[20:31:28.385] [info] modifiers check
+[20:31:28.385] [info] altKey
+[20:31:28.386] [info] modifiers check
+[20:31:28.386] [info] shiftKey
+[20:31:28.386] [info] modifiers check
+[20:31:28.386] [info] ctrlKey
+[20:31:28.386] [info] modifiers check
+[20:31:28.387] [info] metaKey
+[20:31:28.387] [info] modifiers to checkaltKey,shiftKey
+[20:31:30.294] [info] ???
+[20:31:30.295] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:30.296] [info] shortcut key codes2
+[20:31:30.297] [info] shortcut key codes[object Object]
+[20:31:30.297] [info] 29
+[20:31:30.297] [info] 2
+[20:31:30.297] [info] false
+[20:31:30.298] [info] shortcut key codes3
+[20:31:30.298] [info] shortcut key codes[object Object]
+[20:31:30.298] [info] 29
+[20:31:30.298] [info] 3
+[20:31:30.299] [info] false
+[20:31:30.299] [info] shortcut key codes4
+[20:31:30.299] [info] shortcut key codes[object Object]
+[20:31:30.299] [info] 29
+[20:31:30.300] [info] 4
+[20:31:30.300] [info] false
+[20:31:30.300] [info] shortcut key codes5
+[20:31:30.300] [info] shortcut key codes[object Object]
+[20:31:30.301] [info] 29
+[20:31:30.301] [info] 5
+[20:31:30.301] [info] false
+[20:31:30.301] [info] shortcut key codes6
+[20:31:30.302] [info] shortcut key codes[object Object]
+[20:31:30.302] [info] 29
+[20:31:30.302] [info] 6
+[20:31:30.302] [info] false
+[20:31:30.303] [info] shortcut key codes39
+[20:31:30.303] [info] shortcut key codes[object Object]
+[20:31:30.303] [info] 29
+[20:31:30.303] [info] 39
+[20:31:30.304] [info] false
+[20:31:30.304] [info] shortcut key codes40
+[20:31:30.304] [info] shortcut key codes[object Object]
+[20:31:30.304] [info] 29
+[20:31:30.305] [info] 40
+[20:31:30.305] [info] false
+[20:31:30.305] [info] shortcut key codes26
+[20:31:30.305] [info] shortcut key codes[object Object]
+[20:31:30.305] [info] 29
+[20:31:30.307] [info] 26
+[20:31:30.308] [info] false
+[20:31:30.308] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 29,
+  rawcode: 59,
+  type: 'keydown' }
+[20:31:30.308] [info] modifiers check
+[20:31:30.309] [info] keycode
+[20:31:30.309] [info] modifiers check
+[20:31:30.309] [info] altKey
+[20:31:30.309] [info] modifiers check
+[20:31:30.309] [info] shiftKey
+[20:31:30.310] [info] modifiers check
+[20:31:30.310] [info] ctrlKey
+[20:31:30.310] [info] modifiers check
+[20:31:30.310] [info] metaKey
+[20:31:30.310] [info] modifiers to checkaltKey,metaKey
+[20:31:30.311] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 29,
+  rawcode: 59,
+  type: 'keydown' }
+[20:31:30.311] [info] modifiers check
+[20:31:30.311] [info] keycode
+[20:31:30.312] [info] modifiers check
+[20:31:30.312] [info] altKey
+[20:31:30.312] [info] modifiers check
+[20:31:30.312] [info] shiftKey
+[20:31:30.312] [info] modifiers check
+[20:31:30.313] [info] ctrlKey
+[20:31:30.313] [info] modifiers check
+[20:31:30.313] [info] metaKey
+[20:31:30.313] [info] modifiers to checkaltKey,shiftKey
+[20:31:30.390] [info] ???
+[20:31:30.390] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:30.392] [info] shortcut key codes2
+[20:31:30.392] [info] shortcut key codes[object Object]
+[20:31:30.392] [info] 2
+[20:31:30.392] [info] 2
+[20:31:30.393] [info] true
+[20:31:30.393] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:30.394] [info] modifiers check
+[20:31:30.394] [info] displayValue
+[20:31:30.394] [info] modifiers check
+[20:31:30.394] [info] keycode
+[20:31:30.395] [info] modifiers check
+[20:31:30.395] [info] rawcode
+[20:31:30.395] [info] modifiers check
+[20:31:30.395] [info] altKey
+[20:31:30.395] [info] modifiers check
+[20:31:30.396] [info] shiftKey
+[20:31:30.396] [info] modifiers check
+[20:31:30.396] [info] ctrlKey
+[20:31:30.398] [info] modifiers check
+[20:31:30.398] [info] metaKey
+[20:31:30.399] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:30.399] [info] detected!
+[20:31:30.399] [info] keyvalue
+[20:31:30.399] [info] 1
+[20:31:30.400] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:30.400] [info] buffalse
+[20:31:30.400] [info] true
+[20:31:30.400] [info] text buffer triggered!
+[20:31:30.407] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:30.408] [info] modifiers check
+[20:31:30.408] [info] keycode
+[20:31:30.408] [info] modifiers check
+[20:31:30.409] [info] altKey
+[20:31:30.409] [info] modifiers check
+[20:31:30.409] [info] shiftKey
+[20:31:30.409] [info] modifiers check
+[20:31:30.410] [info] ctrlKey
+[20:31:30.410] [info] modifiers check
+[20:31:30.410] [info] metaKey
+[20:31:30.410] [info] modifiers to checkaltKey,metaKey
+[20:31:30.410] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:30.411] [info] modifiers check
+[20:31:30.411] [info] keycode
+[20:31:30.411] [info] modifiers check
+[20:31:30.411] [info] altKey
+[20:31:30.411] [info] modifiers check
+[20:31:30.412] [info] shiftKey
+[20:31:30.412] [info] modifiers check
+[20:31:30.412] [info] ctrlKey
+[20:31:30.413] [info] modifiers check
+[20:31:30.413] [info] metaKey
+[20:31:30.413] [info] modifiers to checkaltKey,shiftKey
+[20:31:30.891] [info] ???
+[20:31:30.892] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:30.893] [info] shortcut key codes2
+[20:31:30.894] [info] shortcut key codes[object Object]
+[20:31:30.894] [info] 2
+[20:31:30.894] [info] 2
+[20:31:30.895] [info] true
+[20:31:30.895] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:30.895] [info] modifiers check
+[20:31:30.896] [info] displayValue
+[20:31:30.896] [info] modifiers check
+[20:31:30.896] [info] keycode
+[20:31:30.896] [info] modifiers check
+[20:31:30.896] [info] rawcode
+[20:31:30.896] [info] modifiers check
+[20:31:30.897] [info] altKey
+[20:31:30.897] [info] modifiers check
+[20:31:30.897] [info] shiftKey
+[20:31:30.897] [info] modifiers check
+[20:31:30.897] [info] ctrlKey
+[20:31:30.898] [info] modifiers check
+[20:31:30.898] [info] metaKey
+[20:31:30.898] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:30.898] [info] detected!
+[20:31:30.898] [info] keyvalue
+[20:31:30.899] [info] 1
+[20:31:30.899] [info] { '1': true,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:30.899] [info] buffalse
+[20:31:30.899] [info] false
+[20:31:30.901] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:30.901] [info] modifiers check
+[20:31:30.902] [info] keycode
+[20:31:30.902] [info] modifiers check
+[20:31:30.902] [info] altKey
+[20:31:30.902] [info] modifiers check
+[20:31:30.902] [info] shiftKey
+[20:31:30.903] [info] modifiers check
+[20:31:30.903] [info] ctrlKey
+[20:31:30.903] [info] modifiers check
+[20:31:30.903] [info] metaKey
+[20:31:30.903] [info] modifiers to checkaltKey,metaKey
+[20:31:30.904] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:30.904] [info] modifiers check
+[20:31:30.904] [info] keycode
+[20:31:30.904] [info] modifiers check
+[20:31:30.905] [info] altKey
+[20:31:30.905] [info] modifiers check
+[20:31:30.905] [info] shiftKey
+[20:31:30.905] [info] modifiers check
+[20:31:30.905] [info] ctrlKey
+[20:31:30.906] [info] modifiers check
+[20:31:30.906] [info] metaKey
+[20:31:30.906] [info] modifiers to checkaltKey,shiftKey
+[20:31:30.975] [info] ???
+[20:31:30.976] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:30.977] [info] shortcut key codes2
+[20:31:30.977] [info] shortcut key codes[object Object]
+[20:31:30.978] [info] 2
+[20:31:30.978] [info] 2
+[20:31:30.979] [info] true
+[20:31:30.979] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:30.979] [info] modifiers check
+[20:31:30.980] [info] displayValue
+[20:31:30.980] [info] modifiers check
+[20:31:30.980] [info] keycode
+[20:31:30.980] [info] modifiers check
+[20:31:30.980] [info] rawcode
+[20:31:30.981] [info] modifiers check
+[20:31:30.981] [info] altKey
+[20:31:30.981] [info] modifiers check
+[20:31:30.981] [info] shiftKey
+[20:31:30.981] [info] modifiers check
+[20:31:30.982] [info] ctrlKey
+[20:31:30.982] [info] modifiers check
+[20:31:30.982] [info] metaKey
+[20:31:30.982] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:30.983] [info] detected!
+[20:31:30.983] [info] keyvalue
+[20:31:30.983] [info] 1
+[20:31:30.983] [info] { '1': true,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:30.984] [info] buffalse
+[20:31:30.984] [info] false
+[20:31:30.985] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:30.985] [info] modifiers check
+[20:31:30.986] [info] keycode
+[20:31:30.986] [info] modifiers check
+[20:31:30.986] [info] altKey
+[20:31:30.986] [info] modifiers check
+[20:31:30.986] [info] shiftKey
+[20:31:30.987] [info] modifiers check
+[20:31:30.987] [info] ctrlKey
+[20:31:30.987] [info] modifiers check
+[20:31:30.987] [info] metaKey
+[20:31:30.987] [info] modifiers to checkaltKey,metaKey
+[20:31:30.988] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:30.988] [info] modifiers check
+[20:31:30.988] [info] keycode
+[20:31:30.988] [info] modifiers check
+[20:31:30.989] [info] altKey
+[20:31:30.989] [info] modifiers check
+[20:31:30.989] [info] shiftKey
+[20:31:30.989] [info] modifiers check
+[20:31:30.989] [info] ctrlKey
+[20:31:30.990] [info] modifiers check
+[20:31:30.990] [info] metaKey
+[20:31:30.990] [info] modifiers to checkaltKey,shiftKey
+[20:31:31.060] [info] ???
+[20:31:31.060] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:31.061] [info] shortcut key codes2
+[20:31:31.062] [info] shortcut key codes[object Object]
+[20:31:31.062] [info] 2
+[20:31:31.063] [info] 2
+[20:31:31.063] [info] true
+[20:31:31.063] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.064] [info] modifiers check
+[20:31:31.064] [info] displayValue
+[20:31:31.064] [info] modifiers check
+[20:31:31.064] [info] keycode
+[20:31:31.065] [info] modifiers check
+[20:31:31.065] [info] rawcode
+[20:31:31.065] [info] modifiers check
+[20:31:31.065] [info] altKey
+[20:31:31.066] [info] modifiers check
+[20:31:31.066] [info] shiftKey
+[20:31:31.066] [info] modifiers check
+[20:31:31.067] [info] ctrlKey
+[20:31:31.067] [info] modifiers check
+[20:31:31.067] [info] metaKey
+[20:31:31.067] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:31.068] [info] detected!
+[20:31:31.068] [info] keyvalue
+[20:31:31.068] [info] 1
+[20:31:31.068] [info] { '1': true,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:31.069] [info] buffalse
+[20:31:31.069] [info] false
+[20:31:31.070] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.071] [info] modifiers check
+[20:31:31.071] [info] keycode
+[20:31:31.071] [info] modifiers check
+[20:31:31.071] [info] altKey
+[20:31:31.072] [info] modifiers check
+[20:31:31.072] [info] shiftKey
+[20:31:31.072] [info] modifiers check
+[20:31:31.072] [info] ctrlKey
+[20:31:31.072] [info] modifiers check
+[20:31:31.073] [info] metaKey
+[20:31:31.073] [info] modifiers to checkaltKey,metaKey
+[20:31:31.073] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.073] [info] modifiers check
+[20:31:31.074] [info] keycode
+[20:31:31.074] [info] modifiers check
+[20:31:31.074] [info] altKey
+[20:31:31.074] [info] modifiers check
+[20:31:31.075] [info] shiftKey
+[20:31:31.075] [info] modifiers check
+[20:31:31.075] [info] ctrlKey
+[20:31:31.075] [info] modifiers check
+[20:31:31.075] [info] metaKey
+[20:31:31.076] [info] modifiers to checkaltKey,shiftKey
+[20:31:31.144] [info] ???
+[20:31:31.144] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:31.145] [info] shortcut key codes2
+[20:31:31.146] [info] shortcut key codes[object Object]
+[20:31:31.146] [info] 2
+[20:31:31.146] [info] 2
+[20:31:31.146] [info] true
+[20:31:31.147] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.147] [info] modifiers check
+[20:31:31.147] [info] displayValue
+[20:31:31.148] [info] modifiers check
+[20:31:31.148] [info] keycode
+[20:31:31.148] [info] modifiers check
+[20:31:31.148] [info] rawcode
+[20:31:31.148] [info] modifiers check
+[20:31:31.149] [info] altKey
+[20:31:31.149] [info] modifiers check
+[20:31:31.149] [info] shiftKey
+[20:31:31.149] [info] modifiers check
+[20:31:31.150] [info] ctrlKey
+[20:31:31.150] [info] modifiers check
+[20:31:31.150] [info] metaKey
+[20:31:31.150] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:31.151] [info] detected!
+[20:31:31.151] [info] keyvalue
+[20:31:31.151] [info] 1
+[20:31:31.152] [info] { '1': true,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:31.152] [info] buffalse
+[20:31:31.152] [info] false
+[20:31:31.154] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.154] [info] modifiers check
+[20:31:31.154] [info] keycode
+[20:31:31.154] [info] modifiers check
+[20:31:31.155] [info] altKey
+[20:31:31.155] [info] modifiers check
+[20:31:31.155] [info] shiftKey
+[20:31:31.155] [info] modifiers check
+[20:31:31.155] [info] ctrlKey
+[20:31:31.156] [info] modifiers check
+[20:31:31.156] [info] metaKey
+[20:31:31.157] [info] modifiers to checkaltKey,metaKey
+[20:31:31.157] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.157] [info] modifiers check
+[20:31:31.157] [info] keycode
+[20:31:31.158] [info] modifiers check
+[20:31:31.158] [info] altKey
+[20:31:31.158] [info] modifiers check
+[20:31:31.158] [info] shiftKey
+[20:31:31.159] [info] modifiers check
+[20:31:31.159] [info] ctrlKey
+[20:31:31.159] [info] modifiers check
+[20:31:31.159] [info] metaKey
+[20:31:31.159] [info] modifiers to checkaltKey,shiftKey
+[20:31:31.228] [info] ???
+[20:31:31.229] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:31.230] [info] shortcut key codes2
+[20:31:31.230] [info] shortcut key codes[object Object]
+[20:31:31.230] [info] 2
+[20:31:31.230] [info] 2
+[20:31:31.231] [info] true
+[20:31:31.231] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.231] [info] modifiers check
+[20:31:31.232] [info] displayValue
+[20:31:31.232] [info] modifiers check
+[20:31:31.232] [info] keycode
+[20:31:31.232] [info] modifiers check
+[20:31:31.233] [info] rawcode
+[20:31:31.233] [info] modifiers check
+[20:31:31.233] [info] altKey
+[20:31:31.233] [info] modifiers check
+[20:31:31.234] [info] shiftKey
+[20:31:31.234] [info] modifiers check
+[20:31:31.234] [info] ctrlKey
+[20:31:31.234] [info] modifiers check
+[20:31:31.234] [info] metaKey
+[20:31:31.235] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:31.235] [info] detected!
+[20:31:31.235] [info] keyvalue
+[20:31:31.235] [info] 1
+[20:31:31.236] [info] { '1': true,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:31.237] [info] buffalse
+[20:31:31.237] [info] false
+[20:31:31.238] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.239] [info] modifiers check
+[20:31:31.239] [info] keycode
+[20:31:31.239] [info] modifiers check
+[20:31:31.239] [info] altKey
+[20:31:31.240] [info] modifiers check
+[20:31:31.240] [info] shiftKey
+[20:31:31.240] [info] modifiers check
+[20:31:31.240] [info] ctrlKey
+[20:31:31.240] [info] modifiers check
+[20:31:31.241] [info] metaKey
+[20:31:31.241] [info] modifiers to checkaltKey,metaKey
+[20:31:31.241] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.241] [info] modifiers check
+[20:31:31.242] [info] keycode
+[20:31:31.242] [info] modifiers check
+[20:31:31.242] [info] altKey
+[20:31:31.242] [info] modifiers check
+[20:31:31.243] [info] shiftKey
+[20:31:31.243] [info] modifiers check
+[20:31:31.243] [info] ctrlKey
+[20:31:31.243] [info] modifiers check
+[20:31:31.243] [info] metaKey
+[20:31:31.243] [info] modifiers to checkaltKey,shiftKey
+[20:31:31.312] [info] ???
+[20:31:31.313] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:31.315] [info] shortcut key codes2
+[20:31:31.315] [info] shortcut key codes[object Object]
+[20:31:31.316] [info] 2
+[20:31:31.316] [info] 2
+[20:31:31.316] [info] true
+[20:31:31.316] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.317] [info] modifiers check
+[20:31:31.317] [info] displayValue
+[20:31:31.317] [info] modifiers check
+[20:31:31.318] [info] keycode
+[20:31:31.318] [info] modifiers check
+[20:31:31.318] [info] rawcode
+[20:31:31.318] [info] modifiers check
+[20:31:31.318] [info] altKey
+[20:31:31.319] [info] modifiers check
+[20:31:31.319] [info] shiftKey
+[20:31:31.319] [info] modifiers check
+[20:31:31.320] [info] ctrlKey
+[20:31:31.320] [info] modifiers check
+[20:31:31.320] [info] metaKey
+[20:31:31.320] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:31.321] [info] detected!
+[20:31:31.321] [info] keyvalue
+[20:31:31.321] [info] 1
+[20:31:31.321] [info] { '1': true,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:31.321] [info] buffalse
+[20:31:31.322] [info] false
+[20:31:31.323] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.323] [info] modifiers check
+[20:31:31.323] [info] keycode
+[20:31:31.324] [info] modifiers check
+[20:31:31.324] [info] altKey
+[20:31:31.324] [info] modifiers check
+[20:31:31.324] [info] shiftKey
+[20:31:31.324] [info] modifiers check
+[20:31:31.325] [info] ctrlKey
+[20:31:31.325] [info] modifiers check
+[20:31:31.325] [info] metaKey
+[20:31:31.325] [info] modifiers to checkaltKey,metaKey
+[20:31:31.325] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.326] [info] modifiers check
+[20:31:31.326] [info] keycode
+[20:31:31.326] [info] modifiers check
+[20:31:31.326] [info] altKey
+[20:31:31.326] [info] modifiers check
+[20:31:31.327] [info] shiftKey
+[20:31:31.327] [info] modifiers check
+[20:31:31.327] [info] ctrlKey
+[20:31:31.327] [info] modifiers check
+[20:31:31.327] [info] metaKey
+[20:31:31.328] [info] modifiers to checkaltKey,shiftKey
+[20:31:31.396] [info] ???
+[20:31:31.396] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:31.397] [info] shortcut key codes2
+[20:31:31.397] [info] shortcut key codes[object Object]
+[20:31:31.397] [info] 2
+[20:31:31.397] [info] 2
+[20:31:31.398] [info] true
+[20:31:31.398] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.398] [info] modifiers check
+[20:31:31.398] [info] displayValue
+[20:31:31.399] [info] modifiers check
+[20:31:31.399] [info] keycode
+[20:31:31.399] [info] modifiers check
+[20:31:31.399] [info] rawcode
+[20:31:31.399] [info] modifiers check
+[20:31:31.400] [info] altKey
+[20:31:31.400] [info] modifiers check
+[20:31:31.400] [info] shiftKey
+[20:31:31.400] [info] modifiers check
+[20:31:31.400] [info] ctrlKey
+[20:31:31.401] [info] modifiers check
+[20:31:31.401] [info] metaKey
+[20:31:31.401] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:31.401] [info] detected!
+[20:31:31.401] [info] keyvalue
+[20:31:31.402] [info] 1
+[20:31:31.402] [info] { '1': true,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:31.402] [info] buffalse
+[20:31:31.402] [info] false
+[20:31:31.403] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.404] [info] modifiers check
+[20:31:31.404] [info] keycode
+[20:31:31.404] [info] modifiers check
+[20:31:31.404] [info] altKey
+[20:31:31.405] [info] modifiers check
+[20:31:31.405] [info] shiftKey
+[20:31:31.405] [info] modifiers check
+[20:31:31.405] [info] ctrlKey
+[20:31:31.405] [info] modifiers check
+[20:31:31.405] [info] metaKey
+[20:31:31.406] [info] modifiers to checkaltKey,metaKey
+[20:31:31.406] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.406] [info] modifiers check
+[20:31:31.406] [info] keycode
+[20:31:31.406] [info] modifiers check
+[20:31:31.407] [info] altKey
+[20:31:31.407] [info] modifiers check
+[20:31:31.407] [info] shiftKey
+[20:31:31.407] [info] modifiers check
+[20:31:31.407] [info] ctrlKey
+[20:31:31.407] [info] modifiers check
+[20:31:31.408] [info] metaKey
+[20:31:31.408] [info] modifiers to checkaltKey,shiftKey
+[20:31:31.480] [info] ???
+[20:31:31.481] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:31.482] [info] shortcut key codes2
+[20:31:31.482] [info] shortcut key codes[object Object]
+[20:31:31.482] [info] 2
+[20:31:31.482] [info] 2
+[20:31:31.482] [info] true
+[20:31:31.483] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.483] [info] modifiers check
+[20:31:31.483] [info] displayValue
+[20:31:31.483] [info] modifiers check
+[20:31:31.483] [info] keycode
+[20:31:31.484] [info] modifiers check
+[20:31:31.484] [info] rawcode
+[20:31:31.484] [info] modifiers check
+[20:31:31.484] [info] altKey
+[20:31:31.484] [info] modifiers check
+[20:31:31.485] [info] shiftKey
+[20:31:31.485] [info] modifiers check
+[20:31:31.485] [info] ctrlKey
+[20:31:31.485] [info] modifiers check
+[20:31:31.485] [info] metaKey
+[20:31:31.485] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:31.486] [info] detected!
+[20:31:31.486] [info] keyvalue
+[20:31:31.486] [info] 1
+[20:31:31.486] [info] { '1': true,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:31.487] [info] buffalse
+[20:31:31.487] [info] false
+[20:31:31.488] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.488] [info] modifiers check
+[20:31:31.488] [info] keycode
+[20:31:31.489] [info] modifiers check
+[20:31:31.489] [info] altKey
+[20:31:31.489] [info] modifiers check
+[20:31:31.489] [info] shiftKey
+[20:31:31.489] [info] modifiers check
+[20:31:31.489] [info] ctrlKey
+[20:31:31.490] [info] modifiers check
+[20:31:31.490] [info] metaKey
+[20:31:31.490] [info] modifiers to checkaltKey,metaKey
+[20:31:31.490] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.490] [info] modifiers check
+[20:31:31.491] [info] keycode
+[20:31:31.491] [info] modifiers check
+[20:31:31.491] [info] altKey
+[20:31:31.491] [info] modifiers check
+[20:31:31.491] [info] shiftKey
+[20:31:31.492] [info] modifiers check
+[20:31:31.492] [info] ctrlKey
+[20:31:31.492] [info] modifiers check
+[20:31:31.492] [info] metaKey
+[20:31:31.492] [info] modifiers to checkaltKey,shiftKey
+[20:31:31.564] [info] ???
+[20:31:31.564] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:31.565] [info] shortcut key codes2
+[20:31:31.566] [info] shortcut key codes[object Object]
+[20:31:31.566] [info] 2
+[20:31:31.567] [info] 2
+[20:31:31.567] [info] true
+[20:31:31.567] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.567] [info] modifiers check
+[20:31:31.568] [info] displayValue
+[20:31:31.568] [info] modifiers check
+[20:31:31.568] [info] keycode
+[20:31:31.568] [info] modifiers check
+[20:31:31.568] [info] rawcode
+[20:31:31.569] [info] modifiers check
+[20:31:31.569] [info] altKey
+[20:31:31.569] [info] modifiers check
+[20:31:31.569] [info] shiftKey
+[20:31:31.569] [info] modifiers check
+[20:31:31.570] [info] ctrlKey
+[20:31:31.570] [info] modifiers check
+[20:31:31.570] [info] metaKey
+[20:31:31.570] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:31.570] [info] detected!
+[20:31:31.571] [info] keyvalue
+[20:31:31.571] [info] 1
+[20:31:31.571] [info] { '1': true,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:31.571] [info] buffalse
+[20:31:31.571] [info] false
+[20:31:31.573] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.573] [info] modifiers check
+[20:31:31.573] [info] keycode
+[20:31:31.573] [info] modifiers check
+[20:31:31.574] [info] altKey
+[20:31:31.574] [info] modifiers check
+[20:31:31.574] [info] shiftKey
+[20:31:31.574] [info] modifiers check
+[20:31:31.574] [info] ctrlKey
+[20:31:31.575] [info] modifiers check
+[20:31:31.575] [info] metaKey
+[20:31:31.575] [info] modifiers to checkaltKey,metaKey
+[20:31:31.575] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.575] [info] modifiers check
+[20:31:31.576] [info] keycode
+[20:31:31.576] [info] modifiers check
+[20:31:31.576] [info] altKey
+[20:31:31.576] [info] modifiers check
+[20:31:31.576] [info] shiftKey
+[20:31:31.577] [info] modifiers check
+[20:31:31.577] [info] ctrlKey
+[20:31:31.577] [info] modifiers check
+[20:31:31.577] [info] metaKey
+[20:31:31.577] [info] modifiers to checkaltKey,shiftKey
+[20:31:31.648] [info] ???
+[20:31:31.648] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:31.649] [info] shortcut key codes2
+[20:31:31.649] [info] shortcut key codes[object Object]
+[20:31:31.649] [info] 2
+[20:31:31.650] [info] 2
+[20:31:31.650] [info] true
+[20:31:31.650] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.650] [info] modifiers check
+[20:31:31.651] [info] displayValue
+[20:31:31.651] [info] modifiers check
+[20:31:31.651] [info] keycode
+[20:31:31.651] [info] modifiers check
+[20:31:31.651] [info] rawcode
+[20:31:31.652] [info] modifiers check
+[20:31:31.652] [info] altKey
+[20:31:31.652] [info] modifiers check
+[20:31:31.652] [info] shiftKey
+[20:31:31.652] [info] modifiers check
+[20:31:31.653] [info] ctrlKey
+[20:31:31.653] [info] modifiers check
+[20:31:31.653] [info] metaKey
+[20:31:31.653] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:31.653] [info] detected!
+[20:31:31.654] [info] keyvalue
+[20:31:31.654] [info] 1
+[20:31:31.654] [info] { '1': true,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:31.654] [info] buffalse
+[20:31:31.654] [info] false
+[20:31:31.656] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.656] [info] modifiers check
+[20:31:31.656] [info] keycode
+[20:31:31.656] [info] modifiers check
+[20:31:31.657] [info] altKey
+[20:31:31.657] [info] modifiers check
+[20:31:31.657] [info] shiftKey
+[20:31:31.657] [info] modifiers check
+[20:31:31.657] [info] ctrlKey
+[20:31:31.657] [info] modifiers check
+[20:31:31.658] [info] metaKey
+[20:31:31.658] [info] modifiers to checkaltKey,metaKey
+[20:31:31.658] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 2,
+  rawcode: 18,
+  type: 'keydown' }
+[20:31:31.658] [info] modifiers check
+[20:31:31.658] [info] keycode
+[20:31:31.659] [info] modifiers check
+[20:31:31.659] [info] altKey
+[20:31:31.659] [info] modifiers check
+[20:31:31.659] [info] shiftKey
+[20:31:31.659] [info] modifiers check
+[20:31:31.660] [info] ctrlKey
+[20:31:31.660] [info] modifiers check
+[20:31:31.660] [info] metaKey
+[20:31:31.660] [info] modifiers to checkaltKey,shiftKey
+[20:31:31.679] [info] buff num:1 currentText:"comment": "To specify a new shortcut, you need to obtain the keycode,
+  \then put the keycode corresponding to the pasteBuffer after naming
+  the string pasteBuffer + p and specify a display value, which will show
+  up on when you press cmd + opt ",
+[20:31:31.795] [info] ???
+[20:31:31.795] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:31.796] [info] shortcut key codes2
+[20:31:31.798] [info] shortcut key codes[object Object]
+[20:31:31.798] [info] 46
+[20:31:31.799] [info] 2
+[20:31:31.799] [info] false
+[20:31:31.799] [info] shortcut key codes3
+[20:31:31.799] [info] shortcut key codes[object Object]
+[20:31:31.800] [info] 46
+[20:31:31.800] [info] 3
+[20:31:31.800] [info] false
+[20:31:31.800] [info] shortcut key codes4
+[20:31:31.800] [info] shortcut key codes[object Object]
+[20:31:31.801] [info] 46
+[20:31:31.801] [info] 4
+[20:31:31.801] [info] false
+[20:31:31.801] [info] shortcut key codes5
+[20:31:31.801] [info] shortcut key codes[object Object]
+[20:31:31.802] [info] 46
+[20:31:31.802] [info] 5
+[20:31:31.802] [info] false
+[20:31:31.802] [info] shortcut key codes6
+[20:31:31.802] [info] shortcut key codes[object Object]
+[20:31:31.803] [info] 46
+[20:31:31.803] [info] 6
+[20:31:31.803] [info] false
+[20:31:31.803] [info] shortcut key codes39
+[20:31:31.804] [info] shortcut key codes[object Object]
+[20:31:31.804] [info] 46
+[20:31:31.804] [info] 39
+[20:31:31.804] [info] false
+[20:31:31.804] [info] shortcut key codes40
+[20:31:31.805] [info] shortcut key codes[object Object]
+[20:31:31.805] [info] 46
+[20:31:31.805] [info] 40
+[20:31:31.805] [info] false
+[20:31:31.805] [info] shortcut key codes26
+[20:31:31.806] [info] shortcut key codes[object Object]
+[20:31:31.806] [info] 46
+[20:31:31.806] [info] 26
+[20:31:31.806] [info] false
+[20:31:31.806] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: false,
+  keycode: 46,
+  rawcode: 8,
+  type: 'keydown' }
+[20:31:31.807] [info] modifiers check
+[20:31:31.807] [info] keycode
+[20:31:31.807] [info] modifiers check
+[20:31:31.807] [info] altKey
+[20:31:31.807] [info] modifiers check
+[20:31:31.808] [info] shiftKey
+[20:31:31.808] [info] modifiers check
+[20:31:31.808] [info] ctrlKey
+[20:31:31.808] [info] modifiers check
+[20:31:31.808] [info] metaKey
+[20:31:31.809] [info] modifiers to checkmetaKey
+[20:31:31.809] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: false,
+  keycode: 46,
+  rawcode: 8,
+  type: 'keydown' }
+[20:31:31.809] [info] modifiers check
+[20:31:31.809] [info] keycode
+[20:31:31.809] [info] modifiers check
+[20:31:31.810] [info] altKey
+[20:31:31.810] [info] modifiers check
+[20:31:31.810] [info] shiftKey
+[20:31:31.810] [info] modifiers check
+[20:31:31.810] [info] ctrlKey
+[20:31:31.811] [info] modifiers check
+[20:31:31.811] [info] metaKey
+[20:31:31.811] [info] modifiers to checkaltKey,metaKey
+[20:31:31.811] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: false,
+  keycode: 46,
+  rawcode: 8,
+  type: 'keydown' }
+[20:31:31.811] [info] modifiers check
+[20:31:31.812] [info] keycode
+[20:31:31.812] [info] modifiers check
+[20:31:31.812] [info] altKey
+[20:31:31.812] [info] modifiers check
+[20:31:31.812] [info] shiftKey
+[20:31:31.812] [info] modifiers check
+[20:31:31.813] [info] ctrlKey
+[20:31:31.813] [info] modifiers check
+[20:31:31.813] [info] metaKey
+[20:31:31.813] [info] modifiers to checkaltKey,shiftKey
+[20:31:33.470] [info] ???
+[20:31:33.472] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:33.473] [info] shortcut key codes2
+[20:31:33.473] [info] shortcut key codes[object Object]
+[20:31:33.473] [info] 29
+[20:31:33.473] [info] 2
+[20:31:33.474] [info] false
+[20:31:33.474] [info] shortcut key codes3
+[20:31:33.474] [info] shortcut key codes[object Object]
+[20:31:33.474] [info] 29
+[20:31:33.475] [info] 3
+[20:31:33.475] [info] false
+[20:31:33.475] [info] shortcut key codes4
+[20:31:33.475] [info] shortcut key codes[object Object]
+[20:31:33.475] [info] 29
+[20:31:33.476] [info] 4
+[20:31:33.476] [info] false
+[20:31:33.476] [info] shortcut key codes5
+[20:31:33.476] [info] shortcut key codes[object Object]
+[20:31:33.476] [info] 29
+[20:31:33.477] [info] 5
+[20:31:33.477] [info] false
+[20:31:33.477] [info] shortcut key codes6
+[20:31:33.477] [info] shortcut key codes[object Object]
+[20:31:33.478] [info] 29
+[20:31:33.478] [info] 6
+[20:31:33.478] [info] false
+[20:31:33.478] [info] shortcut key codes39
+[20:31:33.479] [info] shortcut key codes[object Object]
+[20:31:33.479] [info] 29
+[20:31:33.479] [info] 39
+[20:31:33.479] [info] false
+[20:31:33.479] [info] shortcut key codes40
+[20:31:33.480] [info] shortcut key codes[object Object]
+[20:31:33.480] [info] 29
+[20:31:33.480] [info] 40
+[20:31:33.480] [info] false
+[20:31:33.480] [info] shortcut key codes26
+[20:31:33.481] [info] shortcut key codes[object Object]
+[20:31:33.481] [info] 29
+[20:31:33.481] [info] 26
+[20:31:33.481] [info] false
+[20:31:33.481] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 29,
+  rawcode: 59,
+  type: 'keydown' }
+[20:31:33.482] [info] modifiers check
+[20:31:33.482] [info] keycode
+[20:31:33.482] [info] modifiers check
+[20:31:33.482] [info] altKey
+[20:31:33.483] [info] modifiers check
+[20:31:33.483] [info] shiftKey
+[20:31:33.483] [info] modifiers check
+[20:31:33.484] [info] ctrlKey
+[20:31:33.484] [info] modifiers check
+[20:31:33.484] [info] metaKey
+[20:31:33.484] [info] modifiers to checkaltKey,metaKey
+[20:31:33.484] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 29,
+  rawcode: 59,
+  type: 'keydown' }
+[20:31:33.485] [info] modifiers check
+[20:31:33.485] [info] keycode
+[20:31:33.485] [info] modifiers check
+[20:31:33.485] [info] altKey
+[20:31:33.485] [info] modifiers check
+[20:31:33.486] [info] shiftKey
+[20:31:33.486] [info] modifiers check
+[20:31:33.486] [info] ctrlKey
+[20:31:33.486] [info] modifiers check
+[20:31:33.486] [info] metaKey
+[20:31:33.487] [info] modifiers to checkaltKey,shiftKey
+[20:31:33.566] [info] ???
+[20:31:33.567] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:33.568] [info] shortcut key codes2
+[20:31:33.568] [info] shortcut key codes[object Object]
+[20:31:33.569] [info] 26
+[20:31:33.569] [info] 2
+[20:31:33.569] [info] false
+[20:31:33.570] [info] shortcut key codes3
+[20:31:33.570] [info] shortcut key codes[object Object]
+[20:31:33.570] [info] 26
+[20:31:33.570] [info] 3
+[20:31:33.571] [info] false
+[20:31:33.571] [info] shortcut key codes4
+[20:31:33.571] [info] shortcut key codes[object Object]
+[20:31:33.571] [info] 26
+[20:31:33.571] [info] 4
+[20:31:33.572] [info] false
+[20:31:33.572] [info] shortcut key codes5
+[20:31:33.572] [info] shortcut key codes[object Object]
+[20:31:33.572] [info] 26
+[20:31:33.572] [info] 5
+[20:31:33.573] [info] false
+[20:31:33.573] [info] shortcut key codes6
+[20:31:33.573] [info] shortcut key codes[object Object]
+[20:31:33.573] [info] 26
+[20:31:33.573] [info] 6
+[20:31:33.574] [info] false
+[20:31:33.574] [info] shortcut key codes39
+[20:31:33.574] [info] shortcut key codes[object Object]
+[20:31:33.574] [info] 26
+[20:31:33.574] [info] 39
+[20:31:33.575] [info] false
+[20:31:33.575] [info] shortcut key codes40
+[20:31:33.575] [info] shortcut key codes[object Object]
+[20:31:33.575] [info] 26
+[20:31:33.575] [info] 40
+[20:31:33.576] [info] false
+[20:31:33.576] [info] shortcut key codes26
+[20:31:33.576] [info] shortcut key codes[object Object]
+[20:31:33.576] [info] 26
+[20:31:33.576] [info] 26
+[20:31:33.576] [info] true
+[20:31:33.577] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:33.577] [info] modifiers check
+[20:31:33.577] [info] displayValue
+[20:31:33.577] [info] modifiers check
+[20:31:33.578] [info] keycode
+[20:31:33.578] [info] modifiers check
+[20:31:33.578] [info] altKey
+[20:31:33.579] [info] modifiers check
+[20:31:33.579] [info] shiftKey
+[20:31:33.579] [info] modifiers check
+[20:31:33.579] [info] ctrlKey
+[20:31:33.579] [info] modifiers check
+[20:31:33.579] [info] metaKey
+[20:31:33.580] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:33.580] [info] detected!
+[20:31:33.580] [info] keyvalue
+[20:31:33.580] [info] {
+[20:31:33.580] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:33.581] [info] buffalse
+[20:31:33.581] [info] true
+[20:31:33.581] [info] text buffer triggered!
+[20:31:33.588] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:33.588] [info] modifiers check
+[20:31:33.589] [info] keycode
+[20:31:33.589] [info] modifiers check
+[20:31:33.589] [info] altKey
+[20:31:33.589] [info] modifiers check
+[20:31:33.589] [info] shiftKey
+[20:31:33.590] [info] modifiers check
+[20:31:33.590] [info] ctrlKey
+[20:31:33.590] [info] modifiers check
+[20:31:33.590] [info] metaKey
+[20:31:33.590] [info] modifiers to checkaltKey,metaKey
+[20:31:33.591] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:33.591] [info] modifiers check
+[20:31:33.591] [info] keycode
+[20:31:33.591] [info] modifiers check
+[20:31:33.591] [info] altKey
+[20:31:33.592] [info] modifiers check
+[20:31:33.592] [info] shiftKey
+[20:31:33.592] [info] modifiers check
+[20:31:33.592] [info] ctrlKey
+[20:31:33.592] [info] modifiers check
+[20:31:33.592] [info] metaKey
+[20:31:33.593] [info] modifiers to checkaltKey,shiftKey
+[20:31:34.067] [info] ???
+[20:31:34.068] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:34.068] [info] shortcut key codes2
+[20:31:34.069] [info] shortcut key codes[object Object]
+[20:31:34.069] [info] 26
+[20:31:34.069] [info] 2
+[20:31:34.069] [info] false
+[20:31:34.070] [info] shortcut key codes3
+[20:31:34.070] [info] shortcut key codes[object Object]
+[20:31:34.070] [info] 26
+[20:31:34.070] [info] 3
+[20:31:34.070] [info] false
+[20:31:34.071] [info] shortcut key codes4
+[20:31:34.071] [info] shortcut key codes[object Object]
+[20:31:34.071] [info] 26
+[20:31:34.071] [info] 4
+[20:31:34.071] [info] false
+[20:31:34.072] [info] shortcut key codes5
+[20:31:34.072] [info] shortcut key codes[object Object]
+[20:31:34.072] [info] 26
+[20:31:34.072] [info] 5
+[20:31:34.072] [info] false
+[20:31:34.073] [info] shortcut key codes6
+[20:31:34.073] [info] shortcut key codes[object Object]
+[20:31:34.073] [info] 26
+[20:31:34.073] [info] 6
+[20:31:34.073] [info] false
+[20:31:34.074] [info] shortcut key codes39
+[20:31:34.074] [info] shortcut key codes[object Object]
+[20:31:34.074] [info] 26
+[20:31:34.074] [info] 39
+[20:31:34.075] [info] false
+[20:31:34.075] [info] shortcut key codes40
+[20:31:34.075] [info] shortcut key codes[object Object]
+[20:31:34.075] [info] 26
+[20:31:34.075] [info] 40
+[20:31:34.076] [info] false
+[20:31:34.076] [info] shortcut key codes26
+[20:31:34.076] [info] shortcut key codes[object Object]
+[20:31:34.076] [info] 26
+[20:31:34.076] [info] 26
+[20:31:34.077] [info] true
+[20:31:34.077] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.077] [info] modifiers check
+[20:31:34.077] [info] displayValue
+[20:31:34.077] [info] modifiers check
+[20:31:34.078] [info] keycode
+[20:31:34.078] [info] modifiers check
+[20:31:34.078] [info] altKey
+[20:31:34.078] [info] modifiers check
+[20:31:34.078] [info] shiftKey
+[20:31:34.079] [info] modifiers check
+[20:31:34.079] [info] ctrlKey
+[20:31:34.079] [info] modifiers check
+[20:31:34.079] [info] metaKey
+[20:31:34.079] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:34.079] [info] detected!
+[20:31:34.080] [info] keyvalue
+[20:31:34.080] [info] {
+[20:31:34.080] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': true,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:34.080] [info] buffalse
+[20:31:34.080] [info] false
+[20:31:34.081] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.082] [info] modifiers check
+[20:31:34.082] [info] keycode
+[20:31:34.082] [info] modifiers check
+[20:31:34.082] [info] altKey
+[20:31:34.083] [info] modifiers check
+[20:31:34.083] [info] shiftKey
+[20:31:34.083] [info] modifiers check
+[20:31:34.084] [info] ctrlKey
+[20:31:34.084] [info] modifiers check
+[20:31:34.085] [info] metaKey
+[20:31:34.085] [info] modifiers to checkaltKey,metaKey
+[20:31:34.085] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.085] [info] modifiers check
+[20:31:34.085] [info] keycode
+[20:31:34.086] [info] modifiers check
+[20:31:34.086] [info] altKey
+[20:31:34.086] [info] modifiers check
+[20:31:34.086] [info] shiftKey
+[20:31:34.086] [info] modifiers check
+[20:31:34.087] [info] ctrlKey
+[20:31:34.087] [info] modifiers check
+[20:31:34.087] [info] metaKey
+[20:31:34.087] [info] modifiers to checkaltKey,shiftKey
+[20:31:34.152] [info] ???
+[20:31:34.152] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:34.153] [info] shortcut key codes2
+[20:31:34.153] [info] shortcut key codes[object Object]
+[20:31:34.153] [info] 26
+[20:31:34.153] [info] 2
+[20:31:34.154] [info] false
+[20:31:34.154] [info] shortcut key codes3
+[20:31:34.154] [info] shortcut key codes[object Object]
+[20:31:34.154] [info] 26
+[20:31:34.154] [info] 3
+[20:31:34.155] [info] false
+[20:31:34.155] [info] shortcut key codes4
+[20:31:34.155] [info] shortcut key codes[object Object]
+[20:31:34.155] [info] 26
+[20:31:34.155] [info] 4
+[20:31:34.156] [info] false
+[20:31:34.156] [info] shortcut key codes5
+[20:31:34.156] [info] shortcut key codes[object Object]
+[20:31:34.156] [info] 26
+[20:31:34.156] [info] 5
+[20:31:34.157] [info] false
+[20:31:34.157] [info] shortcut key codes6
+[20:31:34.157] [info] shortcut key codes[object Object]
+[20:31:34.157] [info] 26
+[20:31:34.157] [info] 6
+[20:31:34.158] [info] false
+[20:31:34.158] [info] shortcut key codes39
+[20:31:34.158] [info] shortcut key codes[object Object]
+[20:31:34.158] [info] 26
+[20:31:34.158] [info] 39
+[20:31:34.159] [info] false
+[20:31:34.159] [info] shortcut key codes40
+[20:31:34.159] [info] shortcut key codes[object Object]
+[20:31:34.159] [info] 26
+[20:31:34.159] [info] 40
+[20:31:34.160] [info] false
+[20:31:34.160] [info] shortcut key codes26
+[20:31:34.160] [info] shortcut key codes[object Object]
+[20:31:34.160] [info] 26
+[20:31:34.160] [info] 26
+[20:31:34.161] [info] true
+[20:31:34.161] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.161] [info] modifiers check
+[20:31:34.161] [info] displayValue
+[20:31:34.161] [info] modifiers check
+[20:31:34.162] [info] keycode
+[20:31:34.162] [info] modifiers check
+[20:31:34.162] [info] altKey
+[20:31:34.162] [info] modifiers check
+[20:31:34.162] [info] shiftKey
+[20:31:34.162] [info] modifiers check
+[20:31:34.163] [info] ctrlKey
+[20:31:34.163] [info] modifiers check
+[20:31:34.163] [info] metaKey
+[20:31:34.163] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:34.163] [info] detected!
+[20:31:34.163] [info] keyvalue
+[20:31:34.164] [info] {
+[20:31:34.164] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': true,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:34.164] [info] buffalse
+[20:31:34.164] [info] false
+[20:31:34.165] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.166] [info] modifiers check
+[20:31:34.166] [info] keycode
+[20:31:34.166] [info] modifiers check
+[20:31:34.166] [info] altKey
+[20:31:34.166] [info] modifiers check
+[20:31:34.167] [info] shiftKey
+[20:31:34.167] [info] modifiers check
+[20:31:34.167] [info] ctrlKey
+[20:31:34.167] [info] modifiers check
+[20:31:34.167] [info] metaKey
+[20:31:34.168] [info] modifiers to checkaltKey,metaKey
+[20:31:34.168] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.168] [info] modifiers check
+[20:31:34.168] [info] keycode
+[20:31:34.168] [info] modifiers check
+[20:31:34.169] [info] altKey
+[20:31:34.169] [info] modifiers check
+[20:31:34.169] [info] shiftKey
+[20:31:34.169] [info] modifiers check
+[20:31:34.169] [info] ctrlKey
+[20:31:34.169] [info] modifiers check
+[20:31:34.170] [info] metaKey
+[20:31:34.170] [info] modifiers to checkaltKey,shiftKey
+[20:31:34.236] [info] ???
+[20:31:34.236] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:34.237] [info] shortcut key codes2
+[20:31:34.237] [info] shortcut key codes[object Object]
+[20:31:34.238] [info] 26
+[20:31:34.238] [info] 2
+[20:31:34.238] [info] false
+[20:31:34.239] [info] shortcut key codes3
+[20:31:34.239] [info] shortcut key codes[object Object]
+[20:31:34.239] [info] 26
+[20:31:34.240] [info] 3
+[20:31:34.240] [info] false
+[20:31:34.240] [info] shortcut key codes4
+[20:31:34.240] [info] shortcut key codes[object Object]
+[20:31:34.240] [info] 26
+[20:31:34.241] [info] 4
+[20:31:34.241] [info] false
+[20:31:34.241] [info] shortcut key codes5
+[20:31:34.241] [info] shortcut key codes[object Object]
+[20:31:34.241] [info] 26
+[20:31:34.242] [info] 5
+[20:31:34.242] [info] false
+[20:31:34.242] [info] shortcut key codes6
+[20:31:34.242] [info] shortcut key codes[object Object]
+[20:31:34.242] [info] 26
+[20:31:34.243] [info] 6
+[20:31:34.243] [info] false
+[20:31:34.243] [info] shortcut key codes39
+[20:31:34.243] [info] shortcut key codes[object Object]
+[20:31:34.243] [info] 26
+[20:31:34.244] [info] 39
+[20:31:34.244] [info] false
+[20:31:34.244] [info] shortcut key codes40
+[20:31:34.244] [info] shortcut key codes[object Object]
+[20:31:34.244] [info] 26
+[20:31:34.245] [info] 40
+[20:31:34.245] [info] false
+[20:31:34.245] [info] shortcut key codes26
+[20:31:34.245] [info] shortcut key codes[object Object]
+[20:31:34.245] [info] 26
+[20:31:34.246] [info] 26
+[20:31:34.246] [info] true
+[20:31:34.246] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.246] [info] modifiers check
+[20:31:34.247] [info] displayValue
+[20:31:34.247] [info] modifiers check
+[20:31:34.247] [info] keycode
+[20:31:34.247] [info] modifiers check
+[20:31:34.247] [info] altKey
+[20:31:34.247] [info] modifiers check
+[20:31:34.248] [info] shiftKey
+[20:31:34.248] [info] modifiers check
+[20:31:34.248] [info] ctrlKey
+[20:31:34.248] [info] modifiers check
+[20:31:34.248] [info] metaKey
+[20:31:34.248] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:34.249] [info] detected!
+[20:31:34.249] [info] keyvalue
+[20:31:34.249] [info] {
+[20:31:34.249] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': true,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:34.249] [info] buffalse
+[20:31:34.250] [info] false
+[20:31:34.251] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.251] [info] modifiers check
+[20:31:34.251] [info] keycode
+[20:31:34.252] [info] modifiers check
+[20:31:34.252] [info] altKey
+[20:31:34.252] [info] modifiers check
+[20:31:34.252] [info] shiftKey
+[20:31:34.252] [info] modifiers check
+[20:31:34.252] [info] ctrlKey
+[20:31:34.253] [info] modifiers check
+[20:31:34.253] [info] metaKey
+[20:31:34.253] [info] modifiers to checkaltKey,metaKey
+[20:31:34.253] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.254] [info] modifiers check
+[20:31:34.254] [info] keycode
+[20:31:34.254] [info] modifiers check
+[20:31:34.254] [info] altKey
+[20:31:34.254] [info] modifiers check
+[20:31:34.254] [info] shiftKey
+[20:31:34.255] [info] modifiers check
+[20:31:34.255] [info] ctrlKey
+[20:31:34.255] [info] modifiers check
+[20:31:34.255] [info] metaKey
+[20:31:34.255] [info] modifiers to checkaltKey,shiftKey
+[20:31:34.320] [info] ???
+[20:31:34.320] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:34.321] [info] shortcut key codes2
+[20:31:34.322] [info] shortcut key codes[object Object]
+[20:31:34.322] [info] 26
+[20:31:34.322] [info] 2
+[20:31:34.323] [info] false
+[20:31:34.323] [info] shortcut key codes3
+[20:31:34.323] [info] shortcut key codes[object Object]
+[20:31:34.323] [info] 26
+[20:31:34.325] [info] 3
+[20:31:34.325] [info] false
+[20:31:34.325] [info] shortcut key codes4
+[20:31:34.325] [info] shortcut key codes[object Object]
+[20:31:34.326] [info] 26
+[20:31:34.326] [info] 4
+[20:31:34.326] [info] false
+[20:31:34.326] [info] shortcut key codes5
+[20:31:34.326] [info] shortcut key codes[object Object]
+[20:31:34.327] [info] 26
+[20:31:34.327] [info] 5
+[20:31:34.327] [info] false
+[20:31:34.327] [info] shortcut key codes6
+[20:31:34.327] [info] shortcut key codes[object Object]
+[20:31:34.328] [info] 26
+[20:31:34.328] [info] 6
+[20:31:34.328] [info] false
+[20:31:34.328] [info] shortcut key codes39
+[20:31:34.328] [info] shortcut key codes[object Object]
+[20:31:34.329] [info] 26
+[20:31:34.329] [info] 39
+[20:31:34.329] [info] false
+[20:31:34.329] [info] shortcut key codes40
+[20:31:34.329] [info] shortcut key codes[object Object]
+[20:31:34.330] [info] 26
+[20:31:34.330] [info] 40
+[20:31:34.330] [info] false
+[20:31:34.330] [info] shortcut key codes26
+[20:31:34.330] [info] shortcut key codes[object Object]
+[20:31:34.331] [info] 26
+[20:31:34.331] [info] 26
+[20:31:34.331] [info] true
+[20:31:34.331] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.332] [info] modifiers check
+[20:31:34.332] [info] displayValue
+[20:31:34.332] [info] modifiers check
+[20:31:34.332] [info] keycode
+[20:31:34.333] [info] modifiers check
+[20:31:34.333] [info] altKey
+[20:31:34.333] [info] modifiers check
+[20:31:34.333] [info] shiftKey
+[20:31:34.333] [info] modifiers check
+[20:31:34.333] [info] ctrlKey
+[20:31:34.334] [info] modifiers check
+[20:31:34.334] [info] metaKey
+[20:31:34.334] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:34.334] [info] detected!
+[20:31:34.334] [info] keyvalue
+[20:31:34.335] [info] {
+[20:31:34.335] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': true,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:34.335] [info] buffalse
+[20:31:34.335] [info] false
+[20:31:34.336] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.337] [info] modifiers check
+[20:31:34.337] [info] keycode
+[20:31:34.337] [info] modifiers check
+[20:31:34.337] [info] altKey
+[20:31:34.338] [info] modifiers check
+[20:31:34.338] [info] shiftKey
+[20:31:34.338] [info] modifiers check
+[20:31:34.338] [info] ctrlKey
+[20:31:34.338] [info] modifiers check
+[20:31:34.338] [info] metaKey
+[20:31:34.339] [info] modifiers to checkaltKey,metaKey
+[20:31:34.339] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.339] [info] modifiers check
+[20:31:34.339] [info] keycode
+[20:31:34.339] [info] modifiers check
+[20:31:34.340] [info] altKey
+[20:31:34.340] [info] modifiers check
+[20:31:34.340] [info] shiftKey
+[20:31:34.340] [info] modifiers check
+[20:31:34.340] [info] ctrlKey
+[20:31:34.340] [info] modifiers check
+[20:31:34.340] [info] metaKey
+[20:31:34.341] [info] modifiers to checkaltKey,shiftKey
+[20:31:34.404] [info] ???
+[20:31:34.404] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:34.405] [info] shortcut key codes2
+[20:31:34.405] [info] shortcut key codes[object Object]
+[20:31:34.405] [info] 26
+[20:31:34.406] [info] 2
+[20:31:34.406] [info] false
+[20:31:34.406] [info] shortcut key codes3
+[20:31:34.406] [info] shortcut key codes[object Object]
+[20:31:34.406] [info] 26
+[20:31:34.407] [info] 3
+[20:31:34.407] [info] false
+[20:31:34.407] [info] shortcut key codes4
+[20:31:34.407] [info] shortcut key codes[object Object]
+[20:31:34.407] [info] 26
+[20:31:34.408] [info] 4
+[20:31:34.408] [info] false
+[20:31:34.408] [info] shortcut key codes5
+[20:31:34.408] [info] shortcut key codes[object Object]
+[20:31:34.408] [info] 26
+[20:31:34.409] [info] 5
+[20:31:34.409] [info] false
+[20:31:34.409] [info] shortcut key codes6
+[20:31:34.409] [info] shortcut key codes[object Object]
+[20:31:34.409] [info] 26
+[20:31:34.410] [info] 6
+[20:31:34.410] [info] false
+[20:31:34.410] [info] shortcut key codes39
+[20:31:34.410] [info] shortcut key codes[object Object]
+[20:31:34.410] [info] 26
+[20:31:34.411] [info] 39
+[20:31:34.411] [info] false
+[20:31:34.411] [info] shortcut key codes40
+[20:31:34.411] [info] shortcut key codes[object Object]
+[20:31:34.411] [info] 26
+[20:31:34.412] [info] 40
+[20:31:34.412] [info] false
+[20:31:34.412] [info] shortcut key codes26
+[20:31:34.412] [info] shortcut key codes[object Object]
+[20:31:34.412] [info] 26
+[20:31:34.412] [info] 26
+[20:31:34.413] [info] true
+[20:31:34.413] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.413] [info] modifiers check
+[20:31:34.413] [info] displayValue
+[20:31:34.413] [info] modifiers check
+[20:31:34.414] [info] keycode
+[20:31:34.414] [info] modifiers check
+[20:31:34.414] [info] altKey
+[20:31:34.414] [info] modifiers check
+[20:31:34.414] [info] shiftKey
+[20:31:34.414] [info] modifiers check
+[20:31:34.415] [info] ctrlKey
+[20:31:34.415] [info] modifiers check
+[20:31:34.415] [info] metaKey
+[20:31:34.415] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:34.415] [info] detected!
+[20:31:34.415] [info] keyvalue
+[20:31:34.416] [info] {
+[20:31:34.416] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': true,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:34.416] [info] buffalse
+[20:31:34.416] [info] false
+[20:31:34.417] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.418] [info] modifiers check
+[20:31:34.418] [info] keycode
+[20:31:34.418] [info] modifiers check
+[20:31:34.418] [info] altKey
+[20:31:34.418] [info] modifiers check
+[20:31:34.419] [info] shiftKey
+[20:31:34.419] [info] modifiers check
+[20:31:34.419] [info] ctrlKey
+[20:31:34.419] [info] modifiers check
+[20:31:34.419] [info] metaKey
+[20:31:34.419] [info] modifiers to checkaltKey,metaKey
+[20:31:34.420] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.420] [info] modifiers check
+[20:31:34.420] [info] keycode
+[20:31:34.420] [info] modifiers check
+[20:31:34.420] [info] altKey
+[20:31:34.421] [info] modifiers check
+[20:31:34.421] [info] shiftKey
+[20:31:34.421] [info] modifiers check
+[20:31:34.421] [info] ctrlKey
+[20:31:34.421] [info] modifiers check
+[20:31:34.421] [info] metaKey
+[20:31:34.422] [info] modifiers to checkaltKey,shiftKey
+[20:31:34.488] [info] ???
+[20:31:34.488] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:34.489] [info] shortcut key codes2
+[20:31:34.489] [info] shortcut key codes[object Object]
+[20:31:34.489] [info] 26
+[20:31:34.490] [info] 2
+[20:31:34.490] [info] false
+[20:31:34.490] [info] shortcut key codes3
+[20:31:34.490] [info] shortcut key codes[object Object]
+[20:31:34.490] [info] 26
+[20:31:34.491] [info] 3
+[20:31:34.491] [info] false
+[20:31:34.491] [info] shortcut key codes4
+[20:31:34.491] [info] shortcut key codes[object Object]
+[20:31:34.491] [info] 26
+[20:31:34.492] [info] 4
+[20:31:34.492] [info] false
+[20:31:34.492] [info] shortcut key codes5
+[20:31:34.492] [info] shortcut key codes[object Object]
+[20:31:34.492] [info] 26
+[20:31:34.493] [info] 5
+[20:31:34.493] [info] false
+[20:31:34.493] [info] shortcut key codes6
+[20:31:34.493] [info] shortcut key codes[object Object]
+[20:31:34.493] [info] 26
+[20:31:34.494] [info] 6
+[20:31:34.494] [info] false
+[20:31:34.494] [info] shortcut key codes39
+[20:31:34.494] [info] shortcut key codes[object Object]
+[20:31:34.494] [info] 26
+[20:31:34.495] [info] 39
+[20:31:34.495] [info] false
+[20:31:34.495] [info] shortcut key codes40
+[20:31:34.495] [info] shortcut key codes[object Object]
+[20:31:34.495] [info] 26
+[20:31:34.496] [info] 40
+[20:31:34.496] [info] false
+[20:31:34.496] [info] shortcut key codes26
+[20:31:34.496] [info] shortcut key codes[object Object]
+[20:31:34.496] [info] 26
+[20:31:34.496] [info] 26
+[20:31:34.497] [info] true
+[20:31:34.497] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.497] [info] modifiers check
+[20:31:34.497] [info] displayValue
+[20:31:34.497] [info] modifiers check
+[20:31:34.498] [info] keycode
+[20:31:34.498] [info] modifiers check
+[20:31:34.498] [info] altKey
+[20:31:34.498] [info] modifiers check
+[20:31:34.498] [info] shiftKey
+[20:31:34.498] [info] modifiers check
+[20:31:34.499] [info] ctrlKey
+[20:31:34.499] [info] modifiers check
+[20:31:34.499] [info] metaKey
+[20:31:34.499] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:34.499] [info] detected!
+[20:31:34.499] [info] keyvalue
+[20:31:34.500] [info] {
+[20:31:34.500] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': true,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:34.500] [info] buffalse
+[20:31:34.500] [info] false
+[20:31:34.501] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.502] [info] modifiers check
+[20:31:34.502] [info] keycode
+[20:31:34.502] [info] modifiers check
+[20:31:34.503] [info] altKey
+[20:31:34.503] [info] modifiers check
+[20:31:34.503] [info] shiftKey
+[20:31:34.503] [info] modifiers check
+[20:31:34.503] [info] ctrlKey
+[20:31:34.503] [info] modifiers check
+[20:31:34.504] [info] metaKey
+[20:31:34.504] [info] modifiers to checkaltKey,metaKey
+[20:31:34.504] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.504] [info] modifiers check
+[20:31:34.504] [info] keycode
+[20:31:34.505] [info] modifiers check
+[20:31:34.505] [info] altKey
+[20:31:34.505] [info] modifiers check
+[20:31:34.505] [info] shiftKey
+[20:31:34.505] [info] modifiers check
+[20:31:34.505] [info] ctrlKey
+[20:31:34.506] [info] modifiers check
+[20:31:34.506] [info] metaKey
+[20:31:34.506] [info] modifiers to checkaltKey,shiftKey
+[20:31:34.572] [info] ???
+[20:31:34.572] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:34.573] [info] shortcut key codes2
+[20:31:34.574] [info] shortcut key codes[object Object]
+[20:31:34.574] [info] 26
+[20:31:34.574] [info] 2
+[20:31:34.574] [info] false
+[20:31:34.575] [info] shortcut key codes3
+[20:31:34.575] [info] shortcut key codes[object Object]
+[20:31:34.575] [info] 26
+[20:31:34.575] [info] 3
+[20:31:34.575] [info] false
+[20:31:34.576] [info] shortcut key codes4
+[20:31:34.576] [info] shortcut key codes[object Object]
+[20:31:34.576] [info] 26
+[20:31:34.576] [info] 4
+[20:31:34.576] [info] false
+[20:31:34.577] [info] shortcut key codes5
+[20:31:34.577] [info] shortcut key codes[object Object]
+[20:31:34.577] [info] 26
+[20:31:34.577] [info] 5
+[20:31:34.577] [info] false
+[20:31:34.578] [info] shortcut key codes6
+[20:31:34.578] [info] shortcut key codes[object Object]
+[20:31:34.578] [info] 26
+[20:31:34.578] [info] 6
+[20:31:34.578] [info] false
+[20:31:34.579] [info] shortcut key codes39
+[20:31:34.579] [info] shortcut key codes[object Object]
+[20:31:34.579] [info] 26
+[20:31:34.579] [info] 39
+[20:31:34.579] [info] false
+[20:31:34.579] [info] shortcut key codes40
+[20:31:34.580] [info] shortcut key codes[object Object]
+[20:31:34.580] [info] 26
+[20:31:34.580] [info] 40
+[20:31:34.580] [info] false
+[20:31:34.580] [info] shortcut key codes26
+[20:31:34.581] [info] shortcut key codes[object Object]
+[20:31:34.581] [info] 26
+[20:31:34.581] [info] 26
+[20:31:34.581] [info] true
+[20:31:34.581] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.582] [info] modifiers check
+[20:31:34.582] [info] displayValue
+[20:31:34.582] [info] modifiers check
+[20:31:34.582] [info] keycode
+[20:31:34.582] [info] modifiers check
+[20:31:34.583] [info] altKey
+[20:31:34.583] [info] modifiers check
+[20:31:34.583] [info] shiftKey
+[20:31:34.583] [info] modifiers check
+[20:31:34.583] [info] ctrlKey
+[20:31:34.583] [info] modifiers check
+[20:31:34.583] [info] metaKey
+[20:31:34.584] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:34.584] [info] detected!
+[20:31:34.584] [info] keyvalue
+[20:31:34.584] [info] {
+[20:31:34.584] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': true,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:34.585] [info] buffalse
+[20:31:34.585] [info] false
+[20:31:34.586] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.587] [info] modifiers check
+[20:31:34.587] [info] keycode
+[20:31:34.587] [info] modifiers check
+[20:31:34.587] [info] altKey
+[20:31:34.587] [info] modifiers check
+[20:31:34.587] [info] shiftKey
+[20:31:34.588] [info] modifiers check
+[20:31:34.588] [info] ctrlKey
+[20:31:34.588] [info] modifiers check
+[20:31:34.588] [info] metaKey
+[20:31:34.588] [info] modifiers to checkaltKey,metaKey
+[20:31:34.588] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.589] [info] modifiers check
+[20:31:34.589] [info] keycode
+[20:31:34.589] [info] modifiers check
+[20:31:34.589] [info] altKey
+[20:31:34.589] [info] modifiers check
+[20:31:34.590] [info] shiftKey
+[20:31:34.590] [info] modifiers check
+[20:31:34.590] [info] ctrlKey
+[20:31:34.590] [info] modifiers check
+[20:31:34.590] [info] metaKey
+[20:31:34.590] [info] modifiers to checkaltKey,shiftKey
+[20:31:34.654] [info] ???
+[20:31:34.655] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:34.655] [info] shortcut key codes2
+[20:31:34.655] [info] shortcut key codes[object Object]
+[20:31:34.656] [info] 26
+[20:31:34.656] [info] 2
+[20:31:34.656] [info] false
+[20:31:34.656] [info] shortcut key codes3
+[20:31:34.657] [info] shortcut key codes[object Object]
+[20:31:34.657] [info] 26
+[20:31:34.657] [info] 3
+[20:31:34.657] [info] false
+[20:31:34.657] [info] shortcut key codes4
+[20:31:34.658] [info] shortcut key codes[object Object]
+[20:31:34.658] [info] 26
+[20:31:34.658] [info] 4
+[20:31:34.658] [info] false
+[20:31:34.658] [info] shortcut key codes5
+[20:31:34.659] [info] shortcut key codes[object Object]
+[20:31:34.659] [info] 26
+[20:31:34.659] [info] 5
+[20:31:34.659] [info] false
+[20:31:34.659] [info] shortcut key codes6
+[20:31:34.660] [info] shortcut key codes[object Object]
+[20:31:34.660] [info] 26
+[20:31:34.660] [info] 6
+[20:31:34.660] [info] false
+[20:31:34.661] [info] shortcut key codes39
+[20:31:34.661] [info] shortcut key codes[object Object]
+[20:31:34.661] [info] 26
+[20:31:34.661] [info] 39
+[20:31:34.662] [info] false
+[20:31:34.662] [info] shortcut key codes40
+[20:31:34.662] [info] shortcut key codes[object Object]
+[20:31:34.662] [info] 26
+[20:31:34.662] [info] 40
+[20:31:34.663] [info] false
+[20:31:34.663] [info] shortcut key codes26
+[20:31:34.663] [info] shortcut key codes[object Object]
+[20:31:34.663] [info] 26
+[20:31:34.663] [info] 26
+[20:31:34.663] [info] true
+[20:31:34.664] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.664] [info] modifiers check
+[20:31:34.664] [info] displayValue
+[20:31:34.664] [info] modifiers check
+[20:31:34.664] [info] keycode
+[20:31:34.665] [info] modifiers check
+[20:31:34.665] [info] altKey
+[20:31:34.665] [info] modifiers check
+[20:31:34.665] [info] shiftKey
+[20:31:34.665] [info] modifiers check
+[20:31:34.665] [info] ctrlKey
+[20:31:34.666] [info] modifiers check
+[20:31:34.666] [info] metaKey
+[20:31:34.666] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:34.666] [info] detected!
+[20:31:34.667] [info] keyvalue
+[20:31:34.667] [info] {
+[20:31:34.667] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': true,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:34.667] [info] buffalse
+[20:31:34.668] [info] false
+[20:31:34.669] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.669] [info] modifiers check
+[20:31:34.669] [info] keycode
+[20:31:34.670] [info] modifiers check
+[20:31:34.670] [info] altKey
+[20:31:34.670] [info] modifiers check
+[20:31:34.670] [info] shiftKey
+[20:31:34.670] [info] modifiers check
+[20:31:34.671] [info] ctrlKey
+[20:31:34.671] [info] modifiers check
+[20:31:34.671] [info] metaKey
+[20:31:34.671] [info] modifiers to checkaltKey,metaKey
+[20:31:34.671] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.672] [info] modifiers check
+[20:31:34.672] [info] keycode
+[20:31:34.672] [info] modifiers check
+[20:31:34.672] [info] altKey
+[20:31:34.672] [info] modifiers check
+[20:31:34.672] [info] shiftKey
+[20:31:34.673] [info] modifiers check
+[20:31:34.673] [info] ctrlKey
+[20:31:34.673] [info] modifiers check
+[20:31:34.673] [info] metaKey
+[20:31:34.673] [info] modifiers to checkaltKey,shiftKey
+[20:31:34.739] [info] ???
+[20:31:34.739] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:34.740] [info] shortcut key codes2
+[20:31:34.740] [info] shortcut key codes[object Object]
+[20:31:34.741] [info] 26
+[20:31:34.741] [info] 2
+[20:31:34.742] [info] false
+[20:31:34.742] [info] shortcut key codes3
+[20:31:34.742] [info] shortcut key codes[object Object]
+[20:31:34.742] [info] 26
+[20:31:34.742] [info] 3
+[20:31:34.743] [info] false
+[20:31:34.743] [info] shortcut key codes4
+[20:31:34.743] [info] shortcut key codes[object Object]
+[20:31:34.743] [info] 26
+[20:31:34.743] [info] 4
+[20:31:34.744] [info] false
+[20:31:34.744] [info] shortcut key codes5
+[20:31:34.744] [info] shortcut key codes[object Object]
+[20:31:34.744] [info] 26
+[20:31:34.744] [info] 5
+[20:31:34.744] [info] false
+[20:31:34.745] [info] shortcut key codes6
+[20:31:34.745] [info] shortcut key codes[object Object]
+[20:31:34.745] [info] 26
+[20:31:34.745] [info] 6
+[20:31:34.745] [info] false
+[20:31:34.745] [info] shortcut key codes39
+[20:31:34.746] [info] shortcut key codes[object Object]
+[20:31:34.746] [info] 26
+[20:31:34.746] [info] 39
+[20:31:34.746] [info] false
+[20:31:34.746] [info] shortcut key codes40
+[20:31:34.747] [info] shortcut key codes[object Object]
+[20:31:34.747] [info] 26
+[20:31:34.747] [info] 40
+[20:31:34.747] [info] false
+[20:31:34.747] [info] shortcut key codes26
+[20:31:34.747] [info] shortcut key codes[object Object]
+[20:31:34.748] [info] 26
+[20:31:34.748] [info] 26
+[20:31:34.748] [info] true
+[20:31:34.748] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.748] [info] modifiers check
+[20:31:34.749] [info] displayValue
+[20:31:34.749] [info] modifiers check
+[20:31:34.749] [info] keycode
+[20:31:34.749] [info] modifiers check
+[20:31:34.749] [info] altKey
+[20:31:34.750] [info] modifiers check
+[20:31:34.750] [info] shiftKey
+[20:31:34.750] [info] modifiers check
+[20:31:34.750] [info] ctrlKey
+[20:31:34.750] [info] modifiers check
+[20:31:34.750] [info] metaKey
+[20:31:34.751] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:34.751] [info] detected!
+[20:31:34.751] [info] keyvalue
+[20:31:34.751] [info] {
+[20:31:34.751] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': true,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:34.752] [info] buffalse
+[20:31:34.752] [info] false
+[20:31:34.753] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.753] [info] modifiers check
+[20:31:34.754] [info] keycode
+[20:31:34.754] [info] modifiers check
+[20:31:34.754] [info] altKey
+[20:31:34.754] [info] modifiers check
+[20:31:34.754] [info] shiftKey
+[20:31:34.754] [info] modifiers check
+[20:31:34.755] [info] ctrlKey
+[20:31:34.755] [info] modifiers check
+[20:31:34.755] [info] metaKey
+[20:31:34.755] [info] modifiers to checkaltKey,metaKey
+[20:31:34.755] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.755] [info] modifiers check
+[20:31:34.756] [info] keycode
+[20:31:34.756] [info] modifiers check
+[20:31:34.756] [info] altKey
+[20:31:34.756] [info] modifiers check
+[20:31:34.756] [info] shiftKey
+[20:31:34.756] [info] modifiers check
+[20:31:34.757] [info] ctrlKey
+[20:31:34.757] [info] modifiers check
+[20:31:34.757] [info] metaKey
+[20:31:34.757] [info] modifiers to checkaltKey,shiftKey
+[20:31:34.822] [info] ???
+[20:31:34.823] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:34.824] [info] shortcut key codes2
+[20:31:34.824] [info] shortcut key codes[object Object]
+[20:31:34.824] [info] 26
+[20:31:34.824] [info] 2
+[20:31:34.824] [info] false
+[20:31:34.825] [info] shortcut key codes3
+[20:31:34.825] [info] shortcut key codes[object Object]
+[20:31:34.825] [info] 26
+[20:31:34.825] [info] 3
+[20:31:34.825] [info] false
+[20:31:34.826] [info] shortcut key codes4
+[20:31:34.826] [info] shortcut key codes[object Object]
+[20:31:34.826] [info] 26
+[20:31:34.826] [info] 4
+[20:31:34.826] [info] false
+[20:31:34.827] [info] shortcut key codes5
+[20:31:34.827] [info] shortcut key codes[object Object]
+[20:31:34.827] [info] 26
+[20:31:34.827] [info] 5
+[20:31:34.827] [info] false
+[20:31:34.828] [info] shortcut key codes6
+[20:31:34.828] [info] shortcut key codes[object Object]
+[20:31:34.828] [info] 26
+[20:31:34.828] [info] 6
+[20:31:34.828] [info] false
+[20:31:34.829] [info] shortcut key codes39
+[20:31:34.829] [info] shortcut key codes[object Object]
+[20:31:34.829] [info] 26
+[20:31:34.829] [info] 39
+[20:31:34.829] [info] false
+[20:31:34.830] [info] shortcut key codes40
+[20:31:34.830] [info] shortcut key codes[object Object]
+[20:31:34.830] [info] 26
+[20:31:34.830] [info] 40
+[20:31:34.830] [info] false
+[20:31:34.830] [info] shortcut key codes26
+[20:31:34.831] [info] shortcut key codes[object Object]
+[20:31:34.831] [info] 26
+[20:31:34.831] [info] 26
+[20:31:34.831] [info] true
+[20:31:34.831] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.832] [info] modifiers check
+[20:31:34.832] [info] displayValue
+[20:31:34.832] [info] modifiers check
+[20:31:34.832] [info] keycode
+[20:31:34.832] [info] modifiers check
+[20:31:34.833] [info] altKey
+[20:31:34.833] [info] modifiers check
+[20:31:34.833] [info] shiftKey
+[20:31:34.833] [info] modifiers check
+[20:31:34.833] [info] ctrlKey
+[20:31:34.833] [info] modifiers check
+[20:31:34.834] [info] metaKey
+[20:31:34.834] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:34.834] [info] detected!
+[20:31:34.834] [info] keyvalue
+[20:31:34.834] [info] {
+[20:31:34.834] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': true,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:34.835] [info] buffalse
+[20:31:34.835] [info] false
+[20:31:34.836] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.836] [info] modifiers check
+[20:31:34.836] [info] keycode
+[20:31:34.837] [info] modifiers check
+[20:31:34.837] [info] altKey
+[20:31:34.837] [info] modifiers check
+[20:31:34.837] [info] shiftKey
+[20:31:34.837] [info] modifiers check
+[20:31:34.838] [info] ctrlKey
+[20:31:34.838] [info] modifiers check
+[20:31:34.838] [info] metaKey
+[20:31:34.838] [info] modifiers to checkaltKey,metaKey
+[20:31:34.838] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.838] [info] modifiers check
+[20:31:34.839] [info] keycode
+[20:31:34.839] [info] modifiers check
+[20:31:34.839] [info] altKey
+[20:31:34.839] [info] modifiers check
+[20:31:34.839] [info] shiftKey
+[20:31:34.839] [info] modifiers check
+[20:31:34.840] [info] ctrlKey
+[20:31:34.840] [info] modifiers check
+[20:31:34.840] [info] metaKey
+[20:31:34.840] [info] modifiers to checkaltKey,shiftKey
+[20:31:34.906] [info] ???
+[20:31:34.907] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:34.908] [info] shortcut key codes2
+[20:31:34.908] [info] shortcut key codes[object Object]
+[20:31:34.908] [info] 26
+[20:31:34.908] [info] 2
+[20:31:34.908] [info] false
+[20:31:34.909] [info] shortcut key codes3
+[20:31:34.909] [info] shortcut key codes[object Object]
+[20:31:34.909] [info] 26
+[20:31:34.909] [info] 3
+[20:31:34.909] [info] false
+[20:31:34.909] [info] shortcut key codes4
+[20:31:34.910] [info] shortcut key codes[object Object]
+[20:31:34.910] [info] 26
+[20:31:34.910] [info] 4
+[20:31:34.910] [info] false
+[20:31:34.910] [info] shortcut key codes5
+[20:31:34.911] [info] shortcut key codes[object Object]
+[20:31:34.911] [info] 26
+[20:31:34.911] [info] 5
+[20:31:34.911] [info] false
+[20:31:34.911] [info] shortcut key codes6
+[20:31:34.912] [info] shortcut key codes[object Object]
+[20:31:34.912] [info] 26
+[20:31:34.912] [info] 6
+[20:31:34.912] [info] false
+[20:31:34.912] [info] shortcut key codes39
+[20:31:34.913] [info] shortcut key codes[object Object]
+[20:31:34.913] [info] 26
+[20:31:34.913] [info] 39
+[20:31:34.913] [info] false
+[20:31:34.913] [info] shortcut key codes40
+[20:31:34.913] [info] shortcut key codes[object Object]
+[20:31:34.914] [info] 26
+[20:31:34.914] [info] 40
+[20:31:34.914] [info] false
+[20:31:34.914] [info] shortcut key codes26
+[20:31:34.914] [info] shortcut key codes[object Object]
+[20:31:34.914] [info] 26
+[20:31:34.915] [info] 26
+[20:31:34.915] [info] true
+[20:31:34.915] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.915] [info] modifiers check
+[20:31:34.915] [info] displayValue
+[20:31:34.916] [info] modifiers check
+[20:31:34.916] [info] keycode
+[20:31:34.916] [info] modifiers check
+[20:31:34.916] [info] altKey
+[20:31:34.916] [info] modifiers check
+[20:31:34.916] [info] shiftKey
+[20:31:34.916] [info] modifiers check
+[20:31:34.917] [info] ctrlKey
+[20:31:34.917] [info] modifiers check
+[20:31:34.917] [info] metaKey
+[20:31:34.917] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:34.917] [info] detected!
+[20:31:34.917] [info] keyvalue
+[20:31:34.918] [info] {
+[20:31:34.918] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': true,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:34.918] [info] buffalse
+[20:31:34.918] [info] false
+[20:31:34.919] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.920] [info] modifiers check
+[20:31:34.920] [info] keycode
+[20:31:34.920] [info] modifiers check
+[20:31:34.920] [info] altKey
+[20:31:34.921] [info] modifiers check
+[20:31:34.921] [info] shiftKey
+[20:31:34.921] [info] modifiers check
+[20:31:34.921] [info] ctrlKey
+[20:31:34.921] [info] modifiers check
+[20:31:34.921] [info] metaKey
+[20:31:34.922] [info] modifiers to checkaltKey,metaKey
+[20:31:34.922] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:34.922] [info] modifiers check
+[20:31:34.922] [info] keycode
+[20:31:34.922] [info] modifiers check
+[20:31:34.923] [info] altKey
+[20:31:34.923] [info] modifiers check
+[20:31:34.923] [info] shiftKey
+[20:31:34.923] [info] modifiers check
+[20:31:34.923] [info] ctrlKey
+[20:31:34.923] [info] modifiers check
+[20:31:34.924] [info] metaKey
+[20:31:34.924] [info] modifiers to checkaltKey,shiftKey
+[20:31:34.925] [info] buff num:{ currentText:lobalShortcut.unregisterAll()
+[20:31:35.043] [info] ???
+[20:31:35.043] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:35.044] [info] shortcut key codes2
+[20:31:35.045] [info] shortcut key codes[object Object]
+[20:31:35.045] [info] 46
+[20:31:35.045] [info] 2
+[20:31:35.046] [info] false
+[20:31:35.046] [info] shortcut key codes3
+[20:31:35.046] [info] shortcut key codes[object Object]
+[20:31:35.047] [info] 46
+[20:31:35.047] [info] 3
+[20:31:35.047] [info] false
+[20:31:35.047] [info] shortcut key codes4
+[20:31:35.047] [info] shortcut key codes[object Object]
+[20:31:35.048] [info] 46
+[20:31:35.048] [info] 4
+[20:31:35.048] [info] false
+[20:31:35.048] [info] shortcut key codes5
+[20:31:35.048] [info] shortcut key codes[object Object]
+[20:31:35.049] [info] 46
+[20:31:35.049] [info] 5
+[20:31:35.049] [info] false
+[20:31:35.049] [info] shortcut key codes6
+[20:31:35.049] [info] shortcut key codes[object Object]
+[20:31:35.049] [info] 46
+[20:31:35.050] [info] 6
+[20:31:35.050] [info] false
+[20:31:35.050] [info] shortcut key codes39
+[20:31:35.050] [info] shortcut key codes[object Object]
+[20:31:35.050] [info] 46
+[20:31:35.051] [info] 39
+[20:31:35.051] [info] false
+[20:31:35.051] [info] shortcut key codes40
+[20:31:35.051] [info] shortcut key codes[object Object]
+[20:31:35.051] [info] 46
+[20:31:35.052] [info] 40
+[20:31:35.052] [info] false
+[20:31:35.052] [info] shortcut key codes26
+[20:31:35.052] [info] shortcut key codes[object Object]
+[20:31:35.052] [info] 46
+[20:31:35.053] [info] 26
+[20:31:35.053] [info] false
+[20:31:35.053] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: false,
+  keycode: 46,
+  rawcode: 8,
+  type: 'keydown' }
+[20:31:35.053] [info] modifiers check
+[20:31:35.054] [info] keycode
+[20:31:35.054] [info] modifiers check
+[20:31:35.054] [info] altKey
+[20:31:35.054] [info] modifiers check
+[20:31:35.054] [info] shiftKey
+[20:31:35.054] [info] modifiers check
+[20:31:35.055] [info] ctrlKey
+[20:31:35.055] [info] modifiers check
+[20:31:35.055] [info] metaKey
+[20:31:35.055] [info] modifiers to checkmetaKey
+[20:31:35.055] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: false,
+  keycode: 46,
+  rawcode: 8,
+  type: 'keydown' }
+[20:31:35.056] [info] modifiers check
+[20:31:35.056] [info] keycode
+[20:31:35.056] [info] modifiers check
+[20:31:35.056] [info] altKey
+[20:31:35.056] [info] modifiers check
+[20:31:35.056] [info] shiftKey
+[20:31:35.056] [info] modifiers check
+[20:31:35.057] [info] ctrlKey
+[20:31:35.057] [info] modifiers check
+[20:31:35.057] [info] metaKey
+[20:31:35.057] [info] modifiers to checkaltKey,metaKey
+[20:31:35.057] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: false,
+  keycode: 46,
+  rawcode: 8,
+  type: 'keydown' }
+[20:31:35.058] [info] modifiers check
+[20:31:35.058] [info] keycode
+[20:31:35.058] [info] modifiers check
+[20:31:35.058] [info] altKey
+[20:31:35.058] [info] modifiers check
+[20:31:35.058] [info] shiftKey
+[20:31:35.059] [info] modifiers check
+[20:31:35.059] [info] ctrlKey
+[20:31:35.059] [info] modifiers check
+[20:31:35.059] [info] metaKey
+[20:31:35.059] [info] modifiers to checkaltKey,shiftKey
+[20:31:36.663] [info] ???
+[20:31:36.664] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:36.665] [info] shortcut key codes2
+[20:31:36.665] [info] shortcut key codes[object Object]
+[20:31:36.666] [info] 29
+[20:31:36.666] [info] 2
+[20:31:36.666] [info] false
+[20:31:36.666] [info] shortcut key codes3
+[20:31:36.666] [info] shortcut key codes[object Object]
+[20:31:36.666] [info] 29
+[20:31:36.667] [info] 3
+[20:31:36.667] [info] false
+[20:31:36.667] [info] shortcut key codes4
+[20:31:36.667] [info] shortcut key codes[object Object]
+[20:31:36.667] [info] 29
+[20:31:36.667] [info] 4
+[20:31:36.668] [info] false
+[20:31:36.668] [info] shortcut key codes5
+[20:31:36.668] [info] shortcut key codes[object Object]
+[20:31:36.668] [info] 29
+[20:31:36.668] [info] 5
+[20:31:36.669] [info] false
+[20:31:36.669] [info] shortcut key codes6
+[20:31:36.669] [info] shortcut key codes[object Object]
+[20:31:36.669] [info] 29
+[20:31:36.669] [info] 6
+[20:31:36.669] [info] false
+[20:31:36.670] [info] shortcut key codes39
+[20:31:36.670] [info] shortcut key codes[object Object]
+[20:31:36.670] [info] 29
+[20:31:36.670] [info] 39
+[20:31:36.670] [info] false
+[20:31:36.670] [info] shortcut key codes40
+[20:31:36.671] [info] shortcut key codes[object Object]
+[20:31:36.671] [info] 29
+[20:31:36.671] [info] 40
+[20:31:36.671] [info] false
+[20:31:36.671] [info] shortcut key codes26
+[20:31:36.671] [info] shortcut key codes[object Object]
+[20:31:36.672] [info] 29
+[20:31:36.672] [info] 26
+[20:31:36.672] [info] false
+[20:31:36.672] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 29,
+  rawcode: 59,
+  type: 'keydown' }
+[20:31:36.672] [info] modifiers check
+[20:31:36.673] [info] keycode
+[20:31:36.673] [info] modifiers check
+[20:31:36.673] [info] altKey
+[20:31:36.673] [info] modifiers check
+[20:31:36.673] [info] shiftKey
+[20:31:36.673] [info] modifiers check
+[20:31:36.674] [info] ctrlKey
+[20:31:36.674] [info] modifiers check
+[20:31:36.674] [info] metaKey
+[20:31:36.674] [info] modifiers to checkaltKey,metaKey
+[20:31:36.674] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 29,
+  rawcode: 59,
+  type: 'keydown' }
+[20:31:36.675] [info] modifiers check
+[20:31:36.675] [info] keycode
+[20:31:36.675] [info] modifiers check
+[20:31:36.675] [info] altKey
+[20:31:36.675] [info] modifiers check
+[20:31:36.675] [info] shiftKey
+[20:31:36.676] [info] modifiers check
+[20:31:36.676] [info] ctrlKey
+[20:31:36.676] [info] modifiers check
+[20:31:36.676] [info] metaKey
+[20:31:36.677] [info] modifiers to checkaltKey,shiftKey
+[20:31:36.823] [info] ???
+[20:31:36.823] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:36.825] [info] shortcut key codes2
+[20:31:36.825] [info] shortcut key codes[object Object]
+[20:31:36.825] [info] 26
+[20:31:36.825] [info] 2
+[20:31:36.826] [info] false
+[20:31:36.826] [info] shortcut key codes3
+[20:31:36.826] [info] shortcut key codes[object Object]
+[20:31:36.826] [info] 26
+[20:31:36.826] [info] 3
+[20:31:36.826] [info] false
+[20:31:36.827] [info] shortcut key codes4
+[20:31:36.827] [info] shortcut key codes[object Object]
+[20:31:36.827] [info] 26
+[20:31:36.827] [info] 4
+[20:31:36.827] [info] false
+[20:31:36.827] [info] shortcut key codes5
+[20:31:36.827] [info] shortcut key codes[object Object]
+[20:31:36.828] [info] 26
+[20:31:36.828] [info] 5
+[20:31:36.828] [info] false
+[20:31:36.828] [info] shortcut key codes6
+[20:31:36.828] [info] shortcut key codes[object Object]
+[20:31:36.828] [info] 26
+[20:31:36.828] [info] 6
+[20:31:36.829] [info] false
+[20:31:36.829] [info] shortcut key codes39
+[20:31:36.829] [info] shortcut key codes[object Object]
+[20:31:36.829] [info] 26
+[20:31:36.829] [info] 39
+[20:31:36.829] [info] false
+[20:31:36.829] [info] shortcut key codes40
+[20:31:36.830] [info] shortcut key codes[object Object]
+[20:31:36.830] [info] 26
+[20:31:36.830] [info] 40
+[20:31:36.830] [info] false
+[20:31:36.830] [info] shortcut key codes26
+[20:31:36.831] [info] shortcut key codes[object Object]
+[20:31:36.831] [info] 26
+[20:31:36.831] [info] 26
+[20:31:36.831] [info] true
+[20:31:36.831] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:36.832] [info] modifiers check
+[20:31:36.832] [info] displayValue
+[20:31:36.832] [info] modifiers check
+[20:31:36.832] [info] keycode
+[20:31:36.832] [info] modifiers check
+[20:31:36.833] [info] altKey
+[20:31:36.833] [info] modifiers check
+[20:31:36.833] [info] shiftKey
+[20:31:36.834] [info] modifiers check
+[20:31:36.834] [info] ctrlKey
+[20:31:36.834] [info] modifiers check
+[20:31:36.834] [info] metaKey
+[20:31:36.834] [info] modifiers to checkdisplayValue,ctrlKey
+[20:31:36.834] [info] detected!
+[20:31:36.834] [info] keyvalue
+[20:31:36.835] [info] {
+[20:31:36.835] [info] { '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  ';': false,
+  '\'': false,
+  '{': false,
+  copyKey: false,
+  showKey: false,
+  circBufferKey: false }
+[20:31:36.835] [info] buffalse
+[20:31:36.835] [info] true
+[20:31:36.835] [info] text buffer triggered!
+[20:31:36.845] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:36.845] [info] modifiers check
+[20:31:36.845] [info] keycode
+[20:31:36.846] [info] modifiers check
+[20:31:36.846] [info] altKey
+[20:31:36.846] [info] modifiers check
+[20:31:36.846] [info] shiftKey
+[20:31:36.846] [info] modifiers check
+[20:31:36.846] [info] ctrlKey
+[20:31:36.847] [info] modifiers check
+[20:31:36.847] [info] metaKey
+[20:31:36.847] [info] modifiers to checkaltKey,metaKey
+[20:31:36.847] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 26,
+  rawcode: 33,
+  type: 'keydown' }
+[20:31:36.847] [info] modifiers check
+[20:31:36.848] [info] keycode
+[20:31:36.848] [info] modifiers check
+[20:31:36.848] [info] altKey
+[20:31:36.848] [info] modifiers check
+[20:31:36.848] [info] shiftKey
+[20:31:36.848] [info] modifiers check
+[20:31:36.848] [info] ctrlKey
+[20:31:36.849] [info] modifiers check
+[20:31:36.849] [info] metaKey
+[20:31:36.849] [info] modifiers to checkaltKey,shiftKey
+[20:31:36.899] [info] buffer checker is set
+[20:31:36.900] [info] { '1': 'lobalShortcut.unregisterAll()',
+  '2': 'clipboard.writeText(currentText)',
+  '3': '=(',
+  '4': '=(',
+  '5': '=(',
+  ';': '=(',
+  '\'': '=(',
+  '{': 'lobalShortcut.unregisterAll()',
+  copyKey: '=(',
+  showKey: '=(',
+  circBufferKey: '=(',
+  Semi: '=(',
+  Quotes: '=(',
+  Bracket: '=(' }
+[20:31:37.219] [info] is this a reference to a pointer?lobalShortcut.unregisterAll()
+[20:31:37.220] [info] paste command pressed
+[20:31:37.220] [info] ???
+[20:31:37.220] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:37.221] [info] shortcut key codes2
+[20:31:37.221] [info] shortcut key codes[object Object]
+[20:31:37.221] [info] 47
+[20:31:37.221] [info] 2
+[20:31:37.222] [info] false
+[20:31:37.222] [info] shortcut key codes3
+[20:31:37.222] [info] shortcut key codes[object Object]
+[20:31:37.222] [info] 47
+[20:31:37.222] [info] 3
+[20:31:37.223] [info] false
+[20:31:37.223] [info] shortcut key codes4
+[20:31:37.223] [info] shortcut key codes[object Object]
+[20:31:37.223] [info] 47
+[20:31:37.223] [info] 4
+[20:31:37.223] [info] false
+[20:31:37.224] [info] shortcut key codes5
+[20:31:37.224] [info] shortcut key codes[object Object]
+[20:31:37.224] [info] 47
+[20:31:37.224] [info] 5
+[20:31:37.224] [info] false
+[20:31:37.225] [info] shortcut key codes6
+[20:31:37.225] [info] shortcut key codes[object Object]
+[20:31:37.225] [info] 47
+[20:31:37.225] [info] 6
+[20:31:37.225] [info] false
+[20:31:37.225] [info] shortcut key codes39
+[20:31:37.226] [info] shortcut key codes[object Object]
+[20:31:37.226] [info] 47
+[20:31:37.226] [info] 39
+[20:31:37.226] [info] false
+[20:31:37.226] [info] shortcut key codes40
+[20:31:37.226] [info] shortcut key codes[object Object]
+[20:31:37.227] [info] 47
+[20:31:37.227] [info] 40
+[20:31:37.227] [info] false
+[20:31:37.227] [info] shortcut key codes26
+[20:31:37.227] [info] shortcut key codes[object Object]
+[20:31:37.227] [info] 47
+[20:31:37.228] [info] 26
+[20:31:37.228] [info] false
+[20:31:37.228] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: false,
+  keycode: 47,
+  rawcode: 9,
+  type: 'keydown' }
+[20:31:37.228] [info] modifiers check
+[20:31:37.228] [info] keycode
+[20:31:37.229] [info] modifiers check
+[20:31:37.229] [info] altKey
+[20:31:37.229] [info] modifiers check
+[20:31:37.229] [info] shiftKey
+[20:31:37.229] [info] modifiers check
+[20:31:37.229] [info] ctrlKey
+[20:31:37.229] [info] modifiers check
+[20:31:37.230] [info] metaKey
+[20:31:37.230] [info] modifiers to checkaltKey,metaKey
+[20:31:37.230] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: false,
+  metaKey: false,
+  keycode: 47,
+  rawcode: 9,
+  type: 'keydown' }
+[20:31:37.230] [info] modifiers check
+[20:31:37.231] [info] keycode
+[20:31:37.231] [info] modifiers check
+[20:31:37.231] [info] altKey
+[20:31:37.231] [info] modifiers check
+[20:31:37.231] [info] shiftKey
+[20:31:37.231] [info] modifiers check
+[20:31:37.231] [info] ctrlKey
+[20:31:37.232] [info] modifiers check
+[20:31:37.232] [info] metaKey
+[20:31:37.232] [info] modifiers to checkaltKey,shiftKey
+[20:31:37.521] [info] currenttext:lobalShortcut.unregisterAll()
+[20:31:48.390] [info] ???
+[20:31:48.391] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:48.392] [info] shortcut key codes2
+[20:31:48.392] [info] shortcut key codes[object Object]
+[20:31:48.393] [info] 29
+[20:31:48.393] [info] 2
+[20:31:48.393] [info] false
+[20:31:48.393] [info] shortcut key codes3
+[20:31:48.393] [info] shortcut key codes[object Object]
+[20:31:48.394] [info] 29
+[20:31:48.394] [info] 3
+[20:31:48.394] [info] false
+[20:31:48.394] [info] shortcut key codes4
+[20:31:48.394] [info] shortcut key codes[object Object]
+[20:31:48.395] [info] 29
+[20:31:48.395] [info] 4
+[20:31:48.395] [info] false
+[20:31:48.395] [info] shortcut key codes5
+[20:31:48.395] [info] shortcut key codes[object Object]
+[20:31:48.395] [info] 29
+[20:31:48.396] [info] 5
+[20:31:48.396] [info] false
+[20:31:48.396] [info] shortcut key codes6
+[20:31:48.396] [info] shortcut key codes[object Object]
+[20:31:48.396] [info] 29
+[20:31:48.397] [info] 6
+[20:31:48.397] [info] false
+[20:31:48.397] [info] shortcut key codes39
+[20:31:48.397] [info] shortcut key codes[object Object]
+[20:31:48.397] [info] 29
+[20:31:48.397] [info] 39
+[20:31:48.398] [info] false
+[20:31:48.398] [info] shortcut key codes40
+[20:31:48.398] [info] shortcut key codes[object Object]
+[20:31:48.398] [info] 29
+[20:31:48.398] [info] 40
+[20:31:48.398] [info] false
+[20:31:48.399] [info] shortcut key codes26
+[20:31:48.399] [info] shortcut key codes[object Object]
+[20:31:48.399] [info] 29
+[20:31:48.399] [info] 26
+[20:31:48.399] [info] false
+[20:31:48.399] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 29,
+  rawcode: 59,
+  type: 'keydown' }
+[20:31:48.400] [info] modifiers check
+[20:31:48.400] [info] keycode
+[20:31:48.400] [info] modifiers check
+[20:31:48.400] [info] altKey
+[20:31:48.400] [info] modifiers check
+[20:31:48.401] [info] shiftKey
+[20:31:48.401] [info] modifiers check
+[20:31:48.401] [info] ctrlKey
+[20:31:48.401] [info] modifiers check
+[20:31:48.401] [info] metaKey
+[20:31:48.401] [info] modifiers to checkaltKey,metaKey
+[20:31:48.402] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 29,
+  rawcode: 59,
+  type: 'keydown' }
+[20:31:48.402] [info] modifiers check
+[20:31:48.402] [info] keycode
+[20:31:48.402] [info] modifiers check
+[20:31:48.402] [info] altKey
+[20:31:48.403] [info] modifiers check
+[20:31:48.403] [info] shiftKey
+[20:31:48.403] [info] modifiers check
+[20:31:48.403] [info] ctrlKey
+[20:31:48.403] [info] modifiers check
+[20:31:48.403] [info] metaKey
+[20:31:48.403] [info] modifiers to checkaltKey,shiftKey
+[20:31:48.542] [info] ???
+[20:31:48.542] [info] { '1': 
+   { displayValue: '1',
+     keycode: 2,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '2': 
+   { displayValue: '2',
+     keycode: 3,
+     rawcode: 15,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '3': 
+   { displayValue: '3',
+     keycode: 4,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '4': 
+   { displayValue: '4',
+     keycode: 5,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '5': 
+   { displayValue: '5',
+     keycode: 6,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  ';': 
+   { displayValue: ';',
+     keycode: 39,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '\'': 
+   { displayValue: '\'',
+     keycode: 40,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false },
+  '{': 
+   { displayValue: '{',
+     keycode: 26,
+     altKey: false,
+     shiftKey: false,
+     ctrlKey: true,
+     metaKey: false } }
+[20:31:48.543] [info] shortcut key codes2
+[20:31:48.543] [info] shortcut key codes[object Object]
+[20:31:48.544] [info] 46
+[20:31:48.544] [info] 2
+[20:31:48.544] [info] false
+[20:31:48.544] [info] shortcut key codes3
+[20:31:48.544] [info] shortcut key codes[object Object]
+[20:31:48.544] [info] 46
+[20:31:48.545] [info] 3
+[20:31:48.545] [info] false
+[20:31:48.545] [info] shortcut key codes4
+[20:31:48.545] [info] shortcut key codes[object Object]
+[20:31:48.545] [info] 46
+[20:31:48.546] [info] 4
+[20:31:48.546] [info] false
+[20:31:48.546] [info] shortcut key codes5
+[20:31:48.546] [info] shortcut key codes[object Object]
+[20:31:48.546] [info] 46
+[20:31:48.547] [info] 5
+[20:31:48.547] [info] false
+[20:31:48.547] [info] shortcut key codes6
+[20:31:48.547] [info] shortcut key codes[object Object]
+[20:31:48.547] [info] 46
+[20:31:48.548] [info] 6
+[20:31:48.548] [info] false
+[20:31:48.548] [info] shortcut key codes39
+[20:31:48.548] [info] shortcut key codes[object Object]
+[20:31:48.548] [info] 46
+[20:31:48.548] [info] 39
+[20:31:48.549] [info] false
+[20:31:48.549] [info] shortcut key codes40
+[20:31:48.549] [info] shortcut key codes[object Object]
+[20:31:48.549] [info] 46
+[20:31:48.549] [info] 40
+[20:31:48.549] [info] false
+[20:31:48.549] [info] shortcut key codes26
+[20:31:48.550] [info] shortcut key codes[object Object]
+[20:31:48.550] [info] 46
+[20:31:48.550] [info] 26
+[20:31:48.550] [info] false
+[20:31:48.550] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 46,
+  rawcode: 8,
+  type: 'keydown' }
+[20:31:48.550] [info] modifiers check
+[20:31:48.551] [info] keycode
+[20:31:48.551] [info] modifiers check
+[20:31:48.551] [info] altKey
+[20:31:48.551] [info] modifiers check
+[20:31:48.551] [info] shiftKey
+[20:31:48.551] [info] modifiers check
+[20:31:48.552] [info] ctrlKey
+[20:31:48.552] [info] modifiers check
+[20:31:48.552] [info] metaKey
+[20:31:48.552] [info] modifiers to checkmetaKey
+[20:31:48.552] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 46,
+  rawcode: 8,
+  type: 'keydown' }
+[20:31:48.552] [info] modifiers check
+[20:31:48.553] [info] keycode
+[20:31:48.553] [info] modifiers check
+[20:31:48.553] [info] altKey
+[20:31:48.553] [info] modifiers check
+[20:31:48.553] [info] shiftKey
+[20:31:48.553] [info] modifiers check
+[20:31:48.553] [info] ctrlKey
+[20:31:48.554] [info] modifiers check
+[20:31:48.554] [info] metaKey
+[20:31:48.554] [info] modifiers to checkaltKey,metaKey
+[20:31:48.554] [info] { shiftKey: false,
+  altKey: false,
+  ctrlKey: true,
+  metaKey: false,
+  keycode: 46,
+  rawcode: 8,
+  type: 'keydown' }
+[20:31:48.554] [info] modifiers check
+[20:31:48.555] [info] keycode
+[20:31:48.555] [info] modifiers check
+[20:31:48.555] [info] altKey
+[20:31:48.555] [info] modifiers check
+[20:31:48.555] [info] shiftKey
+[20:31:48.556] [info] modifiers check
+[20:31:48.556] [info] ctrlKey
+[20:31:48.556] [info] modifiers check
+[20:31:48.556] [info] metaKey
+[20:31:48.556] [info] modifiers to checkaltKey,shiftKey

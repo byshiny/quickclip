@@ -75,10 +75,10 @@ log.transports.console.level = 'info';
 var CircularBuffer = require('circular-buffer')
 var keyMapper = require('./keyMapper')
 // TODO: Need to decide how to refactor this... group into one object???
-var textBufferTimer = new Array(COPY_BUFFER_COUNT)
-var textBufferChecker = new Array(COPY_BUFFER_COUNT)
-var textBufferFired = new Array(COPY_BUFFER_COUNT)
-var textBufferContent = new Array(COPY_BUFFER_COUNT)
+var textBufferTimer = new Object();
+var textBufferChecker = new Object();
+var textBufferFired = new Object();
+var textBufferContent = new Object();
 
 // this is to thread multiple interval checkers in case of bouncy touchpads
 // again, global variable path is a terrible idea. I'm never doin this shit again.
@@ -124,19 +124,18 @@ var shortcutKeys = {}
 var showKeyConfig = 'doodle'
 var circBufferKeyConfig = 'woof'
 var copyKeyConfig = 'quack'
+var shortcutConfig = {}
 // initialize all the global Arrays
-function setAllTextArraysToDefault () {
-  var n = COPY_BUFFER_COUNT
-  for (var i = 0; i < n; ++i) {
-    textBufferTimer[i] = new Date()
-    textBufferChecker[i] = 0
-    textBufferFired[i] = false
-    textBufferContent[i] = '=('
+function setAllTextMapsToDefault () {
+  for (var key in shortcutConfig) {
+    var strippedKey = key.replace('pasteBuffer','');
+    textBufferTimer[strippedKey] = new Date()
+    textBufferChecker[strippedKey] = 0
+    textBufferFired[strippedKey] = false
+    textBufferContent[strippedKey] = '=('
   }
-  var n = SHORTCUT_KEY_LIMIT
-  for (i = 0; i < n; ++i) {
-    shortcutKeys[i] = {}
-  }
+  log.info("textbufferfired should be null")
+  log.info(textBufferFired)
 }
 
 // Or use `remote` from the renderer process.
@@ -189,19 +188,6 @@ function showBuffer () {
 }
 
 
-function cycleBufferWindow () {
-  log.info('mousedownyyy')
-  if (mouseDown) {
-    copyTimePassed += COPY_MOUSE_CYCLE_INTERVAL
-    /// ///log.info('cycling choo choo')
-    copyMouseItemIdx++
-    if (copyMouseItemIdx >= mouseCircularBuffer.size() || copyMouseItemIdx == -1) {
-      copyMouseItemIdx = 0
-    }
-  }
-}
-
-
 
 function bufferKeyPressedWithModifier (event) {
   // TODO: REFACTOR WHEN CONFIGURATION Is SET
@@ -212,11 +198,16 @@ function bufferKeyPressedWithModifier (event) {
     }
     return false
     */
-  log.info(shortcutKeys)
+   log.info("???")
+   log.info(shortcutKeys)
   for (var sKey in shortcutKeys) {
+    
     var keyConfig = shortcutKeys[sKey]
-    log.info('shortcut key code' + keyConfig.keycode)
-    log.info('shortcut key code' + keyConfig)
+    log.info('shortcut key codes' + keyConfig.keycode)
+    log.info('shortcut key codes' + keyConfig)
+    log.info(event.keycode)
+    log.info(keyConfig.keycode)
+    log.info(event.keycode == keyConfig.keycode)
     if (event.keycode == keyConfig.keycode) {
       var match = ensureModifierKeysMatch(event, keyConfig)
       return match
@@ -294,9 +285,9 @@ function bufferKeyReleased (event) {
   return false
 }
 
-function triggerBuffer (bufferNum) {
-  textBufferTimer[bufferNum] = new Date()
-  textBufferFired[bufferNum] = true
+function triggerBuffer (bufferKey) {
+  textBufferTimer[bufferKey] = new Date()
+  textBufferFired[bufferKey] = true
 }
 
 function copyKeyTriggered (event) {
@@ -364,7 +355,9 @@ function pasteCommand (currentText) {
 function setGlobalShortcuts () {
   globalShortcut.unregisterAll()
   const os = process.platform
-  var shortcutConfig = configuration.readSettings(os)
+  shortcutConfig = configuration.readSettings(os)
+  log.info("read ")
+  log.info(shortcutConfig)
   var i = 0
   for (var key in shortcutConfig) {
     log.info("key")
@@ -379,29 +372,12 @@ function setGlobalShortcuts () {
       circBufferKeyConfig = shortcutConfig[key]
       // log.info(showKeyConfig)
     }  else {
-      //var strippedKey = key.replace('pasteBuffer','');
-      shortcutKeys[key] = shortcutConfig[key]
+      var strippedKey = key.replace('pasteBuffer','');
+      shortcutKeys[strippedKey] = shortcutConfig[key]
     }
   }
-  // you need to loop afterwards
-  /*
-      globalShortcut.register(shortcutKeySetting1, function () {
-        mainWindow.webContents.send('global-shortcut', 0)
-      })
-      */
-  // pop up paste buffer
-  // var nRegistered = globalShortcut.isRegistered('n')
-
-  /*
-      globalShortcut.register('n', function () {
-        // showBuffer()
-        for (var item in mouseCircularBuffer) {
-          //log.info(item)
-        }
-      })
-      globalShortcut.register('m', function () {
-        bufferWindow.webContents.send('inc-opq', readString)
-      }) */
+  log.info("shortcutKeys")
+  log.info(shortcutKeys)
 }
 
 // iohook setup
@@ -438,7 +414,7 @@ app.on('ready', () => {
     globalShortcut.unregisterAll()
     app.quit()
   })
-
+  log.info("herro???")
   mainWindow.on('minimize', function (event) {
     event.preventDefault()
     mainWindow.hide()
@@ -498,7 +474,10 @@ app.on('ready', () => {
   }
   mouseCircularBuffer.enq(text)
   // load key values from save.json
-  setAllTextArraysToDefault()
+  setGlobalShortcuts()
+  log.info("wtf")
+  log.info(shortcutConfig)
+  setAllTextMapsToDefault()
   var keyBufferFromConfig = stateSaver.readValue('keyBuffer')
   // log.info(keyBufferFromConfig)
   for (var key in keyBufferFromConfig) {
@@ -518,7 +497,6 @@ app.on('ready', () => {
   // win.show()
 
   // IMPORTANT NOTE: NCONFG IS SAVED
-  setGlobalShortcuts()
   ioHook.start()
 
   // this is apparently caused by os 10.13 - need to fork the process and kill. Temporary solution found on github
@@ -526,10 +504,9 @@ app.on('ready', () => {
 app.on('before-quit', () => {
   stateSaver.saveValue('circularBuffer', mouseCircularBuffer.toarray())
   var saveObj = {}
-  for (var x = 0; x < textBufferContent.length; x++) {
-    var key = textBufferContent.displayValue
-    print(key)
-    saveObj[x] = textBufferContent[x]
+  for (var key in textBufferContent){
+    var strippedKey = key.replace('pasteBuffer','');
+    saveObj[strippedKey] = textBufferContent[strippedKey]
   }
   stateSaver.saveValue('keyBuffer', saveObj)
   ioHook.unload()
@@ -558,15 +535,21 @@ ioHook.on('mouseup', event => {
   pasteStarted = false
 })
 ioHook.on('keydown', event => {
-  var number = keyMapper.getKeyFromCode(event.keycode)
+  var keyValue = keyMapper.getKeyFromCode(event.keycode)
   // keycode 46 is control c
   if (bufferKeyPressedWithModifier(event)) {
-    // log.info('detected!')
-    if (textBufferFired[number] == false) {
-      // log.info('text buffer triggered!')
-      triggerBuffer(number)
+    log.info('detected!')
+    log.info("keyvalue")
+    log.info(keyValue)
+    log.info(textBufferFired)
+    log.info("buffalse")
+    log.info(textBufferFired[keyValue] == false)
+    if (textBufferFired[keyValue] == false) {
+      log.info('text buffer triggered!')
+
+      triggerBuffer(keyValue)
     }
-    var lastKeyDownDate = textBufferTimer[number]
+    var lastKeyDownDate = textBufferTimer[keyValue]
     // log.info('goot time to save')
     var diff = Math.abs(new Date() - lastKeyDownDate)
     var saveTimeObj = {}
@@ -720,10 +703,10 @@ function loadCircularBufferWindow () {
 ioHook.on('keyup', event => {
   if (bufferKeyReleased(event)) {
     // log.info('buffer key released')
-    var number = keyMapper.getKeyFromCode(event.keycode)
-    if (textBufferFired[number] === true) {
+    var keyValue = keyMapper.getKeyFromCode(event.keycode)
+    if (textBufferFired[keyValue] === true) {
       var curDate = new Date()
-      var lastKeyDownDate = textBufferTimer[number]
+      var lastKeyDownDate = textBufferTimer[keyValue]
       // log.info('time diff')
       var diff = Math.abs(new Date() - lastKeyDownDate)
       // log.info(lastKeyDownDate.toString())
@@ -733,28 +716,14 @@ ioHook.on('keyup', event => {
       if (diff < COPY_BUFFER_TIME) {
         // saveWindow.hide()
         Menu.sendActionToFirstResponder('hide:')
-        pasteBuffer(number)
+        pasteBuffer(keyValue)
       } else {
         // saveWindow.hide()
         Menu.sendActionToFirstResponder('hide:')
         // Menu.sendActionToFirstResponder('hide:')
-        saveBuffer(number)
+        saveBuffer(keyValue)
       }
-      textBufferFired[number] = false
+      textBufferFired[keyValue] = false
     }
   }
-})
-
-ioHook.on('mousedown', event => {
-  currentEvent = event
-  // log.info(event)
-  // this is prety much a mutex
-  if (!pasteStarted && !mouseDown) {
-    mouseDown = true // I'm downing the mouse twice so the computer doesn't enter the critical section twice
-    log.info('initiate buffer cycling!')
-  }
-  mouseDown = true
-  lastPressTime = new Date()
-
-  // remember to add mainwindow = null later.
 })
