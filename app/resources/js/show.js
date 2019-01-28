@@ -62,7 +62,7 @@ ipcRenderer.on('load-buffer', (event, data) => {
    </button> Herro!
  </div> */
  var savedBuffers = data.savedBuffers
-
+  bufferHolder.innerHTML = ""
   for (var key in savedBuffers.textBufferContent) {
     if (savedBuffers.textBufferChecker[key] === 1) {
       var button = document.createElement('button')

@@ -1,16 +1,16 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
+    "circularBufferWindow = null\n    showOrHideCircularBufferWindow = false",
+    "https://github.com/zeit/next.js",
+    "https://arxiv.org/pdf/1811.10597.pdf",
+    "https://arxiv.org/pdf/1811.10597.pdf",
+    "https://github.com/zeit/next.js",
+    "circularBufferWindow = null\n    showOrHideCircularBufferWindow = false",
+    "bufferHolder.innerHTML = \"\"",
     "var randColorInt = getRandomInt(0, CSS_COLOR_NAMES.length)\n      var rand1Color = CSS_COLOR_NAMES[randColorInt]",
     "circularBufferArrayContent",
-    "circularBufferArrayContent",
-    "var randColorInt = getRandomInt(0, CSS_COLOR_NAMES.length)\n      var rand1Color = CSS_COLOR_NAMES[randColorInt]",
-    "var randColorInt = getRandomInt(0, CSS_COLOR_NAMES.length)\n      var rand1Color = CSS_COLOR_NAMES[randColorInt]",
-    "var randColorInt = getRandomInt(0, CSS_COLOR_NAMES.length)\n      var rand1Color = CSS_COLOR_NAMES[randColorInt]",
-    "var randColorInt = getRandomInt(0, CSS_COLOR_NAMES.length)\n      var rand1Color = CSS_COLOR_NAMES[randColorInt]",
-    "var randColorInt = getRandomInt(0, CSS_COLOR_NAMES.length)\n      var rand1Color = CSS_COLOR_NAMES[randColorInt]",
-    "myConsole.log('checkyy')",
-    "myConsole.log('checkyy')"
+    "circularBufferArrayContent"
   ],
   "keyBuffer": {
     "1": "https://www.youtube.com/watch?v=Lr_n4dsOMTc",

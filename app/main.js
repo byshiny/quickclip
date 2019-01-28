@@ -660,6 +660,8 @@ function loadShowWindow () {
 
   showWindow.on('close', function (event) {
     // log.info('hidden')
+    showWindow = null
+    showOrHideShowWindow = false
     saveWindow.hide()
   })
   showWindow.loadURL(`file://${__dirname}/resources/views/show.html`)
@@ -687,6 +689,8 @@ function loadCircularBufferWindow () {
 
   circularBufferWindow.on('close', function (event) {
     // log.info('hidden')
+    circularBufferWindow = null
+    showOrHideCircularBufferWindow = false
     saveWindow.hide()
   })
   circularBufferWindow.loadURL(`file://${__dirname}/resources/views/circular.html`)

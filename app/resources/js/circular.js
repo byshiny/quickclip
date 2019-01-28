@@ -41,15 +41,13 @@ function replaceBufferFunction(key) {
 }
 ipcRenderer.on('load-circular-buffer', (event, circularBufferArrayContent) => {
     var circularBufferDisplayId = "circular-buffer-display"
-    myConsole.log('checkyy')
     var bufferHolder = document.getElementById(circularBufferDisplayId)
-    
+    bufferHolder.innerHTML = ""
     for (var idx in circularBufferArrayContent) {
         var button = document.createElement('button')
         var textHolder = document.createElement('div')
         var randColorInt = getRandomInt(0, CSS_COLOR_NAMES.length)
         var rand1Color = CSS_COLOR_NAMES[randColorInt]
-        myConsole.log('herro')
         button.classList.add('btn')
         button.innerHTML = "" + idx
         button.setAttribute("id", "" + idx)
