@@ -409,6 +409,16 @@ app.on('ready', () => {
     icon: path.join(__dirname, 'assets/quickclip.png')
   })
   mainWindow.on('closed', () => {
+    if (circularBufferWindow != null ){
+      circularBufferWindow.close()
+    }
+    if (showWindow != null ){
+      showWindow.close()
+    }
+    if (saveWindow != null ){
+      saveWindow.close()
+    }
+  
     mainWindow = null
     bufferWindow = null
     globalShortcut.unregisterAll()

@@ -1,16 +1,16 @@
 {
   "comment": "I'm trying to keep format consistent, so I'm going to have",
   "circularBuffer": [
+    "https://www.amazon.com/Taylor-Precision-Products-Digital-Expandable/dp/B009WN0L96/ref=sr_1_4_a_it?ie=UTF8&qid=1548678577&sr=8-4&keywords=portable%2Bscale&th=1",
+    "https://www.amazon.com/Taylor-Precision-Products-Digital-Expandable/dp/B009WN0L96/ref=sr_1_4_a_it?ie=UTF8&qid=1548678577&sr=8-4&keywords=portable%2Bscale&th=1",
+    "saveWindow",
+    "showWindow",
+    "if (circularBufferWindow != null ){\n    circularBufferWindow.close()\n    }",
+    "window.close();",
     "circularBufferWindow = null\n    showOrHideCircularBufferWindow = false",
     "https://github.com/zeit/next.js",
     "https://arxiv.org/pdf/1811.10597.pdf",
-    "https://arxiv.org/pdf/1811.10597.pdf",
-    "https://github.com/zeit/next.js",
-    "circularBufferWindow = null\n    showOrHideCircularBufferWindow = false",
-    "bufferHolder.innerHTML = \"\"",
-    "var randColorInt = getRandomInt(0, CSS_COLOR_NAMES.length)\n      var rand1Color = CSS_COLOR_NAMES[randColorInt]",
-    "circularBufferArrayContent",
-    "circularBufferArrayContent"
+    "https://arxiv.org/pdf/1811.10597.pdf"
   ],
   "keyBuffer": {
     "1": "https://www.youtube.com/watch?v=Lr_n4dsOMTc",
