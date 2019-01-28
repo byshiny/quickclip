@@ -516,6 +516,13 @@ app.on('before-quit', () => {
 ipcMain.on('close-main-window', function () {
   app.quit()
 })
+ipcMain.on('replace-copy-buffer', (event, textFromBuffer) => {
+  log.info(textFromBuffer) // prints "ping"
+  var currentText = clipboard.readText()
+  clipboard.writeText(textFromBuffer)
+  mouseCircularBuffer.enq(currentText)
+
+})
 
 ioHook.on('mouseup', event => {
   var pasteDateDiff = Math.abs(lastPressTime - new Date())
