@@ -70,7 +70,7 @@ const log = require('electron-log')
 var robot = require('robotjs')
 const path = require('path')
 
-log.transports.console.level = 'info';
+log.transports.console.level = 'debug';
 // for mouse holding
 var CircularBuffer = require('circular-buffer')
 var keyMapper = require('./keyMapper')
