@@ -454,13 +454,6 @@ app.on('ready', () => {
   saveWindow.loadURL(`file://${__dirname}/resources/views/savepop.html`)
   saveWindow.hide()
 
-  circularBufferWindow = new BrowserWindow({
-    width: 500,
-    height: 800,
-    focusable: true
-  })
-  circularBufferWindow.loadURL(`file://${__dirname}/resources/views/savepop.html`)
-  circularBufferWindow.hide()
 
 
   // load circular buffer from save.json
@@ -622,7 +615,7 @@ ioHook.on('keydown', event => {
     // this is an arificial delay for robotjs and os to register cmd + x
     // log.info('show me monies')
     if (showOrHideCircularBufferWindow) {
-      if (showWindow == null) {
+      if (circularBufferWindow == null) {
         loadCircularBufferWindow()
       } else {
         circularBufferWindow.show()
@@ -630,15 +623,7 @@ ioHook.on('keydown', event => {
 
       showOrHideCircularBufferWindow = !showOrHideCircularBufferWindow
       setTimeout(function () {
-        //You need to call soe load fucntion here. 
-        // var data = {}
-        // var savedBuffers = {}
-        // savedBuffers.textBufferTimer = textBufferTimer
-        // savedBuffers.textBufferChecker = textBufferChecker
-        // savedBuffers.textBufferFired = textBufferFired
-        // savedBuffers.textBufferContent = textBufferContent
-        // data.savedBuffers = savedBuffers
-        // showWindow.webContents.send('load-buffer', data)
+        circularBufferWindow.webContents.send('load-circular-buffer', mouseCircularBuffer.toarray())
       }, 500)
     } else {
       if (showOrHideCircularBufferWindow != null) {
@@ -704,7 +689,7 @@ function loadCircularBufferWindow () {
     // log.info('hidden')
     saveWindow.hide()
   })
-  circularBufferWindow.loadURL(`file://${__dirname}/resources/views/show.html`)
+  circularBufferWindow.loadURL(`file://${__dirname}/resources/views/circular.html`)
 }
 
 
